@@ -1,7 +1,7 @@
 {
   "complete": true,
   "input_sha256": {
-    "figures/synthetic_demo/render_figure.py": "adde3cf81f751e097e28cf8c491ca54e38baa6677f7b9cfbcfaadc6d83e4141d",
+    "figures/synthetic_demo/render_figure.py": "e89756e1e6301af19dc7414d67d7911ca4c7507896ff85c88fe8a572ee374344",
     "figures/synthetic_demo/data/normalized_log2_expression.tsv.gz": "3a81f5d936b48219e116c5a38c3537dbf36f88bff927cca3b353d27544d26dcf",
     "figures/synthetic_demo/data/sample_metadata.tsv": "c2d5d5c19a98408a3e9b34f29ec0040accb2f9d91d6b12cc2cc78f620ea6f754",
     "figures/synthetic_demo/data/simulation_summary.json": "0dbba9e51776e8213c7d900beefe1fe8bd491e526d7875224643f4e667c2f378",
@@ -21,6 +21,12 @@
         1024
       ],
       "typography_scale": 1.2,
+      "axis_label_pixels": 40,
+      "axis_tick_pixels": 32,
+      "versioned_export_sha256": {
+        "figure_01_large_axis_synthetic.png": "2c97ad271d0296f49e48dcc5c7338bea9b31bcb238709baba98f3e177eacea5a",
+        "figure_01_large_axis_synthetic.pdf": "69238193bfe9e931dd0da02ce6879aa202227698fe99ff374521016ea72975c1"
+      },
       "pdf_fonts": [
         "EKTMJB+NimbusSans-Bold",
         "EKTMJB+NimbusSans-Regular"
@@ -34,12 +40,12 @@
         {
           "text": "log$_2$ fold change",
           "font": "Nimbus Sans Regular",
-          "size_px": 28.8
+          "size_px": 40.0
         },
         {
           "text": "\u2212log$_{10}$(adjusted $P$)",
           "font": "Nimbus Sans Regular",
-          "size_px": 28.8
+          "size_px": 40.0
         },
         {
           "text": "LD SALINE vs NON-LD control",
@@ -49,12 +55,12 @@
         {
           "text": "Genes",
           "font": "Nimbus Sans Regular",
-          "size_px": 28.8
+          "size_px": 40.0
         },
         {
           "text": "z-score",
           "font": "Nimbus Sans Regular",
-          "size_px": 28.8
+          "size_px": 40.0
         },
         {
           "text": "1.00",
@@ -84,7 +90,7 @@
         {
           "text": "NES",
           "font": "Nimbus Sans Regular",
-          "size_px": 28.8
+          "size_px": 40.0
         },
         {
           "text": "Arachidonic acid metabolism",
@@ -154,7 +160,7 @@
         {
           "text": "NES",
           "font": "Nimbus Sans Regular",
-          "size_px": 28.8
+          "size_px": 40.0
         },
         {
           "text": "epithelial cell apoptotic process",
@@ -403,6 +409,12 @@
         1024
       ],
       "typography_scale": 1.2,
+      "axis_label_pixels": 40,
+      "axis_tick_pixels": 32,
+      "versioned_export_sha256": {
+        "figure_02_large_axis_synthetic.png": "7f528fb314ac36ddf9ac7a007bb9b1be78fd375cfbb9755f7f0a3d0192c0284c",
+        "figure_02_large_axis_synthetic.pdf": "012daf845403fed3ed53bb62772558b46959c23285fa758050875706dcc1ec0b"
+      },
       "pdf_fonts": [
         "EKTMJB+NimbusSans-Bold",
         "EKTMJB+NimbusSans-Regular"
@@ -416,12 +428,12 @@
         {
           "text": "log$_2$ fold change",
           "font": "Nimbus Sans Regular",
-          "size_px": 28.8
+          "size_px": 40.0
         },
         {
           "text": "\u2212log$_{10}$(adjusted $P$)",
           "font": "Nimbus Sans Regular",
-          "size_px": 28.8
+          "size_px": 40.0
         },
         {
           "text": "LD LEPTIN vs LD SALINE",
@@ -431,12 +443,12 @@
         {
           "text": "Genes",
           "font": "Nimbus Sans Regular",
-          "size_px": 28.8
+          "size_px": 40.0
         },
         {
           "text": "z-score",
           "font": "Nimbus Sans Regular",
-          "size_px": 28.8
+          "size_px": 40.0
         },
         {
           "text": "1.00",
@@ -466,7 +478,7 @@
         {
           "text": "NES",
           "font": "Nimbus Sans Regular",
-          "size_px": 28.8
+          "size_px": 40.0
         },
         {
           "text": "Longevity regulating pathway - multiple\nspecies",
@@ -536,7 +548,7 @@
         {
           "text": "NES",
           "font": "Nimbus Sans Regular",
-          "size_px": 28.8
+          "size_px": 40.0
         },
         {
           "text": "negative regulation of Notch signaling\npathway",
@@ -785,6 +797,12 @@
         1024
       ],
       "typography_scale": 1.2,
+      "axis_label_pixels": 40,
+      "axis_tick_pixels": 32,
+      "versioned_export_sha256": {
+        "figure_03_large_axis_synthetic.png": "cbed8feaaa2bf5b3839fd53ac6841ac4e877855048147794746f040beed0bc55",
+        "figure_03_large_axis_synthetic.pdf": "314b55221100e3cf07fb26004e1c31dd52ea0f7d6398dec1d5d9e5a57bf8ed24"
+      },
       "pdf_fonts": [
         "EKTMJB+NimbusSans-Bold",
         "EKTMJB+NimbusSans-Regular"
@@ -798,12 +816,12 @@
         {
           "text": "log$_2$ fold change",
           "font": "Nimbus Sans Regular",
-          "size_px": 28.8
+          "size_px": 40.0
         },
         {
           "text": "\u2212log$_{10}$(adjusted $P$)",
           "font": "Nimbus Sans Regular",
-          "size_px": 28.8
+          "size_px": 40.0
         },
         {
           "text": "LD LEPTIN vs NON-LD control",
@@ -813,12 +831,12 @@
         {
           "text": "Genes",
           "font": "Nimbus Sans Regular",
-          "size_px": 28.8
+          "size_px": 40.0
         },
         {
           "text": "z-score",
           "font": "Nimbus Sans Regular",
-          "size_px": 28.8
+          "size_px": 40.0
         },
         {
           "text": "1.00",
@@ -848,7 +866,7 @@
         {
           "text": "NES",
           "font": "Nimbus Sans Regular",
-          "size_px": 28.8
+          "size_px": 40.0
         },
         {
           "text": "Pancreatic secretion",
@@ -918,7 +936,7 @@
         {
           "text": "NES",
           "font": "Nimbus Sans Regular",
-          "size_px": 28.8
+          "size_px": 40.0
         },
         {
           "text": "T cell selection",

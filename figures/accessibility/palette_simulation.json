@@ -1,6 +1,6 @@
 {
   "status": "PASS",
-  "verified_at_utc": "2026-10-19T14:41:37.825149+00:00",
+  "verified_at_utc": "2026-10-19T14:49:18.664569+00:00",
   "method": "DaltonLens 0.1.5, Machado et al. 2009, severity 1.0; sRGB decoded and encoded by library",
   "grayscale": "linear-light sRGB/Rec.709 relative luminance, re-encoded to sRGB",
   "metrics": "CIE1976 Lab distances (D65); descriptive only, no universal pass/fail threshold",
@@ -218,23 +218,23 @@
     "Pillow": "12.3.0"
   },
   "input_export_sha256": {
-    "figure_01_gsea_synthetic.png": "2218adc74efdfaf21b8e0fea10f420076197b7ca3614df0a88df68e511fb3da5",
-    "figure_02_gsea_synthetic.png": "cf490bb98bbe7879de0d5fdae39aa2892992f11d9c5b9b0310e25b27f74a333a",
-    "figure_03_gsea_synthetic.png": "1d1365339d6131172cdfd3cbf59282d87db45e5736bf3c6a49d6d90e3100fd9b"
+    "figure_01_gsea_synthetic.png": "2c97ad271d0296f49e48dcc5c7338bea9b31bcb238709baba98f3e177eacea5a",
+    "figure_02_gsea_synthetic.png": "7f528fb314ac36ddf9ac7a007bb9b1be78fd375cfbb9755f7f0a3d0192c0284c",
+    "figure_03_gsea_synthetic.png": "cbed8feaaa2bf5b3839fd53ac6841ac4e877855048147794746f040beed0bc55"
   },
   "output_sha256": {
     "palette_color_vision_check.png": "7ab47a36a66442d599973777d2d5f95533623db2d67eb754f031a59039203cfb",
-    "figure_01_protanopia_check.png": "e88fdd29a89f2d1ffca0fc07162e994c45257929ba66d7b9071c57447e380e10",
-    "figure_01_deuteranopia_check.png": "9a41475f95c4d1aac2d520a520d9767d13b59a309be5c11ab954fef346d3d7c2",
-    "figure_01_tritanopia_check.png": "6a85a6b223dd1eae181c05c43e35782cc14ef3addf0d108d04ef6c5270b8a322",
-    "figure_01_grayscale_check.png": "4bdee1acaabbbeb40fe68aa4917f4905fb98afbcfec22cbf2f89462098e22040",
-    "figure_02_protanopia_check.png": "376645dce35fc1557f5c913a7595d932cdd2e9dfa61753bdb1c0eec2bf8a4001",
-    "figure_02_deuteranopia_check.png": "b4bcf3e854aebf5be2987dc5f3455c1d0195c2cf05e8fa774457073662fa9d69",
-    "figure_02_tritanopia_check.png": "571a8fd403bd4f11f793e5370c0c8f3cf23d6dfeaeee2ef0ffcdbc20802bc59e",
-    "figure_02_grayscale_check.png": "b43d47c5b462f9dfee7850fbef289d953980ea62c74e963b8942ebe57217702b",
-    "figure_03_protanopia_check.png": "cce75f7f49c042d7690cc4fa759c7b410e28873583fb0165dea0e292084d9e93",
-    "figure_03_deuteranopia_check.png": "3337f6c068ef8d0182b1c5364fbd5ca789f9f16a268ad96666a241ed58418453",
-    "figure_03_tritanopia_check.png": "a3b8e410b71607d9624ac1534607ea1a29c21739517eb5f3a3c1df1270da8ca9",
-    "figure_03_grayscale_check.png": "a2a235eee802c968ce96251cf029bd4dd62bd253380d22418825ddac676da181"
+    "figure_01_protanopia_check.png": "16b386852a428340b2f80870301fa3786eedb5de3affad4e5bdb08c6a019bbc6",
+    "figure_01_deuteranopia_check.png": "114e572294c12dfa44fd2ee403a8022dd44e0f5865dfb0fcae78ef4ca7098319",
+    "figure_01_tritanopia_check.png": "04d3504687ddfc39f6f44be2c8ee4ffcb5272b1930e162f73e550238c0b4f82f",
+    "figure_01_grayscale_check.png": "d689aa945c0e0a7f34f5b74bf7ddd679c0e978e2f0723fd573c0c646a2d63996",
+    "figure_02_protanopia_check.png": "10c72e086269405f746e8d0797969247b30997ac79fa5097c952be32d94f4fdc",
+    "figure_02_deuteranopia_check.png": "166022018e8122ef9c4a7dccf496c83d46a927eb45b53f4ccb35d517c190a338",
+    "figure_02_tritanopia_check.png": "fa35344cc58649dc111e42eb15bbda75b116823fe2d8099af2af619e641fd47e",
+    "figure_02_grayscale_check.png": "67dae432019f6cc537f8cee7e1e68d980e68f315d72323bf6121a2f47b6970ff",
+    "figure_03_protanopia_check.png": "6e42c4ad86c28c46ad82c7353bbd7ca54cef1437eba5d62210fcad5b0628b75d",
+    "figure_03_deuteranopia_check.png": "3b8d71b0ea98e2c90104e41fea75eb05d5ca4447a385e29d151655f02c5f8023",
+    "figure_03_tritanopia_check.png": "fe9a1ddd307f6191c370081f5f4d3830909c216f8b9843f79ff63c106640e004",
+    "figure_03_grayscale_check.png": "edd2b6418f6c7a2275749edfc26066b2c3e4b40287960d8503d4dc90391fa8d5"
   }
 }

@@ -251,7 +251,10 @@ class GseaDisplayTests(unittest.TestCase):
                 xlim, ylim = render.volcano_limits([table])
                 details = render.render_question(render.SPECS[0], table, expression, metadata, fonts,
                                                  xlim, ylim, 1, 9)
-            self.assertEqual(len(list(root.parent.glob("figure_01*"))), 5)
+            self.assertEqual(len(list(root.parent.glob("figure_01*"))), 7)
+            for extension in ('.png','.pdf'):
+                self.assertEqual((root.parent/f'figure_01_gsea_synthetic{extension}').read_bytes(),
+                                 (root.parent/f'figure_01_large_axis_synthetic{extension}').read_bytes())
             self.assertTrue(all("NimbusSans" in font for font in details["pdf_fonts"]))
             self.assertEqual(details["heatmap_genes"], [])
             self.assertEqual(ylim, 324)

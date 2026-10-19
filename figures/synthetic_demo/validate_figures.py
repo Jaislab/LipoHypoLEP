@@ -78,6 +78,14 @@ def verify():
                 ["volcano", "two-group heatmap", "KEGG preranked GSEA", "GO BP preranked GSEA"],
                 "Unexpected panel composition")
         require(record["all_visible_typography"] == "Nimbus Sans", "Unexpected font selection")
+        expected_exports={f"figure_{number:02d}_large_axis_synthetic{extension}" for extension in ('.png','.pdf')}
+        require(set(record.get("versioned_export_sha256",{}))==expected_exports,
+                "Missing distinctly named large-axis exports")
+        for filename,expected_hash in record['versioned_export_sha256'].items():
+            path=ROOT.parent/filename
+            canonical=ROOT.parent/f"figure_{number:02d}_gsea_synthetic{path.suffix}"
+            require(path.is_file() and digest(path)==expected_hash==digest(canonical),
+                    f"Versioned export differs from verified artwork: {filename}")
         colors = record["comparison_colors"]
         require((colors["higher"], colors["lower"]) == PALETTES[number-1], "Requested palette changed")
         significant = table.loc[(table.padj < 0.05) & (table.log2FoldChange.abs() >= 0.2)]
@@ -111,6 +119,8 @@ def verify():
     for script in (ROOT / "verify_export_fonts.py", ROOT.parent / "accessibility/audit_colors.py"):
         subprocess.run([sys.executable, str(script), "--check-report"], check=True)
     evidence = set(input_hashes)
+    evidence.update(str((ROOT.parent/filename).relative_to(REPO)) for record in plot['figures']
+                    for filename in record['versioned_export_sha256'])
     evidence.update(str(path.relative_to(REPO)) for path in (
         ROOT / "font_and_plot_audit.json", ROOT / "export_font_verification.json",
         ROOT.parent / "accessibility/palette_simulation.json", gsea / "gsea_provenance.json",

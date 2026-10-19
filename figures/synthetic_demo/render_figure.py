@@ -13,6 +13,7 @@ import re
 import textwrap
 import hashlib
 import warnings
+import shutil
 
 os.environ.setdefault('MPLCONFIGDIR', '/tmp/lipohypolep-mpl-v2')
 import matplotlib
@@ -39,6 +40,9 @@ DATA = ROOT/'data'
 W,H,DPI = 1536,1024,100
 # Scale every text role together; keep Nimbus Sans and the artwork dimensions.
 FONT_SCALE = 1.20
+# Axis text has explicit final pixel sizes, independent of secondary typography.
+AXIS_LABEL_PIXELS = 40
+AXIS_TICK_PIXELS = 32
 GROUPS = ('LD SALINE','LD LEPTIN','NON-LD control')
 INK,AXIS,GRID,NS = '#262A2B','#A1A7A7','#C8CDCD','#CFD3D4'
 LOG2FC_CUTOFF = 0.2
@@ -105,7 +109,9 @@ def prepare_nimbus():
         result[style]=ttf
     return result
 
-def px(size): return size*FONT_SCALE*72/DPI
+def points_from_pixels(size): return size*72/DPI
+
+def px(size): return points_from_pixels(size*FONT_SCALE)
 
 SPECS = (
     (1, 'How does untreated LD differ from non-LD controls?',
@@ -122,8 +128,9 @@ def configure_theme():
     warnings.filterwarnings('error',message=r'Glyph .* missing from font',category=UserWarning)
     plt.rcParams.update({
         'font.family':'Nimbus Sans','font.size':px(22),
-        'axes.labelsize':px(24),'axes.titlesize':px(24),
-        'xtick.labelsize':px(21),'ytick.labelsize':px(21),
+        'axes.labelsize':points_from_pixels(AXIS_LABEL_PIXELS),'axes.titlesize':px(24),
+        'xtick.labelsize':points_from_pixels(AXIS_TICK_PIXELS),
+        'ytick.labelsize':points_from_pixels(AXIS_TICK_PIXELS),
         'legend.fontsize':px(20),'axes.labelcolor':INK,
         'text.color':INK,'xtick.color':INK,'ytick.color':INK,
         'axes.edgecolor':AXIS,'axes.linewidth':0.65,
@@ -317,9 +324,16 @@ def export_figure(fig,number,question,fonts,details):
         pdf_fonts=sorted({f[3] for page in doc for f in page.get_fonts()})
         if not pdf_fonts or not all('NimbusSans' in f for f in pdf_fonts):
             raise RuntimeError(f'Font substitution in PDF: {pdf_fonts}')
+    versioned_exports={}
+    for extension in ('.png','.pdf'):
+        versioned=OUT/f'figure_{number:02d}_large_axis_synthetic{extension}'
+        shutil.copyfile(OUT/f'{name}{extension}',versioned)
+        versioned_exports[str(versioned.relative_to(OUT))]=hashlib.sha256(versioned.read_bytes()).hexdigest()
     return {'figure':number,'file_stem':name,'question':question,
             'all_visible_typography':'Nimbus Sans','canvas_pixels':[W,H],
             'typography_scale':FONT_SCALE,
+            'axis_label_pixels':AXIS_LABEL_PIXELS,'axis_tick_pixels':AXIS_TICK_PIXELS,
+            'versioned_export_sha256':versioned_exports,
             'pdf_fonts':pdf_fonts,'pdf_text':'embedded, searchable vector text',
             'svg_text':'outlined paths','editable_svg':'text with embedded Nimbus Sans font data',
             'figure_contains_editorial_prose':False,'pca_panel':False,'labels':labels,**details}
@@ -344,7 +358,7 @@ def render_question(spec,table,expression,metadata,fonts,xmax,ymax,forest_limit,
         ax.set_axisbelow(True)
 
     # a: the complete single-contrast result, with common scales across figures.
-    ax=axes(110,88,560,310)
+    ax=axes(130,88,540,310)
     panel('a',40,27)
     ax.set_title(comparison,pad=20)
     x=table.log2FoldChange.to_numpy()
@@ -393,8 +407,8 @@ def render_question(spec,table,expression,metadata,fonts,xmax,ymax,forest_limit,
         cax=axes(1402,185,13,160)
         cb=fig.colorbar(im,cax=cax,ticks=[-2,0,2])
         cb.outline.set_visible(False)
-        cb.ax.tick_params(size=2,pad=4,labelsize=px(21))
-        cb.set_label('z-score',fontsize=px(24),labelpad=7)
+        cb.ax.tick_params(size=2,pad=4,labelsize=points_from_pixels(AXIS_TICK_PIXELS))
+        cb.set_label('z-score',fontsize=points_from_pixels(AXIS_LABEL_PIXELS),labelpad=7)
     pd.DataFrame({'gene_id':genes}).to_csv(DATA/f'figure_{number:02d}_heatmap_genes.tsv',sep='\t',index=False)
 
     # Retain the gene effect estimates in tables; the canvas now prioritizes GSEA.

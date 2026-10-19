@@ -1,0 +1,3394 @@
+{
+  "status": "PASS",
+  "verified_at_utc": "2026-10-19T14:50:45.403886+00:00",
+  "reference_commit": "3e8d9879690dd63318598b344cf2fd14be32f949",
+  "current_version": "Current working-tree PDF exports identified by SHA-256, measured before publication commit.",
+  "measurement_method": "Actual searchable PDF text spans from PyMuPDF; no renderer-reported font sizes used.",
+  "native_raster_dpi": 100,
+  "pdf_points_to_native_pixels": 1.3888888888888888,
+  "axis_title_rule": "Largest actual span in each full label; smaller math subscripts reported separately.",
+  "numeric_tick_rule": "Upper-left volcano rows, upper-right colorbar, bottom numeric row in each GSEA half; q-value rows excluded.",
+  "all_measured_text_fonts": "Nimbus Sans",
+  "expected_axis_label_native_px": 40,
+  "expected_numeric_tick_native_px": 32,
+  "figures": [
+    {
+      "figure": 1,
+      "previous": {
+        "pdf_sha256": "df3db316b2c81cca8dd12d59f335d84436de99c057cf533c0f320a2adec6e22b",
+        "canvas_native_pixels": [
+          1536,
+          1024
+        ],
+        "axis_titles": {
+          "volcano_x": {
+            "text": "log2 fold change",
+            "bbox_pdf_pt": [
+              205.8000030517578,
+              319.7872314453125,
+              355.2241516113281,
+              342.09521484375
+            ],
+            "span_sizes_pdf_pt": [
+              20.736000061035156,
+              14.515199661254883,
+              20.736000061035156
+            ],
+            "font_names": [
+              "NimbusSans-Regular"
+            ],
+            "full_size_pdf_pt": 20.736000061035156,
+            "full_size_native_px": 28.80000008477105,
+            "span_sizes_native_px": [
+              28.80000008477105,
+              20.159999529520668,
+              28.80000008477105
+            ]
+          },
+          "volcano_y": {
+            "text": "\u2212log10(adjusted P)",
+            "bbox_pdf_pt": [
+              22.005332946777344,
+              91.03941345214844,
+              44.31330871582031,
+              259.46002197265625
+            ],
+            "span_sizes_pdf_pt": [
+              20.736000061035156,
+              14.515199661254883,
+              20.736000061035156
+            ],
+            "font_names": [
+              "NimbusSans-Regular"
+            ],
+            "full_size_pdf_pt": 20.736000061035156,
+            "full_size_native_px": 28.80000008477105,
+            "span_sizes_native_px": [
+              28.80000008477105,
+              20.159999529520668,
+              28.80000008477105
+            ]
+          },
+          "heatmap_y": {
+            "text": "Genes",
+            "bbox_pdf_pt": [
+              636.52783203125,
+              160.2586669921875,
+              657.2637939453125,
+              221.346923828125
+            ],
+            "span_sizes_pdf_pt": [
+              20.736000061035156
+            ],
+            "font_names": [
+              "NimbusSans-Regular"
+            ],
+            "full_size_pdf_pt": 20.736000061035156,
+            "full_size_native_px": 28.80000008477105,
+            "span_sizes_native_px": [
+              28.80000008477105
+            ]
+          },
+          "heatmap_colorbar": {
+            "text": "z-score",
+            "bbox_pdf_pt": [
+              1052.4803466796875,
+              156.8274383544922,
+              1073.2164306640625,
+              224.800048828125
+            ],
+            "span_sizes_pdf_pt": [
+              20.736000061035156
+            ],
+            "font_names": [
+              "NimbusSans-Regular"
+            ],
+            "full_size_pdf_pt": 20.736000061035156,
+            "full_size_native_px": 28.80000008477105,
+            "span_sizes_native_px": [
+              28.80000008477105
+            ]
+          },
+          "kegg_x": {
+            "text": "NES",
+            "bbox_pdf_pt": [
+              405.6474914550781,
+              687.9247436523438,
+              448.28070068359375,
+              708.6607055664062
+            ],
+            "span_sizes_pdf_pt": [
+              20.736000061035156
+            ],
+            "font_names": [
+              "NimbusSans-Regular"
+            ],
+            "full_size_pdf_pt": 20.736000061035156,
+            "full_size_native_px": 28.80000008477105,
+            "span_sizes_native_px": [
+              28.80000008477105
+            ]
+          },
+          "go_bp_x": {
+            "text": "NES",
+            "bbox_pdf_pt": [
+              968.6875,
+              687.9247436523438,
+              1011.3207397460938,
+              708.6607055664062
+            ],
+            "span_sizes_pdf_pt": [
+              20.736000061035156
+            ],
+            "font_names": [
+              "NimbusSans-Regular"
+            ],
+            "full_size_pdf_pt": 20.736000061035156,
+            "full_size_native_px": 28.80000008477105,
+            "span_sizes_native_px": [
+              28.80000008477105
+            ]
+          }
+        },
+        "numeric_ticks": {
+          "volcano_x": [
+            {
+              "text": "\u22124",
+              "bbox_pdf_pt": [
+                109.1762466430664,
+                294.55181884765625,
+                129.8603973388672,
+                312.69580078125
+              ],
+              "span_sizes_pdf_pt": [
+                18.143999099731445
+              ],
+              "font_names": [
+                "NimbusSans-Regular"
+              ],
+              "full_size_pdf_pt": 18.143999099731445,
+              "full_size_native_px": 25.199998749627007,
+              "span_sizes_native_px": [
+                25.199998749627007
+              ]
+            },
+            {
+              "text": "\u22122",
+              "bbox_pdf_pt": [
+                189.81625366210938,
+                294.55181884765625,
+                210.5004119873047,
+                312.69580078125
+              ],
+              "span_sizes_pdf_pt": [
+                18.143999099731445
+              ],
+              "font_names": [
+                "NimbusSans-Regular"
+              ],
+              "full_size_pdf_pt": 18.143999099731445,
+              "full_size_native_px": 25.199998749627007,
+              "span_sizes_native_px": [
+                25.199998749627007
+              ]
+            },
+            {
+              "text": "0",
+              "bbox_pdf_pt": [
+                275.75311279296875,
+                294.55181884765625,
+                285.8411865234375,
+                312.69580078125
+              ],
+              "span_sizes_pdf_pt": [
+                18.143999099731445
+              ],
+              "font_names": [
+                "NimbusSans-Regular"
+              ],
+              "full_size_pdf_pt": 18.143999099731445,
+              "full_size_native_px": 25.199998749627007,
+              "span_sizes_native_px": [
+                25.199998749627007
+              ]
+            },
+            {
+              "text": "2",
+              "bbox_pdf_pt": [
+                356.39312744140625,
+                294.55181884765625,
+                366.481201171875,
+                312.69580078125
+              ],
+              "span_sizes_pdf_pt": [
+                18.143999099731445
+              ],
+              "font_names": [
+                "NimbusSans-Regular"
+              ],
+              "full_size_pdf_pt": 18.143999099731445,
+              "full_size_native_px": 25.199998749627007,
+              "span_sizes_native_px": [
+                25.199998749627007
+              ]
+            },
+            {
+              "text": "4",
+              "bbox_pdf_pt": [
+                437.0331115722656,
+                294.55181884765625,
+                447.1211853027344,
+                312.69580078125
+              ],
+              "span_sizes_pdf_pt": [
+                18.143999099731445
+              ],
+              "font_names": [
+                "NimbusSans-Regular"
+              ],
+              "full_size_pdf_pt": 18.143999099731445,
+              "full_size_native_px": 25.199998749627007,
+              "span_sizes_native_px": [
+                25.199998749627007
+              ]
+            }
+          ],
+          "volcano_y": [
+            {
+              "text": "0",
+              "bbox_pdf_pt": [
+                61.10625076293945,
+                278.1710205078125,
+                71.1943130493164,
+                296.31500244140625
+              ],
+              "span_sizes_pdf_pt": [
+                18.143999099731445
+              ],
+              "font_names": [
+                "NimbusSans-Regular"
+              ],
+              "full_size_pdf_pt": 18.143999099731445,
+              "full_size_native_px": 25.199998749627007,
+              "span_sizes_native_px": [
+                25.199998749627007
+              ]
+            },
+            {
+              "text": "2",
+              "bbox_pdf_pt": [
+                61.10625076293945,
+                233.8852996826172,
+                71.1943130493164,
+                252.029296875
+              ],
+              "span_sizes_pdf_pt": [
+                18.143999099731445
+              ],
+              "font_names": [
+                "NimbusSans-Regular"
+              ],
+              "full_size_pdf_pt": 18.143999099731445,
+              "full_size_native_px": 25.199998749627007,
+              "span_sizes_native_px": [
+                25.199998749627007
+              ]
+            },
+            {
+              "text": "4",
+              "bbox_pdf_pt": [
+                61.10625076293945,
+                189.5995635986328,
+                71.1943130493164,
+                207.74356079101562
+              ],
+              "span_sizes_pdf_pt": [
+                18.143999099731445
+              ],
+              "font_names": [
+                "NimbusSans-Regular"
+              ],
+              "full_size_pdf_pt": 18.143999099731445,
+              "full_size_native_px": 25.199998749627007,
+              "span_sizes_native_px": [
+                25.199998749627007
+              ]
+            },
+            {
+              "text": "6",
+              "bbox_pdf_pt": [
+                61.10625076293945,
+                145.31385803222656,
+                71.1943130493164,
+                163.45785522460938
+              ],
+              "span_sizes_pdf_pt": [
+                18.143999099731445
+              ],
+              "font_names": [
+                "NimbusSans-Regular"
+              ],
+              "full_size_pdf_pt": 18.143999099731445,
+              "full_size_native_px": 25.199998749627007,
+              "span_sizes_native_px": [
+                25.199998749627007
+              ]
+            },
+            {
+              "text": "8",
+              "bbox_pdf_pt": [
+                61.10625076293945,
+                101.02815246582031,
+                71.1943130493164,
+                119.17214965820312
+              ],
+              "span_sizes_pdf_pt": [
+                18.143999099731445
+              ],
+              "font_names": [
+                "NimbusSans-Regular"
+              ],
+              "full_size_pdf_pt": 18.143999099731445,
+              "full_size_native_px": 25.199998749627007,
+              "span_sizes_native_px": [
+                25.199998749627007
+              ]
+            },
+            {
+              "text": "10",
+              "bbox_pdf_pt": [
+                51.01250076293945,
+                56.74244689941406,
+                71.18862915039062,
+                74.88644409179688
+              ],
+              "span_sizes_pdf_pt": [
+                18.143999099731445
+              ],
+              "font_names": [
+                "NimbusSans-Regular"
+              ],
+              "full_size_pdf_pt": 18.143999099731445,
+              "full_size_native_px": 25.199998749627007,
+              "span_sizes_native_px": [
+                25.199998749627007
+              ]
+            }
+          ],
+          "heatmap_colorbar": [
+            {
+              "text": "\u22122",
+              "bbox_pdf_pt": [
+                1024.800048828125,
+                241.7824249267578,
+                1045.484130859375,
+                259.9264221191406
+              ],
+              "span_sizes_pdf_pt": [
+                18.143999099731445
+              ],
+              "font_names": [
+                "NimbusSans-Regular"
+              ],
+              "full_size_pdf_pt": 18.143999099731445,
+              "full_size_native_px": 25.199998749627007,
+              "span_sizes_native_px": [
+                25.199998749627007
+              ]
+            },
+            {
+              "text": "0",
+              "bbox_pdf_pt": [
+                1024.800048828125,
+                184.1824493408203,
+                1034.8880615234375,
+                202.32644653320312
+              ],
+              "span_sizes_pdf_pt": [
+                18.143999099731445
+              ],
+              "font_names": [
+                "NimbusSans-Regular"
+              ],
+              "full_size_pdf_pt": 18.143999099731445,
+              "full_size_native_px": 25.199998749627007,
+              "span_sizes_native_px": [
+                25.199998749627007
+              ]
+            },
+            {
+              "text": "2",
+              "bbox_pdf_pt": [
+                1024.800048828125,
+                126.58241271972656,
+                1034.8880615234375,
+                144.72640991210938
+              ],
+              "span_sizes_pdf_pt": [
+                18.143999099731445
+              ],
+              "font_names": [
+                "NimbusSans-Regular"
+              ],
+              "full_size_pdf_pt": 18.143999099731445,
+              "full_size_native_px": 25.199998749627007,
+              "span_sizes_native_px": [
+                25.199998749627007
+              ]
+            }
+          ],
+          "kegg_x": [
+            {
+              "text": "\u22122",
+              "bbox_pdf_pt": [
+                375.0777893066406,
+                661.7517700195312,
+                395.761962890625,
+                679.8958129882812
+              ],
+              "span_sizes_pdf_pt": [
+                18.143999099731445
+              ],
+              "font_names": [
+                "NimbusSans-Regular"
+              ],
+              "full_size_pdf_pt": 18.143999099731445,
+              "full_size_native_px": 25.199998749627007,
+              "span_sizes_native_px": [
+                25.199998749627007
+              ]
+            },
+            {
+              "text": "0",
+              "bbox_pdf_pt": [
+                421.9131164550781,
+                661.7517700195312,
+                432.0011901855469,
+                679.8958129882812
+              ],
+              "span_sizes_pdf_pt": [
+                18.143999099731445
+              ],
+              "font_names": [
+                "NimbusSans-Regular"
+              ],
+              "full_size_pdf_pt": 18.143999099731445,
+              "full_size_native_px": 25.199998749627007,
+              "span_sizes_native_px": [
+                25.199998749627007
+              ]
+            },
+            {
+              "text": "2",
+              "bbox_pdf_pt": [
+                463.45159912109375,
+                661.7517700195312,
+                473.5396728515625,
+                679.8958129882812
+              ],
+              "span_sizes_pdf_pt": [
+                18.143999099731445
+              ],
+              "font_names": [
+                "NimbusSans-Regular"
+              ],
+              "full_size_pdf_pt": 18.143999099731445,
+              "full_size_native_px": 25.199998749627007,
+              "span_sizes_native_px": [
+                25.199998749627007
+              ]
+            }
+          ],
+          "go_bp_x": [
+            {
+              "text": "\u22122",
+              "bbox_pdf_pt": [
+                938.1177978515625,
+                661.7517700195312,
+                958.8019409179688,
+                679.8958129882812
+              ],
+              "span_sizes_pdf_pt": [
+                18.143999099731445
+              ],
+              "font_names": [
+                "NimbusSans-Regular"
+              ],
+              "full_size_pdf_pt": 18.143999099731445,
+              "full_size_native_px": 25.199998749627007,
+              "span_sizes_native_px": [
+                25.199998749627007
+              ]
+            },
+            {
+              "text": "0",
+              "bbox_pdf_pt": [
+                984.953125,
+                661.7517700195312,
+                995.0411987304688,
+                679.8958129882812
+              ],
+              "span_sizes_pdf_pt": [
+                18.143999099731445
+              ],
+              "font_names": [
+                "NimbusSans-Regular"
+              ],
+              "full_size_pdf_pt": 18.143999099731445,
+              "full_size_native_px": 25.199998749627007,
+              "span_sizes_native_px": [
+                25.199998749627007
+              ]
+            },
+            {
+              "text": "2",
+              "bbox_pdf_pt": [
+                1026.4915771484375,
+                661.7517700195312,
+                1036.57958984375,
+                679.8958129882812
+              ],
+              "span_sizes_pdf_pt": [
+                18.143999099731445
+              ],
+              "font_names": [
+                "NimbusSans-Regular"
+              ],
+              "full_size_pdf_pt": 18.143999099731445,
+              "full_size_native_px": 25.199998749627007,
+              "span_sizes_native_px": [
+                25.199998749627007
+              ]
+            }
+          ]
+        }
+      },
+      "current": {
+        "pdf_sha256": "69238193bfe9e931dd0da02ce6879aa202227698fe99ff374521016ea72975c1",
+        "canvas_native_pixels": [
+          1536,
+          1024
+        ],
+        "axis_titles": {
+          "volcano_x": {
+            "text": "log2 fold change",
+            "bbox_pdf_pt": [
+              184.0,
+              324.4554443359375,
+              391.5286560058594,
+              355.442138671875
+            ],
+            "span_sizes_pdf_pt": [
+              28.799999237060547,
+              20.15999984741211,
+              28.799999237060547
+            ],
+            "font_names": [
+              "NimbusSans-Regular"
+            ],
+            "full_size_pdf_pt": 28.799999237060547,
+            "full_size_native_px": 39.99999894036187,
+            "span_sizes_native_px": [
+              39.99999894036187,
+              27.999999788072373,
+              39.99999894036187
+            ]
+          },
+          "volcano_y": {
+            "text": "\u2212log10(adjusted P)",
+            "bbox_pdf_pt": [
+              23.979799270629883,
+              58.04833221435547,
+              54.96648406982422,
+              291.96002197265625
+            ],
+            "span_sizes_pdf_pt": [
+              28.799999237060547,
+              20.15999984741211,
+              28.799999237060547
+            ],
+            "font_names": [
+              "NimbusSans-Regular"
+            ],
+            "full_size_pdf_pt": 28.799999237060547,
+            "full_size_native_px": 39.99999894036187,
+            "span_sizes_native_px": [
+              39.99999894036187,
+              27.999999788072373,
+              39.99999894036187
+            ]
+          },
+          "heatmap_y": {
+            "text": "Genes",
+            "bbox_pdf_pt": [
+              628.883544921875,
+              148.38491821289062,
+              657.6835327148438,
+              233.22970581054688
+            ],
+            "span_sizes_pdf_pt": [
+              28.799999237060547
+            ],
+            "font_names": [
+              "NimbusSans-Regular"
+            ],
+            "full_size_pdf_pt": 28.799999237060547,
+            "full_size_native_px": 39.99999894036187,
+            "span_sizes_native_px": [
+              39.99999894036187
+            ]
+          },
+          "heatmap_colorbar": {
+            "text": "z-score",
+            "bbox_pdf_pt": [
+              1058.0704345703125,
+              143.61236572265625,
+              1086.8704833984375,
+              238.01876831054688
+            ],
+            "span_sizes_pdf_pt": [
+              28.799999237060547
+            ],
+            "font_names": [
+              "NimbusSans-Regular"
+            ],
+            "full_size_pdf_pt": 28.799999237060547,
+            "full_size_native_px": 39.99999894036187,
+            "span_sizes_native_px": [
+              39.99999894036187
+            ]
+          },
+          "kegg_x": {
+            "text": "NES",
+            "bbox_pdf_pt": [
+              397.3584289550781,
+              692.5773315429688,
+              456.57122802734375,
+              721.3773193359375
+            ],
+            "span_sizes_pdf_pt": [
+              28.799999237060547
+            ],
+            "font_names": [
+              "NimbusSans-Regular"
+            ],
+            "full_size_pdf_pt": 28.799999237060547,
+            "full_size_native_px": 39.99999894036187,
+            "span_sizes_native_px": [
+              39.99999894036187
+            ]
+          },
+          "go_bp_x": {
+            "text": "NES",
+            "bbox_pdf_pt": [
+              960.3984375,
+              692.5773315429688,
+              1019.6112060546875,
+              721.3773193359375
+            ],
+            "span_sizes_pdf_pt": [
+              28.799999237060547
+            ],
+            "font_names": [
+              "NimbusSans-Regular"
+            ],
+            "full_size_pdf_pt": 28.799999237060547,
+            "full_size_native_px": 39.99999894036187,
+            "span_sizes_native_px": [
+              39.99999894036187
+            ]
+          }
+        },
+        "numeric_ticks": {
+          "volcano_x": [
+            {
+              "text": "\u22124",
+              "bbox_pdf_pt": [
+                119.34718322753906,
+                294.56072998046875,
+                145.61279296875,
+                317.6007385253906
+              ],
+              "span_sizes_pdf_pt": [
+                23.040000915527344
+              ],
+              "font_names": [
+                "NimbusSans-Regular"
+              ],
+              "full_size_pdf_pt": 23.040000915527344,
+              "full_size_native_px": 32.00000127156576,
+              "span_sizes_native_px": [
+                32.00000127156576
+              ]
+            },
+            {
+              "text": "\u22122",
+              "bbox_pdf_pt": [
+                197.10719299316406,
+                294.56072998046875,
+                223.372802734375,
+                317.6007385253906
+              ],
+              "span_sizes_pdf_pt": [
+                23.040000915527344
+              ],
+              "font_names": [
+                "NimbusSans-Regular"
+              ],
+              "full_size_pdf_pt": 23.040000915527344,
+              "full_size_native_px": 32.00000127156576,
+              "span_sizes_native_px": [
+                32.00000127156576
+              ]
+            },
+            {
+              "text": "0",
+              "bbox_pdf_pt": [
+                281.59375,
+                294.56072998046875,
+                294.40399169921875,
+                317.6007385253906
+              ],
+              "span_sizes_pdf_pt": [
+                23.040000915527344
+              ],
+              "font_names": [
+                "NimbusSans-Regular"
+              ],
+              "full_size_pdf_pt": 23.040000915527344,
+              "full_size_native_px": 32.00000127156576,
+              "span_sizes_native_px": [
+                32.00000127156576
+              ]
+            },
+            {
+              "text": "2",
+              "bbox_pdf_pt": [
+                359.353759765625,
+                294.56072998046875,
+                372.16400146484375,
+                317.6007385253906
+              ],
+              "span_sizes_pdf_pt": [
+                23.040000915527344
+              ],
+              "font_names": [
+                "NimbusSans-Regular"
+              ],
+              "full_size_pdf_pt": 23.040000915527344,
+              "full_size_native_px": 32.00000127156576,
+              "span_sizes_native_px": [
+                32.00000127156576
+              ]
+            },
+            {
+              "text": "4",
+              "bbox_pdf_pt": [
+                437.1137390136719,
+                294.56072998046875,
+                449.9239807128906,
+                317.6007385253906
+              ],
+              "span_sizes_pdf_pt": [
+                23.040000915527344
+              ],
+              "font_names": [
+                "NimbusSans-Regular"
+              ],
+              "full_size_pdf_pt": 23.040000915527344,
+              "full_size_native_px": 32.00000127156576,
+              "span_sizes_native_px": [
+                32.00000127156576
+              ]
+            }
+          ],
+          "volcano_y": [
+            {
+              "text": "0",
+              "bbox_pdf_pt": [
+                72.7874984741211,
+                276.390869140625,
+                85.59774017333984,
+                299.4308776855469
+              ],
+              "span_sizes_pdf_pt": [
+                23.040000915527344
+              ],
+              "font_names": [
+                "NimbusSans-Regular"
+              ],
+              "full_size_pdf_pt": 23.040000915527344,
+              "full_size_native_px": 32.00000127156576,
+              "span_sizes_native_px": [
+                32.00000127156576
+              ]
+            },
+            {
+              "text": "2",
+              "bbox_pdf_pt": [
+                72.7874984741211,
+                232.1051788330078,
+                85.59774017333984,
+                255.14517211914062
+              ],
+              "span_sizes_pdf_pt": [
+                23.040000915527344
+              ],
+              "font_names": [
+                "NimbusSans-Regular"
+              ],
+              "full_size_pdf_pt": 23.040000915527344,
+              "full_size_native_px": 32.00000127156576,
+              "span_sizes_native_px": [
+                32.00000127156576
+              ]
+            },
+            {
+              "text": "4",
+              "bbox_pdf_pt": [
+                72.7874984741211,
+                187.81944274902344,
+                85.59774017333984,
+                210.85943603515625
+              ],
+              "span_sizes_pdf_pt": [
+                23.040000915527344
+              ],
+              "font_names": [
+                "NimbusSans-Regular"
+              ],
+              "full_size_pdf_pt": 23.040000915527344,
+              "full_size_native_px": 32.00000127156576,
+              "span_sizes_native_px": [
+                32.00000127156576
+              ]
+            },
+            {
+              "text": "6",
+              "bbox_pdf_pt": [
+                72.7874984741211,
+                143.5337371826172,
+                85.59774017333984,
+                166.57373046875
+              ],
+              "span_sizes_pdf_pt": [
+                23.040000915527344
+              ],
+              "font_names": [
+                "NimbusSans-Regular"
+              ],
+              "full_size_pdf_pt": 23.040000915527344,
+              "full_size_native_px": 32.00000127156576,
+              "span_sizes_native_px": [
+                32.00000127156576
+              ]
+            },
+            {
+              "text": "8",
+              "bbox_pdf_pt": [
+                72.7874984741211,
+                99.24803161621094,
+                85.59774017333984,
+                122.28803253173828
+              ],
+              "span_sizes_pdf_pt": [
+                23.040000915527344
+              ],
+              "font_names": [
+                "NimbusSans-Regular"
+              ],
+              "full_size_pdf_pt": 23.040000915527344,
+              "full_size_native_px": 32.00000127156576,
+              "span_sizes_native_px": [
+                32.00000127156576
+              ]
+            },
+            {
+              "text": "10",
+              "bbox_pdf_pt": [
+                59.974998474121094,
+                54.96232604980469,
+                85.5954818725586,
+                78.00232696533203
+              ],
+              "span_sizes_pdf_pt": [
+                23.040000915527344
+              ],
+              "font_names": [
+                "NimbusSans-Regular"
+              ],
+              "full_size_pdf_pt": 23.040000915527344,
+              "full_size_native_px": 32.00000127156576,
+              "span_sizes_native_px": [
+                32.00000127156576
+              ]
+            }
+          ],
+          "heatmap_colorbar": [
+            {
+              "text": "\u22122",
+              "bbox_pdf_pt": [
+                1024.800048828125,
+                240.00230407714844,
+                1051.065673828125,
+                263.04229736328125
+              ],
+              "span_sizes_pdf_pt": [
+                23.040000915527344
+              ],
+              "font_names": [
+                "NimbusSans-Regular"
+              ],
+              "full_size_pdf_pt": 23.040000915527344,
+              "full_size_native_px": 32.00000127156576,
+              "span_sizes_native_px": [
+                32.00000127156576
+              ]
+            },
+            {
+              "text": "0",
+              "bbox_pdf_pt": [
+                1024.800048828125,
+                182.40232849121094,
+                1037.6103515625,
+                205.44232177734375
+              ],
+              "span_sizes_pdf_pt": [
+                23.040000915527344
+              ],
+              "font_names": [
+                "NimbusSans-Regular"
+              ],
+              "full_size_pdf_pt": 23.040000915527344,
+              "full_size_native_px": 32.00000127156576,
+              "span_sizes_native_px": [
+                32.00000127156576
+              ]
+            },
+            {
+              "text": "2",
+              "bbox_pdf_pt": [
+                1024.800048828125,
+                124.80229187011719,
+                1037.6103515625,
+                147.84228515625
+              ],
+              "span_sizes_pdf_pt": [
+                23.040000915527344
+              ],
+              "font_names": [
+                "NimbusSans-Regular"
+              ],
+              "full_size_pdf_pt": 23.040000915527344,
+              "full_size_native_px": 32.00000127156576,
+              "span_sizes_native_px": [
+                32.00000127156576
+              ]
+            }
+          ],
+          "kegg_x": [
+            {
+              "text": "\u22122",
+              "bbox_pdf_pt": [
+                372.2887268066406,
+                661.7607421875,
+                398.5543212890625,
+                684.8007202148438
+              ],
+              "span_sizes_pdf_pt": [
+                23.040000915527344
+              ],
+              "font_names": [
+                "NimbusSans-Regular"
+              ],
+              "full_size_pdf_pt": 23.040000915527344,
+              "full_size_native_px": 32.00000127156576,
+              "span_sizes_native_px": [
+                32.00000127156576
+              ]
+            },
+            {
+              "text": "0",
+              "bbox_pdf_pt": [
+                420.5537414550781,
+                661.7607421875,
+                433.3639831542969,
+                684.8007202148438
+              ],
+              "span_sizes_pdf_pt": [
+                23.040000915527344
+              ],
+              "font_names": [
+                "NimbusSans-Regular"
+              ],
+              "full_size_pdf_pt": 23.040000915527344,
+              "full_size_native_px": 32.00000127156576,
+              "span_sizes_native_px": [
+                32.00000127156576
+              ]
+            },
+            {
+              "text": "2",
+              "bbox_pdf_pt": [
+                462.09222412109375,
+                661.7607421875,
+                474.9024658203125,
+                684.8007202148438
+              ],
+              "span_sizes_pdf_pt": [
+                23.040000915527344
+              ],
+              "font_names": [
+                "NimbusSans-Regular"
+              ],
+              "full_size_pdf_pt": 23.040000915527344,
+              "full_size_native_px": 32.00000127156576,
+              "span_sizes_native_px": [
+                32.00000127156576
+              ]
+            }
+          ],
+          "go_bp_x": [
+            {
+              "text": "\u22122",
+              "bbox_pdf_pt": [
+                935.3287353515625,
+                661.7607421875,
+                961.5943603515625,
+                684.8007202148438
+              ],
+              "span_sizes_pdf_pt": [
+                23.040000915527344
+              ],
+              "font_names": [
+                "NimbusSans-Regular"
+              ],
+              "full_size_pdf_pt": 23.040000915527344,
+              "full_size_native_px": 32.00000127156576,
+              "span_sizes_native_px": [
+                32.00000127156576
+              ]
+            },
+            {
+              "text": "0",
+              "bbox_pdf_pt": [
+                983.59375,
+                661.7607421875,
+                996.4039916992188,
+                684.8007202148438
+              ],
+              "span_sizes_pdf_pt": [
+                23.040000915527344
+              ],
+              "font_names": [
+                "NimbusSans-Regular"
+              ],
+              "full_size_pdf_pt": 23.040000915527344,
+              "full_size_native_px": 32.00000127156576,
+              "span_sizes_native_px": [
+                32.00000127156576
+              ]
+            },
+            {
+              "text": "2",
+              "bbox_pdf_pt": [
+                1025.1322021484375,
+                661.7607421875,
+                1037.9423828125,
+                684.8007202148438
+              ],
+              "span_sizes_pdf_pt": [
+                23.040000915527344
+              ],
+              "font_names": [
+                "NimbusSans-Regular"
+              ],
+              "full_size_pdf_pt": 23.040000915527344,
+              "full_size_native_px": 32.00000127156576,
+              "span_sizes_native_px": [
+                32.00000127156576
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "figure": 2,
+      "previous": {
+        "pdf_sha256": "db639a98cafe20ffcb86e82ef9bb159433131fc52f7fc6df56fe3353a809a905",
+        "canvas_native_pixels": [
+          1536,
+          1024
+        ],
+        "axis_titles": {
+          "volcano_x": {
+            "text": "log2 fold change",
+            "bbox_pdf_pt": [
+              205.8000030517578,
+              319.7872314453125,
+              355.2241516113281,
+              342.09521484375
+            ],
+            "span_sizes_pdf_pt": [
+              20.736000061035156,
+              14.515199661254883,
+              20.736000061035156
+            ],
+            "font_names": [
+              "NimbusSans-Regular"
+            ],
+            "full_size_pdf_pt": 20.736000061035156,
+            "full_size_native_px": 28.80000008477105,
+            "span_sizes_native_px": [
+              28.80000008477105,
+              20.159999529520668,
+              28.80000008477105
+            ]
+          },
+          "volcano_y": {
+            "text": "\u2212log10(adjusted P)",
+            "bbox_pdf_pt": [
+              22.005332946777344,
+              91.03941345214844,
+              44.31330871582031,
+              259.46002197265625
+            ],
+            "span_sizes_pdf_pt": [
+              20.736000061035156,
+              14.515199661254883,
+              20.736000061035156
+            ],
+            "font_names": [
+              "NimbusSans-Regular"
+            ],
+            "full_size_pdf_pt": 20.736000061035156,
+            "full_size_native_px": 28.80000008477105,
+            "span_sizes_native_px": [
+              28.80000008477105,
+              20.159999529520668,
+              28.80000008477105
+            ]
+          },
+          "heatmap_y": {
+            "text": "Genes",
+            "bbox_pdf_pt": [
+              636.52783203125,
+              160.2586669921875,
+              657.2637939453125,
+              221.346923828125
+            ],
+            "span_sizes_pdf_pt": [
+              20.736000061035156
+            ],
+            "font_names": [
+              "NimbusSans-Regular"
+            ],
+            "full_size_pdf_pt": 20.736000061035156,
+            "full_size_native_px": 28.80000008477105,
+            "span_sizes_native_px": [
+              28.80000008477105
+            ]
+          },
+          "heatmap_colorbar": {
+            "text": "z-score",
+            "bbox_pdf_pt": [
+              1052.4803466796875,
+              156.8274383544922,
+              1073.2164306640625,
+              224.800048828125
+            ],
+            "span_sizes_pdf_pt": [
+              20.736000061035156
+            ],
+            "font_names": [
+              "NimbusSans-Regular"
+            ],
+            "full_size_pdf_pt": 20.736000061035156,
+            "full_size_native_px": 28.80000008477105,
+            "span_sizes_native_px": [
+              28.80000008477105
+            ]
+          },
+          "kegg_x": {
+            "text": "NES",
+            "bbox_pdf_pt": [
+              405.6474914550781,
+              687.9247436523438,
+              448.28070068359375,
+              708.6607055664062
+            ],
+            "span_sizes_pdf_pt": [
+              20.736000061035156
+            ],
+            "font_names": [
+              "NimbusSans-Regular"
+            ],
+            "full_size_pdf_pt": 20.736000061035156,
+            "full_size_native_px": 28.80000008477105,
+            "span_sizes_native_px": [
+              28.80000008477105
+            ]
+          },
+          "go_bp_x": {
+            "text": "NES",
+            "bbox_pdf_pt": [
+              968.6875,
+              687.9247436523438,
+              1011.3207397460938,
+              708.6607055664062
+            ],
+            "span_sizes_pdf_pt": [
+              20.736000061035156
+            ],
+            "font_names": [
+              "NimbusSans-Regular"
+            ],
+            "full_size_pdf_pt": 20.736000061035156,
+            "full_size_native_px": 28.80000008477105,
+            "span_sizes_native_px": [
+              28.80000008477105
+            ]
+          }
+        },
+        "numeric_ticks": {
+          "volcano_x": [
+            {
+              "text": "\u22124",
+              "bbox_pdf_pt": [
+                109.1762466430664,
+                294.55181884765625,
+                129.8603973388672,
+                312.69580078125
+              ],
+              "span_sizes_pdf_pt": [
+                18.143999099731445
+              ],
+              "font_names": [
+                "NimbusSans-Regular"
+              ],
+              "full_size_pdf_pt": 18.143999099731445,
+              "full_size_native_px": 25.199998749627007,
+              "span_sizes_native_px": [
+                25.199998749627007
+              ]
+            },
+            {
+              "text": "\u22122",
+              "bbox_pdf_pt": [
+                189.81625366210938,
+                294.55181884765625,
+                210.5004119873047,
+                312.69580078125
+              ],
+              "span_sizes_pdf_pt": [
+                18.143999099731445
+              ],
+              "font_names": [
+                "NimbusSans-Regular"
+              ],
+              "full_size_pdf_pt": 18.143999099731445,
+              "full_size_native_px": 25.199998749627007,
+              "span_sizes_native_px": [
+                25.199998749627007
+              ]
+            },
+            {
+              "text": "0",
+              "bbox_pdf_pt": [
+                275.75311279296875,
+                294.55181884765625,
+                285.8411865234375,
+                312.69580078125
+              ],
+              "span_sizes_pdf_pt": [
+                18.143999099731445
+              ],
+              "font_names": [
+                "NimbusSans-Regular"
+              ],
+              "full_size_pdf_pt": 18.143999099731445,
+              "full_size_native_px": 25.199998749627007,
+              "span_sizes_native_px": [
+                25.199998749627007
+              ]
+            },
+            {
+              "text": "2",
+              "bbox_pdf_pt": [
+                356.39312744140625,
+                294.55181884765625,
+                366.481201171875,
+                312.69580078125
+              ],
+              "span_sizes_pdf_pt": [
+                18.143999099731445
+              ],
+              "font_names": [
+                "NimbusSans-Regular"
+              ],
+              "full_size_pdf_pt": 18.143999099731445,
+              "full_size_native_px": 25.199998749627007,
+              "span_sizes_native_px": [
+                25.199998749627007
+              ]
+            },
+            {
+              "text": "4",
+              "bbox_pdf_pt": [
+                437.0331115722656,
+                294.55181884765625,
+                447.1211853027344,
+                312.69580078125
+              ],
+              "span_sizes_pdf_pt": [
+                18.143999099731445
+              ],
+              "font_names": [
+                "NimbusSans-Regular"
+              ],
+              "full_size_pdf_pt": 18.143999099731445,
+              "full_size_native_px": 25.199998749627007,
+              "span_sizes_native_px": [
+                25.199998749627007
+              ]
+            }
+          ],
+          "volcano_y": [
+            {
+              "text": "0",
+              "bbox_pdf_pt": [
+                61.10625076293945,
+                278.1710205078125,
+                71.1943130493164,
+                296.31500244140625
+              ],
+              "span_sizes_pdf_pt": [
+                18.143999099731445
+              ],
+              "font_names": [
+                "NimbusSans-Regular"
+              ],
+              "full_size_pdf_pt": 18.143999099731445,
+              "full_size_native_px": 25.199998749627007,
+              "span_sizes_native_px": [
+                25.199998749627007
+              ]
+            },
+            {
+              "text": "2",
+              "bbox_pdf_pt": [
+                61.10625076293945,
+                233.8852996826172,
+                71.1943130493164,
+                252.029296875
+              ],
+              "span_sizes_pdf_pt": [
+                18.143999099731445
+              ],
+              "font_names": [
+                "NimbusSans-Regular"
+              ],
+              "full_size_pdf_pt": 18.143999099731445,
+              "full_size_native_px": 25.199998749627007,
+              "span_sizes_native_px": [
+                25.199998749627007
+              ]
+            },
+            {
+              "text": "4",
+              "bbox_pdf_pt": [
+                61.10625076293945,
+                189.5995635986328,
+                71.1943130493164,
+                207.74356079101562
+              ],
+              "span_sizes_pdf_pt": [
+                18.143999099731445
+              ],
+              "font_names": [
+                "NimbusSans-Regular"
+              ],
+              "full_size_pdf_pt": 18.143999099731445,
+              "full_size_native_px": 25.199998749627007,
+              "span_sizes_native_px": [
+                25.199998749627007
+              ]
+            },
+            {
+              "text": "6",
+              "bbox_pdf_pt": [
+                61.10625076293945,
+                145.31385803222656,
+                71.1943130493164,
+                163.45785522460938
+              ],
+              "span_sizes_pdf_pt": [
+                18.143999099731445
+              ],
+              "font_names": [
+                "NimbusSans-Regular"
+              ],
+              "full_size_pdf_pt": 18.143999099731445,
+              "full_size_native_px": 25.199998749627007,
+              "span_sizes_native_px": [
+                25.199998749627007
+              ]
+            },
+            {
+              "text": "8",
+              "bbox_pdf_pt": [
+                61.10625076293945,
+                101.02815246582031,
+                71.1943130493164,
+                119.17214965820312
+              ],
+              "span_sizes_pdf_pt": [
+                18.143999099731445
+              ],
+              "font_names": [
+                "NimbusSans-Regular"
+              ],
+              "full_size_pdf_pt": 18.143999099731445,
+              "full_size_native_px": 25.199998749627007,
+              "span_sizes_native_px": [
+                25.199998749627007
+              ]
+            },
+            {
+              "text": "10",
+              "bbox_pdf_pt": [
+                51.01250076293945,
+                56.74244689941406,
+                71.18862915039062,
+                74.88644409179688
+              ],
+              "span_sizes_pdf_pt": [
+                18.143999099731445
+              ],
+              "font_names": [
+                "NimbusSans-Regular"
+              ],
+              "full_size_pdf_pt": 18.143999099731445,
+              "full_size_native_px": 25.199998749627007,
+              "span_sizes_native_px": [
+                25.199998749627007
+              ]
+            }
+          ],
+          "heatmap_colorbar": [
+            {
+              "text": "\u22122",
+              "bbox_pdf_pt": [
+                1024.800048828125,
+                241.7824249267578,
+                1045.484130859375,
+                259.9264221191406
+              ],
+              "span_sizes_pdf_pt": [
+                18.143999099731445
+              ],
+              "font_names": [
+                "NimbusSans-Regular"
+              ],
+              "full_size_pdf_pt": 18.143999099731445,
+              "full_size_native_px": 25.199998749627007,
+              "span_sizes_native_px": [
+                25.199998749627007
+              ]
+            },
+            {
+              "text": "0",
+              "bbox_pdf_pt": [
+                1024.800048828125,
+                184.1824493408203,
+                1034.8880615234375,
+                202.32644653320312
+              ],
+              "span_sizes_pdf_pt": [
+                18.143999099731445
+              ],
+              "font_names": [
+                "NimbusSans-Regular"
+              ],
+              "full_size_pdf_pt": 18.143999099731445,
+              "full_size_native_px": 25.199998749627007,
+              "span_sizes_native_px": [
+                25.199998749627007
+              ]
+            },
+            {
+              "text": "2",
+              "bbox_pdf_pt": [
+                1024.800048828125,
+                126.58241271972656,
+                1034.8880615234375,
+                144.72640991210938
+              ],
+              "span_sizes_pdf_pt": [
+                18.143999099731445
+              ],
+              "font_names": [
+                "NimbusSans-Regular"
+              ],
+              "full_size_pdf_pt": 18.143999099731445,
+              "full_size_native_px": 25.199998749627007,
+              "span_sizes_native_px": [
+                25.199998749627007
+              ]
+            }
+          ],
+          "kegg_x": [
+            {
+              "text": "\u22122",
+              "bbox_pdf_pt": [
+                375.0777893066406,
+                661.7517700195312,
+                395.761962890625,
+                679.8958129882812
+              ],
+              "span_sizes_pdf_pt": [
+                18.143999099731445
+              ],
+              "font_names": [
+                "NimbusSans-Regular"
+              ],
+              "full_size_pdf_pt": 18.143999099731445,
+              "full_size_native_px": 25.199998749627007,
+              "span_sizes_native_px": [
+                25.199998749627007
+              ]
+            },
+            {
+              "text": "0",
+              "bbox_pdf_pt": [
+                421.9131164550781,
+                661.7517700195312,
+                432.0011901855469,
+                679.8958129882812
+              ],
+              "span_sizes_pdf_pt": [
+                18.143999099731445
+              ],
+              "font_names": [
+                "NimbusSans-Regular"
+              ],
+              "full_size_pdf_pt": 18.143999099731445,
+              "full_size_native_px": 25.199998749627007,
+              "span_sizes_native_px": [
+                25.199998749627007
+              ]
+            },
+            {
+              "text": "2",
+              "bbox_pdf_pt": [
+                463.45159912109375,
+                661.7517700195312,
+                473.5396728515625,
+                679.8958129882812
+              ],
+              "span_sizes_pdf_pt": [
+                18.143999099731445
+              ],
+              "font_names": [
+                "NimbusSans-Regular"
+              ],
+              "full_size_pdf_pt": 18.143999099731445,
+              "full_size_native_px": 25.199998749627007,
+              "span_sizes_native_px": [
+                25.199998749627007
+              ]
+            }
+          ],
+          "go_bp_x": [
+            {
+              "text": "\u22122",
+              "bbox_pdf_pt": [
+                938.1177978515625,
+                661.7517700195312,
+                958.8019409179688,
+                679.8958129882812
+              ],
+              "span_sizes_pdf_pt": [
+                18.143999099731445
+              ],
+              "font_names": [
+                "NimbusSans-Regular"
+              ],
+              "full_size_pdf_pt": 18.143999099731445,
+              "full_size_native_px": 25.199998749627007,
+              "span_sizes_native_px": [
+                25.199998749627007
+              ]
+            },
+            {
+              "text": "0",
+              "bbox_pdf_pt": [
+                984.953125,
+                661.7517700195312,
+                995.0411987304688,
+                679.8958129882812
+              ],
+              "span_sizes_pdf_pt": [
+                18.143999099731445
+              ],
+              "font_names": [
+                "NimbusSans-Regular"
+              ],
+              "full_size_pdf_pt": 18.143999099731445,
+              "full_size_native_px": 25.199998749627007,
+              "span_sizes_native_px": [
+                25.199998749627007
+              ]
+            },
+            {
+              "text": "2",
+              "bbox_pdf_pt": [
+                1026.4915771484375,
+                661.7517700195312,
+                1036.57958984375,
+                679.8958129882812
+              ],
+              "span_sizes_pdf_pt": [
+                18.143999099731445
+              ],
+              "font_names": [
+                "NimbusSans-Regular"
+              ],
+              "full_size_pdf_pt": 18.143999099731445,
+              "full_size_native_px": 25.199998749627007,
+              "span_sizes_native_px": [
+                25.199998749627007
+              ]
+            }
+          ]
+        }
+      },
+      "current": {
+        "pdf_sha256": "012daf845403fed3ed53bb62772558b46959c23285fa758050875706dcc1ec0b",
+        "canvas_native_pixels": [
+          1536,
+          1024
+        ],
+        "axis_titles": {
+          "volcano_x": {
+            "text": "log2 fold change",
+            "bbox_pdf_pt": [
+              184.0,
+              324.4554443359375,
+              391.5286560058594,
+              355.442138671875
+            ],
+            "span_sizes_pdf_pt": [
+              28.799999237060547,
+              20.15999984741211,
+              28.799999237060547
+            ],
+            "font_names": [
+              "NimbusSans-Regular"
+            ],
+            "full_size_pdf_pt": 28.799999237060547,
+            "full_size_native_px": 39.99999894036187,
+            "span_sizes_native_px": [
+              39.99999894036187,
+              27.999999788072373,
+              39.99999894036187
+            ]
+          },
+          "volcano_y": {
+            "text": "\u2212log10(adjusted P)",
+            "bbox_pdf_pt": [
+              23.979799270629883,
+              58.04833221435547,
+              54.96648406982422,
+              291.96002197265625
+            ],
+            "span_sizes_pdf_pt": [
+              28.799999237060547,
+              20.15999984741211,
+              28.799999237060547
+            ],
+            "font_names": [
+              "NimbusSans-Regular"
+            ],
+            "full_size_pdf_pt": 28.799999237060547,
+            "full_size_native_px": 39.99999894036187,
+            "span_sizes_native_px": [
+              39.99999894036187,
+              27.999999788072373,
+              39.99999894036187
+            ]
+          },
+          "heatmap_y": {
+            "text": "Genes",
+            "bbox_pdf_pt": [
+              628.883544921875,
+              148.38491821289062,
+              657.6835327148438,
+              233.22970581054688
+            ],
+            "span_sizes_pdf_pt": [
+              28.799999237060547
+            ],
+            "font_names": [
+              "NimbusSans-Regular"
+            ],
+            "full_size_pdf_pt": 28.799999237060547,
+            "full_size_native_px": 39.99999894036187,
+            "span_sizes_native_px": [
+              39.99999894036187
+            ]
+          },
+          "heatmap_colorbar": {
+            "text": "z-score",
+            "bbox_pdf_pt": [
+              1058.0704345703125,
+              143.61236572265625,
+              1086.8704833984375,
+              238.01876831054688
+            ],
+            "span_sizes_pdf_pt": [
+              28.799999237060547
+            ],
+            "font_names": [
+              "NimbusSans-Regular"
+            ],
+            "full_size_pdf_pt": 28.799999237060547,
+            "full_size_native_px": 39.99999894036187,
+            "span_sizes_native_px": [
+              39.99999894036187
+            ]
+          },
+          "kegg_x": {
+            "text": "NES",
+            "bbox_pdf_pt": [
+              397.3584289550781,
+              692.5773315429688,
+              456.57122802734375,
+              721.3773193359375
+            ],
+            "span_sizes_pdf_pt": [
+              28.799999237060547
+            ],
+            "font_names": [
+              "NimbusSans-Regular"
+            ],
+            "full_size_pdf_pt": 28.799999237060547,
+            "full_size_native_px": 39.99999894036187,
+            "span_sizes_native_px": [
+              39.99999894036187
+            ]
+          },
+          "go_bp_x": {
+            "text": "NES",
+            "bbox_pdf_pt": [
+              960.3984375,
+              692.5773315429688,
+              1019.6112060546875,
+              721.3773193359375
+            ],
+            "span_sizes_pdf_pt": [
+              28.799999237060547
+            ],
+            "font_names": [
+              "NimbusSans-Regular"
+            ],
+            "full_size_pdf_pt": 28.799999237060547,
+            "full_size_native_px": 39.99999894036187,
+            "span_sizes_native_px": [
+              39.99999894036187
+            ]
+          }
+        },
+        "numeric_ticks": {
+          "volcano_x": [
+            {
+              "text": "\u22124",
+              "bbox_pdf_pt": [
+                119.34718322753906,
+                294.56072998046875,
+                145.61279296875,
+                317.6007385253906
+              ],
+              "span_sizes_pdf_pt": [
+                23.040000915527344
+              ],
+              "font_names": [
+                "NimbusSans-Regular"
+              ],
+              "full_size_pdf_pt": 23.040000915527344,
+              "full_size_native_px": 32.00000127156576,
+              "span_sizes_native_px": [
+                32.00000127156576
+              ]
+            },
+            {
+              "text": "\u22122",
+              "bbox_pdf_pt": [
+                197.10719299316406,
+                294.56072998046875,
+                223.372802734375,
+                317.6007385253906
+              ],
+              "span_sizes_pdf_pt": [
+                23.040000915527344
+              ],
+              "font_names": [
+                "NimbusSans-Regular"
+              ],
+              "full_size_pdf_pt": 23.040000915527344,
+              "full_size_native_px": 32.00000127156576,
+              "span_sizes_native_px": [
+                32.00000127156576
+              ]
+            },
+            {
+              "text": "0",
+              "bbox_pdf_pt": [
+                281.59375,
+                294.56072998046875,
+                294.40399169921875,
+                317.6007385253906
+              ],
+              "span_sizes_pdf_pt": [
+                23.040000915527344
+              ],
+              "font_names": [
+                "NimbusSans-Regular"
+              ],
+              "full_size_pdf_pt": 23.040000915527344,
+              "full_size_native_px": 32.00000127156576,
+              "span_sizes_native_px": [
+                32.00000127156576
+              ]
+            },
+            {
+              "text": "2",
+              "bbox_pdf_pt": [
+                359.353759765625,
+                294.56072998046875,
+                372.16400146484375,
+                317.6007385253906
+              ],
+              "span_sizes_pdf_pt": [
+                23.040000915527344
+              ],
+              "font_names": [
+                "NimbusSans-Regular"
+              ],
+              "full_size_pdf_pt": 23.040000915527344,
+              "full_size_native_px": 32.00000127156576,
+              "span_sizes_native_px": [
+                32.00000127156576
+              ]
+            },
+            {
+              "text": "4",
+              "bbox_pdf_pt": [
+                437.1137390136719,
+                294.56072998046875,
+                449.9239807128906,
+                317.6007385253906
+              ],
+              "span_sizes_pdf_pt": [
+                23.040000915527344
+              ],
+              "font_names": [
+                "NimbusSans-Regular"
+              ],
+              "full_size_pdf_pt": 23.040000915527344,
+              "full_size_native_px": 32.00000127156576,
+              "span_sizes_native_px": [
+                32.00000127156576
+              ]
+            }
+          ],
+          "volcano_y": [
+            {
+              "text": "0",
+              "bbox_pdf_pt": [
+                72.7874984741211,
+                276.390869140625,
+                85.59774017333984,
+                299.4308776855469
+              ],
+              "span_sizes_pdf_pt": [
+                23.040000915527344
+              ],
+              "font_names": [
+                "NimbusSans-Regular"
+              ],
+              "full_size_pdf_pt": 23.040000915527344,
+              "full_size_native_px": 32.00000127156576,
+              "span_sizes_native_px": [
+                32.00000127156576
+              ]
+            },
+            {
+              "text": "2",
+              "bbox_pdf_pt": [
+                72.7874984741211,
+                232.1051788330078,
+                85.59774017333984,
+                255.14517211914062
+              ],
+              "span_sizes_pdf_pt": [
+                23.040000915527344
+              ],
+              "font_names": [
+                "NimbusSans-Regular"
+              ],
+              "full_size_pdf_pt": 23.040000915527344,
+              "full_size_native_px": 32.00000127156576,
+              "span_sizes_native_px": [
+                32.00000127156576
+              ]
+            },
+            {
+              "text": "4",
+              "bbox_pdf_pt": [
+                72.7874984741211,
+                187.81944274902344,
+                85.59774017333984,
+                210.85943603515625
+              ],
+              "span_sizes_pdf_pt": [
+                23.040000915527344
+              ],
+              "font_names": [
+                "NimbusSans-Regular"
+              ],
+              "full_size_pdf_pt": 23.040000915527344,
+              "full_size_native_px": 32.00000127156576,
+              "span_sizes_native_px": [
+                32.00000127156576
+              ]
+            },
+            {
+              "text": "6",
+              "bbox_pdf_pt": [
+                72.7874984741211,
+                143.5337371826172,
+                85.59774017333984,
+                166.57373046875
+              ],
+              "span_sizes_pdf_pt": [
+                23.040000915527344
+              ],
+              "font_names": [
+                "NimbusSans-Regular"
+              ],
+              "full_size_pdf_pt": 23.040000915527344,
+              "full_size_native_px": 32.00000127156576,
+              "span_sizes_native_px": [
+                32.00000127156576
+              ]
+            },
+            {
+              "text": "8",
+              "bbox_pdf_pt": [
+                72.7874984741211,
+                99.24803161621094,
+                85.59774017333984,
+                122.28803253173828
+              ],
+              "span_sizes_pdf_pt": [
+                23.040000915527344
+              ],
+              "font_names": [
+                "NimbusSans-Regular"
+              ],
+              "full_size_pdf_pt": 23.040000915527344,
+              "full_size_native_px": 32.00000127156576,
+              "span_sizes_native_px": [
+                32.00000127156576
+              ]
+            },
+            {
+              "text": "10",
+              "bbox_pdf_pt": [
+                59.974998474121094,
+                54.96232604980469,
+                85.5954818725586,
+                78.00232696533203
+              ],
+              "span_sizes_pdf_pt": [
+                23.040000915527344
+              ],
+              "font_names": [
+                "NimbusSans-Regular"
+              ],
+              "full_size_pdf_pt": 23.040000915527344,
+              "full_size_native_px": 32.00000127156576,
+              "span_sizes_native_px": [
+                32.00000127156576
+              ]
+            }
+          ],
+          "heatmap_colorbar": [
+            {
+              "text": "\u22122",
+              "bbox_pdf_pt": [
+                1024.800048828125,
+                240.00230407714844,
+                1051.065673828125,
+                263.04229736328125
+              ],
+              "span_sizes_pdf_pt": [
+                23.040000915527344
+              ],
+              "font_names": [
+                "NimbusSans-Regular"
+              ],
+              "full_size_pdf_pt": 23.040000915527344,
+              "full_size_native_px": 32.00000127156576,
+              "span_sizes_native_px": [
+                32.00000127156576
+              ]
+            },
+            {
+              "text": "0",
+              "bbox_pdf_pt": [
+                1024.800048828125,
+                182.40232849121094,
+                1037.6103515625,
+                205.44232177734375
+              ],
+              "span_sizes_pdf_pt": [
+                23.040000915527344
+              ],
+              "font_names": [
+                "NimbusSans-Regular"
+              ],
+              "full_size_pdf_pt": 23.040000915527344,
+              "full_size_native_px": 32.00000127156576,
+              "span_sizes_native_px": [
+                32.00000127156576
+              ]
+            },
+            {
+              "text": "2",
+              "bbox_pdf_pt": [
+                1024.800048828125,
+                124.80229187011719,
+                1037.6103515625,
+                147.84228515625
+              ],
+              "span_sizes_pdf_pt": [
+                23.040000915527344
+              ],
+              "font_names": [
+                "NimbusSans-Regular"
+              ],
+              "full_size_pdf_pt": 23.040000915527344,
+              "full_size_native_px": 32.00000127156576,
+              "span_sizes_native_px": [
+                32.00000127156576
+              ]
+            }
+          ],
+          "kegg_x": [
+            {
+              "text": "\u22122",
+              "bbox_pdf_pt": [
+                372.2887268066406,
+                661.7607421875,
+                398.5543212890625,
+                684.8007202148438
+              ],
+              "span_sizes_pdf_pt": [
+                23.040000915527344
+              ],
+              "font_names": [
+                "NimbusSans-Regular"
+              ],
+              "full_size_pdf_pt": 23.040000915527344,
+              "full_size_native_px": 32.00000127156576,
+              "span_sizes_native_px": [
+                32.00000127156576
+              ]
+            },
+            {
+              "text": "0",
+              "bbox_pdf_pt": [
+                420.5537414550781,
+                661.7607421875,
+                433.3639831542969,
+                684.8007202148438
+              ],
+              "span_sizes_pdf_pt": [
+                23.040000915527344
+              ],
+              "font_names": [
+                "NimbusSans-Regular"
+              ],
+              "full_size_pdf_pt": 23.040000915527344,
+              "full_size_native_px": 32.00000127156576,
+              "span_sizes_native_px": [
+                32.00000127156576
+              ]
+            },
+            {
+              "text": "2",
+              "bbox_pdf_pt": [
+                462.09222412109375,
+                661.7607421875,
+                474.9024658203125,
+                684.8007202148438
+              ],
+              "span_sizes_pdf_pt": [
+                23.040000915527344
+              ],
+              "font_names": [
+                "NimbusSans-Regular"
+              ],
+              "full_size_pdf_pt": 23.040000915527344,
+              "full_size_native_px": 32.00000127156576,
+              "span_sizes_native_px": [
+                32.00000127156576
+              ]
+            }
+          ],
+          "go_bp_x": [
+            {
+              "text": "\u22122",
+              "bbox_pdf_pt": [
+                935.3287353515625,
+                661.7607421875,
+                961.5943603515625,
+                684.8007202148438
+              ],
+              "span_sizes_pdf_pt": [
+                23.040000915527344
+              ],
+              "font_names": [
+                "NimbusSans-Regular"
+              ],
+              "full_size_pdf_pt": 23.040000915527344,
+              "full_size_native_px": 32.00000127156576,
+              "span_sizes_native_px": [
+                32.00000127156576
+              ]
+            },
+            {
+              "text": "0",
+              "bbox_pdf_pt": [
+                983.59375,
+                661.7607421875,
+                996.4039916992188,
+                684.8007202148438
+              ],
+              "span_sizes_pdf_pt": [
+                23.040000915527344
+              ],
+              "font_names": [
+                "NimbusSans-Regular"
+              ],
+              "full_size_pdf_pt": 23.040000915527344,
+              "full_size_native_px": 32.00000127156576,
+              "span_sizes_native_px": [
+                32.00000127156576
+              ]
+            },
+            {
+              "text": "2",
+              "bbox_pdf_pt": [
+                1025.1322021484375,
+                661.7607421875,
+                1037.9423828125,
+                684.8007202148438
+              ],
+              "span_sizes_pdf_pt": [
+                23.040000915527344
+              ],
+              "font_names": [
+                "NimbusSans-Regular"
+              ],
+              "full_size_pdf_pt": 23.040000915527344,
+              "full_size_native_px": 32.00000127156576,
+              "span_sizes_native_px": [
+                32.00000127156576
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "figure": 3,
+      "previous": {
+        "pdf_sha256": "bfd96efe292618113ecbc0b272e39d5d649fa41de388fcb865f2094ef801641b",
+        "canvas_native_pixels": [
+          1536,
+          1024
+        ],
+        "axis_titles": {
+          "volcano_x": {
+            "text": "log2 fold change",
+            "bbox_pdf_pt": [
+              205.8000030517578,
+              319.7872314453125,
+              355.2241516113281,
+              342.09521484375
+            ],
+            "span_sizes_pdf_pt": [
+              20.736000061035156,
+              14.515199661254883,
+              20.736000061035156
+            ],
+            "font_names": [
+              "NimbusSans-Regular"
+            ],
+            "full_size_pdf_pt": 20.736000061035156,
+            "full_size_native_px": 28.80000008477105,
+            "span_sizes_native_px": [
+              28.80000008477105,
+              20.159999529520668,
+              28.80000008477105
+            ]
+          },
+          "volcano_y": {
+            "text": "\u2212log10(adjusted P)",
+            "bbox_pdf_pt": [
+              22.005332946777344,
+              91.03941345214844,
+              44.31330871582031,
+              259.46002197265625
+            ],
+            "span_sizes_pdf_pt": [
+              20.736000061035156,
+              14.515199661254883,
+              20.736000061035156
+            ],
+            "font_names": [
+              "NimbusSans-Regular"
+            ],
+            "full_size_pdf_pt": 20.736000061035156,
+            "full_size_native_px": 28.80000008477105,
+            "span_sizes_native_px": [
+              28.80000008477105,
+              20.159999529520668,
+              28.80000008477105
+            ]
+          },
+          "heatmap_y": {
+            "text": "Genes",
+            "bbox_pdf_pt": [
+              636.52783203125,
+              160.2586669921875,
+              657.2637939453125,
+              221.346923828125
+            ],
+            "span_sizes_pdf_pt": [
+              20.736000061035156
+            ],
+            "font_names": [
+              "NimbusSans-Regular"
+            ],
+            "full_size_pdf_pt": 20.736000061035156,
+            "full_size_native_px": 28.80000008477105,
+            "span_sizes_native_px": [
+              28.80000008477105
+            ]
+          },
+          "heatmap_colorbar": {
+            "text": "z-score",
+            "bbox_pdf_pt": [
+              1052.4803466796875,
+              156.8274383544922,
+              1073.2164306640625,
+              224.800048828125
+            ],
+            "span_sizes_pdf_pt": [
+              20.736000061035156
+            ],
+            "font_names": [
+              "NimbusSans-Regular"
+            ],
+            "full_size_pdf_pt": 20.736000061035156,
+            "full_size_native_px": 28.80000008477105,
+            "span_sizes_native_px": [
+              28.80000008477105
+            ]
+          },
+          "kegg_x": {
+            "text": "NES",
+            "bbox_pdf_pt": [
+              405.6474914550781,
+              687.9247436523438,
+              448.28070068359375,
+              708.6607055664062
+            ],
+            "span_sizes_pdf_pt": [
+              20.736000061035156
+            ],
+            "font_names": [
+              "NimbusSans-Regular"
+            ],
+            "full_size_pdf_pt": 20.736000061035156,
+            "full_size_native_px": 28.80000008477105,
+            "span_sizes_native_px": [
+              28.80000008477105
+            ]
+          },
+          "go_bp_x": {
+            "text": "NES",
+            "bbox_pdf_pt": [
+              968.6875,
+              687.9247436523438,
+              1011.3207397460938,
+              708.6607055664062
+            ],
+            "span_sizes_pdf_pt": [
+              20.736000061035156
+            ],
+            "font_names": [
+              "NimbusSans-Regular"
+            ],
+            "full_size_pdf_pt": 20.736000061035156,
+            "full_size_native_px": 28.80000008477105,
+            "span_sizes_native_px": [
+              28.80000008477105
+            ]
+          }
+        },
+        "numeric_ticks": {
+          "volcano_x": [
+            {
+              "text": "\u22124",
+              "bbox_pdf_pt": [
+                109.1762466430664,
+                294.55181884765625,
+                129.8603973388672,
+                312.69580078125
+              ],
+              "span_sizes_pdf_pt": [
+                18.143999099731445
+              ],
+              "font_names": [
+                "NimbusSans-Regular"
+              ],
+              "full_size_pdf_pt": 18.143999099731445,
+              "full_size_native_px": 25.199998749627007,
+              "span_sizes_native_px": [
+                25.199998749627007
+              ]
+            },
+            {
+              "text": "\u22122",
+              "bbox_pdf_pt": [
+                189.81625366210938,
+                294.55181884765625,
+                210.5004119873047,
+                312.69580078125
+              ],
+              "span_sizes_pdf_pt": [
+                18.143999099731445
+              ],
+              "font_names": [
+                "NimbusSans-Regular"
+              ],
+              "full_size_pdf_pt": 18.143999099731445,
+              "full_size_native_px": 25.199998749627007,
+              "span_sizes_native_px": [
+                25.199998749627007
+              ]
+            },
+            {
+              "text": "0",
+              "bbox_pdf_pt": [
+                275.75311279296875,
+                294.55181884765625,
+                285.8411865234375,
+                312.69580078125
+              ],
+              "span_sizes_pdf_pt": [
+                18.143999099731445
+              ],
+              "font_names": [
+                "NimbusSans-Regular"
+              ],
+              "full_size_pdf_pt": 18.143999099731445,
+              "full_size_native_px": 25.199998749627007,
+              "span_sizes_native_px": [
+                25.199998749627007
+              ]
+            },
+            {
+              "text": "2",
+              "bbox_pdf_pt": [
+                356.39312744140625,
+                294.55181884765625,
+                366.481201171875,
+                312.69580078125
+              ],
+              "span_sizes_pdf_pt": [
+                18.143999099731445
+              ],
+              "font_names": [
+                "NimbusSans-Regular"
+              ],
+              "full_size_pdf_pt": 18.143999099731445,
+              "full_size_native_px": 25.199998749627007,
+              "span_sizes_native_px": [
+                25.199998749627007
+              ]
+            },
+            {
+              "text": "4",
+              "bbox_pdf_pt": [
+                437.0331115722656,
+                294.55181884765625,
+                447.1211853027344,
+                312.69580078125
+              ],
+              "span_sizes_pdf_pt": [
+                18.143999099731445
+              ],
+              "font_names": [
+                "NimbusSans-Regular"
+              ],
+              "full_size_pdf_pt": 18.143999099731445,
+              "full_size_native_px": 25.199998749627007,
+              "span_sizes_native_px": [
+                25.199998749627007
+              ]
+            }
+          ],
+          "volcano_y": [
+            {
+              "text": "0",
+              "bbox_pdf_pt": [
+                61.10625076293945,
+                278.1710205078125,
+                71.1943130493164,
+                296.31500244140625
+              ],
+              "span_sizes_pdf_pt": [
+                18.143999099731445
+              ],
+              "font_names": [
+                "NimbusSans-Regular"
+              ],
+              "full_size_pdf_pt": 18.143999099731445,
+              "full_size_native_px": 25.199998749627007,
+              "span_sizes_native_px": [
+                25.199998749627007
+              ]
+            },
+            {
+              "text": "2",
+              "bbox_pdf_pt": [
+                61.10625076293945,
+                233.8852996826172,
+                71.1943130493164,
+                252.029296875
+              ],
+              "span_sizes_pdf_pt": [
+                18.143999099731445
+              ],
+              "font_names": [
+                "NimbusSans-Regular"
+              ],
+              "full_size_pdf_pt": 18.143999099731445,
+              "full_size_native_px": 25.199998749627007,
+              "span_sizes_native_px": [
+                25.199998749627007
+              ]
+            },
+            {
+              "text": "4",
+              "bbox_pdf_pt": [
+                61.10625076293945,
+                189.5995635986328,
+                71.1943130493164,
+                207.74356079101562
+              ],
+              "span_sizes_pdf_pt": [
+                18.143999099731445
+              ],
+              "font_names": [
+                "NimbusSans-Regular"
+              ],
+              "full_size_pdf_pt": 18.143999099731445,
+              "full_size_native_px": 25.199998749627007,
+              "span_sizes_native_px": [
+                25.199998749627007
+              ]
+            },
+            {
+              "text": "6",
+              "bbox_pdf_pt": [
+                61.10625076293945,
+                145.31385803222656,
+                71.1943130493164,
+                163.45785522460938
+              ],
+              "span_sizes_pdf_pt": [
+                18.143999099731445
+              ],
+              "font_names": [
+                "NimbusSans-Regular"
+              ],
+              "full_size_pdf_pt": 18.143999099731445,
+              "full_size_native_px": 25.199998749627007,
+              "span_sizes_native_px": [
+                25.199998749627007
+              ]
+            },
+            {
+              "text": "8",
+              "bbox_pdf_pt": [
+                61.10625076293945,
+                101.02815246582031,
+                71.1943130493164,
+                119.17214965820312
+              ],
+              "span_sizes_pdf_pt": [
+                18.143999099731445
+              ],
+              "font_names": [
+                "NimbusSans-Regular"
+              ],
+              "full_size_pdf_pt": 18.143999099731445,
+              "full_size_native_px": 25.199998749627007,
+              "span_sizes_native_px": [
+                25.199998749627007
+              ]
+            },
+            {
+              "text": "10",
+              "bbox_pdf_pt": [
+                51.01250076293945,
+                56.74244689941406,
+                71.18862915039062,
+                74.88644409179688
+              ],
+              "span_sizes_pdf_pt": [
+                18.143999099731445
+              ],
+              "font_names": [
+                "NimbusSans-Regular"
+              ],
+              "full_size_pdf_pt": 18.143999099731445,
+              "full_size_native_px": 25.199998749627007,
+              "span_sizes_native_px": [
+                25.199998749627007
+              ]
+            }
+          ],
+          "heatmap_colorbar": [
+            {
+              "text": "\u22122",
+              "bbox_pdf_pt": [
+                1024.800048828125,
+                241.7824249267578,
+                1045.484130859375,
+                259.9264221191406
+              ],
+              "span_sizes_pdf_pt": [
+                18.143999099731445
+              ],
+              "font_names": [
+                "NimbusSans-Regular"
+              ],
+              "full_size_pdf_pt": 18.143999099731445,
+              "full_size_native_px": 25.199998749627007,
+              "span_sizes_native_px": [
+                25.199998749627007
+              ]
+            },
+            {
+              "text": "0",
+              "bbox_pdf_pt": [
+                1024.800048828125,
+                184.1824493408203,
+                1034.8880615234375,
+                202.32644653320312
+              ],
+              "span_sizes_pdf_pt": [
+                18.143999099731445
+              ],
+              "font_names": [
+                "NimbusSans-Regular"
+              ],
+              "full_size_pdf_pt": 18.143999099731445,
+              "full_size_native_px": 25.199998749627007,
+              "span_sizes_native_px": [
+                25.199998749627007
+              ]
+            },
+            {
+              "text": "2",
+              "bbox_pdf_pt": [
+                1024.800048828125,
+                126.58241271972656,
+                1034.8880615234375,
+                144.72640991210938
+              ],
+              "span_sizes_pdf_pt": [
+                18.143999099731445
+              ],
+              "font_names": [
+                "NimbusSans-Regular"
+              ],
+              "full_size_pdf_pt": 18.143999099731445,
+              "full_size_native_px": 25.199998749627007,
+              "span_sizes_native_px": [
+                25.199998749627007
+              ]
+            }
+          ],
+          "kegg_x": [
+            {
+              "text": "\u22122",
+              "bbox_pdf_pt": [
+                375.0777893066406,
+                661.7517700195312,
+                395.761962890625,
+                679.8958129882812
+              ],
+              "span_sizes_pdf_pt": [
+                18.143999099731445
+              ],
+              "font_names": [
+                "NimbusSans-Regular"
+              ],
+              "full_size_pdf_pt": 18.143999099731445,
+              "full_size_native_px": 25.199998749627007,
+              "span_sizes_native_px": [
+                25.199998749627007
+              ]
+            },
+            {
+              "text": "0",
+              "bbox_pdf_pt": [
+                421.9131164550781,
+                661.7517700195312,
+                432.0011901855469,
+                679.8958129882812
+              ],
+              "span_sizes_pdf_pt": [
+                18.143999099731445
+              ],
+              "font_names": [
+                "NimbusSans-Regular"
+              ],
+              "full_size_pdf_pt": 18.143999099731445,
+              "full_size_native_px": 25.199998749627007,
+              "span_sizes_native_px": [
+                25.199998749627007
+              ]
+            },
+            {
+              "text": "2",
+              "bbox_pdf_pt": [
+                463.45159912109375,
+                661.7517700195312,
+                473.5396728515625,
+                679.8958129882812
+              ],
+              "span_sizes_pdf_pt": [
+                18.143999099731445
+              ],
+              "font_names": [
+                "NimbusSans-Regular"
+              ],
+              "full_size_pdf_pt": 18.143999099731445,
+              "full_size_native_px": 25.199998749627007,
+              "span_sizes_native_px": [
+                25.199998749627007
+              ]
+            }
+          ],
+          "go_bp_x": [
+            {
+              "text": "\u22122",
+              "bbox_pdf_pt": [
+                938.1177978515625,
+                661.7517700195312,
+                958.8019409179688,
+                679.8958129882812
+              ],
+              "span_sizes_pdf_pt": [
+                18.143999099731445
+              ],
+              "font_names": [
+                "NimbusSans-Regular"
+              ],
+              "full_size_pdf_pt": 18.143999099731445,
+              "full_size_native_px": 25.199998749627007,
+              "span_sizes_native_px": [
+                25.199998749627007
+              ]
+            },
+            {
+              "text": "0",
+              "bbox_pdf_pt": [
+                984.953125,
+                661.7517700195312,
+                995.0411987304688,
+                679.8958129882812
+              ],
+              "span_sizes_pdf_pt": [
+                18.143999099731445
+              ],
+              "font_names": [
+                "NimbusSans-Regular"
+              ],
+              "full_size_pdf_pt": 18.143999099731445,
+              "full_size_native_px": 25.199998749627007,
+              "span_sizes_native_px": [
+                25.199998749627007
+              ]
+            },
+            {
+              "text": "2",
+              "bbox_pdf_pt": [
+                1026.4915771484375,
+                661.7517700195312,
+                1036.57958984375,
+                679.8958129882812
+              ],
+              "span_sizes_pdf_pt": [
+                18.143999099731445
+              ],
+              "font_names": [
+                "NimbusSans-Regular"
+              ],
+              "full_size_pdf_pt": 18.143999099731445,
+              "full_size_native_px": 25.199998749627007,
+              "span_sizes_native_px": [
+                25.199998749627007
+              ]
+            }
+          ]
+        }
+      },
+      "current": {
+        "pdf_sha256": "314b55221100e3cf07fb26004e1c31dd52ea0f7d6398dec1d5d9e5a57bf8ed24",
+        "canvas_native_pixels": [
+          1536,
+          1024
+        ],
+        "axis_titles": {
+          "volcano_x": {
+            "text": "log2 fold change",
+            "bbox_pdf_pt": [
+              184.0,
+              324.4554443359375,
+              391.5286560058594,
+              355.442138671875
+            ],
+            "span_sizes_pdf_pt": [
+              28.799999237060547,
+              20.15999984741211,
+              28.799999237060547
+            ],
+            "font_names": [
+              "NimbusSans-Regular"
+            ],
+            "full_size_pdf_pt": 28.799999237060547,
+            "full_size_native_px": 39.99999894036187,
+            "span_sizes_native_px": [
+              39.99999894036187,
+              27.999999788072373,
+              39.99999894036187
+            ]
+          },
+          "volcano_y": {
+            "text": "\u2212log10(adjusted P)",
+            "bbox_pdf_pt": [
+              23.979799270629883,
+              58.04833221435547,
+              54.96648406982422,
+              291.96002197265625
+            ],
+            "span_sizes_pdf_pt": [
+              28.799999237060547,
+              20.15999984741211,
+              28.799999237060547
+            ],
+            "font_names": [
+              "NimbusSans-Regular"
+            ],
+            "full_size_pdf_pt": 28.799999237060547,
+            "full_size_native_px": 39.99999894036187,
+            "span_sizes_native_px": [
+              39.99999894036187,
+              27.999999788072373,
+              39.99999894036187
+            ]
+          },
+          "heatmap_y": {
+            "text": "Genes",
+            "bbox_pdf_pt": [
+              628.883544921875,
+              148.38491821289062,
+              657.6835327148438,
+              233.22970581054688
+            ],
+            "span_sizes_pdf_pt": [
+              28.799999237060547
+            ],
+            "font_names": [
+              "NimbusSans-Regular"
+            ],
+            "full_size_pdf_pt": 28.799999237060547,
+            "full_size_native_px": 39.99999894036187,
+            "span_sizes_native_px": [
+              39.99999894036187
+            ]
+          },
+          "heatmap_colorbar": {
+            "text": "z-score",
+            "bbox_pdf_pt": [
+              1058.0704345703125,
+              143.61236572265625,
+              1086.8704833984375,
+              238.01876831054688
+            ],
+            "span_sizes_pdf_pt": [
+              28.799999237060547
+            ],
+            "font_names": [
+              "NimbusSans-Regular"
+            ],
+            "full_size_pdf_pt": 28.799999237060547,
+            "full_size_native_px": 39.99999894036187,
+            "span_sizes_native_px": [
+              39.99999894036187
+            ]
+          },
+          "kegg_x": {
+            "text": "NES",
+            "bbox_pdf_pt": [
+              397.3584289550781,
+              692.5773315429688,
+              456.57122802734375,
+              721.3773193359375
+            ],
+            "span_sizes_pdf_pt": [
+              28.799999237060547
+            ],
+            "font_names": [
+              "NimbusSans-Regular"
+            ],
+            "full_size_pdf_pt": 28.799999237060547,
+            "full_size_native_px": 39.99999894036187,
+            "span_sizes_native_px": [
+              39.99999894036187
+            ]
+          },
+          "go_bp_x": {
+            "text": "NES",
+            "bbox_pdf_pt": [
+              960.3984375,
+              692.5773315429688,
+              1019.6112060546875,
+              721.3773193359375
+            ],
+            "span_sizes_pdf_pt": [
+              28.799999237060547
+            ],
+            "font_names": [
+              "NimbusSans-Regular"
+            ],
+            "full_size_pdf_pt": 28.799999237060547,
+            "full_size_native_px": 39.99999894036187,
+            "span_sizes_native_px": [
+              39.99999894036187
+            ]
+          }
+        },
+        "numeric_ticks": {
+          "volcano_x": [
+            {
+              "text": "\u22124",
+              "bbox_pdf_pt": [
+                119.34718322753906,
+                294.56072998046875,
+                145.61279296875,
+                317.6007385253906
+              ],
+              "span_sizes_pdf_pt": [
+                23.040000915527344
+              ],
+              "font_names": [
+                "NimbusSans-Regular"
+              ],
+              "full_size_pdf_pt": 23.040000915527344,
+              "full_size_native_px": 32.00000127156576,
+              "span_sizes_native_px": [
+                32.00000127156576
+              ]
+            },
+            {
+              "text": "\u22122",
+              "bbox_pdf_pt": [
+                197.10719299316406,
+                294.56072998046875,
+                223.372802734375,
+                317.6007385253906
+              ],
+              "span_sizes_pdf_pt": [
+                23.040000915527344
+              ],
+              "font_names": [
+                "NimbusSans-Regular"
+              ],
+              "full_size_pdf_pt": 23.040000915527344,
+              "full_size_native_px": 32.00000127156576,
+              "span_sizes_native_px": [
+                32.00000127156576
+              ]
+            },
+            {
+              "text": "0",
+              "bbox_pdf_pt": [
+                281.59375,
+                294.56072998046875,
+                294.40399169921875,
+                317.6007385253906
+              ],
+              "span_sizes_pdf_pt": [
+                23.040000915527344
+              ],
+              "font_names": [
+                "NimbusSans-Regular"
+              ],
+              "full_size_pdf_pt": 23.040000915527344,
+              "full_size_native_px": 32.00000127156576,
+              "span_sizes_native_px": [
+                32.00000127156576
+              ]
+            },
+            {
+              "text": "2",
+              "bbox_pdf_pt": [
+                359.353759765625,
+                294.56072998046875,
+                372.16400146484375,
+                317.6007385253906
+              ],
+              "span_sizes_pdf_pt": [
+                23.040000915527344
+              ],
+              "font_names": [
+                "NimbusSans-Regular"
+              ],
+              "full_size_pdf_pt": 23.040000915527344,
+              "full_size_native_px": 32.00000127156576,
+              "span_sizes_native_px": [
+                32.00000127156576
+              ]
+            },
+            {
+              "text": "4",
+              "bbox_pdf_pt": [
+                437.1137390136719,
+                294.56072998046875,
+                449.9239807128906,
+                317.6007385253906
+              ],
+              "span_sizes_pdf_pt": [
+                23.040000915527344
+              ],
+              "font_names": [
+                "NimbusSans-Regular"
+              ],
+              "full_size_pdf_pt": 23.040000915527344,
+              "full_size_native_px": 32.00000127156576,
+              "span_sizes_native_px": [
+                32.00000127156576
+              ]
+            }
+          ],
+          "volcano_y": [
+            {
+              "text": "0",
+              "bbox_pdf_pt": [
+                72.7874984741211,
+                276.390869140625,
+                85.59774017333984,
+                299.4308776855469
+              ],
+              "span_sizes_pdf_pt": [
+                23.040000915527344
+              ],
+              "font_names": [
+                "NimbusSans-Regular"
+              ],
+              "full_size_pdf_pt": 23.040000915527344,
+              "full_size_native_px": 32.00000127156576,
+              "span_sizes_native_px": [
+                32.00000127156576
+              ]
+            },
+            {
+              "text": "2",
+              "bbox_pdf_pt": [
+                72.7874984741211,
+                232.1051788330078,
+                85.59774017333984,
+                255.14517211914062
+              ],
+              "span_sizes_pdf_pt": [
+                23.040000915527344
+              ],
+              "font_names": [
+                "NimbusSans-Regular"
+              ],
+              "full_size_pdf_pt": 23.040000915527344,
+              "full_size_native_px": 32.00000127156576,
+              "span_sizes_native_px": [
+                32.00000127156576
+              ]
+            },
+            {
+              "text": "4",
+              "bbox_pdf_pt": [
+                72.7874984741211,
+                187.81944274902344,
+                85.59774017333984,
+                210.85943603515625
+              ],
+              "span_sizes_pdf_pt": [
+                23.040000915527344
+              ],
+              "font_names": [
+                "NimbusSans-Regular"
+              ],
+              "full_size_pdf_pt": 23.040000915527344,
+              "full_size_native_px": 32.00000127156576,
+              "span_sizes_native_px": [
+                32.00000127156576
+              ]
+            },
+            {
+              "text": "6",
+              "bbox_pdf_pt": [
+                72.7874984741211,
+                143.5337371826172,
+                85.59774017333984,
+                166.57373046875
+              ],
+              "span_sizes_pdf_pt": [
+                23.040000915527344
+              ],
+              "font_names": [
+                "NimbusSans-Regular"
+              ],
+              "full_size_pdf_pt": 23.040000915527344,
+              "full_size_native_px": 32.00000127156576,
+              "span_sizes_native_px": [
+                32.00000127156576
+              ]
+            },
+            {
+              "text": "8",
+              "bbox_pdf_pt": [
+                72.7874984741211,
+                99.24803161621094,
+                85.59774017333984,
+                122.28803253173828
+              ],
+              "span_sizes_pdf_pt": [
+                23.040000915527344
+              ],
+              "font_names": [
+                "NimbusSans-Regular"
+              ],
+              "full_size_pdf_pt": 23.040000915527344,
+              "full_size_native_px": 32.00000127156576,
+              "span_sizes_native_px": [
+                32.00000127156576
+              ]
+            },
+            {
+              "text": "10",
+              "bbox_pdf_pt": [
+                59.974998474121094,
+                54.96232604980469,
+                85.5954818725586,
+                78.00232696533203
+              ],
+              "span_sizes_pdf_pt": [
+                23.040000915527344
+              ],
+              "font_names": [
+                "NimbusSans-Regular"
+              ],
+              "full_size_pdf_pt": 23.040000915527344,
+              "full_size_native_px": 32.00000127156576,
+              "span_sizes_native_px": [
+                32.00000127156576
+              ]
+            }
+          ],
+          "heatmap_colorbar": [
+            {
+              "text": "\u22122",
+              "bbox_pdf_pt": [
+                1024.800048828125,
+                240.00230407714844,
+                1051.065673828125,
+                263.04229736328125
+              ],
+              "span_sizes_pdf_pt": [
+                23.040000915527344
+              ],
+              "font_names": [
+                "NimbusSans-Regular"
+              ],
+              "full_size_pdf_pt": 23.040000915527344,
+              "full_size_native_px": 32.00000127156576,
+              "span_sizes_native_px": [
+                32.00000127156576
+              ]
+            },
+            {
+              "text": "0",
+              "bbox_pdf_pt": [
+                1024.800048828125,
+                182.40232849121094,
+                1037.6103515625,
+                205.44232177734375
+              ],
+              "span_sizes_pdf_pt": [
+                23.040000915527344
+              ],
+              "font_names": [
+                "NimbusSans-Regular"
+              ],
+              "full_size_pdf_pt": 23.040000915527344,
+              "full_size_native_px": 32.00000127156576,
+              "span_sizes_native_px": [
+                32.00000127156576
+              ]
+            },
+            {
+              "text": "2",
+              "bbox_pdf_pt": [
+                1024.800048828125,
+                124.80229187011719,
+                1037.6103515625,
+                147.84228515625
+              ],
+              "span_sizes_pdf_pt": [
+                23.040000915527344
+              ],
+              "font_names": [
+                "NimbusSans-Regular"
+              ],
+              "full_size_pdf_pt": 23.040000915527344,
+              "full_size_native_px": 32.00000127156576,
+              "span_sizes_native_px": [
+                32.00000127156576
+              ]
+            }
+          ],
+          "kegg_x": [
+            {
+              "text": "\u22122",
+              "bbox_pdf_pt": [
+                372.2887268066406,
+                661.7607421875,
+                398.5543212890625,
+                684.8007202148438
+              ],
+              "span_sizes_pdf_pt": [
+                23.040000915527344
+              ],
+              "font_names": [
+                "NimbusSans-Regular"
+              ],
+              "full_size_pdf_pt": 23.040000915527344,
+              "full_size_native_px": 32.00000127156576,
+              "span_sizes_native_px": [
+                32.00000127156576
+              ]
+            },
+            {
+              "text": "0",
+              "bbox_pdf_pt": [
+                420.5537414550781,
+                661.7607421875,
+                433.3639831542969,
+                684.8007202148438
+              ],
+              "span_sizes_pdf_pt": [
+                23.040000915527344
+              ],
+              "font_names": [
+                "NimbusSans-Regular"
+              ],
+              "full_size_pdf_pt": 23.040000915527344,
+              "full_size_native_px": 32.00000127156576,
+              "span_sizes_native_px": [
+                32.00000127156576
+              ]
+            },
+            {
+              "text": "2",
+              "bbox_pdf_pt": [
+                462.09222412109375,
+                661.7607421875,
+                474.9024658203125,
+                684.8007202148438
+              ],
+              "span_sizes_pdf_pt": [
+                23.040000915527344
+              ],
+              "font_names": [
+                "NimbusSans-Regular"
+              ],
+              "full_size_pdf_pt": 23.040000915527344,
+              "full_size_native_px": 32.00000127156576,
+              "span_sizes_native_px": [
+                32.00000127156576
+              ]
+            }
+          ],
+          "go_bp_x": [
+            {
+              "text": "\u22122",
+              "bbox_pdf_pt": [
+                935.3287353515625,
+                661.7607421875,
+                961.5943603515625,
+                684.8007202148438
+              ],
+              "span_sizes_pdf_pt": [
+                23.040000915527344
+              ],
+              "font_names": [
+                "NimbusSans-Regular"
+              ],
+              "full_size_pdf_pt": 23.040000915527344,
+              "full_size_native_px": 32.00000127156576,
+              "span_sizes_native_px": [
+                32.00000127156576
+              ]
+            },
+            {
+              "text": "0",
+              "bbox_pdf_pt": [
+                983.59375,
+                661.7607421875,
+                996.4039916992188,
+                684.8007202148438
+              ],
+              "span_sizes_pdf_pt": [
+                23.040000915527344
+              ],
+              "font_names": [
+                "NimbusSans-Regular"
+              ],
+              "full_size_pdf_pt": 23.040000915527344,
+              "full_size_native_px": 32.00000127156576,
+              "span_sizes_native_px": [
+                32.00000127156576
+              ]
+            },
+            {
+              "text": "2",
+              "bbox_pdf_pt": [
+                1025.1322021484375,
+                661.7607421875,
+                1037.9423828125,
+                684.8007202148438
+              ],
+              "span_sizes_pdf_pt": [
+                23.040000915527344
+              ],
+              "font_names": [
+                "NimbusSans-Regular"
+              ],
+              "full_size_pdf_pt": 23.040000915527344,
+              "full_size_native_px": 32.00000127156576,
+              "span_sizes_native_px": [
+                32.00000127156576
+              ]
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "analysis_data_unchanged": true,
+  "unchanged_analysis_file_count": 52,
+  "unchanged_analysis_sha256": {
+    "figures/synthetic_demo/data/contrast_LD_LEPTIN_vs_LD_SALINE.tsv.gz": "3af98fb3e0c71bd2e86bf2f870b9759c532f0e39f03f7f8e0abf280187cc1ae6",
+    "figures/synthetic_demo/data/contrast_LD_LEPTIN_vs_NON_LD_control.tsv.gz": "5fd698622266646338baccf6598e06279a51d8f92e3d6425110d66f2fbda3410",
+    "figures/synthetic_demo/data/contrast_LD_SALINE_vs_NON_LD_control.tsv.gz": "f7989f4ff70f4a364607b6e029cedce9791cd19784f02e81e68140a62fefc28b",
+    "figures/synthetic_demo/data/counts.tsv.gz": "aeac8eed1cf7952e736ddbf60953523a9f81dae8d5b6730eff4b71a0137e7345",
+    "figures/synthetic_demo/data/figure_01_forest_genes.tsv": "29479702adb691c872ade3bcb3349217e4bbf152b1aaf9ff0406baec35cd5587",
+    "figures/synthetic_demo/data/figure_01_heatmap_genes.tsv": "8961282bb0ff65faa8c344e29a235e64d4b80afa60f51ffb6c216ed2837e0217",
+    "figures/synthetic_demo/data/figure_02_forest_genes.tsv": "51caac66059ccf54c4a65488b0e535e257fddf2ea01e2da4bd0d78bb7bf7936e",
+    "figures/synthetic_demo/data/figure_02_heatmap_genes.tsv": "8384de63465e127d7fd54de37fe76240a5203fcfd800767f2dcbe20673519b8c",
+    "figures/synthetic_demo/data/figure_03_forest_genes.tsv": "f21705edf34f124005d4d10cd24962b92014926101383e790c7a6a0251511496",
+    "figures/synthetic_demo/data/figure_03_heatmap_genes.tsv": "588a0806761e6d97bfd677870ac38a800fe036ece9c622cada5c91eecdca370e",
+    "figures/synthetic_demo/data/normalized_log2_expression.tsv.gz": "3a81f5d936b48219e116c5a38c3537dbf36f88bff927cca3b353d27544d26dcf",
+    "figures/synthetic_demo/data/pca_genes.tsv": "bd9fbe42fcea070ce01376842c592c4a8bdde0492afde6015c996bc664bab8e0",
+    "figures/synthetic_demo/data/pca_scores.tsv": "1b00b039b18af043ea37eabb1da75a7e8d9b002eb4da72f3d013a8e71070d1f2",
+    "figures/synthetic_demo/data/pca_variance.tsv": "887112772417b4fb6df0579c776c88bb49ddf7292808886fca540c2af747c3e4",
+    "figures/synthetic_demo/data/sample_metadata.tsv": "c2d5d5c19a98408a3e9b34f29ec0040accb2f9d91d6b12cc2cc78f620ea6f754",
+    "figures/synthetic_demo/data/simulation_summary.json": "0dbba9e51776e8213c7d900beefe1fe8bd491e526d7875224643f4e667c2f378",
+    "figures/synthetic_demo/data/simulation_truth.tsv.gz": "08b8695e7ae41d8008c7e60150a8c4cdfedfd3e5fefaa17295f2ec65265ed85d",
+    "figures/synthetic_demo/gsea_data/figure_01_complete_ranked_statistics.tsv.gz": "83d2328f8b23573dfe9398a259d9394ed353e294c069e09e9a6c4f688d851d9e",
+    "figures/synthetic_demo/gsea_data/figure_01_go_bp_all_results.tsv.gz": "bd08ab8b686afc3a8d565b700ad7757a820550fa73ae9bd79139a24127207843",
+    "figures/synthetic_demo/gsea_data/figure_01_go_bp_display.tsv": "62f0451c60f79b30f4f07de2e028edb478b2a527fb015cc028ceb67a478d1221",
+    "figures/synthetic_demo/gsea_data/figure_01_go_bp_gseapy_raw.tsv.gz": "309c3af8abbcfeac810f9f68970138e0c543d298201009d8fe297479759893ce",
+    "figures/synthetic_demo/gsea_data/figure_01_go_bp_leading_edge.tsv.gz": "062818df15f5a1e12106b1503c79fdb7e59bcc961066aed290d2b95ac6b79685",
+    "figures/synthetic_demo/gsea_data/figure_01_kegg_all_results.tsv.gz": "dbdb12d23258e8a1c3598b27a2c3ee6573a9d0f95713471841cea806149d420b",
+    "figures/synthetic_demo/gsea_data/figure_01_kegg_display.tsv": "810bc53555bf517f11b59c6c282ec3c181651ebb0bdf7649d4b235e4e44d9f19",
+    "figures/synthetic_demo/gsea_data/figure_01_kegg_gseapy_raw.tsv.gz": "fca110c29b76008017f8d5a7b90fa889640bff4dcc59df11042c77d6a03641fc",
+    "figures/synthetic_demo/gsea_data/figure_01_kegg_leading_edge.tsv.gz": "cf854ed628f5ffacddfa13425616af8b6f9473138fbabddae96bccc6c6f627e6",
+    "figures/synthetic_demo/gsea_data/figure_02_complete_ranked_statistics.tsv.gz": "6104ccb60497de76650dd255c98e9297b2e029421fefb5312fe181e7cac491b4",
+    "figures/synthetic_demo/gsea_data/figure_02_go_bp_all_results.tsv.gz": "ab73ad2903bef5827273a42a69b1f59f5962e971d84262270e0b9a0b09c52a5f",
+    "figures/synthetic_demo/gsea_data/figure_02_go_bp_display.tsv": "2f4a81dd38c793a4412019a84d4432ea9754be1dce45b1324e0f6f7f885b20f0",
+    "figures/synthetic_demo/gsea_data/figure_02_go_bp_gseapy_raw.tsv.gz": "e49fe9cf0fba4f57eaeae6ced48094ac63e15850a9452cfcc847518f2f9a8657",
+    "figures/synthetic_demo/gsea_data/figure_02_go_bp_leading_edge.tsv.gz": "adfb467146f250c7543a037d91a0b0e6cf74b04c0766f7de1fb17f136e9751d8",
+    "figures/synthetic_demo/gsea_data/figure_02_kegg_all_results.tsv.gz": "641af2df0a3303db113428c7575032e3e4d8175bc8c88e69db55392e923663c6",
+    "figures/synthetic_demo/gsea_data/figure_02_kegg_display.tsv": "477c2c5b9b5257078b857bca537d30905e5554144e659884bb78cdc1b845ef81",
+    "figures/synthetic_demo/gsea_data/figure_02_kegg_gseapy_raw.tsv.gz": "425dc2c8452dc077896d91ef6378cad864a6d789c3a9291343ef1e33c9ef96ac",
+    "figures/synthetic_demo/gsea_data/figure_02_kegg_leading_edge.tsv.gz": "0dc7a0ae2497f3ea3009792b6b7de1ae38b60d00708e4b4d4931c8752508e8f0",
+    "figures/synthetic_demo/gsea_data/figure_03_complete_ranked_statistics.tsv.gz": "29a6cfce08115e78842b346c37516fe865a47f46a3bf951985e1d85f8007b4ca",
+    "figures/synthetic_demo/gsea_data/figure_03_go_bp_all_results.tsv.gz": "4109de0ec73c9ff437fba1092fb123eb9865dcb286f256a99088ac40a25a0198",
+    "figures/synthetic_demo/gsea_data/figure_03_go_bp_display.tsv": "65f1ac2cf342b71cdb69d1cf745b737e31ea87f4c8e5a078dc53cb63f27fd723",
+    "figures/synthetic_demo/gsea_data/figure_03_go_bp_gseapy_raw.tsv.gz": "7ee2a9d60e467cdacc543f965da8fcf1a82791e9caa9363223ebe73bfe525b5c",
+    "figures/synthetic_demo/gsea_data/figure_03_go_bp_leading_edge.tsv.gz": "6f2ff6fa70703504ae83ce2c113d45ff6e529f0423e03a5dec76487412212d2c",
+    "figures/synthetic_demo/gsea_data/figure_03_kegg_all_results.tsv.gz": "68cb83091099e13e610b0b30b23cf34e260c3e2d7524db0cabd2a4c399ad3f79",
+    "figures/synthetic_demo/gsea_data/figure_03_kegg_display.tsv": "da692901da200f277752e1791371f55086f2426cae136e04e985a55464824bfe",
+    "figures/synthetic_demo/gsea_data/figure_03_kegg_gseapy_raw.tsv.gz": "efb0636db66f02ce94ccb261f7c18db5afdef4366b1882a72383952bcab1c6e5",
+    "figures/synthetic_demo/gsea_data/figure_03_kegg_leading_edge.tsv.gz": "75080a9eb8e28c0a0717479b41bce52541a0f5e53b7480615edd887550754bd6",
+    "figures/synthetic_demo/gsea_data/go_bp_all_gene_set_coverage.tsv.gz": "26e1a30b6890f5efa8eed1d88dce2b43f744a30529ad240e0509ef3464a0aa0b",
+    "figures/synthetic_demo/gsea_data/gsea_provenance.json": "ad58843eafd1ae03bc5f61613601e8b787fb5c63fa7c71cf6c469438b37c13f6",
+    "figures/synthetic_demo/gsea_data/kegg_all_gene_set_coverage.tsv.gz": "85279297c7d3d1a1f73d9358d890aac62f1fd453bb7ce980e4bf03f3fd059068",
+    "figures/synthetic_demo/gsea_data/resources/go_bp_mouse_2026_05_19_nonIEA_protein_coding.gmt": "009be991eedc31fa18e23ded71cfac222fd5773d87fc243d19d67008ee21c73f",
+    "figures/synthetic_demo/gsea_data/resources/go_bp_mouse_provenance.json": "c5541c88c6372ea558d5ac30c8085aa3e276d33989d87e18762f2b5a38b89c64",
+    "figures/synthetic_demo/gsea_data/resources/kegg_mouse_biosystems_archive_2020.gmt": "70127d28c5c82a42abf2d1f33291d4a6a2a10e0afad320aad484d01931a9091a",
+    "figures/synthetic_demo/gsea_data/resources/kegg_mouse_provenance.json": "12428593c85f86ab7d6743f77cfe987bf981754609c28a00da4bd8409c4ab214",
+    "figures/synthetic_demo/gsea_data/synthetic_to_mouse_symbol_map.tsv": "f64a7fba9f0257d9715c073f42339109e4a01784da68c55ce85ada0c3b36abbf"
+  },
+  "review_image": {
+    "source_figure": 1,
+    "crop_box_native_pixels": [
+      0,
+      74,
+      755,
+      496
+    ],
+    "source_rasterization_dpi": 100,
+    "source_pixel_to_review_pixel": "1:1",
+    "source_crops_pixel_identical_in_montage": true,
+    "review_canvas_pixels": [
+      1582,
+      554
+    ],
+    "file": "axis_type_before_after.png",
+    "sha256": "1e221f0dec7783362c9833ed2d24eb4bb00051a2009cc592aff00caac7d6c597"
+  },
+  "verifier_sha256": "9b4763088f512e83ab7d7a4fbc97eb7f56422263b68f6e61ad5fd6d132db6c8e"
+}
