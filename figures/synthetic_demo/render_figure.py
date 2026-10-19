@@ -33,7 +33,7 @@ OUT = ROOT.parent
 DATA = ROOT/'data'
 W,H,DPI = 1536,1024,100
 GROUPS = ('LD SALINE','LD LEPTIN','NON-LD control')
-PALETTE = {'LD SALINE':'#C28E85','LD LEPTIN':'#80A596','NON-LD control':'#8B9FB3'}
+PALETTE = {'LD SALINE':'#C28E85','LD LEPTIN':'#527D6B','NON-LD control':'#A8BED2'}
 INK,AXIS,GRID,NS = '#262A2B','#A1A7A7','#C8CDCD','#CFD3D4'
 LOWER,HIGHER = '#779AAC','#C28A80'
 
@@ -117,18 +117,18 @@ def configure_theme():
 
 
 def selected_rows(table):
-    selected=table[(table.padj<.05)&(table.log2FoldChange.abs()>=1)]
-    heatmap=selected.sort_values('padj',kind='stable').head(40)
-    positive=selected[selected.log2FoldChange>0].sort_values('padj',kind='stable').head(6)
-    negative=selected[selected.log2FoldChange<0].sort_values('padj',kind='stable').head(6)
+    # Rank all tested genes; a low-powered contrast must not force significant hits.
+    heatmap=table.sort_values('padj',kind='stable').head(40)
+    positive=table[table.log2FoldChange>0].sort_values('padj',kind='stable').head(6)
+    negative=table[table.log2FoldChange<0].sort_values('padj',kind='stable').head(6)
     forest=pd.concat([positive,negative]).sort_values('log2FoldChange',ascending=False,kind='stable')
     if len(heatmap)!=40 or len(forest)!=12:
-        raise RuntimeError('Synthetic demonstration needs 40 selected heatmap genes and six genes in each direction.')
+        raise RuntimeError('Synthetic demonstration needs 40 ranked genes and six estimates in each direction, regardless of significance.')
     return heatmap,forest
 
 
 def export_figure(fig,number,question,fonts,details):
-    name=f'figure_{number:02d}_synthetic'
+    name=f'figure_{number:02d}_small_effects_synthetic'
     labels=[]
     for t in fig.findobj(Text):
         if not t.get_text():continue
@@ -197,13 +197,14 @@ def render_question(spec,table,expression,metadata,fonts,xmax,ymax,forest_limit,
     ax.set_title(comparison,pad=20)
     x=table.log2FoldChange.to_numpy()
     y=-np.log10(table.padj.to_numpy())
-    selected=(table.padj.to_numpy()<.05)&(np.abs(x)>=1)
+    selected=table.padj.to_numpy()<.05
     ax.scatter(x[~selected],y[~selected],s=8,c=NS,alpha=.55,edgecolors='none',rasterized=True)
     for mask,color in [(selected&(x<0),LOWER),(selected&(x>0),HIGHER)]:
         ax.scatter(x[mask],y[mask],s=11,c=color,alpha=.82,edgecolors='none',rasterized=True)
-    for value in [-1,1]:ax.axvline(value,color=GRID,lw=.65,ls=(0,(3,4)),zorder=0)
+    ax.axvline(0,color=GRID,lw=.65,ls=(0,(3,4)),zorder=0)
     ax.axhline(-np.log10(.05),color=GRID,lw=.65,ls=(0,(3,4)),zorder=0)
-    ax.set(xlim=(-xmax,xmax),ylim=(-.08,ymax),xticks=[-4,-2,0,2,4],yticks=np.arange(0,ymax+.1,2))
+    ax.set(xlim=(-xmax,xmax),ylim=(-.08,ymax),
+           xticks=np.round(np.arange(-xmax,xmax+.01,.2),1),yticks=np.arange(0,ymax+.1,2))
     ax.set_xlabel(r'log$_2$ fold change',labelpad=8)
     ax.set_ylabel(r'−log$_{10}$(adjusted $P$)',labelpad=8)
     theme(ax)
@@ -248,7 +249,8 @@ def render_question(spec,table,expression,metadata,fonts,xmax,ymax,forest_limit,
                     color=color,ecolor=color,elinewidth=1.0,capsize=2,capthick=.8)
     ax.axvline(0,color=GRID,lw=.8,ls=(0,(3,4)),zorder=0)
     ax.set_yticks(np.arange(len(forest)),labels=forest.index)
-    ax.set(xlim=(-forest_limit,forest_limit),ylim=(len(forest)-.5,-.5),xticks=[-4,-2,0,2,4])
+    ax.set(xlim=(-forest_limit,forest_limit),ylim=(len(forest)-.5,-.5),
+           xticks=np.round(np.arange(-forest_limit,forest_limit+.01,.2),1))
     ax.set_xlabel(r'log$_2$ fold change',labelpad=9)
     ax.tick_params(axis='y',length=0,pad=10)
     ax.spines['left'].set_visible(False)
@@ -265,10 +267,13 @@ def render_question(spec,table,expression,metadata,fonts,xmax,ymax,forest_limit,
         'volcano_limits':{'absolute_log2fc':xmax,'negative_log10_adjusted_p':ymax},
         'volcano_genes':len(table),'heatmap_samples':samples,'heatmap_genes':genes.tolist(),
         'heatmap_group_order':[first,second],
-        'heatmap_selection':'40 display-threshold genes with smallest adjusted P in this contrast, clustered using only the two displayed groups',
+        'heatmap_selection':'40 tested genes with smallest adjusted P in this contrast, regardless of significance, clustered using only the two displayed groups',
         'forest_genes':forest.index.tolist(),'forest_absolute_limit':forest_limit,
         'forest_confidence_level':.95,'forest_residual_degrees_of_freedom':df,
         'forest_intervals':'marginal, unadjusted; genes selected from the same dataset',
+        'forest_selection':'six positive and six negative estimates with smallest adjusted P among all tested genes, regardless of significance',
+        'synthetic_effect_scale':'planted base effects 0.08 to 0.22 log2 units; fitted effects are neither rescaled nor clipped',
+        'group_colors':PALETTE,
     })
 
 
@@ -281,11 +286,11 @@ def main():
     metadata=pd.read_csv(DATA/'sample_metadata.tsv',sep='\t').set_index('sample_id')
     summary=json.loads((DATA/'simulation_summary.json').read_text())
     df=summary['analysis']['residual_degrees_of_freedom']
-    xmax=float(np.ceil(max(t.log2FoldChange.abs().max() for t in tables)))
+    xmax=float(np.ceil(max(t.log2FoldChange.abs().max() for t in tables)/.2)*.2)
     ymax=float(np.ceil(max((-np.log10(t.padj)).max() for t in tables)/2)*2)
     crit=stats.t.ppf(.975,df)
     forest_limit=float(np.ceil(max((f.log2FoldChange.abs()+crit*f.lfcSE).max()
-                                  for f in [selected_rows(t)[1] for t in tables])))
+                                  for f in [selected_rows(t)[1] for t in tables])/.2)*.2)
     audits=[render_question(spec,table,expression,metadata,fonts,xmax,ymax,forest_limit,df)
             for spec,table in zip(SPECS,tables)]
     (ROOT/'font_and_plot_audit.json').write_text(json.dumps({'figures':audits},indent=2)+'\n')

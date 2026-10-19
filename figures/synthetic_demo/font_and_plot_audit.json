@@ -2,7 +2,7 @@
   "figures": [
     {
       "figure": 1,
-      "file_stem": "figure_01_synthetic",
+      "file_stem": "figure_01_small_effects_synthetic",
       "question": "How does untreated LD differ from non-LD controls?",
       "all_visible_typography": "Nimbus Sans",
       "canvas_pixels": [
@@ -50,122 +50,122 @@
           "size_px": 24.0
         },
         {
-          "text": "SIM01289",
+          "text": "SIM03168",
           "font": "Nimbus Sans Regular",
           "size_px": 21.0
         },
         {
-          "text": "SIM01289",
+          "text": "SIM03168",
           "font": "Nimbus Sans Regular",
           "size_px": 21.0
         },
         {
-          "text": "SIM06871",
+          "text": "SIM04531",
           "font": "Nimbus Sans Regular",
           "size_px": 21.0
         },
         {
-          "text": "SIM06871",
+          "text": "SIM04531",
           "font": "Nimbus Sans Regular",
           "size_px": 21.0
         },
         {
-          "text": "SIM00633",
+          "text": "SIM01957",
           "font": "Nimbus Sans Regular",
           "size_px": 21.0
         },
         {
-          "text": "SIM00633",
+          "text": "SIM01957",
           "font": "Nimbus Sans Regular",
           "size_px": 21.0
         },
         {
-          "text": "SIM03002",
+          "text": "SIM04379",
           "font": "Nimbus Sans Regular",
           "size_px": 21.0
         },
         {
-          "text": "SIM03002",
+          "text": "SIM04379",
           "font": "Nimbus Sans Regular",
           "size_px": 21.0
         },
         {
-          "text": "SIM01407",
+          "text": "SIM00752",
           "font": "Nimbus Sans Regular",
           "size_px": 21.0
         },
         {
-          "text": "SIM01407",
+          "text": "SIM00752",
           "font": "Nimbus Sans Regular",
           "size_px": 21.0
         },
         {
-          "text": "SIM05285",
+          "text": "SIM04146",
           "font": "Nimbus Sans Regular",
           "size_px": 21.0
         },
         {
-          "text": "SIM05285",
+          "text": "SIM04146",
           "font": "Nimbus Sans Regular",
           "size_px": 21.0
         },
         {
-          "text": "SIM01928",
+          "text": "SIM05768",
           "font": "Nimbus Sans Regular",
           "size_px": 21.0
         },
         {
-          "text": "SIM01928",
+          "text": "SIM05768",
           "font": "Nimbus Sans Regular",
           "size_px": 21.0
         },
         {
-          "text": "SIM04145",
+          "text": "SIM06391",
           "font": "Nimbus Sans Regular",
           "size_px": 21.0
         },
         {
-          "text": "SIM04145",
+          "text": "SIM06391",
           "font": "Nimbus Sans Regular",
           "size_px": 21.0
         },
         {
-          "text": "SIM05598",
+          "text": "SIM02345",
           "font": "Nimbus Sans Regular",
           "size_px": 21.0
         },
         {
-          "text": "SIM05598",
+          "text": "SIM02345",
           "font": "Nimbus Sans Regular",
           "size_px": 21.0
         },
         {
-          "text": "SIM05873",
+          "text": "SIM05854",
           "font": "Nimbus Sans Regular",
           "size_px": 21.0
         },
         {
-          "text": "SIM05873",
+          "text": "SIM05854",
           "font": "Nimbus Sans Regular",
           "size_px": 21.0
         },
         {
-          "text": "SIM06181",
+          "text": "SIM00129",
           "font": "Nimbus Sans Regular",
           "size_px": 21.0
         },
         {
-          "text": "SIM06181",
+          "text": "SIM00129",
           "font": "Nimbus Sans Regular",
           "size_px": 21.0
         },
         {
-          "text": "SIM01537",
+          "text": "SIM05927",
           "font": "Nimbus Sans Regular",
           "size_px": 21.0
         },
         {
-          "text": "SIM01537",
+          "text": "SIM05927",
           "font": "Nimbus Sans Regular",
           "size_px": 21.0
         },
@@ -203,10 +203,10 @@
         "selected effects with 95% confidence intervals"
       ],
       "volcano_limits": {
-        "absolute_log2fc": 5.0,
-        "negative_log10_adjusted_p": 10.0
+        "absolute_log2fc": 0.8,
+        "negative_log10_adjusted_p": 6.0
       },
-      "volcano_genes": 7647,
+      "volcano_genes": 8000,
       "heatmap_samples": [
         "LD SALINE 01",
         "LD SALINE 02",
@@ -222,74 +222,81 @@
         "NON-LD control 06"
       ],
       "heatmap_genes": [
-        "SIM00669",
-        "SIM01537",
-        "SIM03716",
-        "SIM01652",
-        "SIM04145",
-        "SIM00939",
-        "SIM02682",
-        "SIM06181",
-        "SIM02793",
-        "SIM06008",
-        "SIM01928",
-        "SIM05873",
-        "SIM01309",
-        "SIM07987",
-        "SIM00323",
-        "SIM06066",
-        "SIM05598",
-        "SIM02431",
-        "SIM02279",
-        "SIM02047",
-        "SIM06285",
+        "SIM00326",
+        "SIM02086",
+        "SIM03868",
+        "SIM02420",
+        "SIM06914",
+        "SIM04661",
+        "SIM04146",
+        "SIM03168",
+        "SIM07947",
+        "SIM04531",
+        "SIM07219",
+        "SIM05624",
+        "SIM04379",
+        "SIM05944",
+        "SIM06879",
+        "SIM00752",
+        "SIM01866",
+        "SIM01142",
+        "SIM01957",
+        "SIM07308",
+        "SIM00393",
+        "SIM01892",
+        "SIM05927",
+        "SIM06519",
+        "SIM06391",
+        "SIM04275",
+        "SIM02345",
+        "SIM02143",
+        "SIM06939",
         "SIM05854",
-        "SIM05404",
-        "SIM03002",
-        "SIM07018",
-        "SIM06713",
-        "SIM06871",
-        "SIM03003",
-        "SIM06396",
-        "SIM05242",
-        "SIM01407",
-        "SIM05285",
-        "SIM07256",
-        "SIM02789",
-        "SIM05019",
-        "SIM01289",
-        "SIM01807",
-        "SIM04233",
-        "SIM00633",
-        "SIM05689"
+        "SIM02661",
+        "SIM03013",
+        "SIM07561",
+        "SIM02584",
+        "SIM02289",
+        "SIM05172",
+        "SIM00129",
+        "SIM02714",
+        "SIM05768",
+        "SIM01464"
       ],
       "heatmap_group_order": [
         "LD SALINE",
         "NON-LD control"
       ],
-      "heatmap_selection": "40 display-threshold genes with smallest adjusted P in this contrast, clustered using only the two displayed groups",
+      "heatmap_selection": "40 tested genes with smallest adjusted P in this contrast, regardless of significance, clustered using only the two displayed groups",
       "forest_genes": [
-        "SIM01289",
-        "SIM06871",
-        "SIM00633",
-        "SIM03002",
-        "SIM01407",
-        "SIM05285",
-        "SIM01928",
-        "SIM04145",
-        "SIM05598",
-        "SIM05873",
-        "SIM06181",
-        "SIM01537"
+        "SIM03168",
+        "SIM04531",
+        "SIM01957",
+        "SIM04379",
+        "SIM00752",
+        "SIM04146",
+        "SIM05768",
+        "SIM06391",
+        "SIM02345",
+        "SIM05854",
+        "SIM00129",
+        "SIM05927"
       ],
-      "forest_absolute_limit": 5.0,
+      "forest_absolute_limit": 0.6000000000000001,
       "forest_confidence_level": 0.95,
       "forest_residual_degrees_of_freedom": 15,
-      "forest_intervals": "marginal, unadjusted; genes selected from the same dataset"
+      "forest_intervals": "marginal, unadjusted; genes selected from the same dataset",
+      "forest_selection": "six positive and six negative estimates with smallest adjusted P among all tested genes, regardless of significance",
+      "synthetic_effect_scale": "planted base effects 0.08 to 0.22 log2 units; fitted effects are neither rescaled nor clipped",
+      "group_colors": {
+        "LD SALINE": "#C28E85",
+        "LD LEPTIN": "#527D6B",
+        "NON-LD control": "#A8BED2"
+      }
     },
     {
       "figure": 2,
-      "file_stem": "figure_02_synthetic",
+      "file_stem": "figure_02_small_effects_synthetic",
       "question": "What does leptin treatment change in LD mice?",
       "all_visible_typography": "Nimbus Sans",
       "canvas_pixels": [
@@ -337,122 +344,122 @@
           "size_px": 24.0
         },
         {
-          "text": "SIM00323",
+          "text": "SIM01601",
           "font": "Nimbus Sans Regular",
           "size_px": 21.0
         },
         {
-          "text": "SIM00323",
+          "text": "SIM01601",
           "font": "Nimbus Sans Regular",
           "size_px": 21.0
         },
         {
-          "text": "SIM00154",
+          "text": "SIM01156",
           "font": "Nimbus Sans Regular",
           "size_px": 21.0
         },
         {
-          "text": "SIM00154",
+          "text": "SIM01156",
           "font": "Nimbus Sans Regular",
           "size_px": 21.0
         },
         {
-          "text": "SIM07079",
+          "text": "SIM07308",
           "font": "Nimbus Sans Regular",
           "size_px": 21.0
         },
         {
-          "text": "SIM07079",
+          "text": "SIM07308",
           "font": "Nimbus Sans Regular",
           "size_px": 21.0
         },
         {
-          "text": "SIM05379",
+          "text": "SIM02708",
           "font": "Nimbus Sans Regular",
           "size_px": 21.0
         },
         {
-          "text": "SIM05379",
+          "text": "SIM02708",
           "font": "Nimbus Sans Regular",
           "size_px": 21.0
         },
         {
-          "text": "SIM01652",
+          "text": "SIM06391",
           "font": "Nimbus Sans Regular",
           "size_px": 21.0
         },
         {
-          "text": "SIM01652",
+          "text": "SIM06391",
           "font": "Nimbus Sans Regular",
           "size_px": 21.0
         },
         {
-          "text": "SIM07437",
+          "text": "SIM05768",
           "font": "Nimbus Sans Regular",
           "size_px": 21.0
         },
         {
-          "text": "SIM07437",
+          "text": "SIM05768",
           "font": "Nimbus Sans Regular",
           "size_px": 21.0
         },
         {
-          "text": "SIM00633",
+          "text": "SIM04477",
           "font": "Nimbus Sans Regular",
           "size_px": 21.0
         },
         {
-          "text": "SIM00633",
+          "text": "SIM04477",
           "font": "Nimbus Sans Regular",
           "size_px": 21.0
         },
         {
-          "text": "SIM02728",
+          "text": "SIM04671",
           "font": "Nimbus Sans Regular",
           "size_px": 21.0
         },
         {
-          "text": "SIM02728",
+          "text": "SIM04671",
           "font": "Nimbus Sans Regular",
           "size_px": 21.0
         },
         {
-          "text": "SIM05404",
+          "text": "SIM04739",
           "font": "Nimbus Sans Regular",
           "size_px": 21.0
         },
         {
-          "text": "SIM05404",
+          "text": "SIM04739",
           "font": "Nimbus Sans Regular",
           "size_px": 21.0
         },
         {
-          "text": "SIM06713",
+          "text": "SIM02370",
           "font": "Nimbus Sans Regular",
           "size_px": 21.0
         },
         {
-          "text": "SIM06713",
+          "text": "SIM02370",
           "font": "Nimbus Sans Regular",
           "size_px": 21.0
         },
         {
-          "text": "SIM07366",
+          "text": "SIM03188",
           "font": "Nimbus Sans Regular",
           "size_px": 21.0
         },
         {
-          "text": "SIM07366",
+          "text": "SIM03188",
           "font": "Nimbus Sans Regular",
           "size_px": 21.0
         },
         {
-          "text": "SIM06467",
+          "text": "SIM03168",
           "font": "Nimbus Sans Regular",
           "size_px": 21.0
         },
         {
-          "text": "SIM06467",
+          "text": "SIM03168",
           "font": "Nimbus Sans Regular",
           "size_px": 21.0
         },
@@ -490,10 +497,10 @@
         "selected effects with 95% confidence intervals"
       ],
       "volcano_limits": {
-        "absolute_log2fc": 5.0,
-        "negative_log10_adjusted_p": 10.0
+        "absolute_log2fc": 0.8,
+        "negative_log10_adjusted_p": 6.0
       },
-      "volcano_genes": 7647,
+      "volcano_genes": 8000,
       "heatmap_samples": [
         "LD LEPTIN 01",
         "LD LEPTIN 02",
@@ -509,74 +516,81 @@
         "LD SALINE 06"
       ],
       "heatmap_genes": [
-        "SIM02682",
-        "SIM05734",
+        "SIM00393",
+        "SIM02979",
+        "SIM03036",
+        "SIM02775",
+        "SIM03770",
+        "SIM02544",
+        "SIM01464",
+        "SIM06519",
+        "SIM02714",
+        "SIM04275",
+        "SIM06391",
+        "SIM05094",
+        "SIM04965",
+        "SIM05399",
+        "SIM01891",
+        "SIM03662",
+        "SIM01156",
+        "SIM02647",
+        "SIM02708",
+        "SIM05768",
+        "SIM01601",
+        "SIM07308",
+        "SIM07812",
+        "SIM02492",
+        "SIM05624",
+        "SIM00408",
+        "SIM01693",
+        "SIM07675",
+        "SIM04477",
+        "SIM06322",
+        "SIM05490",
+        "SIM04146",
+        "SIM03494",
+        "SIM04671",
+        "SIM02370",
+        "SIM03168",
+        "SIM03188",
         "SIM04739",
-        "SIM00401",
-        "SIM03578",
-        "SIM04296",
-        "SIM01652",
-        "SIM02304",
-        "SIM06871",
-        "SIM07079",
-        "SIM07437",
-        "SIM04390",
-        "SIM02674",
-        "SIM00323",
-        "SIM00154",
-        "SIM05379",
-        "SIM07987",
-        "SIM05521",
-        "SIM04543",
-        "SIM04654",
-        "SIM03892",
-        "SIM02888",
-        "SIM02728",
-        "SIM05404",
-        "SIM07018",
-        "SIM06713",
-        "SIM00633",
-        "SIM06467",
-        "SIM07366",
-        "SIM06795",
-        "SIM02319",
-        "SIM06396",
-        "SIM03844",
-        "SIM01858",
-        "SIM03693",
-        "SIM01478",
-        "SIM06980",
-        "SIM06425",
-        "SIM00897",
-        "SIM05766"
+        "SIM06904",
+        "SIM00861"
       ],
       "heatmap_group_order": [
         "LD LEPTIN",
         "LD SALINE"
       ],
-      "heatmap_selection": "40 display-threshold genes with smallest adjusted P in this contrast, clustered using only the two displayed groups",
+      "heatmap_selection": "40 tested genes with smallest adjusted P in this contrast, regardless of significance, clustered using only the two displayed groups",
       "forest_genes": [
-        "SIM00323",
-        "SIM00154",
-        "SIM07079",
-        "SIM05379",
-        "SIM01652",
-        "SIM07437",
-        "SIM00633",
-        "SIM02728",
-        "SIM05404",
-        "SIM06713",
-        "SIM07366",
-        "SIM06467"
+        "SIM01601",
+        "SIM01156",
+        "SIM07308",
+        "SIM02708",
+        "SIM06391",
+        "SIM05768",
+        "SIM04477",
+        "SIM04671",
+        "SIM04739",
+        "SIM02370",
+        "SIM03188",
+        "SIM03168"
       ],
-      "forest_absolute_limit": 5.0,
+      "forest_absolute_limit": 0.6000000000000001,
       "forest_confidence_level": 0.95,
       "forest_residual_degrees_of_freedom": 15,
-      "forest_intervals": "marginal, unadjusted; genes selected from the same dataset"
+      "forest_intervals": "marginal, unadjusted; genes selected from the same dataset",
+      "forest_selection": "six positive and six negative estimates with smallest adjusted P among all tested genes, regardless of significance",
+      "synthetic_effect_scale": "planted base effects 0.08 to 0.22 log2 units; fitted effects are neither rescaled nor clipped",
+      "group_colors": {
+        "LD SALINE": "#C28E85",
+        "LD LEPTIN": "#527D6B",
+        "NON-LD control": "#A8BED2"
+      }
     },
     {
       "figure": 3,
-      "file_stem": "figure_03_synthetic",
+      "file_stem": "figure_03_small_effects_synthetic",
       "question": "What differences remain after leptin treatment?",
       "all_visible_typography": "Nimbus Sans",
       "canvas_pixels": [
@@ -624,122 +638,122 @@
           "size_px": 24.0
         },
         {
-          "text": "SIM06871",
+          "text": "SIM00661",
           "font": "Nimbus Sans Regular",
           "size_px": 21.0
         },
         {
-          "text": "SIM06871",
+          "text": "SIM00661",
           "font": "Nimbus Sans Regular",
           "size_px": 21.0
         },
         {
-          "text": "SIM07256",
+          "text": "SIM03605",
           "font": "Nimbus Sans Regular",
           "size_px": 21.0
         },
         {
-          "text": "SIM07256",
+          "text": "SIM03605",
           "font": "Nimbus Sans Regular",
           "size_px": 21.0
         },
         {
-          "text": "SIM05689",
+          "text": "SIM00752",
           "font": "Nimbus Sans Regular",
           "size_px": 21.0
         },
         {
-          "text": "SIM05689",
+          "text": "SIM00752",
           "font": "Nimbus Sans Regular",
           "size_px": 21.0
         },
         {
-          "text": "SIM03703",
+          "text": "SIM02965",
           "font": "Nimbus Sans Regular",
           "size_px": 21.0
         },
         {
-          "text": "SIM03703",
+          "text": "SIM02965",
           "font": "Nimbus Sans Regular",
           "size_px": 21.0
         },
         {
-          "text": "SIM03002",
+          "text": "SIM01634",
           "font": "Nimbus Sans Regular",
           "size_px": 21.0
         },
         {
-          "text": "SIM03002",
+          "text": "SIM01634",
           "font": "Nimbus Sans Regular",
           "size_px": 21.0
         },
         {
-          "text": "SIM07079",
+          "text": "SIM02463",
           "font": "Nimbus Sans Regular",
           "size_px": 21.0
         },
         {
-          "text": "SIM07079",
+          "text": "SIM02463",
           "font": "Nimbus Sans Regular",
           "size_px": 21.0
         },
         {
-          "text": "SIM05598",
+          "text": "SIM04739",
           "font": "Nimbus Sans Regular",
           "size_px": 21.0
         },
         {
-          "text": "SIM05598",
+          "text": "SIM04739",
           "font": "Nimbus Sans Regular",
           "size_px": 21.0
         },
         {
-          "text": "SIM01928",
+          "text": "SIM07561",
           "font": "Nimbus Sans Regular",
           "size_px": 21.0
         },
         {
-          "text": "SIM01928",
+          "text": "SIM07561",
           "font": "Nimbus Sans Regular",
           "size_px": 21.0
         },
         {
-          "text": "SIM05289",
+          "text": "SIM05595",
           "font": "Nimbus Sans Regular",
           "size_px": 21.0
         },
         {
-          "text": "SIM05289",
+          "text": "SIM05595",
           "font": "Nimbus Sans Regular",
           "size_px": 21.0
         },
         {
-          "text": "SIM03007",
+          "text": "SIM01099",
           "font": "Nimbus Sans Regular",
           "size_px": 21.0
         },
         {
-          "text": "SIM03007",
+          "text": "SIM01099",
           "font": "Nimbus Sans Regular",
           "size_px": 21.0
         },
         {
-          "text": "SIM06344",
+          "text": "SIM07237",
           "font": "Nimbus Sans Regular",
           "size_px": 21.0
         },
         {
-          "text": "SIM06344",
+          "text": "SIM07237",
           "font": "Nimbus Sans Regular",
           "size_px": 21.0
         },
         {
-          "text": "SIM01478",
+          "text": "SIM05854",
           "font": "Nimbus Sans Regular",
           "size_px": 21.0
         },
         {
-          "text": "SIM01478",
+          "text": "SIM05854",
           "font": "Nimbus Sans Regular",
           "size_px": 21.0
         },
@@ -777,10 +791,10 @@
         "selected effects with 95% confidence intervals"
       ],
       "volcano_limits": {
-        "absolute_log2fc": 5.0,
-        "negative_log10_adjusted_p": 10.0
+        "absolute_log2fc": 0.8,
+        "negative_log10_adjusted_p": 6.0
       },
-      "volcano_genes": 7647,
+      "volcano_genes": 8000,
       "heatmap_samples": [
         "LD LEPTIN 01",
         "LD LEPTIN 02",
@@ -796,70 +810,77 @@
         "NON-LD control 06"
       ],
       "heatmap_genes": [
-        "SIM06870",
-        "SIM07243",
-        "SIM07477",
-        "SIM05598",
+        "SIM03605",
+        "SIM00661",
+        "SIM02463",
+        "SIM00770",
+        "SIM06586",
+        "SIM02159",
+        "SIM01634",
+        "SIM04531",
+        "SIM01115",
+        "SIM00752",
+        "SIM02482",
+        "SIM03793",
+        "SIM02965",
+        "SIM00326",
+        "SIM06645",
         "SIM07829",
-        "SIM01916",
-        "SIM01981",
-        "SIM01928",
-        "SIM06344",
-        "SIM06053",
-        "SIM03007",
-        "SIM04315",
-        "SIM07595",
-        "SIM01478",
-        "SIM05289",
-        "SIM04762",
-        "SIM02834",
-        "SIM02674",
-        "SIM03282",
-        "SIM05689",
-        "SIM02591",
-        "SIM07079",
-        "SIM05854",
-        "SIM05904",
-        "SIM02789",
-        "SIM05692",
-        "SIM04939",
-        "SIM07681",
-        "SIM05285",
-        "SIM07256",
-        "SIM06871",
-        "SIM03002",
+        "SIM05595",
+        "SIM04739",
+        "SIM05172",
+        "SIM05927",
+        "SIM02584",
+        "SIM07561",
         "SIM00574",
-        "SIM03843",
-        "SIM07437",
-        "SIM02599",
-        "SIM03703",
-        "SIM07295",
-        "SIM06285",
-        "SIM00627"
+        "SIM02661",
+        "SIM07237",
+        "SIM02370",
+        "SIM07381",
+        "SIM07289",
+        "SIM05854",
+        "SIM01099",
+        "SIM05904",
+        "SIM05079",
+        "SIM03007",
+        "SIM02626",
+        "SIM03580",
+        "SIM02345",
+        "SIM07039",
+        "SIM07057",
+        "SIM01478",
+        "SIM01680"
       ],
       "heatmap_group_order": [
         "LD LEPTIN",
         "NON-LD control"
       ],
-      "heatmap_selection": "40 display-threshold genes with smallest adjusted P in this contrast, clustered using only the two displayed groups",
+      "heatmap_selection": "40 tested genes with smallest adjusted P in this contrast, regardless of significance, clustered using only the two displayed groups",
       "forest_genes": [
-        "SIM06871",
-        "SIM07256",
-        "SIM05689",
-        "SIM03703",
-        "SIM03002",
-        "SIM07079",
-        "SIM05598",
-        "SIM01928",
-        "SIM05289",
-        "SIM03007",
-        "SIM06344",
-        "SIM01478"
+        "SIM00661",
+        "SIM03605",
+        "SIM00752",
+        "SIM02965",
+        "SIM01634",
+        "SIM02463",
+        "SIM04739",
+        "SIM07561",
+        "SIM05595",
+        "SIM01099",
+        "SIM07237",
+        "SIM05854"
       ],
-      "forest_absolute_limit": 5.0,
+      "forest_absolute_limit": 0.6000000000000001,
       "forest_confidence_level": 0.95,
       "forest_residual_degrees_of_freedom": 15,
-      "forest_intervals": "marginal, unadjusted; genes selected from the same dataset"
+      "forest_intervals": "marginal, unadjusted; genes selected from the same dataset",
+      "forest_selection": "six positive and six negative estimates with smallest adjusted P among all tested genes, regardless of significance",
+      "synthetic_effect_scale": "planted base effects 0.08 to 0.22 log2 units; fitted effects are neither rescaled nor clipped",
+      "group_colors": {
+        "LD SALINE": "#C28E85",
+        "LD LEPTIN": "#527D6B",
+        "NON-LD control": "#A8BED2"
+      }
     }
   ]
 }

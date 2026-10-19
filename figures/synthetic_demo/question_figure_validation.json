@@ -2,57 +2,51 @@
   {
     "figure": 1,
     "comparison": "LD SALINE vs NON-LD control",
+    "tested_genes": 8000,
     "heatmap_shape": [
       40,
       12
     ],
     "forest_genes": 12,
-    "directional_balance": [
-      6,
-      6
-    ],
     "ci_formula_verified": true,
-    "contrast_selection_verified": true,
+    "estimates_equal_fitted_group_differences_without_rescaling": true,
+    "ranked_selection_without_significance_requirement": true,
+    "axis_and_ci_clipping_absent": true,
     "pca_absent": true,
-    "only_relevant_groups_on_canvas": true,
     "fonts": "Nimbus Sans",
     "all_checks_passed": true
   },
   {
     "figure": 2,
     "comparison": "LD LEPTIN vs LD SALINE",
+    "tested_genes": 8000,
     "heatmap_shape": [
       40,
       12
     ],
     "forest_genes": 12,
-    "directional_balance": [
-      6,
-      6
-    ],
     "ci_formula_verified": true,
-    "contrast_selection_verified": true,
+    "estimates_equal_fitted_group_differences_without_rescaling": true,
+    "ranked_selection_without_significance_requirement": true,
+    "axis_and_ci_clipping_absent": true,
     "pca_absent": true,
-    "only_relevant_groups_on_canvas": true,
     "fonts": "Nimbus Sans",
     "all_checks_passed": true
   },
   {
     "figure": 3,
     "comparison": "LD LEPTIN vs NON-LD control",
+    "tested_genes": 8000,
     "heatmap_shape": [
       40,
       12
     ],
     "forest_genes": 12,
-    "directional_balance": [
-      6,
-      6
-    ],
     "ci_formula_verified": true,
-    "contrast_selection_verified": true,
+    "estimates_equal_fitted_group_differences_without_rescaling": true,
+    "ranked_selection_without_significance_requirement": true,
+    "axis_and_ci_clipping_absent": true,
     "pca_absent": true,
-    "only_relevant_groups_on_canvas": true,
     "fonts": "Nimbus Sans",
     "all_checks_passed": true
   }
