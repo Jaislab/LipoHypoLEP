@@ -1,0 +1,11 @@
+# FIGURE 2 | What does leptin treatment change in LD mice?
+
+**Entirely synthetic demonstration. No experimental measurements or biological conclusions are shown.** The comparison is **LD LEPTIN vs LD SALINE**, with six simulated mice per group. All mice are on the LDLR−/− background. Positive log2 fold change indicates higher expression in LD LEPTIN.
+
+**a,** Volcano plot of 7,647 retained synthetic genes. Coral and blue identify higher and lower expression in LD LEPTIN, respectively, at adjusted *P* < 0.05 and absolute estimated log2 fold change ≥ 1; other genes are gray. Dashed lines mark these display criteria. In this simulation, 672 genes meet both criteria: 342 higher and 330 lower. These counts are illustrative, not study results.
+
+**b,** Expression heatmap of the 40 genes with the smallest adjusted *P* values among those meeting the panel-a criteria, restricted to the 12 LD LEPTIN and LD SALINE samples. Rows show gene-wise z-scores of log2-normalized expression across these samples (sample standard deviation, ddof = 1) and are ordered by average-linkage Euclidean clustering. The displayed scale is limited to −2 to 2. Columns are individual mice, grouped by the full study-group names.
+
+**c,** Estimated effects for the six genes with the smallest adjusted *P* values in each direction among those meeting the panel-a criteria, sorted by effect. Intervals are marginal, unadjusted 95% confidence intervals from the common fitted model (coefficient ± *t*<sub>0.975,15</sub> × standard error). Gene selection uses the same data; these intervals do not provide multiplicity- or selection-adjusted coverage for the displayed set. SIM labels are anonymous synthetic identifiers.
+
+This contrast illustrates treatment-associated differences within LD. It does not by itself establish that treatment reverses an LD-associated difference relative to NON-LD control. See [shared methods and limitations](FIGURE_LEGEND.md) for simulation, normalization, the illustrative log-scale model, multiple-testing adjustment, and display-selection rules. Gene selections: [heatmap](synthetic_demo/data/figure_02_heatmap_genes.tsv) · [effect estimates](synthetic_demo/data/figure_02_forest_genes.tsv).

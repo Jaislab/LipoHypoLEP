@@ -41,10 +41,13 @@ No copyrighted paper figures or downloaded article PDFs are redistributed in thi
 
 ## Decisions implemented
 
-- Six real analytical panels: three volcano plots, PCA, an effect-size comparison, and a heatmap.
+- Three separate question-led figures, each with three populated analytical panels: a volcano plot, a two-group expression heatmap, and selected gene effect estimates with confidence intervals. All plotted observations are synthetic.
+- Figure 1 compares LD SALINE with NON-LD control; Figure 2 compares LD LEPTIN with LD SALINE; Figure 3 compares LD LEPTIN with NON-LD control. PCA is omitted.
 - No page title, subtitle, promotional label, explanatory footer, interpretation box, cohort badge, or generic RNA-seq icon inside the artwork.
-- Only panel letters, full contrast names, axes, a compact cohort key, heatmap group annotations, and the color scale remain on the canvas.
+- Only panel letters, full contrast names, axes, anonymous gene identifiers, heatmap group annotations, and the color scale remain on the canvas. Questions and figure numbers appear in the surrounding documentation and legends.
 - Thin gray left/bottom axes; no decorative chart containers or background grids.
 - Muted coral, sage, and blue-gray cohort colors; a separate signed-effect palette defined in the legend.
-- Nimbus Sans throughout; 21–24 pixel main labels/ticks and 32 pixel panel identifiers, with 19 pixel compact keys and smaller mathematical subscripts. These are this figure's design choices, not claimed journal requirements.
-- The synthetic-data disclosure, sample counts, statistical method, thresholds, plot-selection rule, limitations, and interpretation appear in [FIGURE_LEGEND.md](FIGURE_LEGEND.md) and repository documentation.
+- Nimbus Sans throughout, retaining large labels and panel identifiers with smaller mathematical subscripts. These are the project's design choices, not claimed journal requirements.
+- Matching volcano scales and repeated panel types support comparison across figures. Each heatmap and effect-estimate panel uses genes selected within its own contrast; only the two relevant groups appear in that heatmap.
+- The synthetic-data disclosure, sample counts, statistical method, thresholds, plot-selection rules, uncertainty limitations, and interpretation appear in the [shared methods](FIGURE_LEGEND.md), [Figure 1 legend](FIGURE_1_LEGEND.md), [Figure 2 legend](FIGURE_2_LEGEND.md), [Figure 3 legend](FIGURE_3_LEGEND.md), and repository documentation.
+- The post-treatment figure describes differences present after treatment, without assigning all of them to uncorrected LD effects or treating nonsignificance as normalization.
