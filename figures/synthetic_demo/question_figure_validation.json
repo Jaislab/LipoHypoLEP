@@ -1,10 +1,10 @@
 {
   "status": "PASS",
-  "verified_at_utc": "2026-10-19T14:34:55.397469+00:00",
+  "verified_at_utc": "2026-10-19T14:41:39.294391+00:00",
   "scope": "Synthetic figures only; numerical/table consistency plus current export evidence.",
   "validator_sha256": "e4eb9accf382dbf1e43c2390bca362e86256f1fa79d243fb766e0f3b40e8cee1",
   "input_sha256": {
-    "figures/accessibility/palette_simulation.json": "80827b23b65cfcea829d1f88c22186cb1d140ea63b41e9c1b827b09d37723daf",
+    "figures/accessibility/palette_simulation.json": "aaef7a17985362c5ce8b65c1c92019efb97aeae72fa5eace00eb55c896df58dd",
     "figures/requirements.txt": "d00410f43d5197362b4e538c3574e8ed1b1f26d9a9d05c735e262039fdc9087e",
     "figures/synthetic_demo/data/contrast_LD_LEPTIN_vs_LD_SALINE.tsv.gz": "3af98fb3e0c71bd2e86bf2f870b9759c532f0e39f03f7f8e0abf280187cc1ae6",
     "figures/synthetic_demo/data/contrast_LD_LEPTIN_vs_NON_LD_control.tsv.gz": "5fd698622266646338baccf6598e06279a51d8f92e3d6425110d66f2fbda3410",
@@ -12,8 +12,8 @@
     "figures/synthetic_demo/data/normalized_log2_expression.tsv.gz": "3a81f5d936b48219e116c5a38c3537dbf36f88bff927cca3b353d27544d26dcf",
     "figures/synthetic_demo/data/sample_metadata.tsv": "c2d5d5c19a98408a3e9b34f29ec0040accb2f9d91d6b12cc2cc78f620ea6f754",
     "figures/synthetic_demo/data/simulation_summary.json": "0dbba9e51776e8213c7d900beefe1fe8bd491e526d7875224643f4e667c2f378",
-    "figures/synthetic_demo/export_font_verification.json": "484d390bf8dccef63814c29a91829428e946b80749a70157145619cba99e8c5d",
-    "figures/synthetic_demo/font_and_plot_audit.json": "1625fdb5bbdb21cb47c64499776736d2b660f87e067822c33332357977aa2d60",
+    "figures/synthetic_demo/export_font_verification.json": "d7613c2e808885805627ce9993e85681f7284265c4c6ffa06372f40704e647ef",
+    "figures/synthetic_demo/font_and_plot_audit.json": "c68234fefd1058951102cc34f682679009b8262499ddac0baf4d38eacd5b3f60",
     "figures/synthetic_demo/gsea_data/figure_01_complete_ranked_statistics.tsv.gz": "83d2328f8b23573dfe9398a259d9394ed353e294c069e09e9a6c4f688d851d9e",
     "figures/synthetic_demo/gsea_data/figure_01_go_bp_all_results.tsv.gz": "bd08ab8b686afc3a8d565b700ad7757a820550fa73ae9bd79139a24127207843",
     "figures/synthetic_demo/gsea_data/figure_01_go_bp_display.tsv": "62f0451c60f79b30f4f07de2e028edb478b2a527fb015cc028ceb67a478d1221",
@@ -49,7 +49,7 @@
     "figures/synthetic_demo/gsea_data/resources/kegg_mouse_biosystems_archive_2020.gmt": "70127d28c5c82a42abf2d1f33291d4a6a2a10e0afad320aad484d01931a9091a",
     "figures/synthetic_demo/gsea_data/resources/kegg_mouse_provenance.json": "12428593c85f86ab7d6743f77cfe987bf981754609c28a00da4bd8409c4ab214",
     "figures/synthetic_demo/gsea_data/synthetic_to_mouse_symbol_map.tsv": "f64a7fba9f0257d9715c073f42339109e4a01784da68c55ce85ada0c3b36abbf",
-    "figures/synthetic_demo/render_figure.py": "aca8eeed5c34e7ab031bc43a3648fbabdfcc6be3c6bd83dd666011d676ee95e7",
+    "figures/synthetic_demo/render_figure.py": "adde3cf81f751e097e28cf8c491ca54e38baa6677f7b9cfbcfaadc6d83e4141d",
     "figures/synthetic_demo/run_gsea.py": "e3f5465364ffdac1d58d18293502109ed5a60b6f62b01ea3129a333eb46431c6",
     "figures/synthetic_demo/simulate_and_analyze.py": "69a6da88cdbd439d56a0dee60be650da485e18bdf16a317cda1ed1d7b7e0379a"
   },

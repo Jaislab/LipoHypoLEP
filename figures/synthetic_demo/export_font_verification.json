@@ -1,5 +1,5 @@
 {
-  "verified_at_utc": "2026-10-19T14:34:50.973180+00:00",
+  "verified_at_utc": "2026-10-19T14:41:33.944361+00:00",
   "status": "PASS",
   "scope": "Current exported files identified by SHA-256; rerun after every export.",
   "verification_method": "Actual PDF and SVG font programs independently compared to installed URW Nimbus Sans source metrics and outlines.",
@@ -74,7 +74,7 @@
       }
     }
   ],
-  "renderer_sha256": "aca8eeed5c34e7ab031bc43a3648fbabdfcc6be3c6bd83dd666011d676ee95e7",
+  "renderer_sha256": "adde3cf81f751e097e28cf8c491ca54e38baa6677f7b9cfbcfaadc6d83e4141d",
   "verifier_sha256": "56e6287c5d9a42c5c5397a8aa26a291661116d7b73952538d8820fa3f25e8f45",
   "software": {
     "PyMuPDF": "1.26.6",
@@ -87,11 +87,11 @@
       "figure": 1,
       "file_stem": "figure_01_gsea_synthetic",
       "export_sha256": {
-        "figure_01_gsea_synthetic.pdf": "8673078542c37bb1c8b007601e6cc9a7217d603c9724b34e325563143a801519",
-        "figure_01_gsea_synthetic.svg": "2c8e6b64336d094a0123df4e0084d8739eb3cd710d888eaf62e92565f9f359bc",
-        "figure_01_gsea_synthetic_editable.svg": "319ad019236f85beb107a720b74ac78b205556c595a79585a4ffdefc0a35a4e6",
-        "figure_01_gsea_synthetic.png": "06a8c87fae450e4d63ff80545f9711d793d60eb02f5bcd37bfe6bca418dd7b7f",
-        "figure_01_gsea_synthetic_300dpi.png": "59d78d4dd3ec9b21303aebe2f42ed82df093cf0ea0e436ab9a6ec38fff5a7836"
+        "figure_01_gsea_synthetic.pdf": "df3db316b2c81cca8dd12d59f335d84436de99c057cf533c0f320a2adec6e22b",
+        "figure_01_gsea_synthetic.svg": "4629ba46408c2a3e77db5e08e69c863a63ae04745c65dcefe6ef86eeb18fc203",
+        "figure_01_gsea_synthetic_editable.svg": "0f9b0cc3679fd7513d028c825ebceafe3ad91c3ead6409344cd1d91eaa87d1cd",
+        "figure_01_gsea_synthetic.png": "2218adc74efdfaf21b8e0fea10f420076197b7ca3614df0a88df68e511fb3da5",
+        "figure_01_gsea_synthetic_300dpi.png": "068e11d11b1a544757e5b8f6d0ca82c5e823b444b4b78417e24ffb09f5b1a0c4"
       },
       "pdf": {
         "font_programs": [
@@ -114,7 +114,7 @@
                 "NimbusSans-Bold"
               ]
             },
-            "sha256": "9415d3c754a8f243c3bdc497cc917d27c292b677668eaf2bb39910b5ac650c08",
+            "sha256": "6f1213e79cf289b1dcb687e3fc94b582cb70ce80c8f5b1848a8a2256ef1b222c",
             "bytes": 1460,
             "units_per_em": 1000,
             "unicode_glyphs_compared": 4,
@@ -144,7 +144,7 @@
                 "NimbusSans-Regular"
               ]
             },
-            "sha256": "bc28223b692b429097803c6994645486fbcd26b9b38662cf289c83f456b89d01",
+            "sha256": "9b31b1840f385b5caca7866777bc6c1623701f3b8dec97031a01bb6bd1d906bc",
             "bytes": 5864,
             "units_per_em": 1000,
             "unicode_glyphs_compared": 52,
@@ -196,7 +196,7 @@
                 "NimbusSans-Regular"
               ]
             },
-            "sha256": "4364da3673638c7c8749b4f14d4bf5fd3ef9de5333434064e4f8f7e1d4cef40f",
+            "sha256": "ec7926d9f6b648670fc1c5fef1d2c911f50e132c2de6710d2d53b4d8a535fbdc",
             "bytes": 95936,
             "units_per_em": 1000,
             "unicode_glyphs_compared": 854,
@@ -223,7 +223,7 @@
                 "NimbusSans-Bold"
               ]
             },
-            "sha256": "5169500ce34d7fa3c299e03ca2bd0268fc94bf96c37a7e7c7ce1462cd60d59a3",
+            "sha256": "03d85735bed5b1e187d898d43fe42c85096857466fe48f73f41cc86a915ad303",
             "bytes": 94980,
             "units_per_em": 1000,
             "unicode_glyphs_compared": 854,
@@ -250,7 +250,7 @@
                 "NimbusSans-Italic"
               ]
             },
-            "sha256": "811b81f9320b40496475b220bfa042ea07d03a3a92889921b1384b86b9ea3514",
+            "sha256": "294df54d34e47f864c8991048f2e2b012c38b7b84fedcc12bdc2c98ef2fd6a01",
             "bytes": 114084,
             "units_per_em": 1000,
             "unicode_glyphs_compared": 854,
@@ -284,7 +284,7 @@
             1536,
             1024
           ],
-          "mean_absolute_rgb_difference_0_to_255": 0.90227
+          "mean_absolute_rgb_difference_0_to_255": 1.38492
         },
         "font_identity_limit": "Pixels do not encode a font name. Identity is supported by verified companion exports, explicit Nimbus source selection in the renderer, and matching rendered content."
       },
@@ -308,7 +308,7 @@
             1536,
             1024
           ],
-          "mean_absolute_rgb_difference_0_to_255": 0.66187
+          "mean_absolute_rgb_difference_0_to_255": 0.95118
         },
         "font_identity_limit": "Pixels do not encode a font name. Identity is supported by verified companion exports, explicit Nimbus source selection in the renderer, and matching rendered content."
       },
@@ -321,11 +321,11 @@
       "figure": 2,
       "file_stem": "figure_02_gsea_synthetic",
       "export_sha256": {
-        "figure_02_gsea_synthetic.pdf": "6b887c830b99beb4244d4398edbb340aa1d0b952a32ccce0770f70d7cf9261d9",
-        "figure_02_gsea_synthetic.svg": "0c8ceb4bf6fcb3e6c52c1a1e8fada5a031090381e16e9410256c83b7ba1870f3",
-        "figure_02_gsea_synthetic_editable.svg": "6870738fd1608722c670ce6da6a265bda275475fa807f14bd144288f9dc23e18",
-        "figure_02_gsea_synthetic.png": "f6cfc7afaf6f55d3f35588e258e837e35644aa496a2523be217d4c33220a3bc5",
-        "figure_02_gsea_synthetic_300dpi.png": "639626a8bac7a142a74e3c5bfb732106e138dd16bd0b04421f9e53c9d63531f6"
+        "figure_02_gsea_synthetic.pdf": "db639a98cafe20ffcb86e82ef9bb159433131fc52f7fc6df56fe3353a809a905",
+        "figure_02_gsea_synthetic.svg": "c56cfd18f5dabd92ff52a64771e65c3cd0a4652106fb604cb0c7f3b624f4213e",
+        "figure_02_gsea_synthetic_editable.svg": "30fd1386a84409c6858ca5fa986f870087ae97d074d721cc8e1fc95926e8ef1d",
+        "figure_02_gsea_synthetic.png": "cf490bb98bbe7879de0d5fdae39aa2892992f11d9c5b9b0310e25b27f74a333a",
+        "figure_02_gsea_synthetic_300dpi.png": "88b3de79f02e93d7b868a49d58eb187f93ddb32eeabcfcfc99ee6772324c4bc7"
       },
       "pdf": {
         "font_programs": [
@@ -348,7 +348,7 @@
                 "NimbusSans-Bold"
               ]
             },
-            "sha256": "9415d3c754a8f243c3bdc497cc917d27c292b677668eaf2bb39910b5ac650c08",
+            "sha256": "6f1213e79cf289b1dcb687e3fc94b582cb70ce80c8f5b1848a8a2256ef1b222c",
             "bytes": 1460,
             "units_per_em": 1000,
             "unicode_glyphs_compared": 4,
@@ -378,7 +378,7 @@
                 "NimbusSans-Regular"
               ]
             },
-            "sha256": "cc2b1b1afeaf804ede92b0f5b884e5e67a67f08d24d69f1a5f151759e74cb5d1",
+            "sha256": "3243f6727618c059d4a83c69eec6e5dad3c39e0eb37f7e2338ae0f88e73e22b7",
             "bytes": 5844,
             "units_per_em": 1000,
             "unicode_glyphs_compared": 54,
@@ -430,7 +430,7 @@
                 "NimbusSans-Regular"
               ]
             },
-            "sha256": "4364da3673638c7c8749b4f14d4bf5fd3ef9de5333434064e4f8f7e1d4cef40f",
+            "sha256": "ec7926d9f6b648670fc1c5fef1d2c911f50e132c2de6710d2d53b4d8a535fbdc",
             "bytes": 95936,
             "units_per_em": 1000,
             "unicode_glyphs_compared": 854,
@@ -457,7 +457,7 @@
                 "NimbusSans-Bold"
               ]
             },
-            "sha256": "5169500ce34d7fa3c299e03ca2bd0268fc94bf96c37a7e7c7ce1462cd60d59a3",
+            "sha256": "03d85735bed5b1e187d898d43fe42c85096857466fe48f73f41cc86a915ad303",
             "bytes": 94980,
             "units_per_em": 1000,
             "unicode_glyphs_compared": 854,
@@ -484,7 +484,7 @@
                 "NimbusSans-Italic"
               ]
             },
-            "sha256": "811b81f9320b40496475b220bfa042ea07d03a3a92889921b1384b86b9ea3514",
+            "sha256": "294df54d34e47f864c8991048f2e2b012c38b7b84fedcc12bdc2c98ef2fd6a01",
             "bytes": 114084,
             "units_per_em": 1000,
             "unicode_glyphs_compared": 854,
@@ -518,7 +518,7 @@
             1536,
             1024
           ],
-          "mean_absolute_rgb_difference_0_to_255": 1.06229
+          "mean_absolute_rgb_difference_0_to_255": 1.72269
         },
         "font_identity_limit": "Pixels do not encode a font name. Identity is supported by verified companion exports, explicit Nimbus source selection in the renderer, and matching rendered content."
       },
@@ -542,7 +542,7 @@
             1536,
             1024
           ],
-          "mean_absolute_rgb_difference_0_to_255": 0.74774
+          "mean_absolute_rgb_difference_0_to_255": 1.13635
         },
         "font_identity_limit": "Pixels do not encode a font name. Identity is supported by verified companion exports, explicit Nimbus source selection in the renderer, and matching rendered content."
       },
@@ -555,11 +555,11 @@
       "figure": 3,
       "file_stem": "figure_03_gsea_synthetic",
       "export_sha256": {
-        "figure_03_gsea_synthetic.pdf": "60479128ac6707ea1184d5afef83f9a1d6041a36763a902f765001c012c76825",
-        "figure_03_gsea_synthetic.svg": "578dc1d95f9a26569d2e478452ae268222c20c7ede38d168003fbb3f02182b2e",
-        "figure_03_gsea_synthetic_editable.svg": "93447b4971d6d008a153e7d331f4d1b3c9ebc07f9a4b1f9c67041fba818302d9",
-        "figure_03_gsea_synthetic.png": "f3c0ed45bf6a91e8923bc9284a41cc9a7c7dbd723c677814be4724e0619a258c",
-        "figure_03_gsea_synthetic_300dpi.png": "32af346fd9c5636a0b55ecec99364f01b8c2a55e6dde4a1f6b4f2b5194075857"
+        "figure_03_gsea_synthetic.pdf": "bfd96efe292618113ecbc0b272e39d5d649fa41de388fcb865f2094ef801641b",
+        "figure_03_gsea_synthetic.svg": "bf084689572ceaf8146a1cfe666389108e7dd4299defb8439aad2384da0d0973",
+        "figure_03_gsea_synthetic_editable.svg": "3feeaf6d4a63ac23c44e511f373018c1c3dc50696bc1e8ef8dc43c62e2f34ef0",
+        "figure_03_gsea_synthetic.png": "1d1365339d6131172cdfd3cbf59282d87db45e5736bf3c6a49d6d90e3100fd9b",
+        "figure_03_gsea_synthetic_300dpi.png": "f7733014b133d05e8d8afafc49f455fdbc1aa67fb6184c93a08e98c21b029504"
       },
       "pdf": {
         "font_programs": [
@@ -582,7 +582,7 @@
                 "NimbusSans-Bold"
               ]
             },
-            "sha256": "9415d3c754a8f243c3bdc497cc917d27c292b677668eaf2bb39910b5ac650c08",
+            "sha256": "6f1213e79cf289b1dcb687e3fc94b582cb70ce80c8f5b1848a8a2256ef1b222c",
             "bytes": 1460,
             "units_per_em": 1000,
             "unicode_glyphs_compared": 4,
@@ -612,7 +612,7 @@
                 "NimbusSans-Regular"
               ]
             },
-            "sha256": "fbcd50f258bab4ee45f6675d9f143fccfcaf09ea624d06d49dc61ecc6345a775",
+            "sha256": "b5a81fab1ffb99280c2b160900ec655b2c4d99168e64b0149aa895a6d7a0da39",
             "bytes": 5964,
             "units_per_em": 1000,
             "unicode_glyphs_compared": 55,
@@ -664,7 +664,7 @@
                 "NimbusSans-Regular"
               ]
             },
-            "sha256": "4364da3673638c7c8749b4f14d4bf5fd3ef9de5333434064e4f8f7e1d4cef40f",
+            "sha256": "ec7926d9f6b648670fc1c5fef1d2c911f50e132c2de6710d2d53b4d8a535fbdc",
             "bytes": 95936,
             "units_per_em": 1000,
             "unicode_glyphs_compared": 854,
@@ -691,7 +691,7 @@
                 "NimbusSans-Bold"
               ]
             },
-            "sha256": "5169500ce34d7fa3c299e03ca2bd0268fc94bf96c37a7e7c7ce1462cd60d59a3",
+            "sha256": "03d85735bed5b1e187d898d43fe42c85096857466fe48f73f41cc86a915ad303",
             "bytes": 94980,
             "units_per_em": 1000,
             "unicode_glyphs_compared": 854,
@@ -718,7 +718,7 @@
                 "NimbusSans-Italic"
               ]
             },
-            "sha256": "811b81f9320b40496475b220bfa042ea07d03a3a92889921b1384b86b9ea3514",
+            "sha256": "294df54d34e47f864c8991048f2e2b012c38b7b84fedcc12bdc2c98ef2fd6a01",
             "bytes": 114084,
             "units_per_em": 1000,
             "unicode_glyphs_compared": 854,
@@ -752,7 +752,7 @@
             1536,
             1024
           ],
-          "mean_absolute_rgb_difference_0_to_255": 1.09568
+          "mean_absolute_rgb_difference_0_to_255": 1.52362
         },
         "font_identity_limit": "Pixels do not encode a font name. Identity is supported by verified companion exports, explicit Nimbus source selection in the renderer, and matching rendered content."
       },
@@ -776,7 +776,7 @@
             1536,
             1024
           ],
-          "mean_absolute_rgb_difference_0_to_255": 0.82354
+          "mean_absolute_rgb_difference_0_to_255": 1.13835
         },
         "font_identity_limit": "Pixels do not encode a font name. Identity is supported by verified companion exports, explicit Nimbus source selection in the renderer, and matching rendered content."
       },

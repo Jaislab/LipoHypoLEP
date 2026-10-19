@@ -37,6 +37,8 @@ ROOT = Path(__file__).resolve().parent
 OUT = ROOT.parent
 DATA = ROOT/'data'
 W,H,DPI = 1536,1024,100
+# Scale every text role together; keep Nimbus Sans and the artwork dimensions.
+FONT_SCALE = 1.20
 GROUPS = ('LD SALINE','LD LEPTIN','NON-LD control')
 INK,AXIS,GRID,NS = '#262A2B','#A1A7A7','#C8CDCD','#CFD3D4'
 LOG2FC_CUTOFF = 0.2
@@ -103,7 +105,7 @@ def prepare_nimbus():
         result[style]=ttf
     return result
 
-def px(size): return size*72/DPI
+def px(size): return size*FONT_SCALE*72/DPI
 
 SPECS = (
     (1, 'How does untreated LD differ from non-LD controls?',
@@ -317,6 +319,7 @@ def export_figure(fig,number,question,fonts,details):
             raise RuntimeError(f'Font substitution in PDF: {pdf_fonts}')
     return {'figure':number,'file_stem':name,'question':question,
             'all_visible_typography':'Nimbus Sans','canvas_pixels':[W,H],
+            'typography_scale':FONT_SCALE,
             'pdf_fonts':pdf_fonts,'pdf_text':'embedded, searchable vector text',
             'svg_text':'outlined paths','editable_svg':'text with embedded Nimbus Sans font data',
             'figure_contains_editorial_prose':False,'pca_panel':False,'labels':labels,**details}
@@ -407,7 +410,8 @@ def render_question(spec,table,expression,metadata,fonts,xmax,ymax,forest_limit,
     # c,d: one preranked calculation per collection and biological comparison.
     gsea_details={}
     fig._gsea_layout_regions=[]
-    for collection,letter,left,title in [('kegg','c',538,'KEGG'),('go_bp','d',1320,'GO BP')]:
+    # Reserve space for larger q values, including '<0.05' and scientific notation.
+    for collection,letter,left,title in [('kegg','c',518,'KEGG'),('go_bp','d',1300,'GO BP')]:
         path=ROOT/'gsea_data'/f'figure_{number:02d}_{collection}_display.tsv'
         if not path.is_file():raise RuntimeError(f'GSEA results missing: run run_gsea.py first ({path})')
         results=read_table(path)

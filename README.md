@@ -48,6 +48,8 @@ The design follows an inspection of author-archived Nature Biotechnology, Nature
 
 Every canvas is **1536 × 1024 pixels (3:2)**; the high-resolution PNGs are 4608 × 3072. All type is **Nimbus Sans**. PDFs contain embedded, searchable TrueType text; the primary SVGs outline lettering; editable SVGs include embedded font data. The [font verification](figures/FONT_VERIFICATION.md) checks actual exported Nimbus Sans font programs, metrics, and glyph outlines against the source fonts; its [report](figures/synthetic_demo/export_font_verification.json) identifies checked files by SHA-256. Plot selections and labels are recorded in the [plot audit](figures/synthetic_demo/font_and_plot_audit.json).
 
+All text roles are **20% larger** than the audited initial layout, including axes, ticks, group names, pathway labels, q values and panel letters. At **180 mm figure width**, main labels are approximately **8–10 pt**, with larger panel letters. The complete four-panel figures are intended for full-width placement; reducing the whole composition to a single column reduces type proportionally. Use the PDF or outlined SVG for final print artwork.
+
 Each comparison uses its own warm/cool pair from the supplied color-scheme guide: Figure 1 yellow/blue, Figure 2 tan/turquoise, and Figure 3 orange/purple. Colors encode direction within a comparison; group colors are not fixed across figures. Full group names, effect direction on the axes, and marker fill provide additional encodings. See the [color-accessibility review and simulation previews](figures/accessibility/COLOR_ACCESSIBILITY.md).
 
 ## Reproduce
