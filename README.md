@@ -1,31 +1,39 @@
 # LipoHypoLEP
 
-Hypothalamic bulk RNA-seq figure templates for lipodystrophic mice, with saline-treated LD (S), leptin-treated LD (L), and non-LD LDLR−/− controls (K).
+Hypothalamic bulk RNA-seq figure development for **LD SALINE**, **LD LEPTIN**, and **NON-LD control** mice.
 
-These figures show the study design and planned analysis. No expression data, DEG counts, or statistical results have been simulated.
+**The figure below uses entirely synthetic data. It is a layout and analysis demonstration, not experimental evidence or a prediction of this study's results.** It simulates 8,000 anonymous genes and six mice per group; 7,647 genes pass the example count filter. No real gene or pathway conclusions are implied.
 
-## View and download the figures
+## Figure
 
-Click an image to view it. On a GitHub file page, use the **Download raw file** button to save the original. The ZIP contains all exports, source, artwork, style notes, dependency versions, and the font audit.
+![Six-panel analytical figure using entirely synthetic data](figures/figure_01_synthetic.png)
 
-**[Download the complete figure pack](figures/lipohypolep_figure_templates.zip)**
+[PNG](figures/figure_01_synthetic.png) · [PDF](figures/figure_01_synthetic.pdf) · [Outlined SVG](figures/figure_01_synthetic.svg) · [Editable SVG](figures/figure_01_synthetic_editable.svg) · [High-resolution PNG](figures/figure_01_synthetic_300dpi.png)
 
-### Study design
+**[Complete figure pack, analysis source, and synthetic tables (ZIP)](figures/lipohypolep_synthetic_figure_pack.zip)**
 
-![Study design and planned differential-expression analysis](figures/01_study_design.png)
+Open a file on GitHub and use **Download raw file** to save it. The ZIP includes every export, both source scripts, synthetic source tables, the legend, dependency versions, and visual-reference notes.
 
-[PNG](figures/01_study_design.png) · [PDF](figures/01_study_design.pdf) · [SVG](figures/01_study_design.svg) · [High-resolution PNG](figures/01_study_design_300dpi.png)
+The six panels show the three volcano plots, PCA, a joint fold-change comparison, and a heatmap. Full group names replace letter codes. All interpretive text, methods, sample counts, thresholds, and simulation disclosures are in the [separate figure legend](figures/FIGURE_LEGEND.md), rather than the artwork. File names and embedded artwork metadata also identify the synthetic demonstration.
 
-### Volcano-plot template
+## Visual references and typography
 
-![Three-contrast volcano-plot template; no expression data plotted](figures/02_volcano_template.png)
+The redesign follows an inspection of author-archived Nature Biotechnology, Nature Methods, and Cell research figures, documented with source links and access limitations in the [visual reference review](figures/VISUAL_REFERENCE_REVIEW.md). There is no journal logo or assertion of publisher endorsement. Earlier slide-like drafts were replaced; they remain recoverable in Git history.
 
-[PNG](figures/02_volcano_template.png) · [PDF](figures/02_volcano_template.pdf) · [SVG](figures/02_volcano_template.svg) · [High-resolution PNG](figures/02_volcano_template_300dpi.png)
+The main canvas is **1536 × 1024 pixels (3:2)**; the high-resolution PNG is 4608 × 3072. All type is **Nimbus Sans**. The PDF contains embedded, searchable TrueType text; the primary SVG outlines lettering; the editable SVG includes embedded font data. Font identities and plot selections are recorded in the [audit](figures/synthetic_demo/font_and_plot_audit.json).
 
-## Style and source
+## Reproduce
 
-Both figures use a white 3:2 canvas, muted coral/sage/blue-gray cohort colors, and large Nimbus Sans type. The PNGs are 1536 × 1024; high-resolution exports are 4608 × 3072. All lettering in the PDF/SVG files is outlined to prevent font substitution. The Python source retains editable labels.
+From the repository root:
 
-See [style, scientific conventions, and regeneration instructions](figures/STYLE_AND_USAGE.md), [editable source](figures/make_figures.py), and [pinned Python dependencies](figures/requirements.txt).
+```bash
+python -m pip install -r figures/requirements.txt
+python figures/synthetic_demo/simulate_and_analyze.py
+python figures/synthetic_demo/render_figure.py
+```
 
-The three contrasts are **L vs S**, **S vs K**, and **L vs K**. Positive log2 fold change means higher expression in the first named group. L vs K can contain persistent LD differences and treatment-associated changes; nonsignificance alone does not establish normalization.
+Install URW Nimbus Sans (Debian/Ubuntu package `fonts-urw-base35`), or set `NIMBUS_SANS_FONT_DIR` to its OTF font directory. Missing fonts cause a hard error instead of substitution.
+
+The simulation uses seed **20261019**, negative-binomial counts, median-of-ratios normalization, and an **illustrative log-scale linear model**, with separate Benjamini–Hochberg correction for each contrast. This is not DESeq2, edgeR, or limma-voom. See the [legend and complete method](figures/FIGURE_LEGEND.md), [simulation source](figures/synthetic_demo/simulate_and_analyze.py), and [rendering source](figures/synthetic_demo/render_figure.py).
+
+The [synthetic data directory](figures/synthetic_demo/data) contains count and expression matrices, metadata, three complete contrast tables, PCA outputs, the selected heatmap genes, separate simulation truth, and a [numerical summary](figures/synthetic_demo/data/simulation_summary.json). Positive log2 fold change means higher expression in the first named group. A nonsignificant post-treatment comparison alone does not establish normalization.

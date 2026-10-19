@@ -1,0 +1,157 @@
+{
+  "all_visible_typography": "Nimbus Sans",
+  "canvas_pixels": [
+    1536,
+    1024
+  ],
+  "pdf_fonts": [
+    "EKTMJB+NimbusSans-Bold",
+    "EKTMJB+NimbusSans-Regular"
+  ],
+  "pdf_text": "embedded, searchable vector text",
+  "svg_text": "outlined paths",
+  "editable_svg": "text with embedded Nimbus Sans font data",
+  "figure_contains_editorial_prose": false,
+  "labels": [
+    {
+      "text": "log$_2$ fold change",
+      "font": "Nimbus Sans Regular",
+      "size_px": 24.0
+    },
+    {
+      "text": "\u2212log$_{10}$(adjusted $P$)",
+      "font": "Nimbus Sans Regular",
+      "size_px": 24.0
+    },
+    {
+      "text": "LD LEPTIN vs LD SALINE",
+      "font": "Nimbus Sans Regular",
+      "size_px": 24.0
+    },
+    {
+      "text": "log$_2$ fold change",
+      "font": "Nimbus Sans Regular",
+      "size_px": 24.0
+    },
+    {
+      "text": "\u2212log$_{10}$(adjusted $P$)",
+      "font": "Nimbus Sans Regular",
+      "size_px": 24.0
+    },
+    {
+      "text": "LD SALINE vs NON-LD control",
+      "font": "Nimbus Sans Regular",
+      "size_px": 24.0
+    },
+    {
+      "text": "log$_2$ fold change",
+      "font": "Nimbus Sans Regular",
+      "size_px": 24.0
+    },
+    {
+      "text": "\u2212log$_{10}$(adjusted $P$)",
+      "font": "Nimbus Sans Regular",
+      "size_px": 24.0
+    },
+    {
+      "text": "LD LEPTIN vs NON-LD control",
+      "font": "Nimbus Sans Regular",
+      "size_px": 24.0
+    },
+    {
+      "text": "PC1 (36.7%)",
+      "font": "Nimbus Sans Regular",
+      "size_px": 24.0
+    },
+    {
+      "text": "PC2 (16.6%)",
+      "font": "Nimbus Sans Regular",
+      "size_px": 24.0
+    },
+    {
+      "text": "LD SALINE",
+      "font": "Nimbus Sans Regular",
+      "size_px": 19.0
+    },
+    {
+      "text": "LD LEPTIN",
+      "font": "Nimbus Sans Regular",
+      "size_px": 19.0
+    },
+    {
+      "text": "NON-LD control",
+      "font": "Nimbus Sans Regular",
+      "size_px": 19.0
+    },
+    {
+      "text": "LD SALINE vs NON-LD control\n(log$_2$ fold change)",
+      "font": "Nimbus Sans Regular",
+      "size_px": 21.0
+    },
+    {
+      "text": "LD LEPTIN vs NON-LD control\n(log$_2$ fold change)",
+      "font": "Nimbus Sans Regular",
+      "size_px": 21.0
+    },
+    {
+      "text": "Genes",
+      "font": "Nimbus Sans Regular",
+      "size_px": 24.0
+    },
+    {
+      "text": "z-score",
+      "font": "Nimbus Sans Regular",
+      "size_px": 21.0
+    },
+    {
+      "text": "a",
+      "font": "Nimbus Sans Bold",
+      "size_px": 32.0
+    },
+    {
+      "text": "b",
+      "font": "Nimbus Sans Bold",
+      "size_px": 32.0
+    },
+    {
+      "text": "c",
+      "font": "Nimbus Sans Bold",
+      "size_px": 32.0
+    },
+    {
+      "text": "d",
+      "font": "Nimbus Sans Bold",
+      "size_px": 32.0
+    },
+    {
+      "text": "e",
+      "font": "Nimbus Sans Bold",
+      "size_px": 32.0
+    },
+    {
+      "text": "f",
+      "font": "Nimbus Sans Bold",
+      "size_px": 32.0
+    },
+    {
+      "text": "LD\nSALINE",
+      "font": "Nimbus Sans Regular",
+      "size_px": 19.0
+    },
+    {
+      "text": "LD\nLEPTIN",
+      "font": "Nimbus Sans Regular",
+      "size_px": 19.0
+    },
+    {
+      "text": "NON-LD\ncontrol",
+      "font": "Nimbus Sans Regular",
+      "size_px": 19.0
+    }
+  ],
+  "heatmap_selection": "60 tested genes with smallest minimum adjusted P across three contrasts; average-linkage Euclidean row ordering",
+  "volcano_limits": {
+    "absolute_log2fc": 5.0,
+    "negative_log10_adjusted_p": 10.0
+  }
+}

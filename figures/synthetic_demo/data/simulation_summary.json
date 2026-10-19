@@ -1,0 +1,121 @@
+{
+  "data_status": "Entirely synthetic illustration; no experimental measurements or biological findings.",
+  "seed": 20261019,
+  "software": {
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "scipy": "1.17.0"
+  },
+  "genes_simulated": 8000,
+  "genes_retained": 7647,
+  "genes_filtered": 353,
+  "samples": 18,
+  "replicates_per_group": {
+    "NON-LD control": 6,
+    "LD SALINE": 6,
+    "LD LEPTIN": 6
+  },
+  "simulation": {
+    "distribution": "Negative binomial; variance = mean + dispersion * mean^2.",
+    "baseline": "Lognormal(log(80), 1.3), clipped to [2, 12000].",
+    "dispersion": "(0.04 + 0.25 / (1 + baseline / 100)) * Lognormal(0, 0.18).",
+    "direction": "Balanced positive and negative effects within each non-null truth class.",
+    "truth_class_counts": {
+      "unchanged": 5200,
+      "near_complete_reversal": 640,
+      "partial_reversal": 800,
+      "persistent": 800,
+      "treatment_only": 320,
+      "amplified": 240
+    },
+    "truth_class_fractions": {
+      "unchanged": 0.65,
+      "near_complete_reversal": 0.08,
+      "partial_reversal": 0.1,
+      "persistent": 0.1,
+      "treatment_only": 0.04,
+      "amplified": 0.03
+    },
+    "class_interpretation": "Generating parameters only; never classifications inferred from statistical significance."
+  },
+  "analysis": {
+    "normalization": "Median of ratios using genes positive in every sample; factors rescaled to geometric mean 1.",
+    "genes_used_for_size_factor_estimation": 7677,
+    "filter": "Raw count >= 10 in at least 6 samples, irrespective of group.",
+    "transformation": "log2(count / estimated_size_factor + 0.5)",
+    "model": "One pooled group-only OLS model on transformed expression, with common per-gene residual variance.",
+    "residual_degrees_of_freedom": 15,
+    "contrasts": "First group minus second group; all contrasts derived from the same fitted group means.",
+    "tests": "Two-sided Student t tests; Benjamini-Hochberg adjustment independently per contrast across all retained genes.",
+    "limitation": "Illustrative approximate log-scale inference, without empirical-Bayes moderation or precision weights; not DESeq2, edgeR, or limma-voom.",
+    "contrast_covariance": "All three contrasts share model estimates. Per-gene contrast covariance follows the common design matrix; contrasts are not independent.",
+    "plot_selection_example": "Adjusted P < 0.05 and absolute log2 fold change >= 1; this does not define truth classes or establish normalization."
+  },
+  "pca": {
+    "gene_selection": "1,500 tested genes with highest sample variance of transformed expression.",
+    "centering_and_scaling": "Genes centered; no variance scaling.",
+    "genes_used": 1500,
+    "explained_variance_ratio": {
+      "PC1": 0.3668069600451803,
+      "PC2": 0.16582227145011705,
+      "PC3": 0.03688945217234025
+    }
+  },
+  "contrasts": {
+    "LD LEPTIN vs LD SALINE": {
+      "file": "contrast_LD_LEPTIN_vs_LD_SALINE.tsv.gz",
+      "tested_genes": 7647,
+      "adjusted_p_below_0_05": 789,
+      "adjusted_p_below_0_05_and_absolute_log2fc_at_least_1": 672,
+      "higher_expression_selected": 342,
+      "lower_expression_selected": 330,
+      "true_null_genes": 5758,
+      "true_null_unadjusted_p_below_0_05_fraction": 0.04654393886766238,
+      "estimated_vs_true_effect_correlation": 0.8239258577671194,
+      "estimated_vs_true_effect_mean_absolute_error": 0.30264348920998796,
+      "pvalues_finite_and_bounded": true,
+      "adjusted_pvalues_finite_and_bounded": true
+    },
+    "LD SALINE vs NON-LD control": {
+      "file": "contrast_LD_SALINE_vs_NON_LD_control.tsv.gz",
+      "tested_genes": 7647,
+      "adjusted_p_below_0_05": 1826,
+      "adjusted_p_below_0_05_and_absolute_log2fc_at_least_1": 1690,
+      "higher_expression_selected": 868,
+      "lower_expression_selected": 822,
+      "true_null_genes": 5304,
+      "true_null_unadjusted_p_below_0_05_fraction": 0.04807692307692308,
+      "estimated_vs_true_effect_correlation": 0.9097300452734423,
+      "estimated_vs_true_effect_mean_absolute_error": 0.3030402118942944,
+      "pvalues_finite_and_bounded": true,
+      "adjusted_pvalues_finite_and_bounded": true
+    },
+    "LD LEPTIN vs NON-LD control": {
+      "file": "contrast_LD_LEPTIN_vs_NON_LD_control.tsv.gz",
+      "tested_genes": 7647,
+      "adjusted_p_below_0_05": 1226,
+      "adjusted_p_below_0_05_and_absolute_log2fc_at_least_1": 1094,
+      "higher_expression_selected": 580,
+      "lower_expression_selected": 514,
+      "true_null_genes": 4996,
+      "true_null_unadjusted_p_below_0_05_fraction": 0.0500400320256205,
+      "estimated_vs_true_effect_correlation": 0.8871538641590172,
+      "estimated_vs_true_effect_mean_absolute_error": 0.30045422695224183,
+      "pvalues_finite_and_bounded": true,
+      "adjusted_pvalues_finite_and_bounded": true
+    }
+  },
+  "validations": {
+    "counts_shape_is_8000_by_18": true,
+    "counts_are_nonnegative_integers": true,
+    "six_replicates_per_group": true,
+    "all_gene_ids_are_unique_and_synthetic": true,
+    "normalization_factors_are_finite_and_positive": true,
+    "residual_degrees_of_freedom_equal_15": true,
+    "contrast_identity_max_absolute_error": 4.440892098500626e-16,
+    "contrast_identity_within_1e_minus_12": true,
+    "all_pvalues_finite_and_bounded": true,
+    "all_adjusted_pvalues_finite_and_bounded": true,
+    "pca_variance_ratios_sum_to_one": true
+  }
+}
