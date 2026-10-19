@@ -1,74 +1,104 @@
-[
-  {
-    "figure": 1,
-    "comparison": "LD SALINE vs NON-LD control",
-    "tested_genes": 7647,
-    "joint_DEG_cutoff": {
-      "absolute_log2fc_at_least": 0.2,
-      "adjusted_p_below": 0.05
-    },
-    "joint_DEG_genes": 1826,
-    "original_pre_scaling_data_restored_exactly": true,
-    "gsea_full_unfiltered_rank_count": 7647,
-    "gsea_collections": [
-      "KEGG",
-      "GO BP"
-    ],
-    "gsea_scores_and_q_match_complete_tables": true,
-    "requested_palette": {
-      "higher": "#FDB338",
-      "lower": "#025196"
-    },
-    "panels": 4,
-    "pca_absent": true,
-    "all_checks_passed": true
+{
+  "status": "PASS",
+  "verified_at_utc": "2026-10-19T14:34:55.397469+00:00",
+  "scope": "Synthetic figures only; numerical/table consistency plus current export evidence.",
+  "validator_sha256": "e4eb9accf382dbf1e43c2390bca362e86256f1fa79d243fb766e0f3b40e8cee1",
+  "input_sha256": {
+    "figures/accessibility/palette_simulation.json": "80827b23b65cfcea829d1f88c22186cb1d140ea63b41e9c1b827b09d37723daf",
+    "figures/requirements.txt": "d00410f43d5197362b4e538c3574e8ed1b1f26d9a9d05c735e262039fdc9087e",
+    "figures/synthetic_demo/data/contrast_LD_LEPTIN_vs_LD_SALINE.tsv.gz": "3af98fb3e0c71bd2e86bf2f870b9759c532f0e39f03f7f8e0abf280187cc1ae6",
+    "figures/synthetic_demo/data/contrast_LD_LEPTIN_vs_NON_LD_control.tsv.gz": "5fd698622266646338baccf6598e06279a51d8f92e3d6425110d66f2fbda3410",
+    "figures/synthetic_demo/data/contrast_LD_SALINE_vs_NON_LD_control.tsv.gz": "f7989f4ff70f4a364607b6e029cedce9791cd19784f02e81e68140a62fefc28b",
+    "figures/synthetic_demo/data/normalized_log2_expression.tsv.gz": "3a81f5d936b48219e116c5a38c3537dbf36f88bff927cca3b353d27544d26dcf",
+    "figures/synthetic_demo/data/sample_metadata.tsv": "c2d5d5c19a98408a3e9b34f29ec0040accb2f9d91d6b12cc2cc78f620ea6f754",
+    "figures/synthetic_demo/data/simulation_summary.json": "0dbba9e51776e8213c7d900beefe1fe8bd491e526d7875224643f4e667c2f378",
+    "figures/synthetic_demo/export_font_verification.json": "484d390bf8dccef63814c29a91829428e946b80749a70157145619cba99e8c5d",
+    "figures/synthetic_demo/font_and_plot_audit.json": "1625fdb5bbdb21cb47c64499776736d2b660f87e067822c33332357977aa2d60",
+    "figures/synthetic_demo/gsea_data/figure_01_complete_ranked_statistics.tsv.gz": "83d2328f8b23573dfe9398a259d9394ed353e294c069e09e9a6c4f688d851d9e",
+    "figures/synthetic_demo/gsea_data/figure_01_go_bp_all_results.tsv.gz": "bd08ab8b686afc3a8d565b700ad7757a820550fa73ae9bd79139a24127207843",
+    "figures/synthetic_demo/gsea_data/figure_01_go_bp_display.tsv": "62f0451c60f79b30f4f07de2e028edb478b2a527fb015cc028ceb67a478d1221",
+    "figures/synthetic_demo/gsea_data/figure_01_go_bp_gseapy_raw.tsv.gz": "309c3af8abbcfeac810f9f68970138e0c543d298201009d8fe297479759893ce",
+    "figures/synthetic_demo/gsea_data/figure_01_go_bp_leading_edge.tsv.gz": "062818df15f5a1e12106b1503c79fdb7e59bcc961066aed290d2b95ac6b79685",
+    "figures/synthetic_demo/gsea_data/figure_01_kegg_all_results.tsv.gz": "dbdb12d23258e8a1c3598b27a2c3ee6573a9d0f95713471841cea806149d420b",
+    "figures/synthetic_demo/gsea_data/figure_01_kegg_display.tsv": "810bc53555bf517f11b59c6c282ec3c181651ebb0bdf7649d4b235e4e44d9f19",
+    "figures/synthetic_demo/gsea_data/figure_01_kegg_gseapy_raw.tsv.gz": "fca110c29b76008017f8d5a7b90fa889640bff4dcc59df11042c77d6a03641fc",
+    "figures/synthetic_demo/gsea_data/figure_01_kegg_leading_edge.tsv.gz": "cf854ed628f5ffacddfa13425616af8b6f9473138fbabddae96bccc6c6f627e6",
+    "figures/synthetic_demo/gsea_data/figure_02_complete_ranked_statistics.tsv.gz": "6104ccb60497de76650dd255c98e9297b2e029421fefb5312fe181e7cac491b4",
+    "figures/synthetic_demo/gsea_data/figure_02_go_bp_all_results.tsv.gz": "ab73ad2903bef5827273a42a69b1f59f5962e971d84262270e0b9a0b09c52a5f",
+    "figures/synthetic_demo/gsea_data/figure_02_go_bp_display.tsv": "2f4a81dd38c793a4412019a84d4432ea9754be1dce45b1324e0f6f7f885b20f0",
+    "figures/synthetic_demo/gsea_data/figure_02_go_bp_gseapy_raw.tsv.gz": "e49fe9cf0fba4f57eaeae6ced48094ac63e15850a9452cfcc847518f2f9a8657",
+    "figures/synthetic_demo/gsea_data/figure_02_go_bp_leading_edge.tsv.gz": "adfb467146f250c7543a037d91a0b0e6cf74b04c0766f7de1fb17f136e9751d8",
+    "figures/synthetic_demo/gsea_data/figure_02_kegg_all_results.tsv.gz": "641af2df0a3303db113428c7575032e3e4d8175bc8c88e69db55392e923663c6",
+    "figures/synthetic_demo/gsea_data/figure_02_kegg_display.tsv": "477c2c5b9b5257078b857bca537d30905e5554144e659884bb78cdc1b845ef81",
+    "figures/synthetic_demo/gsea_data/figure_02_kegg_gseapy_raw.tsv.gz": "425dc2c8452dc077896d91ef6378cad864a6d789c3a9291343ef1e33c9ef96ac",
+    "figures/synthetic_demo/gsea_data/figure_02_kegg_leading_edge.tsv.gz": "0dc7a0ae2497f3ea3009792b6b7de1ae38b60d00708e4b4d4931c8752508e8f0",
+    "figures/synthetic_demo/gsea_data/figure_03_complete_ranked_statistics.tsv.gz": "29a6cfce08115e78842b346c37516fe865a47f46a3bf951985e1d85f8007b4ca",
+    "figures/synthetic_demo/gsea_data/figure_03_go_bp_all_results.tsv.gz": "4109de0ec73c9ff437fba1092fb123eb9865dcb286f256a99088ac40a25a0198",
+    "figures/synthetic_demo/gsea_data/figure_03_go_bp_display.tsv": "65f1ac2cf342b71cdb69d1cf745b737e31ea87f4c8e5a078dc53cb63f27fd723",
+    "figures/synthetic_demo/gsea_data/figure_03_go_bp_gseapy_raw.tsv.gz": "7ee2a9d60e467cdacc543f965da8fcf1a82791e9caa9363223ebe73bfe525b5c",
+    "figures/synthetic_demo/gsea_data/figure_03_go_bp_leading_edge.tsv.gz": "6f2ff6fa70703504ae83ce2c113d45ff6e529f0423e03a5dec76487412212d2c",
+    "figures/synthetic_demo/gsea_data/figure_03_kegg_all_results.tsv.gz": "68cb83091099e13e610b0b30b23cf34e260c3e2d7524db0cabd2a4c399ad3f79",
+    "figures/synthetic_demo/gsea_data/figure_03_kegg_display.tsv": "da692901da200f277752e1791371f55086f2426cae136e04e985a55464824bfe",
+    "figures/synthetic_demo/gsea_data/figure_03_kegg_gseapy_raw.tsv.gz": "efb0636db66f02ce94ccb261f7c18db5afdef4366b1882a72383952bcab1c6e5",
+    "figures/synthetic_demo/gsea_data/figure_03_kegg_leading_edge.tsv.gz": "75080a9eb8e28c0a0717479b41bce52541a0f5e53b7480615edd887550754bd6",
+    "figures/synthetic_demo/gsea_data/go_bp_all_gene_set_coverage.tsv.gz": "26e1a30b6890f5efa8eed1d88dce2b43f744a30529ad240e0509ef3464a0aa0b",
+    "figures/synthetic_demo/gsea_data/gsea_provenance.json": "ad58843eafd1ae03bc5f61613601e8b787fb5c63fa7c71cf6c469438b37c13f6",
+    "figures/synthetic_demo/gsea_data/kegg_all_gene_set_coverage.tsv.gz": "85279297c7d3d1a1f73d9358d890aac62f1fd453bb7ce980e4bf03f3fd059068",
+    "figures/synthetic_demo/gsea_data/resources/go_bp_mouse_2026_05_19_nonIEA_protein_coding.gmt": "009be991eedc31fa18e23ded71cfac222fd5773d87fc243d19d67008ee21c73f",
+    "figures/synthetic_demo/gsea_data/resources/go_bp_mouse_provenance.json": "c5541c88c6372ea558d5ac30c8085aa3e276d33989d87e18762f2b5a38b89c64",
+    "figures/synthetic_demo/gsea_data/resources/kegg_mouse_biosystems_archive_2020.gmt": "70127d28c5c82a42abf2d1f33291d4a6a2a10e0afad320aad484d01931a9091a",
+    "figures/synthetic_demo/gsea_data/resources/kegg_mouse_provenance.json": "12428593c85f86ab7d6743f77cfe987bf981754609c28a00da4bd8409c4ab214",
+    "figures/synthetic_demo/gsea_data/synthetic_to_mouse_symbol_map.tsv": "f64a7fba9f0257d9715c073f42339109e4a01784da68c55ce85ada0c3b36abbf",
+    "figures/synthetic_demo/render_figure.py": "aca8eeed5c34e7ab031bc43a3648fbabdfcc6be3c6bd83dd666011d676ee95e7",
+    "figures/synthetic_demo/run_gsea.py": "e3f5465364ffdac1d58d18293502109ed5a60b6f62b01ea3129a333eb46431c6",
+    "figures/synthetic_demo/simulate_and_analyze.py": "69a6da88cdbd439d56a0dee60be650da485e18bdf16a317cda1ed1d7b7e0379a"
   },
-  {
-    "figure": 2,
-    "comparison": "LD LEPTIN vs LD SALINE",
-    "tested_genes": 7647,
-    "joint_DEG_cutoff": {
-      "absolute_log2fc_at_least": 0.2,
-      "adjusted_p_below": 0.05
+  "gsea_complete_analyses": 6,
+  "figures": [
+    {
+      "figure": 1,
+      "comparison": "LD SALINE vs NON-LD control",
+      "tested_genes": 7647,
+      "joint_DEG_genes": 1826,
+      "gsea_full_unfiltered_rank_count": 7647,
+      "gsea_scores_and_q_match_complete_tables": true,
+      "requested_palette": {
+        "name": "yellow/blue",
+        "higher": "#FDB338",
+        "lower": "#025196"
+      },
+      "panels": 4,
+      "pca_absent": true
     },
-    "joint_DEG_genes": 789,
-    "original_pre_scaling_data_restored_exactly": true,
-    "gsea_full_unfiltered_rank_count": 7647,
-    "gsea_collections": [
-      "KEGG",
-      "GO BP"
-    ],
-    "gsea_scores_and_q_match_complete_tables": true,
-    "requested_palette": {
-      "higher": "#FFBE6A",
-      "lower": "#40B0A6"
+    {
+      "figure": 2,
+      "comparison": "LD LEPTIN vs LD SALINE",
+      "tested_genes": 7647,
+      "joint_DEG_genes": 789,
+      "gsea_full_unfiltered_rank_count": 7647,
+      "gsea_scores_and_q_match_complete_tables": true,
+      "requested_palette": {
+        "name": "tan/turquoise",
+        "higher": "#FFBE6A",
+        "lower": "#40B0A6"
+      },
+      "panels": 4,
+      "pca_absent": true
     },
-    "panels": 4,
-    "pca_absent": true,
-    "all_checks_passed": true
-  },
-  {
-    "figure": 3,
-    "comparison": "LD LEPTIN vs NON-LD control",
-    "tested_genes": 7647,
-    "joint_DEG_cutoff": {
-      "absolute_log2fc_at_least": 0.2,
-      "adjusted_p_below": 0.05
-    },
-    "joint_DEG_genes": 1226,
-    "original_pre_scaling_data_restored_exactly": true,
-    "gsea_full_unfiltered_rank_count": 7647,
-    "gsea_collections": [
-      "KEGG",
-      "GO BP"
-    ],
-    "gsea_scores_and_q_match_complete_tables": true,
-    "requested_palette": {
-      "higher": "#EB6123",
-      "lower": "#512888"
-    },
-    "panels": 4,
-    "pca_absent": true,
-    "all_checks_passed": true
-  }
-]
+    {
+      "figure": 3,
+      "comparison": "LD LEPTIN vs NON-LD control",
+      "tested_genes": 7647,
+      "joint_DEG_genes": 1226,
+      "gsea_full_unfiltered_rank_count": 7647,
+      "gsea_scores_and_q_match_complete_tables": true,
+      "requested_palette": {
+        "name": "orange/purple",
+        "higher": "#EB6123",
+        "lower": "#512888"
+      },
+      "panels": 4,
+      "pca_absent": true
+    }
+  ]
+}

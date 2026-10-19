@@ -15,7 +15,10 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 from pathlib import Path
+import shutil
+import tempfile
 
 import numpy as np
 import pandas as pd
@@ -44,12 +47,69 @@ CLASS_COUNTS = {
 
 def benjamini_hochberg(pvalues: np.ndarray) -> np.ndarray:
     """Adjust one contrast's complete tested family, preserving row order."""
+    pvalues = np.asarray(pvalues, dtype=float)
+    if pvalues.ndim != 1 or not np.all(np.isfinite(pvalues)):
+        raise ValueError("P values must be a finite one-dimensional array.")
+    if np.any((pvalues < 0) | (pvalues > 1)):
+        raise ValueError("P values must be between zero and one.")
+    if not pvalues.size:
+        return np.empty(0, dtype=float)
     order = np.argsort(pvalues, kind="stable")
     adjusted = pvalues[order] * len(pvalues) / np.arange(1, len(pvalues) + 1)
     adjusted = np.minimum.accumulate(adjusted[::-1])[::-1]
     result = np.empty_like(adjusted)
     result[order] = np.minimum(adjusted, 1.0)
     return result
+
+
+def median_ratio_size_factors(counts: np.ndarray) -> np.ndarray:
+    """Estimate demo size factors, failing when median-of-ratios is undefined."""
+    counts = np.asarray(counts)
+    if counts.ndim != 2 or not all(counts.shape):
+        raise ValueError("Counts must be a nonempty genes-by-samples matrix.")
+    if not np.all(np.isfinite(counts)) or np.any(counts < 0):
+        raise ValueError("Counts must be finite and nonnegative.")
+    if np.any(counts != np.floor(counts)):
+        raise ValueError("The synthetic count matrix must contain integer counts.")
+    positive = counts[np.all(counts > 0, axis=1)].astype(float)
+    if not len(positive):
+        raise ValueError("Median-of-ratios requires a gene positive in every sample.")
+    geometric_means = np.exp(np.mean(np.log(positive), axis=1))
+    factors = np.median(positive / geometric_means[:, None], axis=0)
+    if not np.all(np.isfinite(factors)) or np.any(factors <= 0):
+        raise ValueError("Median-of-ratios produced invalid size factors.")
+    factors /= np.exp(np.mean(np.log(factors)))
+    return factors
+
+
+def fit_group_model(
+    expression: np.ndarray, sample_groups: np.ndarray, groups: tuple[str, ...]
+) -> tuple[dict[str, np.ndarray], np.ndarray, int]:
+    """Fit the illustrative group-only OLS model, rejecting undefined tests."""
+    expression = np.asarray(expression, dtype=float)
+    sample_groups = np.asarray(sample_groups)
+    if expression.ndim != 2 or not all(expression.shape):
+        raise ValueError("Expression must be a nonempty genes-by-samples matrix.")
+    if not np.all(np.isfinite(expression)):
+        raise ValueError("Expression values must be finite.")
+    if sample_groups.ndim != 1 or len(sample_groups) != expression.shape[1]:
+        raise ValueError("Sample groups must match the expression columns.")
+    if not groups or len(set(groups)) != len(groups):
+        raise ValueError("Model groups must be nonempty and unique.")
+    if set(sample_groups) != set(groups):
+        raise ValueError("Each declared group must have samples, with no unknown groups.")
+    residual_df = expression.shape[1] - len(groups)
+    if residual_df <= 0:
+        raise ValueError("The group model requires positive residual degrees of freedom.")
+    means = {
+        group: np.mean(expression[:, sample_groups == group], axis=1)
+        for group in groups
+    }
+    fitted = np.column_stack([means[group] for group in sample_groups])
+    residual_variance = np.sum((expression - fitted) ** 2, axis=1) / residual_df
+    if not np.all(np.isfinite(residual_variance)) or np.any(residual_variance <= 0):
+        raise ValueError("The illustrative t test requires positive residual variance for every gene.")
+    return means, residual_variance, residual_df
 
 
 def write_table(frame: pd.DataFrame, destination: Path) -> None:
@@ -70,7 +130,7 @@ def balanced_effects(rng: np.random.Generator, size: int) -> np.ndarray:
     return signs * rng.uniform(0.8, 2.2, size)
 
 
-def generate_demo(output_dir: Path) -> dict:
+def _generate_demo_into(output_dir: Path) -> dict:
     output_dir.mkdir(parents=True, exist_ok=True)
     rng = np.random.default_rng(SEED)
     gene_ids = np.array([f"SIM{i:05d}" for i in range(1, N_GENES + 1)])
@@ -125,12 +185,11 @@ def generate_demo(output_dir: Path) -> dict:
     # Standard median-of-ratios normalization uses genes positive in every sample.
     # Counts themselves, rather than the generating factors, determine normalization.
     positive_in_every_sample = np.all(counts > 0, axis=1)
-    positive_counts = counts[positive_in_every_sample].astype(float)
-    geometric_means = np.exp(np.mean(np.log(positive_counts), axis=1))
-    estimated_factors = np.median(positive_counts / geometric_means[:, None], axis=0)
-    estimated_factors /= np.exp(np.mean(np.log(estimated_factors)))
+    estimated_factors = median_ratio_size_factors(counts)
     normalized = counts / estimated_factors[None, :]
     retained = np.sum(counts >= 10, axis=1) >= N_REPLICATES
+    if not np.any(retained):
+        raise ValueError("No synthetic genes passed the count filter.")
     tested_ids = gene_ids[retained]
     log_expression = np.log2(normalized[retained] + 0.5)
     base_mean = np.mean(normalized[retained], axis=1)
@@ -155,13 +214,9 @@ def generate_demo(output_dir: Path) -> dict:
 
     # One group-only OLS model is used for all contrasts. Its residual degrees of
     # freedom are 18 - 3 = 15. Contrasts share model estimates and covariance.
-    group_means = {
-        group: np.mean(log_expression[:, sample_groups == group], axis=1)
-        for group in GROUPS
-    }
-    fitted = np.column_stack([group_means[group] for group in sample_groups])
-    residual_df = len(sample_ids) - len(GROUPS)
-    residual_variance = np.sum((log_expression - fitted) ** 2, axis=1) / residual_df
+    group_means, residual_variance, residual_df = fit_group_model(
+        log_expression, sample_groups, GROUPS
+    )
     contrast_se = np.sqrt(residual_variance * (2.0 / N_REPLICATES))
     estimates = {}
     contrast_summary = {}
@@ -339,12 +394,63 @@ def generate_demo(output_dir: Path) -> dict:
         "contrasts": contrast_summary,
         "validations": validations,
     }
-    with (output_dir / "simulation_summary.json").open("w", encoding="utf-8") as handle:
-        json.dump(summary, handle, indent=2, ensure_ascii=False, allow_nan=False)
-        handle.write("\n")
     failed = [name for name, value in validations.items() if isinstance(value, bool) and not value]
     if failed:
         raise RuntimeError(f"Synthetic demonstration validation failed: {failed}")
+    with (output_dir / "simulation_summary.json").open("w", encoding="utf-8") as handle:
+        json.dump(summary, handle, indent=2, ensure_ascii=False, allow_nan=False)
+        handle.write("\n")
+    return summary
+
+
+def generate_demo(output_dir: Path) -> dict:
+    """Stage a validated demo before publication; refuse unmarked data folders.
+
+    Existing synthetic auxiliary files are retained. A calculation or serialization
+    failure leaves the previous output untouched; the two final directory renames
+    are rolled back if publication fails. Concurrent writers are not supported.
+    """
+    output_dir = Path(output_dir).absolute()
+    if output_dir.is_symlink():
+        raise ValueError("The synthetic output directory must not be a symbolic link.")
+    if output_dir.exists() and not output_dir.is_dir():
+        raise ValueError("The synthetic output destination must be a directory.")
+    if output_dir.exists() and any(output_dir.iterdir()):
+        marker = output_dir / "simulation_summary.json"
+        try:
+            previous = json.loads(marker.read_text(encoding="utf-8"))
+        except (OSError, ValueError) as error:
+            raise ValueError(
+                "Refusing to overwrite a nonempty directory without a synthetic demo marker."
+            ) from error
+        if not isinstance(previous, dict) or not str(previous.get("data_status", "")).startswith(
+            "Entirely synthetic illustration;"
+        ):
+            raise ValueError("Refusing to overwrite a directory not marked as synthetic.")
+    output_dir.parent.mkdir(parents=True, exist_ok=True)
+    with tempfile.TemporaryDirectory(
+        prefix=f".{output_dir.name}-staging-", dir=output_dir.parent
+    ) as temporary:
+        staging_root = Path(temporary)
+        staged = staging_root / "data"
+        if output_dir.exists():
+            shutil.copytree(output_dir, staged, symlinks=True)
+            # Never follow an existing output-file symlink while regenerating.
+            for path in staged.iterdir():
+                if path.is_symlink():
+                    raise ValueError("Synthetic output directories must not contain symbolic links.")
+        else:
+            staged.mkdir()
+        summary = _generate_demo_into(staged)
+        backup = staging_root / "previous"
+        if output_dir.exists():
+            os.replace(output_dir, backup)
+        try:
+            os.replace(staged, output_dir)
+        except OSError:
+            if backup.exists():
+                os.replace(backup, output_dir)
+            raise
     return summary
 
 

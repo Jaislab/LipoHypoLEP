@@ -139,7 +139,7 @@
         },
         {
           "term": "mmu00591 Linoleic acid metabolism",
-          "NES": 1.458657419894731,
+          "NES": 1.4586574198947313,
           "nominal_p": 0.03339882121807466,
           "gsea_fdr_q": 1.0,
           "ranked_set_size": 25
@@ -153,7 +153,7 @@
         },
         {
           "term": "mmu03015 mRNA surveillance pathway",
-          "NES": -1.5519929446232739,
+          "NES": -1.5519929446232734,
           "nominal_p": 0.01282051282051282,
           "gsea_fdr_q": 0.9352534633738864,
           "ranked_set_size": 43
@@ -167,13 +167,13 @@
         },
         {
           "term": "mmu04724 Glutamatergic synapse",
-          "NES": -1.636134162989149,
+          "NES": -1.6361341629891495,
           "nominal_p": 0.0,
           "gsea_fdr_q": 1.0,
           "ranked_set_size": 42
         }
       ],
-      "runtime_seconds": 5.364
+      "runtime_seconds": 4.528
     },
     {
       "figure": 1,
@@ -202,7 +202,7 @@
         },
         {
           "term": "GO:0045058 T cell selection",
-          "NES": 1.8781330839891395,
+          "NES": 1.8781330839891393,
           "nominal_p": 0.0018867924528301887,
           "gsea_fdr_q": 0.17136227564390122,
           "ranked_set_size": 26
@@ -216,14 +216,14 @@
         },
         {
           "term": "GO:0042789 mRNA transcription by RNA polymerase II",
-          "NES": -1.7714247640794014,
+          "NES": -1.771424764079401,
           "nominal_p": 0.0,
           "gsea_fdr_q": 0.7797272265270485,
           "ranked_set_size": 21
         },
         {
           "term": "GO:0009299 mRNA transcription",
-          "NES": -1.7895803413764992,
+          "NES": -1.789580341376499,
           "nominal_p": 0.0,
           "gsea_fdr_q": 0.9393345786363567,
           "ranked_set_size": 25
@@ -236,7 +236,7 @@
           "ranked_set_size": 17
         }
       ],
-      "runtime_seconds": 53.642
+      "runtime_seconds": 46.072
     },
     {
       "figure": 2,
@@ -258,14 +258,14 @@
       "displayed_sets": [
         {
           "term": "mmu04213 Longevity regulating pathway - multiple species",
-          "NES": 1.654129587232228,
+          "NES": 1.6541295872322277,
           "nominal_p": 0.009940357852882704,
           "gsea_fdr_q": 1.0,
           "ranked_set_size": 29
         },
         {
           "term": "mmu00250 Alanine, aspartate and glutamate metabolism",
-          "NES": 1.5984993679030128,
+          "NES": 1.598499367903013,
           "nominal_p": 0.03522504892367906,
           "gsea_fdr_q": 1.0,
           "ranked_set_size": 16
@@ -299,7 +299,7 @@
           "ranked_set_size": 19
         }
       ],
-      "runtime_seconds": 5.315
+      "runtime_seconds": 3.959
     },
     {
       "figure": 2,
@@ -328,41 +328,41 @@
         },
         {
           "term": "GO:0070269 pyroptotic inflammatory response",
-          "NES": 1.7398772502317907,
+          "NES": 1.7398772502317912,
           "nominal_p": 0.00929368029739777,
           "gsea_fdr_q": 1.0,
           "ranked_set_size": 20
         },
         {
           "term": "GO:0031122 cytoplasmic microtubule organization",
-          "NES": 1.7292382784040363,
+          "NES": 1.7292382784040357,
           "nominal_p": 0.0019455252918287938,
           "gsea_fdr_q": 1.0,
           "ranked_set_size": 31
         },
         {
           "term": "GO:0035088 establishment or maintenance of apical/basal cell polarity",
-          "NES": -1.835767376094494,
+          "NES": -1.8357673760944937,
           "nominal_p": 0.006263048016701462,
           "gsea_fdr_q": 0.3360369159987585,
           "ranked_set_size": 20
         },
         {
           "term": "GO:0006984 ER-nucleus signaling pathway",
-          "NES": -1.8859200050708842,
+          "NES": -1.8859200050708844,
           "nominal_p": 0.0,
           "gsea_fdr_q": 0.36305844120278236,
           "ranked_set_size": 15
         },
         {
           "term": "GO:0045197 establishment or maintenance of epithelial cell apical/basal polarity",
-          "NES": -1.9993270678549389,
+          "NES": -1.9993270678549386,
           "nominal_p": 0.0,
           "gsea_fdr_q": 0.11824804191846348,
           "ranked_set_size": 17
         }
       ],
-      "runtime_seconds": 50.663
+      "runtime_seconds": 41.679
     },
     {
       "figure": 3,
@@ -398,7 +398,7 @@
         },
         {
           "term": "mmu00140 Steroid hormone biosynthesis",
-          "NES": 1.3555290588755768,
+          "NES": 1.3555290588755766,
           "nominal_p": 0.09230769230769231,
           "gsea_fdr_q": 1.0,
           "ranked_set_size": 31
@@ -425,7 +425,7 @@
           "ranked_set_size": 23
         }
       ],
-      "runtime_seconds": 5.069
+      "runtime_seconds": 3.852
     },
     {
       "figure": 3,
@@ -449,14 +449,14 @@
           "term": "GO:0045058 T cell selection",
           "NES": 1.9870975091004768,
           "nominal_p": 0.0,
-          "gsea_fdr_q": 0.07574295861136592,
+          "gsea_fdr_q": 0.0757430084896441,
           "ranked_set_size": 26
         },
         {
           "term": "GO:0043368 positive T cell selection",
-          "NES": 1.8503099439894457,
+          "NES": 1.8503099439894464,
           "nominal_p": 0.0,
-          "gsea_fdr_q": 0.41845646887143517,
+          "gsea_fdr_q": 0.41798919499840637,
           "ranked_set_size": 18
         },
         {
@@ -470,26 +470,62 @@
           "term": "GO:1902750 negative regulation of cell cycle G2/M phase transition",
           "NES": -1.83412119055207,
           "nominal_p": 0.0,
-          "gsea_fdr_q": 0.4361764176948813,
+          "gsea_fdr_q": 0.4361760848485958,
           "ranked_set_size": 36
         },
         {
           "term": "GO:0010972 negative regulation of G2/M transition of mitotic cell cycle",
           "NES": -1.834550906511123,
           "nominal_p": 0.0,
-          "gsea_fdr_q": 0.6521142087065214,
+          "gsea_fdr_q": 0.6521137110780774,
           "ranked_set_size": 34
         },
         {
           "term": "GO:0044818 mitotic G2/M transition checkpoint",
           "NES": -1.8872495017279785,
           "nominal_p": 0.0,
-          "gsea_fdr_q": 0.6257715902179645,
+          "gsea_fdr_q": 0.6257711126915763,
           "ranked_set_size": 27
         }
       ],
-      "runtime_seconds": 54.593
+      "runtime_seconds": 54.864
     }
   ],
-  "runtime_seconds": 175.363
+  "runtime_seconds": 155.811,
+  "artifact_sha256": {
+    "figure_01_complete_ranked_statistics.tsv.gz": "83d2328f8b23573dfe9398a259d9394ed353e294c069e09e9a6c4f688d851d9e",
+    "figure_01_go_bp_all_results.tsv.gz": "bd08ab8b686afc3a8d565b700ad7757a820550fa73ae9bd79139a24127207843",
+    "figure_01_go_bp_display.tsv": "62f0451c60f79b30f4f07de2e028edb478b2a527fb015cc028ceb67a478d1221",
+    "figure_01_go_bp_gseapy_raw.tsv.gz": "309c3af8abbcfeac810f9f68970138e0c543d298201009d8fe297479759893ce",
+    "figure_01_go_bp_leading_edge.tsv.gz": "062818df15f5a1e12106b1503c79fdb7e59bcc961066aed290d2b95ac6b79685",
+    "figure_01_kegg_all_results.tsv.gz": "dbdb12d23258e8a1c3598b27a2c3ee6573a9d0f95713471841cea806149d420b",
+    "figure_01_kegg_display.tsv": "810bc53555bf517f11b59c6c282ec3c181651ebb0bdf7649d4b235e4e44d9f19",
+    "figure_01_kegg_gseapy_raw.tsv.gz": "fca110c29b76008017f8d5a7b90fa889640bff4dcc59df11042c77d6a03641fc",
+    "figure_01_kegg_leading_edge.tsv.gz": "cf854ed628f5ffacddfa13425616af8b6f9473138fbabddae96bccc6c6f627e6",
+    "figure_02_complete_ranked_statistics.tsv.gz": "6104ccb60497de76650dd255c98e9297b2e029421fefb5312fe181e7cac491b4",
+    "figure_02_go_bp_all_results.tsv.gz": "ab73ad2903bef5827273a42a69b1f59f5962e971d84262270e0b9a0b09c52a5f",
+    "figure_02_go_bp_display.tsv": "2f4a81dd38c793a4412019a84d4432ea9754be1dce45b1324e0f6f7f885b20f0",
+    "figure_02_go_bp_gseapy_raw.tsv.gz": "e49fe9cf0fba4f57eaeae6ced48094ac63e15850a9452cfcc847518f2f9a8657",
+    "figure_02_go_bp_leading_edge.tsv.gz": "adfb467146f250c7543a037d91a0b0e6cf74b04c0766f7de1fb17f136e9751d8",
+    "figure_02_kegg_all_results.tsv.gz": "641af2df0a3303db113428c7575032e3e4d8175bc8c88e69db55392e923663c6",
+    "figure_02_kegg_display.tsv": "477c2c5b9b5257078b857bca537d30905e5554144e659884bb78cdc1b845ef81",
+    "figure_02_kegg_gseapy_raw.tsv.gz": "425dc2c8452dc077896d91ef6378cad864a6d789c3a9291343ef1e33c9ef96ac",
+    "figure_02_kegg_leading_edge.tsv.gz": "0dc7a0ae2497f3ea3009792b6b7de1ae38b60d00708e4b4d4931c8752508e8f0",
+    "figure_03_complete_ranked_statistics.tsv.gz": "29a6cfce08115e78842b346c37516fe865a47f46a3bf951985e1d85f8007b4ca",
+    "figure_03_go_bp_all_results.tsv.gz": "4109de0ec73c9ff437fba1092fb123eb9865dcb286f256a99088ac40a25a0198",
+    "figure_03_go_bp_display.tsv": "65f1ac2cf342b71cdb69d1cf745b737e31ea87f4c8e5a078dc53cb63f27fd723",
+    "figure_03_go_bp_gseapy_raw.tsv.gz": "7ee2a9d60e467cdacc543f965da8fcf1a82791e9caa9363223ebe73bfe525b5c",
+    "figure_03_go_bp_leading_edge.tsv.gz": "6f2ff6fa70703504ae83ce2c113d45ff6e529f0423e03a5dec76487412212d2c",
+    "figure_03_kegg_all_results.tsv.gz": "68cb83091099e13e610b0b30b23cf34e260c3e2d7524db0cabd2a4c399ad3f79",
+    "figure_03_kegg_display.tsv": "da692901da200f277752e1791371f55086f2426cae136e04e985a55464824bfe",
+    "figure_03_kegg_gseapy_raw.tsv.gz": "efb0636db66f02ce94ccb261f7c18db5afdef4366b1882a72383952bcab1c6e5",
+    "figure_03_kegg_leading_edge.tsv.gz": "75080a9eb8e28c0a0717479b41bce52541a0f5e53b7480615edd887550754bd6",
+    "go_bp_all_gene_set_coverage.tsv.gz": "26e1a30b6890f5efa8eed1d88dce2b43f744a30529ad240e0509ef3464a0aa0b",
+    "kegg_all_gene_set_coverage.tsv.gz": "85279297c7d3d1a1f73d9358d890aac62f1fd453bb7ce980e4bf03f3fd059068",
+    "synthetic_to_mouse_symbol_map.tsv": "f64a7fba9f0257d9715c073f42339109e4a01784da68c55ce85ada0c3b36abbf"
+  },
+  "started_utc": "2026-10-19T14:30:00.816919+00:00",
+  "completed_utc": "2026-10-19T14:32:37.959053+00:00",
+  "runner_sha256": "e3f5465364ffdac1d58d18293502109ed5a60b6f62b01ea3129a333eb46431c6",
+  "integrity_schema": 1
 }

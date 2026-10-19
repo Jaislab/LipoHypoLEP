@@ -34,3 +34,5 @@ python figures/accessibility/audit_colors.py
 ```
 
 The audit outputs are separate review material, outside the manuscript figure canvases.
+
+The JSON report records current source PNG/font/script/dependency identities and output checksums. Reruns publish RUNNING/FAILED/PASS atomically, preventing an old PASS from surviving a failed review. `python figures/accessibility/audit_colors.py --check-report` verifies that the saved evidence still matches the current files; PASS means the simulations were generated and verified, rather than a guarantee of universal color accessibility.

@@ -1,5 +1,5 @@
 {
-  "verified_at_utc": "2026-10-19T14:12:16.739463+00:00",
+  "verified_at_utc": "2026-10-19T14:34:50.973180+00:00",
   "status": "PASS",
   "scope": "Current exported files identified by SHA-256; rerun after every export.",
   "verification_method": "Actual PDF and SVG font programs independently compared to installed URW Nimbus Sans source metrics and outlines.",
@@ -74,16 +74,22 @@
       }
     }
   ],
-  "renderer_sha256": "043a1cf342eaea37203e2ded4bb1ce0aac3221b3871d7ec4555c7fde93a4f56c",
-  "verifier_sha256": "24fa46a22b89252dfd562b38a45a546f37bdd15a572179283f7d31130b4e227a",
+  "renderer_sha256": "aca8eeed5c34e7ab031bc43a3648fbabdfcc6be3c6bd83dd666011d676ee95e7",
+  "verifier_sha256": "56e6287c5d9a42c5c5397a8aa26a291661116d7b73952538d8820fa3f25e8f45",
+  "software": {
+    "PyMuPDF": "1.26.6",
+    "fonttools": "4.61.1",
+    "Pillow": "12.3.0",
+    "numpy": "2.3.5"
+  },
   "figures": [
     {
       "figure": 1,
       "file_stem": "figure_01_gsea_synthetic",
       "export_sha256": {
-        "figure_01_gsea_synthetic.pdf": "b494c430e12a49f1030afbd916fac69919369b51535ea011315dd1c1e10a4514",
-        "figure_01_gsea_synthetic.svg": "699d4d84f8708f67fda41669cca80220c1c28e45fe98d9fcc7d4570f779d08b0",
-        "figure_01_gsea_synthetic_editable.svg": "6f920730235c5f5acb0399cfedb4034a63a9d6c02345bf2c7dd1902bf96fcd70",
+        "figure_01_gsea_synthetic.pdf": "8673078542c37bb1c8b007601e6cc9a7217d603c9724b34e325563143a801519",
+        "figure_01_gsea_synthetic.svg": "2c8e6b64336d094a0123df4e0084d8739eb3cd710d888eaf62e92565f9f359bc",
+        "figure_01_gsea_synthetic_editable.svg": "319ad019236f85beb107a720b74ac78b205556c595a79585a4ffdefc0a35a4e6",
         "figure_01_gsea_synthetic.png": "06a8c87fae450e4d63ff80545f9711d793d60eb02f5bcd37bfe6bca418dd7b7f",
         "figure_01_gsea_synthetic_300dpi.png": "59d78d4dd3ec9b21303aebe2f42ed82df093cf0ea0e436ab9a6ec38fff5a7836"
       },
@@ -108,8 +114,8 @@
                 "NimbusSans-Bold"
               ]
             },
-            "sha256": "1ce410997c6ea23314da2c1daaf81627b8f8aea9da560c0984fcf72a067b6e88",
-            "bytes": 1340,
+            "sha256": "9415d3c754a8f243c3bdc497cc917d27c292b677668eaf2bb39910b5ac650c08",
+            "bytes": 1460,
             "units_per_em": 1000,
             "unicode_glyphs_compared": 4,
             "advance_widths_and_sidebearings_match_source": true,
@@ -138,8 +144,8 @@
                 "NimbusSans-Regular"
               ]
             },
-            "sha256": "e61eb3db74f6efb47da144d823d348b8a2899d3971dd50d853bc9ea3adb913a8",
-            "bytes": 5744,
+            "sha256": "bc28223b692b429097803c6994645486fbcd26b9b38662cf289c83f456b89d01",
+            "bytes": 5864,
             "units_per_em": 1000,
             "unicode_glyphs_compared": 52,
             "advance_widths_and_sidebearings_match_source": true,
@@ -190,8 +196,8 @@
                 "NimbusSans-Regular"
               ]
             },
-            "sha256": "b9cb9faaab6faf20cb822d49dff5dfce624358f048b49d20be84c55de3794075",
-            "bytes": 95752,
+            "sha256": "4364da3673638c7c8749b4f14d4bf5fd3ef9de5333434064e4f8f7e1d4cef40f",
+            "bytes": 95936,
             "units_per_em": 1000,
             "unicode_glyphs_compared": 854,
             "advance_widths_and_sidebearings_match_source": true,
@@ -217,8 +223,8 @@
                 "NimbusSans-Bold"
               ]
             },
-            "sha256": "df89c426716a4cbde6cf06cc0aebf55a244ae5573f47283a0acf07df84384e30",
-            "bytes": 94796,
+            "sha256": "5169500ce34d7fa3c299e03ca2bd0268fc94bf96c37a7e7c7ce1462cd60d59a3",
+            "bytes": 94980,
             "units_per_em": 1000,
             "unicode_glyphs_compared": 854,
             "advance_widths_and_sidebearings_match_source": true,
@@ -244,8 +250,8 @@
                 "NimbusSans-Italic"
               ]
             },
-            "sha256": "45a630ac74037eb0a4e939d685333d48e33463264329ecbdffc697f5ce1ea208",
-            "bytes": 113900,
+            "sha256": "811b81f9320b40496475b220bfa042ea07d03a3a92889921b1384b86b9ea3514",
+            "bytes": 114084,
             "units_per_em": 1000,
             "unicode_glyphs_compared": 854,
             "advance_widths_and_sidebearings_match_source": true,
@@ -274,7 +280,35 @@
         },
         "pdf_raster_comparison": {
           "gaussian_blur_radius_px": 1,
+          "comparison_pixels": [
+            1536,
+            1024
+          ],
           "mean_absolute_rgb_difference_0_to_255": 0.90227
+        },
+        "font_identity_limit": "Pixels do not encode a font name. Identity is supported by verified companion exports, explicit Nimbus source selection in the renderer, and matching rendered content."
+      },
+      "high_resolution_png": {
+        "pixels": [
+          4608,
+          3072
+        ],
+        "metadata": {
+          "Software": "Matplotlib version3.10.8, https://matplotlib.org/",
+          "Title": "FIGURE 1 | How does untreated LD differ from non-LD controls? | Synthetic demonstration",
+          "Description": "Entirely synthetic data. See separate figure legend; not experimental results.",
+          "dpi": [
+            299.9994,
+            299.9994
+          ]
+        },
+        "pdf_raster_comparison": {
+          "gaussian_blur_radius_px": 1,
+          "comparison_pixels": [
+            1536,
+            1024
+          ],
+          "mean_absolute_rgb_difference_0_to_255": 0.66187
         },
         "font_identity_limit": "Pixels do not encode a font name. Identity is supported by verified companion exports, explicit Nimbus source selection in the renderer, and matching rendered content."
       },
@@ -287,9 +321,9 @@
       "figure": 2,
       "file_stem": "figure_02_gsea_synthetic",
       "export_sha256": {
-        "figure_02_gsea_synthetic.pdf": "d05ce92a606ce4be79b6fd18c9ea22a7959891f36982f41ae092e114b291b4ab",
-        "figure_02_gsea_synthetic.svg": "9ae9a4c48f6e397a1f1f61d55fbfa6aae8a90a0dd4665dc3c037ae75b412708e",
-        "figure_02_gsea_synthetic_editable.svg": "75607fd5afd596bf3a609d396660797cdb0a24a20b14d2fc1962d86793ed3bef",
+        "figure_02_gsea_synthetic.pdf": "6b887c830b99beb4244d4398edbb340aa1d0b952a32ccce0770f70d7cf9261d9",
+        "figure_02_gsea_synthetic.svg": "0c8ceb4bf6fcb3e6c52c1a1e8fada5a031090381e16e9410256c83b7ba1870f3",
+        "figure_02_gsea_synthetic_editable.svg": "6870738fd1608722c670ce6da6a265bda275475fa807f14bd144288f9dc23e18",
         "figure_02_gsea_synthetic.png": "f6cfc7afaf6f55d3f35588e258e837e35644aa496a2523be217d4c33220a3bc5",
         "figure_02_gsea_synthetic_300dpi.png": "639626a8bac7a142a74e3c5bfb732106e138dd16bd0b04421f9e53c9d63531f6"
       },
@@ -314,8 +348,8 @@
                 "NimbusSans-Bold"
               ]
             },
-            "sha256": "1ce410997c6ea23314da2c1daaf81627b8f8aea9da560c0984fcf72a067b6e88",
-            "bytes": 1340,
+            "sha256": "9415d3c754a8f243c3bdc497cc917d27c292b677668eaf2bb39910b5ac650c08",
+            "bytes": 1460,
             "units_per_em": 1000,
             "unicode_glyphs_compared": 4,
             "advance_widths_and_sidebearings_match_source": true,
@@ -344,8 +378,8 @@
                 "NimbusSans-Regular"
               ]
             },
-            "sha256": "a00e7a41ae2c708250b169044b2b899146bdea5f2510cf1bb08bf77b82fe86be",
-            "bytes": 5724,
+            "sha256": "cc2b1b1afeaf804ede92b0f5b884e5e67a67f08d24d69f1a5f151759e74cb5d1",
+            "bytes": 5844,
             "units_per_em": 1000,
             "unicode_glyphs_compared": 54,
             "advance_widths_and_sidebearings_match_source": true,
@@ -396,8 +430,8 @@
                 "NimbusSans-Regular"
               ]
             },
-            "sha256": "b9cb9faaab6faf20cb822d49dff5dfce624358f048b49d20be84c55de3794075",
-            "bytes": 95752,
+            "sha256": "4364da3673638c7c8749b4f14d4bf5fd3ef9de5333434064e4f8f7e1d4cef40f",
+            "bytes": 95936,
             "units_per_em": 1000,
             "unicode_glyphs_compared": 854,
             "advance_widths_and_sidebearings_match_source": true,
@@ -423,8 +457,8 @@
                 "NimbusSans-Bold"
               ]
             },
-            "sha256": "df89c426716a4cbde6cf06cc0aebf55a244ae5573f47283a0acf07df84384e30",
-            "bytes": 94796,
+            "sha256": "5169500ce34d7fa3c299e03ca2bd0268fc94bf96c37a7e7c7ce1462cd60d59a3",
+            "bytes": 94980,
             "units_per_em": 1000,
             "unicode_glyphs_compared": 854,
             "advance_widths_and_sidebearings_match_source": true,
@@ -450,8 +484,8 @@
                 "NimbusSans-Italic"
               ]
             },
-            "sha256": "45a630ac74037eb0a4e939d685333d48e33463264329ecbdffc697f5ce1ea208",
-            "bytes": 113900,
+            "sha256": "811b81f9320b40496475b220bfa042ea07d03a3a92889921b1384b86b9ea3514",
+            "bytes": 114084,
             "units_per_em": 1000,
             "unicode_glyphs_compared": 854,
             "advance_widths_and_sidebearings_match_source": true,
@@ -480,7 +514,35 @@
         },
         "pdf_raster_comparison": {
           "gaussian_blur_radius_px": 1,
+          "comparison_pixels": [
+            1536,
+            1024
+          ],
           "mean_absolute_rgb_difference_0_to_255": 1.06229
+        },
+        "font_identity_limit": "Pixels do not encode a font name. Identity is supported by verified companion exports, explicit Nimbus source selection in the renderer, and matching rendered content."
+      },
+      "high_resolution_png": {
+        "pixels": [
+          4608,
+          3072
+        ],
+        "metadata": {
+          "Software": "Matplotlib version3.10.8, https://matplotlib.org/",
+          "Title": "FIGURE 2 | What does leptin treatment change in LD mice? | Synthetic demonstration",
+          "Description": "Entirely synthetic data. See separate figure legend; not experimental results.",
+          "dpi": [
+            299.9994,
+            299.9994
+          ]
+        },
+        "pdf_raster_comparison": {
+          "gaussian_blur_radius_px": 1,
+          "comparison_pixels": [
+            1536,
+            1024
+          ],
+          "mean_absolute_rgb_difference_0_to_255": 0.74774
         },
         "font_identity_limit": "Pixels do not encode a font name. Identity is supported by verified companion exports, explicit Nimbus source selection in the renderer, and matching rendered content."
       },
@@ -493,9 +555,9 @@
       "figure": 3,
       "file_stem": "figure_03_gsea_synthetic",
       "export_sha256": {
-        "figure_03_gsea_synthetic.pdf": "f5fbefdb692751ea734ceb57ef48fe9550a6a5051a2fd87f5b13f01835543a72",
-        "figure_03_gsea_synthetic.svg": "548da41350ec87d75295dadf805bf7de1f97216940e9ba6b5e1443044c6cf46d",
-        "figure_03_gsea_synthetic_editable.svg": "e8ac502e9c4bcbd9f978bf467acdf886809b57da67d0492019f58c902b7a3eed",
+        "figure_03_gsea_synthetic.pdf": "60479128ac6707ea1184d5afef83f9a1d6041a36763a902f765001c012c76825",
+        "figure_03_gsea_synthetic.svg": "578dc1d95f9a26569d2e478452ae268222c20c7ede38d168003fbb3f02182b2e",
+        "figure_03_gsea_synthetic_editable.svg": "93447b4971d6d008a153e7d331f4d1b3c9ebc07f9a4b1f9c67041fba818302d9",
         "figure_03_gsea_synthetic.png": "f3c0ed45bf6a91e8923bc9284a41cc9a7c7dbd723c677814be4724e0619a258c",
         "figure_03_gsea_synthetic_300dpi.png": "32af346fd9c5636a0b55ecec99364f01b8c2a55e6dde4a1f6b4f2b5194075857"
       },
@@ -520,8 +582,8 @@
                 "NimbusSans-Bold"
               ]
             },
-            "sha256": "1ce410997c6ea23314da2c1daaf81627b8f8aea9da560c0984fcf72a067b6e88",
-            "bytes": 1340,
+            "sha256": "9415d3c754a8f243c3bdc497cc917d27c292b677668eaf2bb39910b5ac650c08",
+            "bytes": 1460,
             "units_per_em": 1000,
             "unicode_glyphs_compared": 4,
             "advance_widths_and_sidebearings_match_source": true,
@@ -550,8 +612,8 @@
                 "NimbusSans-Regular"
               ]
             },
-            "sha256": "18e4abf5539483fa525ba5a5ba76ba351abb9db6f6a0b89ee2733c77b8ae1975",
-            "bytes": 5844,
+            "sha256": "fbcd50f258bab4ee45f6675d9f143fccfcaf09ea624d06d49dc61ecc6345a775",
+            "bytes": 5964,
             "units_per_em": 1000,
             "unicode_glyphs_compared": 55,
             "advance_widths_and_sidebearings_match_source": true,
@@ -602,8 +664,8 @@
                 "NimbusSans-Regular"
               ]
             },
-            "sha256": "b9cb9faaab6faf20cb822d49dff5dfce624358f048b49d20be84c55de3794075",
-            "bytes": 95752,
+            "sha256": "4364da3673638c7c8749b4f14d4bf5fd3ef9de5333434064e4f8f7e1d4cef40f",
+            "bytes": 95936,
             "units_per_em": 1000,
             "unicode_glyphs_compared": 854,
             "advance_widths_and_sidebearings_match_source": true,
@@ -629,8 +691,8 @@
                 "NimbusSans-Bold"
               ]
             },
-            "sha256": "df89c426716a4cbde6cf06cc0aebf55a244ae5573f47283a0acf07df84384e30",
-            "bytes": 94796,
+            "sha256": "5169500ce34d7fa3c299e03ca2bd0268fc94bf96c37a7e7c7ce1462cd60d59a3",
+            "bytes": 94980,
             "units_per_em": 1000,
             "unicode_glyphs_compared": 854,
             "advance_widths_and_sidebearings_match_source": true,
@@ -656,8 +718,8 @@
                 "NimbusSans-Italic"
               ]
             },
-            "sha256": "45a630ac74037eb0a4e939d685333d48e33463264329ecbdffc697f5ce1ea208",
-            "bytes": 113900,
+            "sha256": "811b81f9320b40496475b220bfa042ea07d03a3a92889921b1384b86b9ea3514",
+            "bytes": 114084,
             "units_per_em": 1000,
             "unicode_glyphs_compared": 854,
             "advance_widths_and_sidebearings_match_source": true,
@@ -686,7 +748,35 @@
         },
         "pdf_raster_comparison": {
           "gaussian_blur_radius_px": 1,
+          "comparison_pixels": [
+            1536,
+            1024
+          ],
           "mean_absolute_rgb_difference_0_to_255": 1.09568
+        },
+        "font_identity_limit": "Pixels do not encode a font name. Identity is supported by verified companion exports, explicit Nimbus source selection in the renderer, and matching rendered content."
+      },
+      "high_resolution_png": {
+        "pixels": [
+          4608,
+          3072
+        ],
+        "metadata": {
+          "Software": "Matplotlib version3.10.8, https://matplotlib.org/",
+          "Title": "FIGURE 3 | What differences remain after leptin treatment? | Synthetic demonstration",
+          "Description": "Entirely synthetic data. See separate figure legend; not experimental results.",
+          "dpi": [
+            299.9994,
+            299.9994
+          ]
+        },
+        "pdf_raster_comparison": {
+          "gaussian_blur_radius_px": 1,
+          "comparison_pixels": [
+            1536,
+            1024
+          ],
+          "mean_absolute_rgb_difference_0_to_255": 0.82354
         },
         "font_identity_limit": "Pixels do not encode a font name. Identity is supported by verified companion exports, explicit Nimbus source selection in the renderer, and matching rendered content."
       },

@@ -1,4 +1,15 @@
 {
+  "complete": true,
+  "input_sha256": {
+    "figures/synthetic_demo/render_figure.py": "aca8eeed5c34e7ab031bc43a3648fbabdfcc6be3c6bd83dd666011d676ee95e7",
+    "figures/synthetic_demo/data/normalized_log2_expression.tsv.gz": "3a81f5d936b48219e116c5a38c3537dbf36f88bff927cca3b353d27544d26dcf",
+    "figures/synthetic_demo/data/sample_metadata.tsv": "c2d5d5c19a98408a3e9b34f29ec0040accb2f9d91d6b12cc2cc78f620ea6f754",
+    "figures/synthetic_demo/data/simulation_summary.json": "0dbba9e51776e8213c7d900beefe1fe8bd491e526d7875224643f4e667c2f378",
+    "figures/synthetic_demo/gsea_data/gsea_provenance.json": "ad58843eafd1ae03bc5f61613601e8b787fb5c63fa7c71cf6c469438b37c13f6",
+    "figures/synthetic_demo/data/contrast_LD_SALINE_vs_NON_LD_control.tsv.gz": "f7989f4ff70f4a364607b6e029cedce9791cd19784f02e81e68140a62fefc28b",
+    "figures/synthetic_demo/data/contrast_LD_LEPTIN_vs_LD_SALINE.tsv.gz": "3af98fb3e0c71bd2e86bf2f870b9759c532f0e39f03f7f8e0abf280187cc1ae6",
+    "figures/synthetic_demo/data/contrast_LD_LEPTIN_vs_NON_LD_control.tsv.gz": "5fd698622266646338baccf6598e06279a51d8f92e3d6425110d66f2fbda3410"
+  },
   "figures": [
     {
       "figure": 1,
@@ -237,6 +248,7 @@
         "absolute_log2fc": 5.0,
         "negative_log10_adjusted_p": 10.0
       },
+      "zero_adjusted_p_plotting_floor": 5e-324,
       "volcano_genes": 7647,
       "heatmap_samples": [
         "LD SALINE 01",
@@ -294,11 +306,12 @@
         "SIM00633",
         "SIM05689"
       ],
+      "heatmap_constant_genes_at_zero_zscore": [],
       "heatmap_group_order": [
         "LD SALINE",
         "NON-LD control"
       ],
-      "heatmap_selection": "40 genes with smallest adjusted P among genes passing adjusted P < 0.05 and absolute log2FC >= 0.2 in this contrast",
+      "heatmap_selection": "up to 40 genes with smallest adjusted P among genes passing adjusted P < 0.05 and absolute log2FC >= 0.2 in this contrast",
       "forest_genes": [
         "SIM01289",
         "SIM06871",
@@ -317,7 +330,7 @@
       "forest_confidence_level": 0.95,
       "forest_residual_degrees_of_freedom": 15,
       "forest_intervals": "marginal, unadjusted; genes selected from the same dataset",
-      "forest_selection": "six positive and six negative estimates with smallest adjusted P among genes passing the joint adjusted-P and log2FC criteria",
+      "forest_selection": "up to six positive and six negative estimates with smallest adjusted P among genes passing the joint adjusted-P and log2FC criteria",
       "absolute_log2fc_cutoff": 0.2,
       "adjusted_p_cutoff": 0.05,
       "synthetic_effect_scale": "original synthetic generator restored; fitted effects and intervals are neither rescaled nor clipped",
@@ -338,8 +351,8 @@
           "NES": [
             1.4855555890690186,
             1.4586574198947313,
-            -1.624925901469204,
-            -1.636134162989149
+            -1.6249259014692041,
+            -1.6361341629891495
           ],
           "gsea_fdr_q": [
             1.0,
@@ -347,7 +360,8 @@
             0.7249083535816182,
             1.0
           ],
-          "selection": "two largest positive and two most negative NES, without significance requirement",
+          "selection": "up to two largest positive and two most negative NES, without significance requirement",
+          "absolute_nes_limit": 2.6,
           "ranking": "all tested genes, signed t statistic; no DEG cutoff",
           "synthetic_random_mouse_assignment": true
         },
@@ -360,18 +374,19 @@
             "GO:0006688 glycosphingolipid biosynthetic process"
           ],
           "NES": [
-            1.8893550382292144,
-            1.8781330839891397,
-            -1.7895803413764992,
-            -1.8466062262821996
+            1.8893550382292146,
+            1.8781330839891393,
+            -1.789580341376499,
+            -1.8466062262821994
           ],
           "gsea_fdr_q": [
-            0.2906878393121675,
-            0.1713622756439012,
-            0.9393345786363568,
+            0.2906878393121676,
+            0.17136227564390122,
+            0.9393345786363567,
             0.8278128714267243
           ],
-          "selection": "two largest positive and two most negative NES, without significance requirement",
+          "selection": "up to two largest positive and two most negative NES, without significance requirement",
+          "absolute_nes_limit": 2.6,
           "ranking": "all tested genes, signed t statistic; no DEG cutoff",
           "synthetic_random_mouse_assignment": true
         }
@@ -614,6 +629,7 @@
         "absolute_log2fc": 5.0,
         "negative_log10_adjusted_p": 10.0
       },
+      "zero_adjusted_p_plotting_floor": 5e-324,
       "volcano_genes": 7647,
       "heatmap_samples": [
         "LD LEPTIN 01",
@@ -671,11 +687,12 @@
         "SIM00897",
         "SIM05766"
       ],
+      "heatmap_constant_genes_at_zero_zscore": [],
       "heatmap_group_order": [
         "LD LEPTIN",
         "LD SALINE"
       ],
-      "heatmap_selection": "40 genes with smallest adjusted P among genes passing adjusted P < 0.05 and absolute log2FC >= 0.2 in this contrast",
+      "heatmap_selection": "up to 40 genes with smallest adjusted P among genes passing adjusted P < 0.05 and absolute log2FC >= 0.2 in this contrast",
       "forest_genes": [
         "SIM00323",
         "SIM00154",
@@ -694,7 +711,7 @@
       "forest_confidence_level": 0.95,
       "forest_residual_degrees_of_freedom": 15,
       "forest_intervals": "marginal, unadjusted; genes selected from the same dataset",
-      "forest_selection": "six positive and six negative estimates with smallest adjusted P among genes passing the joint adjusted-P and log2FC criteria",
+      "forest_selection": "up to six positive and six negative estimates with smallest adjusted P among genes passing the joint adjusted-P and log2FC criteria",
       "absolute_log2fc_cutoff": 0.2,
       "adjusted_p_cutoff": 0.05,
       "synthetic_effect_scale": "original synthetic generator restored; fitted effects and intervals are neither rescaled nor clipped",
@@ -713,8 +730,8 @@
             "mmu05144 Malaria"
           ],
           "NES": [
-            1.654129587232228,
-            1.5984993679030128,
+            1.6541295872322277,
+            1.598499367903013,
             -1.5133663305475795,
             -1.5884929976386344
           ],
@@ -724,7 +741,8 @@
             1.0,
             1.0
           ],
-          "selection": "two largest positive and two most negative NES, without significance requirement",
+          "selection": "up to two largest positive and two most negative NES, without significance requirement",
+          "absolute_nes_limit": 2.6,
           "ranking": "all tested genes, signed t statistic; no DEG cutoff",
           "synthetic_random_mouse_assignment": true
         },
@@ -738,17 +756,18 @@
           ],
           "NES": [
             1.749644344668265,
-            1.7398772502317907,
-            -1.885920005070884,
-            -1.9993270678549389
+            1.7398772502317912,
+            -1.8859200050708844,
+            -1.9993270678549386
           ],
           "gsea_fdr_q": [
             1.0,
             1.0,
-            0.3630584412027823,
-            0.1182480419184634
+            0.36305844120278236,
+            0.11824804191846348
           ],
-          "selection": "two largest positive and two most negative NES, without significance requirement",
+          "selection": "up to two largest positive and two most negative NES, without significance requirement",
+          "absolute_nes_limit": 2.6,
           "ranking": "all tested genes, signed t statistic; no DEG cutoff",
           "synthetic_random_mouse_assignment": true
         }
@@ -991,6 +1010,7 @@
         "absolute_log2fc": 5.0,
         "negative_log10_adjusted_p": 10.0
       },
+      "zero_adjusted_p_plotting_floor": 5e-324,
       "volcano_genes": 7647,
       "heatmap_samples": [
         "LD LEPTIN 01",
@@ -1048,11 +1068,12 @@
         "SIM06285",
         "SIM00627"
       ],
+      "heatmap_constant_genes_at_zero_zscore": [],
       "heatmap_group_order": [
         "LD LEPTIN",
         "NON-LD control"
       ],
-      "heatmap_selection": "40 genes with smallest adjusted P among genes passing adjusted P < 0.05 and absolute log2FC >= 0.2 in this contrast",
+      "heatmap_selection": "up to 40 genes with smallest adjusted P among genes passing adjusted P < 0.05 and absolute log2FC >= 0.2 in this contrast",
       "forest_genes": [
         "SIM06871",
         "SIM07256",
@@ -1071,7 +1092,7 @@
       "forest_confidence_level": 0.95,
       "forest_residual_degrees_of_freedom": 15,
       "forest_intervals": "marginal, unadjusted; genes selected from the same dataset",
-      "forest_selection": "six positive and six negative estimates with smallest adjusted P among genes passing the joint adjusted-P and log2FC criteria",
+      "forest_selection": "up to six positive and six negative estimates with smallest adjusted P among genes passing the joint adjusted-P and log2FC criteria",
       "absolute_log2fc_cutoff": 0.2,
       "adjusted_p_cutoff": 0.05,
       "synthetic_effect_scale": "original synthetic generator restored; fitted effects and intervals are neither rescaled nor clipped",
@@ -1093,15 +1114,16 @@
             1.4099643404322937,
             1.3884117815008403,
             -1.555467684002594,
-            -1.783126266327156
+            -1.7831262663271559
           ],
           "gsea_fdr_q": [
             1.0,
             1.0,
             1.0,
-            0.2626551034022681
+            0.26265510340226816
           ],
-          "selection": "two largest positive and two most negative NES, without significance requirement",
+          "selection": "up to two largest positive and two most negative NES, without significance requirement",
+          "absolute_nes_limit": 2.6,
           "ranking": "all tested genes, signed t statistic; no DEG cutoff",
           "synthetic_random_mouse_assignment": true
         },
@@ -1115,17 +1137,18 @@
           ],
           "NES": [
             1.9870975091004768,
-            1.8503099439894457,
+            1.8503099439894464,
             -1.834550906511123,
             -1.8872495017279785
           ],
           "gsea_fdr_q": [
-            0.0757429586113659,
-            0.4184564688714351,
-            0.6521142087065213,
-            0.6257715902179644
+            0.0757430084896441,
+            0.41798919499840637,
+            0.6521137110780774,
+            0.6257711126915763
           ],
-          "selection": "two largest positive and two most negative NES, without significance requirement",
+          "selection": "up to two largest positive and two most negative NES, without significance requirement",
+          "absolute_nes_limit": 2.6,
           "ranking": "all tested genes, signed t statistic; no DEG cutoff",
           "synthetic_random_mouse_assignment": true
         }
