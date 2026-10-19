@@ -1,0 +1,33 @@
+{
+  "species": "Mus musculus",
+  "ncbi_taxonomy_id": 10090,
+  "retrieved_date": "2026-10-19",
+  "demo_only": true,
+  "caveat": "Gene-set membership is real mouse annotation. Any assignment of these gene symbols to anonymous synthetic SIM identifiers is arbitrary demonstration metadata; all resulting enrichment values have no experimental biological interpretation.",
+  "library": "GO Biological Process mouse; non-IEA; protein-coding projection",
+  "data_file": "go_bp_mouse_2026_05_19_nonIEA_protein_coding.gmt",
+  "sha256": "009be991eedc31fa18e23ded71cfac222fd5773d87fc243d19d67008ee21c73f",
+  "set_count": 8474,
+  "go_release": "2026-05-19",
+  "go_concept_doi": "10.5281/zenodo.1205166",
+  "source_repository": "https://github.com/robinson-vidva/enrichlite",
+  "source_commit": "a98877feabb5e1fa68180eeea63ccffefe7186f3",
+  "upstream_data_url": "https://raw.githubusercontent.com/robinson-vidva/enrichlite/a98877feabb5e1fa68180eeea63ccffefe7186f3/data/mouse/go_bp.json",
+  "upstream_data_sha256": "9963350b05861e1dfd9fe1b7515802cef81774d7a459bbc6dc998fe25f239bf4",
+  "upstream_symbols_url": "https://raw.githubusercontent.com/robinson-vidva/enrichlite/a98877feabb5e1fa68180eeea63ccffefe7186f3/data/mouse/symbols.json",
+  "upstream_symbols_sha256": "fd932f30ca8c4976f84348aeecaf2545f01bf890b08d4516a961d1e64d5e8d6c",
+  "upstream_manifest_url": "https://github.com/robinson-vidva/enrichlite/blob/a98877feabb5e1fa68180eeea63ccffefe7186f3/data/manifest.json",
+  "upstream_builder_url": "https://github.com/robinson-vidva/enrichlite/blob/a98877feabb5e1fa68180eeea63ccffefe7186f3/scripts/build_genesets.py",
+  "original_sources": [
+    "https://current.geneontology.org/annotations/mgi.gaf.gz",
+    "https://current.geneontology.org/ontology/go-basic.obo",
+    "https://ftp.ncbi.nlm.nih.gov/gene/DATA/GENE_INFO/Mammalia/Mus_musculus.gene_info.gz"
+  ],
+  "upstream_processing": "MGI GAF native mouse annotations; exclude evidence IEA and ND and NOT-qualified records; resolve GO primary IDs; true-path propagation through is_a and part_of within biological_process namespace; retain upstream sets of 5\u2013500 objects. Upstream release recorded in manifest; GO concept DOI is not a release-specific DOI.",
+  "local_processing": "Resolve compact member indices through same-commit symbols.json. Intersect each set with its first codingN=26310 authoritative NCBI mouse protein-coding gene symbols, to exclude GAF complex objects and noncoding identifiers. Retain nonempty sets; GSEA must additionally apply min_size/max_size after intersection with ranked experimental universe.",
+  "identifier_type": "Authoritative NCBI mouse protein-coding gene symbols at mirror build date",
+  "source_version_limitation": "This collection is intentionally restricted upstream to terms of 5\u2013500 GAF objects before local protein-coding projection; terms larger than 500 are absent even if an experimental-universe intersection could make them smaller. Refresh a complete versioned ontology/annotation snapshot for experimental analysis if needed.",
+  "license": "Gene Ontology CC BY 4.0; attribution Gene Ontology Consortium and Mouse Genome Informatics; NCBI gene_info public domain. Enrichlite source code MIT.",
+  "license_documentation_url": "https://github.com/robinson-vidva/enrichlite/blob/a98877feabb5e1fa68180eeea63ccffefe7186f3/DATA_LICENSES.md",
+  "direct_source_unavailable": "https://current.geneontology.org/annotations/mgi.gaf.gz returned tunnel 403; no verification was disabled."
+}

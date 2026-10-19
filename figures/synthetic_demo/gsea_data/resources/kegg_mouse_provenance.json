@@ -1,0 +1,23 @@
+{
+  "species": "Mus musculus",
+  "ncbi_taxonomy_id": 10090,
+  "retrieved_date": "2026-10-19",
+  "demo_only": true,
+  "caveat": "Gene-set membership is real mouse annotation. Any assignment of these gene symbols to anonymous synthetic SIM identifiers is arbitrary demonstration metadata; all resulting enrichment values have no experimental biological interpretation.",
+  "library": "KEGG mouse (archived NCBI BioSystems snapshot)",
+  "data_file": "kegg_mouse_biosystems_archive_2020.gmt",
+  "sha256": "70127d28c5c82a42abf2d1f33291d4a6a2a10e0afad320aad484d01931a9091a",
+  "set_count": 313,
+  "unique_gene_symbols": 8038,
+  "archive_retrieval_date": "2020-03-22",
+  "upstream_data_url": "https://raw.githubusercontent.com/stephenslab/pathways/996e2f93dd05ce3e0e203d9f0b5729c3ed171d82/data/gene_sets_mouse.RData",
+  "upstream_data_sha256": "6372f9073f09c24742fa3e7d7259c86c8abf2922ff2f234fea37bc38b184d372",
+  "source_repository": "https://github.com/stephenslab/pathways",
+  "source_commit": "996e2f93dd05ce3e0e203d9f0b5729c3ed171d82",
+  "upstream_documentation_url": "https://github.com/stephenslab/pathways/blob/996e2f93dd05ce3e0e203d9f0b5729c3ed171d82/README.md",
+  "extraction": "RData gene_sets_mouse: use sparse matrix columns where gene_set_info.database == BioSystems-kegg; accession identifiers all mmu; map sparse row positions to gene_info.Symbol; unique symbols within each pathway. Column identities were verified against sparse matrix Dimnames. No human-to-mouse orthology conversion. Retain only canonical pathway accessions matching ^mmu[0-9]{5}$; exclude all 89 mmu_M module accessions (402 BioSystems-kegg entries become 313 pathways).",
+  "identifier_type": "Mouse gene symbols; archived nomenclature from package snapshot",
+  "source_version_limitation": "Archived NCBI BioSystems collection, not the current KEGG release. Exact constituent KEGG release was not recorded by this mirror. Update from direct KEGG/mmu source before experimental analysis. NCBI mouse gene_info documented download 2020-10-15.",
+  "license": "Mirror R package MIT; original KEGG data remain subject to KEGG terms. Do not interpret package source-code license as relicensing constituent annotation.",
+  "direct_source_unavailable": "https://rest.kegg.jp/link/mmu/pathway and Enrichr HTTPS requests returned tunnel 403; no verification was disabled."
+}

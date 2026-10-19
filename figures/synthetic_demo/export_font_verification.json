@@ -1,0 +1,699 @@
+{
+  "verified_at_utc": "2026-10-19T14:12:16.739463+00:00",
+  "status": "PASS",
+  "scope": "Current exported files identified by SHA-256; rerun after every export.",
+  "verification_method": "Actual PDF and SVG font programs independently compared to installed URW Nimbus Sans source metrics and outlines.",
+  "source_fonts": [
+    {
+      "style": "Regular",
+      "path": "/usr/share/fonts/opentype/urw-base35/NimbusSans-Regular.otf",
+      "sha256": "7c25be4d78155523080ab85b10277150657ff7dabbcad7037bdd536c9b6d0d08",
+      "names": {
+        "1": [
+          "Nimbus Sans"
+        ],
+        "2": [
+          "Regular"
+        ],
+        "3": [
+          "URW:NimbusSans-Regular:2016"
+        ],
+        "4": [
+          "Nimbus Sans",
+          "NimbusSans-Regular"
+        ],
+        "6": [
+          "NimbusSans-Regular"
+        ]
+      }
+    },
+    {
+      "style": "Bold",
+      "path": "/usr/share/fonts/opentype/urw-base35/NimbusSans-Bold.otf",
+      "sha256": "7f33328e6b4d4cd21b45fa625791928c9407dc702db6780e56b09ca9a3ecaa67",
+      "names": {
+        "1": [
+          "Nimbus Sans"
+        ],
+        "2": [
+          "Bold"
+        ],
+        "3": [
+          "URW:NimbusSans-Bold:2016"
+        ],
+        "4": [
+          "Nimbus Sans Bold",
+          "NimbusSans-Bold"
+        ],
+        "6": [
+          "NimbusSans-Bold"
+        ]
+      }
+    },
+    {
+      "style": "Italic",
+      "path": "/usr/share/fonts/opentype/urw-base35/NimbusSans-Italic.otf",
+      "sha256": "7b0bef5686aa58c0fd0f0d01beeae56664208490e30ca6a25431281c9a0c6402",
+      "names": {
+        "1": [
+          "Nimbus Sans"
+        ],
+        "2": [
+          "Italic"
+        ],
+        "3": [
+          "URW:NimbusSans-Italic:2016"
+        ],
+        "4": [
+          "Nimbus Sans Italic",
+          "NimbusSans-Italic"
+        ],
+        "6": [
+          "NimbusSans-Italic"
+        ]
+      }
+    }
+  ],
+  "renderer_sha256": "043a1cf342eaea37203e2ded4bb1ce0aac3221b3871d7ec4555c7fde93a4f56c",
+  "verifier_sha256": "24fa46a22b89252dfd562b38a45a546f37bdd15a572179283f7d31130b4e227a",
+  "figures": [
+    {
+      "figure": 1,
+      "file_stem": "figure_01_gsea_synthetic",
+      "export_sha256": {
+        "figure_01_gsea_synthetic.pdf": "b494c430e12a49f1030afbd916fac69919369b51535ea011315dd1c1e10a4514",
+        "figure_01_gsea_synthetic.svg": "699d4d84f8708f67fda41669cca80220c1c28e45fe98d9fcc7d4570f779d08b0",
+        "figure_01_gsea_synthetic_editable.svg": "6f920730235c5f5acb0399cfedb4034a63a9d6c02345bf2c7dd1902bf96fcd70",
+        "figure_01_gsea_synthetic.png": "06a8c87fae450e4d63ff80545f9711d793d60eb02f5bcd37bfe6bca418dd7b7f",
+        "figure_01_gsea_synthetic_300dpi.png": "59d78d4dd3ec9b21303aebe2f42ed82df093cf0ea0e436ab9a6ec38fff5a7836"
+      },
+      "pdf": {
+        "font_programs": [
+          {
+            "style": "Bold",
+            "names": {
+              "1": [
+                "Nimbus Sans"
+              ],
+              "2": [
+                "Bold"
+              ],
+              "3": [
+                "NimbusSans-Bold-Figure"
+              ],
+              "4": [
+                "Nimbus Sans Bold"
+              ],
+              "6": [
+                "NimbusSans-Bold"
+              ]
+            },
+            "sha256": "1ce410997c6ea23314da2c1daaf81627b8f8aea9da560c0984fcf72a067b6e88",
+            "bytes": 1340,
+            "units_per_em": 1000,
+            "unicode_glyphs_compared": 4,
+            "advance_widths_and_sidebearings_match_source": true,
+            "outlines_match_source_after_cubic_to_quadratic_conversion": true,
+            "conversion_max_error_font_units": 0.5,
+            "pdf_resource_name": "EKTMJB+NimbusSans-Bold",
+            "pdf_font_type": "Type0",
+            "xref": 18
+          },
+          {
+            "style": "Regular",
+            "names": {
+              "1": [
+                "Nimbus Sans"
+              ],
+              "2": [
+                "Regular"
+              ],
+              "3": [
+                "NimbusSans-Regular-Figure"
+              ],
+              "4": [
+                "Nimbus Sans Regular"
+              ],
+              "6": [
+                "NimbusSans-Regular"
+              ]
+            },
+            "sha256": "e61eb3db74f6efb47da144d823d348b8a2899d3971dd50d853bc9ea3adb913a8",
+            "bytes": 5744,
+            "units_per_em": 1000,
+            "unicode_glyphs_compared": 52,
+            "advance_widths_and_sidebearings_match_source": true,
+            "outlines_match_source_after_cubic_to_quadratic_conversion": true,
+            "conversion_max_error_font_units": 0.5,
+            "pdf_resource_name": "EKTMJB+NimbusSans-Regular",
+            "pdf_font_type": "Type0",
+            "xref": 25
+          }
+        ],
+        "text_span_fonts": [
+          "NimbusSans-Bold",
+          "NimbusSans-Regular"
+        ],
+        "text_spans_checked": 57,
+        "pages": 1,
+        "fallback_font_found": false,
+        "pdffonts_stdout": "name                                 type              encoding         emb sub uni object ID\n------------------------------------ ----------------- ---------------- --- --- --- ---------\nEKTMJB+NimbusSans-Bold               CID TrueType      Identity-H       yes yes yes     18  0\nEKTMJB+NimbusSans-Regular            CID TrueType      Identity-H       yes yes yes     25  0\n"
+      },
+      "outlined_svg": {
+        "live_text_elements": 0,
+        "glyph_uses_checked": 369,
+        "glyph_prefixes": [
+          "NimbusSans-Bold",
+          "NimbusSans-Regular"
+        ],
+        "all_text_glyph_references_resolve": true,
+        "note": "Outlined artwork cannot substitute a font; identity is traced through the Nimbus glyph definitions and companion PDF font-program checks."
+      },
+      "editable_svg": {
+        "embedded_font_programs": [
+          {
+            "style": "Regular",
+            "names": {
+              "1": [
+                "Nimbus Sans"
+              ],
+              "2": [
+                "Regular"
+              ],
+              "3": [
+                "NimbusSans-Regular-Figure"
+              ],
+              "4": [
+                "Nimbus Sans Regular"
+              ],
+              "6": [
+                "NimbusSans-Regular"
+              ]
+            },
+            "sha256": "b9cb9faaab6faf20cb822d49dff5dfce624358f048b49d20be84c55de3794075",
+            "bytes": 95752,
+            "units_per_em": 1000,
+            "unicode_glyphs_compared": 854,
+            "advance_widths_and_sidebearings_match_source": true,
+            "outlines_match_source_after_cubic_to_quadratic_conversion": true,
+            "conversion_max_error_font_units": 0.5
+          },
+          {
+            "style": "Bold",
+            "names": {
+              "1": [
+                "Nimbus Sans"
+              ],
+              "2": [
+                "Bold"
+              ],
+              "3": [
+                "NimbusSans-Bold-Figure"
+              ],
+              "4": [
+                "Nimbus Sans Bold"
+              ],
+              "6": [
+                "NimbusSans-Bold"
+              ]
+            },
+            "sha256": "df89c426716a4cbde6cf06cc0aebf55a244ae5573f47283a0acf07df84384e30",
+            "bytes": 94796,
+            "units_per_em": 1000,
+            "unicode_glyphs_compared": 854,
+            "advance_widths_and_sidebearings_match_source": true,
+            "outlines_match_source_after_cubic_to_quadratic_conversion": true,
+            "conversion_max_error_font_units": 0.5
+          },
+          {
+            "style": "Italic",
+            "names": {
+              "1": [
+                "Nimbus Sans"
+              ],
+              "2": [
+                "Italic"
+              ],
+              "3": [
+                "NimbusSans-Italic-Figure"
+              ],
+              "4": [
+                "Nimbus Sans Italic"
+              ],
+              "6": [
+                "NimbusSans-Italic"
+              ]
+            },
+            "sha256": "45a630ac74037eb0a4e939d685333d48e33463264329ecbdffc697f5ce1ea208",
+            "bytes": 113900,
+            "units_per_em": 1000,
+            "unicode_glyphs_compared": 854,
+            "advance_widths_and_sidebearings_match_source": true,
+            "outlines_match_source_after_cubic_to_quadratic_conversion": true,
+            "conversion_max_error_font_units": 0.5
+          }
+        ],
+        "live_text_elements": 53,
+        "family_declarations_checked": 85,
+        "fallback_font_found": false,
+        "viewer_limitation": "A viewer must honor embedded @font-face fonts. The outlined SVG and embedded-font PDF avoid that dependency."
+      },
+      "png": {
+        "pixels": [
+          1536,
+          1024
+        ],
+        "metadata": {
+          "Software": "Matplotlib version3.10.8, https://matplotlib.org/",
+          "Title": "FIGURE 1 | How does untreated LD differ from non-LD controls? | Synthetic demonstration",
+          "Description": "Entirely synthetic data. See separate figure legend; not experimental results.",
+          "dpi": [
+            99.9998,
+            99.9998
+          ]
+        },
+        "pdf_raster_comparison": {
+          "gaussian_blur_radius_px": 1,
+          "mean_absolute_rgb_difference_0_to_255": 0.90227
+        },
+        "font_identity_limit": "Pixels do not encode a font name. Identity is supported by verified companion exports, explicit Nimbus source selection in the renderer, and matching rendered content."
+      },
+      "high_resolution_png_pixels": [
+        4608,
+        3072
+      ]
+    },
+    {
+      "figure": 2,
+      "file_stem": "figure_02_gsea_synthetic",
+      "export_sha256": {
+        "figure_02_gsea_synthetic.pdf": "d05ce92a606ce4be79b6fd18c9ea22a7959891f36982f41ae092e114b291b4ab",
+        "figure_02_gsea_synthetic.svg": "9ae9a4c48f6e397a1f1f61d55fbfa6aae8a90a0dd4665dc3c037ae75b412708e",
+        "figure_02_gsea_synthetic_editable.svg": "75607fd5afd596bf3a609d396660797cdb0a24a20b14d2fc1962d86793ed3bef",
+        "figure_02_gsea_synthetic.png": "f6cfc7afaf6f55d3f35588e258e837e35644aa496a2523be217d4c33220a3bc5",
+        "figure_02_gsea_synthetic_300dpi.png": "639626a8bac7a142a74e3c5bfb732106e138dd16bd0b04421f9e53c9d63531f6"
+      },
+      "pdf": {
+        "font_programs": [
+          {
+            "style": "Bold",
+            "names": {
+              "1": [
+                "Nimbus Sans"
+              ],
+              "2": [
+                "Bold"
+              ],
+              "3": [
+                "NimbusSans-Bold-Figure"
+              ],
+              "4": [
+                "Nimbus Sans Bold"
+              ],
+              "6": [
+                "NimbusSans-Bold"
+              ]
+            },
+            "sha256": "1ce410997c6ea23314da2c1daaf81627b8f8aea9da560c0984fcf72a067b6e88",
+            "bytes": 1340,
+            "units_per_em": 1000,
+            "unicode_glyphs_compared": 4,
+            "advance_widths_and_sidebearings_match_source": true,
+            "outlines_match_source_after_cubic_to_quadratic_conversion": true,
+            "conversion_max_error_font_units": 0.5,
+            "pdf_resource_name": "EKTMJB+NimbusSans-Bold",
+            "pdf_font_type": "Type0",
+            "xref": 18
+          },
+          {
+            "style": "Regular",
+            "names": {
+              "1": [
+                "Nimbus Sans"
+              ],
+              "2": [
+                "Regular"
+              ],
+              "3": [
+                "NimbusSans-Regular-Figure"
+              ],
+              "4": [
+                "Nimbus Sans Regular"
+              ],
+              "6": [
+                "NimbusSans-Regular"
+              ]
+            },
+            "sha256": "a00e7a41ae2c708250b169044b2b899146bdea5f2510cf1bb08bf77b82fe86be",
+            "bytes": 5724,
+            "units_per_em": 1000,
+            "unicode_glyphs_compared": 54,
+            "advance_widths_and_sidebearings_match_source": true,
+            "outlines_match_source_after_cubic_to_quadratic_conversion": true,
+            "conversion_max_error_font_units": 0.5,
+            "pdf_resource_name": "EKTMJB+NimbusSans-Regular",
+            "pdf_font_type": "Type0",
+            "xref": 25
+          }
+        ],
+        "text_span_fonts": [
+          "NimbusSans-Bold",
+          "NimbusSans-Regular"
+        ],
+        "text_spans_checked": 61,
+        "pages": 1,
+        "fallback_font_found": false,
+        "pdffonts_stdout": "name                                 type              encoding         emb sub uni object ID\n------------------------------------ ----------------- ---------------- --- --- --- ---------\nEKTMJB+NimbusSans-Bold               CID TrueType      Identity-H       yes yes yes     18  0\nEKTMJB+NimbusSans-Regular            CID TrueType      Identity-H       yes yes yes     25  0\n"
+      },
+      "outlined_svg": {
+        "live_text_elements": 0,
+        "glyph_uses_checked": 452,
+        "glyph_prefixes": [
+          "NimbusSans-Bold",
+          "NimbusSans-Regular"
+        ],
+        "all_text_glyph_references_resolve": true,
+        "note": "Outlined artwork cannot substitute a font; identity is traced through the Nimbus glyph definitions and companion PDF font-program checks."
+      },
+      "editable_svg": {
+        "embedded_font_programs": [
+          {
+            "style": "Regular",
+            "names": {
+              "1": [
+                "Nimbus Sans"
+              ],
+              "2": [
+                "Regular"
+              ],
+              "3": [
+                "NimbusSans-Regular-Figure"
+              ],
+              "4": [
+                "Nimbus Sans Regular"
+              ],
+              "6": [
+                "NimbusSans-Regular"
+              ]
+            },
+            "sha256": "b9cb9faaab6faf20cb822d49dff5dfce624358f048b49d20be84c55de3794075",
+            "bytes": 95752,
+            "units_per_em": 1000,
+            "unicode_glyphs_compared": 854,
+            "advance_widths_and_sidebearings_match_source": true,
+            "outlines_match_source_after_cubic_to_quadratic_conversion": true,
+            "conversion_max_error_font_units": 0.5
+          },
+          {
+            "style": "Bold",
+            "names": {
+              "1": [
+                "Nimbus Sans"
+              ],
+              "2": [
+                "Bold"
+              ],
+              "3": [
+                "NimbusSans-Bold-Figure"
+              ],
+              "4": [
+                "Nimbus Sans Bold"
+              ],
+              "6": [
+                "NimbusSans-Bold"
+              ]
+            },
+            "sha256": "df89c426716a4cbde6cf06cc0aebf55a244ae5573f47283a0acf07df84384e30",
+            "bytes": 94796,
+            "units_per_em": 1000,
+            "unicode_glyphs_compared": 854,
+            "advance_widths_and_sidebearings_match_source": true,
+            "outlines_match_source_after_cubic_to_quadratic_conversion": true,
+            "conversion_max_error_font_units": 0.5
+          },
+          {
+            "style": "Italic",
+            "names": {
+              "1": [
+                "Nimbus Sans"
+              ],
+              "2": [
+                "Italic"
+              ],
+              "3": [
+                "NimbusSans-Italic-Figure"
+              ],
+              "4": [
+                "Nimbus Sans Italic"
+              ],
+              "6": [
+                "NimbusSans-Italic"
+              ]
+            },
+            "sha256": "45a630ac74037eb0a4e939d685333d48e33463264329ecbdffc697f5ce1ea208",
+            "bytes": 113900,
+            "units_per_em": 1000,
+            "unicode_glyphs_compared": 854,
+            "advance_widths_and_sidebearings_match_source": true,
+            "outlines_match_source_after_cubic_to_quadratic_conversion": true,
+            "conversion_max_error_font_units": 0.5
+          }
+        ],
+        "live_text_elements": 57,
+        "family_declarations_checked": 89,
+        "fallback_font_found": false,
+        "viewer_limitation": "A viewer must honor embedded @font-face fonts. The outlined SVG and embedded-font PDF avoid that dependency."
+      },
+      "png": {
+        "pixels": [
+          1536,
+          1024
+        ],
+        "metadata": {
+          "Software": "Matplotlib version3.10.8, https://matplotlib.org/",
+          "Title": "FIGURE 2 | What does leptin treatment change in LD mice? | Synthetic demonstration",
+          "Description": "Entirely synthetic data. See separate figure legend; not experimental results.",
+          "dpi": [
+            99.9998,
+            99.9998
+          ]
+        },
+        "pdf_raster_comparison": {
+          "gaussian_blur_radius_px": 1,
+          "mean_absolute_rgb_difference_0_to_255": 1.06229
+        },
+        "font_identity_limit": "Pixels do not encode a font name. Identity is supported by verified companion exports, explicit Nimbus source selection in the renderer, and matching rendered content."
+      },
+      "high_resolution_png_pixels": [
+        4608,
+        3072
+      ]
+    },
+    {
+      "figure": 3,
+      "file_stem": "figure_03_gsea_synthetic",
+      "export_sha256": {
+        "figure_03_gsea_synthetic.pdf": "f5fbefdb692751ea734ceb57ef48fe9550a6a5051a2fd87f5b13f01835543a72",
+        "figure_03_gsea_synthetic.svg": "548da41350ec87d75295dadf805bf7de1f97216940e9ba6b5e1443044c6cf46d",
+        "figure_03_gsea_synthetic_editable.svg": "e8ac502e9c4bcbd9f978bf467acdf886809b57da67d0492019f58c902b7a3eed",
+        "figure_03_gsea_synthetic.png": "f3c0ed45bf6a91e8923bc9284a41cc9a7c7dbd723c677814be4724e0619a258c",
+        "figure_03_gsea_synthetic_300dpi.png": "32af346fd9c5636a0b55ecec99364f01b8c2a55e6dde4a1f6b4f2b5194075857"
+      },
+      "pdf": {
+        "font_programs": [
+          {
+            "style": "Bold",
+            "names": {
+              "1": [
+                "Nimbus Sans"
+              ],
+              "2": [
+                "Bold"
+              ],
+              "3": [
+                "NimbusSans-Bold-Figure"
+              ],
+              "4": [
+                "Nimbus Sans Bold"
+              ],
+              "6": [
+                "NimbusSans-Bold"
+              ]
+            },
+            "sha256": "1ce410997c6ea23314da2c1daaf81627b8f8aea9da560c0984fcf72a067b6e88",
+            "bytes": 1340,
+            "units_per_em": 1000,
+            "unicode_glyphs_compared": 4,
+            "advance_widths_and_sidebearings_match_source": true,
+            "outlines_match_source_after_cubic_to_quadratic_conversion": true,
+            "conversion_max_error_font_units": 0.5,
+            "pdf_resource_name": "EKTMJB+NimbusSans-Bold",
+            "pdf_font_type": "Type0",
+            "xref": 18
+          },
+          {
+            "style": "Regular",
+            "names": {
+              "1": [
+                "Nimbus Sans"
+              ],
+              "2": [
+                "Regular"
+              ],
+              "3": [
+                "NimbusSans-Regular-Figure"
+              ],
+              "4": [
+                "Nimbus Sans Regular"
+              ],
+              "6": [
+                "NimbusSans-Regular"
+              ]
+            },
+            "sha256": "18e4abf5539483fa525ba5a5ba76ba351abb9db6f6a0b89ee2733c77b8ae1975",
+            "bytes": 5844,
+            "units_per_em": 1000,
+            "unicode_glyphs_compared": 55,
+            "advance_widths_and_sidebearings_match_source": true,
+            "outlines_match_source_after_cubic_to_quadratic_conversion": true,
+            "conversion_max_error_font_units": 0.5,
+            "pdf_resource_name": "EKTMJB+NimbusSans-Regular",
+            "pdf_font_type": "Type0",
+            "xref": 25
+          }
+        ],
+        "text_span_fonts": [
+          "NimbusSans-Bold",
+          "NimbusSans-Regular"
+        ],
+        "text_spans_checked": 58,
+        "pages": 1,
+        "fallback_font_found": false,
+        "pdffonts_stdout": "name                                 type              encoding         emb sub uni object ID\n------------------------------------ ----------------- ---------------- --- --- --- ---------\nEKTMJB+NimbusSans-Bold               CID TrueType      Identity-H       yes yes yes     18  0\nEKTMJB+NimbusSans-Regular            CID TrueType      Identity-H       yes yes yes     25  0\n"
+      },
+      "outlined_svg": {
+        "live_text_elements": 0,
+        "glyph_uses_checked": 414,
+        "glyph_prefixes": [
+          "NimbusSans-Bold",
+          "NimbusSans-Regular"
+        ],
+        "all_text_glyph_references_resolve": true,
+        "note": "Outlined artwork cannot substitute a font; identity is traced through the Nimbus glyph definitions and companion PDF font-program checks."
+      },
+      "editable_svg": {
+        "embedded_font_programs": [
+          {
+            "style": "Regular",
+            "names": {
+              "1": [
+                "Nimbus Sans"
+              ],
+              "2": [
+                "Regular"
+              ],
+              "3": [
+                "NimbusSans-Regular-Figure"
+              ],
+              "4": [
+                "Nimbus Sans Regular"
+              ],
+              "6": [
+                "NimbusSans-Regular"
+              ]
+            },
+            "sha256": "b9cb9faaab6faf20cb822d49dff5dfce624358f048b49d20be84c55de3794075",
+            "bytes": 95752,
+            "units_per_em": 1000,
+            "unicode_glyphs_compared": 854,
+            "advance_widths_and_sidebearings_match_source": true,
+            "outlines_match_source_after_cubic_to_quadratic_conversion": true,
+            "conversion_max_error_font_units": 0.5
+          },
+          {
+            "style": "Bold",
+            "names": {
+              "1": [
+                "Nimbus Sans"
+              ],
+              "2": [
+                "Bold"
+              ],
+              "3": [
+                "NimbusSans-Bold-Figure"
+              ],
+              "4": [
+                "Nimbus Sans Bold"
+              ],
+              "6": [
+                "NimbusSans-Bold"
+              ]
+            },
+            "sha256": "df89c426716a4cbde6cf06cc0aebf55a244ae5573f47283a0acf07df84384e30",
+            "bytes": 94796,
+            "units_per_em": 1000,
+            "unicode_glyphs_compared": 854,
+            "advance_widths_and_sidebearings_match_source": true,
+            "outlines_match_source_after_cubic_to_quadratic_conversion": true,
+            "conversion_max_error_font_units": 0.5
+          },
+          {
+            "style": "Italic",
+            "names": {
+              "1": [
+                "Nimbus Sans"
+              ],
+              "2": [
+                "Italic"
+              ],
+              "3": [
+                "NimbusSans-Italic-Figure"
+              ],
+              "4": [
+                "Nimbus Sans Italic"
+              ],
+              "6": [
+                "NimbusSans-Italic"
+              ]
+            },
+            "sha256": "45a630ac74037eb0a4e939d685333d48e33463264329ecbdffc697f5ce1ea208",
+            "bytes": 113900,
+            "units_per_em": 1000,
+            "unicode_glyphs_compared": 854,
+            "advance_widths_and_sidebearings_match_source": true,
+            "outlines_match_source_after_cubic_to_quadratic_conversion": true,
+            "conversion_max_error_font_units": 0.5
+          }
+        ],
+        "live_text_elements": 54,
+        "family_declarations_checked": 86,
+        "fallback_font_found": false,
+        "viewer_limitation": "A viewer must honor embedded @font-face fonts. The outlined SVG and embedded-font PDF avoid that dependency."
+      },
+      "png": {
+        "pixels": [
+          1536,
+          1024
+        ],
+        "metadata": {
+          "Software": "Matplotlib version3.10.8, https://matplotlib.org/",
+          "Title": "FIGURE 3 | What differences remain after leptin treatment? | Synthetic demonstration",
+          "Description": "Entirely synthetic data. See separate figure legend; not experimental results.",
+          "dpi": [
+            99.9998,
+            99.9998
+          ]
+        },
+        "pdf_raster_comparison": {
+          "gaussian_blur_radius_px": 1,
+          "mean_absolute_rgb_difference_0_to_255": 1.09568
+        },
+        "font_identity_limit": "Pixels do not encode a font name. Identity is supported by verified companion exports, explicit Nimbus source selection in the renderer, and matching rendered content."
+      },
+      "high_resolution_png_pixels": [
+        4608,
+        3072
+      ]
+    }
+  ]
+}

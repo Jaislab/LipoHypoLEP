@@ -2,267 +2,207 @@
   "method": "DaltonLens 0.1.5, Machado et al. 2009, severity 1.0; sRGB decoded and encoded by library",
   "grayscale": "linear-light sRGB/Rec.709 relative luminance, re-encoded to sRGB",
   "metrics": "CIE1976 Lab distances (D65); descriptive only, no universal pass/fail threshold",
-  "scope": "Original and revised categorical colors; retained effect hues; full rendered Figure 1 including heatmap and transparency",
+  "scope": "Three comparison-specific pairs from the RGB codes printed in the supplied PDF; full rendered Figures 1\u20133 including heatmaps, GSEA and transparency",
   "limitation": "Simulation is an accessibility check, not a guarantee for every observer or grayscale print.",
   "palettes": {
-    "Original groups": {
+    "Figure 1: yellow / blue": {
       "Normal": {
         "hex": {
-          "LD SALINE": "#C28E85",
-          "LD LEPTIN": "#80A596",
-          "NON-LD control": "#8B9FB3"
+          "Higher": "#FDB338",
+          "Lower": "#025196"
         },
         "Lstar": {
-          "LD SALINE": 63.76,
-          "LD LEPTIN": 64.72,
-          "NON-LD control": 64.59
+          "Higher": 78.12,
+          "Lower": 34.19
         },
         "deltaE76": {
-          "LD SALINE / LD LEPTIN": 35.44,
-          "LD SALINE / NON-LD control": 32.88,
-          "LD LEPTIN / NON-LD control": 21.04
+          "Higher / Lower": 121.26
         }
       },
       "Protanopia": {
         "hex": {
-          "LD SALINE": "#999484",
-          "LD LEPTIN": "#A39F95",
-          "NON-LD control": "#979FB4"
+          "Higher": "#CDB622",
+          "Lower": "#2B5698"
         },
         "Lstar": {
-          "LD SALINE": 61.32,
-          "LD LEPTIN": 65.56,
-          "NON-LD control": 65.49
+          "Higher": 73.9,
+          "Lower": 36.81
         },
         "deltaE76": {
-          "LD SALINE / LD LEPTIN": 5.46,
-          "LD SALINE / NON-LD control": 21.51,
-          "LD LEPTIN / NON-LD control": 17.66
+          "Higher / Lower": 117.73
         }
       },
       "Deuteranopia": {
         "hex": {
-          "LD SALINE": "#A59E84",
-          "LD LEPTIN": "#9C9B96",
-          "NON-LD control": "#929AB2"
+          "Higher": "#DFC83C",
+          "Lower": "#044A94"
         },
         "Lstar": {
-          "LD SALINE": 65.06,
-          "LD LEPTIN": 63.93,
-          "NON-LD control": 63.7
+          "Higher": 80.36,
+          "Lower": 31.94
         },
         "deltaE76": {
-          "LD SALINE / LD LEPTIN": 11.9,
-          "LD SALINE / NON-LD control": 28.29,
-          "LD LEPTIN / NON-LD control": 16.42
+          "Higher / Lower": 125.68
         }
       },
       "Tritanopia": {
         "hex": {
-          "LD SALINE": "#CD878B",
-          "LD LEPTIN": "#77A5A0",
-          "NON-LD control": "#80A3A5"
+          "Higher": "#FE9F9B",
+          "Lower": "#00616B"
         },
         "Lstar": {
-          "LD SALINE": 63.49,
-          "LD LEPTIN": 64.46,
-          "NON-LD control": 64.56
+          "Higher": 74.98,
+          "Lower": 37.13
         },
         "deltaE76": {
-          "LD SALINE / LD LEPTIN": 45.28,
-          "LD SALINE / NON-LD control": 41.25,
-          "LD LEPTIN / NON-LD control": 5.64
+          "Higher / Lower": 73.05
         }
       },
       "Grayscale": {
         "hex": {
-          "LD SALINE": "#9A9A9A",
-          "LD LEPTIN": "#9D9D9D",
-          "NON-LD control": "#9D9D9D"
+          "Higher": "#C1C1C1",
+          "Lower": "#505050"
         },
         "Lstar": {
-          "LD SALINE": 63.6,
-          "LD LEPTIN": 64.74,
-          "NON-LD control": 64.74
+          "Higher": 78.07,
+          "Lower": 34.03
         },
         "deltaE76": {
-          "LD SALINE / LD LEPTIN": 1.13,
-          "LD SALINE / NON-LD control": 1.13,
-          "LD LEPTIN / NON-LD control": 0.0
+          "Higher / Lower": 44.04
         }
       }
     },
-    "Revised groups": {
+    "Figure 2: tan / turquoise": {
       "Normal": {
         "hex": {
-          "LD SALINE": "#C28E85",
-          "LD LEPTIN": "#527D6B",
-          "NON-LD control": "#A8BED2"
+          "Higher": "#FFBE6A",
+          "Lower": "#40B0A6"
         },
         "Lstar": {
-          "LD SALINE": 63.76,
-          "LD LEPTIN": 48.91,
-          "NON-LD control": 75.95
+          "Higher": 81.36,
+          "Lower": 65.66
         },
         "deltaE76": {
-          "LD SALINE / LD LEPTIN": 41.12,
-          "LD SALINE / NON-LD control": 35.35,
-          "LD LEPTIN / NON-LD control": 36.0
+          "Higher / Lower": 74.95
         }
       },
       "Protanopia": {
         "hex": {
-          "LD SALINE": "#999484",
-          "LD LEPTIN": "#7B776A",
-          "NON-LD control": "#B6BDD3"
+          "Higher": "#D4C162",
+          "Lower": "#A7A6A5"
         },
         "Lstar": {
-          "LD SALINE": 61.32,
-          "LD LEPTIN": 50.03,
-          "NON-LD control": 76.7
+          "Higher": 77.89,
+          "Lower": 68.17
         },
         "deltaE76": {
-          "LD SALINE / LD LEPTIN": 11.38,
-          "LD SALINE / NON-LD control": 26.18,
-          "LD LEPTIN / NON-LD control": 33.19
+          "Higher / Lower": 50.27
         }
       },
       "Deuteranopia": {
         "hex": {
-          "LD SALINE": "#A59E84",
-          "LD LEPTIN": "#73726C",
-          "NON-LD control": "#B1B9D1"
+          "Higher": "#E4D06B",
+          "Lower": "#969AA7"
         },
         "Lstar": {
-          "LD SALINE": 65.06,
-          "LD LEPTIN": 47.96,
-          "NON-LD control": 75.23
+          "Higher": 83.27,
+          "Lower": 63.66
         },
         "deltaE76": {
-          "LD SALINE / LD LEPTIN": 20.4,
-          "LD SALINE / NON-LD control": 29.62,
-          "LD LEPTIN / NON-LD control": 31.99
+          "Higher / Lower": 62.87
         }
       },
       "Tritanopia": {
         "hex": {
-          "LD SALINE": "#CD878B",
-          "LD LEPTIN": "#477D77",
-          "NON-LD control": "#9CC2C4"
+          "Higher": "#FEADAA",
+          "Lower": "#00B3AC"
         },
         "Lstar": {
-          "LD SALINE": 63.49,
-          "LD LEPTIN": 48.68,
-          "NON-LD control": 75.84
+          "Higher": 78.38,
+          "Lower": 65.92
         },
         "deltaE76": {
-          "LD SALINE / LD LEPTIN": 50.39,
-          "LD SALINE / NON-LD control": 43.74,
-          "LD LEPTIN / NON-LD control": 28.27
+          "Higher / Lower": 72.5
         }
       },
       "Grayscale": {
         "hex": {
-          "LD SALINE": "#9A9A9A",
-          "LD LEPTIN": "#747474",
-          "NON-LD control": "#BBBBBB"
+          "Higher": "#CACACA",
+          "Lower": "#9F9F9F"
         },
         "Lstar": {
-          "LD SALINE": 63.6,
-          "LD LEPTIN": 48.84,
-          "NON-LD control": 75.88
+          "Higher": 81.33,
+          "Lower": 65.49
         },
         "deltaE76": {
-          "LD SALINE / LD LEPTIN": 14.76,
-          "LD SALINE / NON-LD control": 12.28,
-          "LD LEPTIN / NON-LD control": 27.04
+          "Higher / Lower": 15.83
         }
       }
     },
-    "Effect direction": {
+    "Figure 3: orange / purple": {
       "Normal": {
         "hex": {
-          "Lower": "#779AAC",
-          "Higher": "#C28A80",
-          "Not significant": "#CFD3D4"
+          "Higher": "#EB6123",
+          "Lower": "#512888"
         },
         "Lstar": {
-          "Lower": 61.66,
-          "Higher": 62.68,
-          "Not significant": 84.28
+          "Higher": 58.36,
+          "Lower": 26.86
         },
         "deltaE76": {
-          "Lower / Higher": 38.82,
-          "Lower / Not significant": 26.57,
-          "Higher / Not significant": 33.71
+          "Higher / Lower": 110.15
         }
       },
       "Protanopia": {
         "hex": {
-          "Lower": "#9198AC",
-          "Higher": "#96907F",
-          "Not significant": "#D2D2D4"
+          "Higher": "#887817",
+          "Lower": "#003F8A"
         },
         "Lstar": {
-          "Lower": 62.89,
-          "Higher": 59.86,
-          "Not significant": 84.25
+          "Higher": 50.37,
+          "Lower": 27.82
         },
         "deltaE76": {
-          "Lower / Higher": 21.48,
-          "Lower / Not significant": 23.75,
-          "Higher / Not significant": 26.71
+          "Higher / Lower": 101.43
         }
       },
       "Deuteranopia": {
         "hex": {
-          "Lower": "#8992AB",
-          "Higher": "#A39B7F",
-          "Not significant": "#D1D1D4"
+          "Higher": "#AA971B",
+          "Lower": "#003E86"
         },
         "Lstar": {
-          "Lower": 60.62,
-          "Higher": 63.97,
-          "Not significant": 83.92
+          "Higher": 62.3,
+          "Lower": 27.2
         },
         "deltaE76": {
-          "Lower / Higher": 30.4,
-          "Lower / Not significant": 26.59,
-          "Higher / Not significant": 26.47
+          "Higher / Lower": 113.26
         }
       },
       "Tritanopia": {
         "hex": {
-          "Lower": "#669F9F",
-          "Higher": "#CE8287",
-          "Not significant": "#CDD3D3"
+          "Higher": "#FE3E55",
+          "Lower": "#433E54"
         },
         "Lstar": {
-          "Lower": 61.76,
-          "Higher": 62.37,
-          "Not significant": 84.11
+          "Higher": 57.25,
+          "Lower": 27.51
         },
         "deltaE76": {
-          "Lower / Higher": 50.93,
-          "Lower / Not significant": 28.28,
-          "Higher / Not significant": 40.02
+          "Higher / Lower": 84.08
         }
       },
       "Grayscale": {
         "hex": {
-          "Lower": "#959595",
-          "Higher": "#989898",
-          "Not significant": "#D2D2D2"
+          "Higher": "#8C8C8C",
+          "Lower": "#3F3F3F"
         },
         "Lstar": {
-          "Lower": 61.7,
-          "Higher": 62.84,
-          "Not significant": 84.2
+          "Higher": 58.25,
+          "Lower": 26.65
         },
         "deltaE76": {
-          "Lower / Higher": 1.14,
-          "Lower / Not significant": 22.5,
-          "Higher / Not significant": 21.36
+          "Higher / Lower": 31.6
         }
       }
     }

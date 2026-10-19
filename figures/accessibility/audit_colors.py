@@ -15,9 +15,9 @@ from matplotlib import font_manager as fm
 
 ROOT=Path(__file__).resolve().parent
 PALETTES={
-    'Original groups':{'LD SALINE':'#C28E85','LD LEPTIN':'#80A596','NON-LD control':'#8B9FB3'},
-    'Revised groups':{'LD SALINE':'#C28E85','LD LEPTIN':'#527D6B','NON-LD control':'#A8BED2'},
-    'Effect direction':{'Lower':'#779AAC','Higher':'#C28A80','Not significant':'#CFD3D4'},
+    'Figure 1: yellow / blue':{'Higher':'#FDB338','Lower':'#025196'},
+    'Figure 2: tan / turquoise':{'Higher':'#FFBE6A','Lower':'#40B0A6'},
+    'Figure 3: orange / purple':{'Higher':'#EB6123','Lower':'#512888'},
 }
 CONDITIONS={'Normal':None,'Protanopia':simulate.Deficiency.PROTAN,
             'Deuteranopia':simulate.Deficiency.DEUTAN,'Tritanopia':simulate.Deficiency.TRITAN,
@@ -75,18 +75,19 @@ def main():
     fig.tight_layout(pad=2.5,w_pad=2,h_pad=2)
     fig.savefig(ROOT/'palette_color_vision_check.png')
     plt.close(fig)
-    original=np.asarray(Image.open(ROOT.parent/'figure_01_small_effects_synthetic.png').convert('RGB'))
-    for label,condition in CONDITIONS.items():
-        if condition is None:continue
-        seen=transform(original,condition,simulator)
-        Image.fromarray(seen).save(ROOT/f'figure_01_{label.lower()}_check.png')
+    for number in (1,2,3):
+        original=np.asarray(Image.open(ROOT.parent/f'figure_{number:02d}_gsea_synthetic.png').convert('RGB'))
+        for label,condition in CONDITIONS.items():
+            if condition is None:continue
+            seen=transform(original,condition,simulator)
+            Image.fromarray(seen).save(ROOT/f'figure_{number:02d}_{label.lower()}_check.png')
     report={'method':'DaltonLens 0.1.5, Machado et al. 2009, severity 1.0; sRGB decoded and encoded by library',
             'grayscale':'linear-light sRGB/Rec.709 relative luminance, re-encoded to sRGB',
             'metrics':'CIE1976 Lab distances (D65); descriptive only, no universal pass/fail threshold',
-            'scope':'Original and revised categorical colors; retained effect hues; full rendered Figure 1 including heatmap and transparency',
+            'scope':'Three comparison-specific pairs from the RGB codes printed in the supplied PDF; full rendered Figures 1–3 including heatmaps, GSEA and transparency',
             'limitation':'Simulation is an accessibility check, not a guarantee for every observer or grayscale print.',
             'palettes':results}
     (ROOT/'palette_simulation.json').write_text(json.dumps(report,indent=2)+'\n')
-    print('Created actual palette and full-Figure-1 protanopia/deuteranopia/tritanopia/grayscale checks.')
+    print('Created requested-palette and full-Figures-1–3 protanopia/deuteranopia/tritanopia/grayscale checks.')
 
 if __name__=='__main__':main()

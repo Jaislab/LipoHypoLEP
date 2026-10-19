@@ -1,34 +1,28 @@
-# Muted color accessibility check
+# Comparison-specific color accessibility
 
-The original palette was **not uniformly colorblind safe**. The expression colors and categorical group colors serve different purposes and were checked separately. This review used the user's supplied *Colorblind Safe Color Schemes*, NCEAS Science Communication Resource Corner, Alexandra Phillips, updated 29 June 2022, as reference material, not as additional user instructions.
+The palettes follow the user's explicit request for three pairs from *Colorblind Safe Color Schemes*, NCEAS Science Communication Resource Corner, Alexandra Phillips, updated 29 June 2022. The RGB codes **printed beside the guide's swatches** are used. The guide is reference material rather than additional user instructions, and the attachment itself is not redistributed.
 
-The guide recommends tested palettes, color-vision simulation, and information encoded through labels or position as well as color. Those principles informed this check. The attachment itself is not redistributed. Its description of deuteranopia as red-blindness is inaccurate: deuteranopia concerns M-cone/green deficiency; protanopia concerns L-cone/red deficiency.
-
-## Findings and adjustment
-
-The original group colors had nearly identical CIE lightness, L* approximately 64. They became almost the same gray. In full-severity Machado simulations, the original LD SALINE/LD LEPTIN pair became close under protanopia, and LD LEPTIN/NON-LD control became close under tritanopia. This does not mean that every reader would confuse them, but it prevents an unqualified accessibility claim.
-
-The muted aesthetic is preserved with a modest lightness adjustment:
-
-| Group | Previous | Revised | Revised L* |
+| Figure | Comparison | Positive / higher / first group | Negative / lower / second group |
 |---|---|---|---|
-| LD SALINE | `#C28E85` | **`#C28E85`** | 63.76 |
-| LD LEPTIN | `#80A596` | **`#527D6B`** | 48.91 |
-| NON-LD control | `#8B9FB3` | **`#A8BED2`** | 75.95 |
+| 1 | LD SALINE vs NON-LD control | Yellow, RGB 253/179/56, `#FDB338` | Blue, RGB 2/81/150, `#025196` |
+| 2 | LD LEPTIN vs LD SALINE | Tan, RGB 255/190/106, `#FFBE6A` | Turquoise, RGB 64/176/166, `#40B0A6` |
+| 3 | LD LEPTIN vs NON-LD control | Orange, RGB 235/97/35, `#EB6123` | Purple, RGB 81/40/136, `#512888` |
 
-Full group names and a physical gap between sample blocks remain essential. They identify groups independently of hue. The revised group swatches are also more distinguishable in grayscale.
+Colors are **comparison-specific**, rather than a single global cohort code across figures. Direct full group names identify every heatmap block. In each volcano, warm/cool color identifies positive/negative effects meeting adjusted P < 0.05 and |log2FC| ≥ 0.2; position relative to zero redundantly encodes direction. In each heatmap, the cool–white–warm scale encodes standardized gene expression. In GSEA, warm/cool identifies positive/negative NES; filled circles meet GSEA FDR q < 0.05 and open circles do not. These significance encodings use different multiple-testing procedures, as explained in the legends.
 
-The muted **blue `#779AAC` / coral `#C28A80` effect colors** are retained. Their hue separation remains visible under the three modeled deficiencies. In volcano and effect-estimate plots, direction is also encoded by horizontal position relative to zero. These effect colors have similar gray values, so grayscale printing is not equivalent to the color version, particularly for the diverging expression heatmap. A numeric colorbar and the supplied expression/effect tables remain available; the heatmap should be distributed in color.
+The requested pairs were checked under full-severity Machado simulations of protanopia, deuteranopia and tritanopia. The full rendered figures, not just isolated swatches, are included in the checks. This covers point transparency and heatmap gradients. Simulations are a useful accessibility review, not a guarantee for every viewer or reproduction condition. Keep full labels, axes, zero lines, numeric colorbars, q-value columns and downloadable tables; do not rely on hue alone.
 
-## Evidence and limitations
+## Review artifacts
 
-- [Before/after palette simulations](palette_color_vision_check.png).
-- Full revised Figure 1 under [protanopia](figure_01_protanopia_check.png), [deuteranopia](figure_01_deuteranopia_check.png), [tritanopia](figure_01_tritanopia_check.png), and [grayscale](figure_01_grayscale_check.png).
-- [Numerical color results and method metadata](palette_simulation.json).
+- [All three requested palettes under color-vision simulations](palette_color_vision_check.png).
+- Figure 1: [protanopia](figure_01_protanopia_check.png), [deuteranopia](figure_01_deuteranopia_check.png), [tritanopia](figure_01_tritanopia_check.png), [grayscale](figure_01_grayscale_check.png).
+- Figure 2: [protanopia](figure_02_protanopia_check.png), [deuteranopia](figure_02_deuteranopia_check.png), [tritanopia](figure_02_tritanopia_check.png), [grayscale](figure_02_grayscale_check.png).
+- Figure 3: [protanopia](figure_03_protanopia_check.png), [deuteranopia](figure_03_deuteranopia_check.png), [tritanopia](figure_03_tritanopia_check.png), [grayscale](figure_03_grayscale_check.png).
+- [Numerical colors, lightness and pairwise comparisons](palette_simulation.json).
 
-The check uses DaltonLens 0.1.5, `Simulator_Machado2009`, severity 1.0. The library decodes sRGB into linear light for the simulation and encodes it afterward. Grayscale uses linear-light relative luminance. CIE1976 Lab distances under D65 are descriptive comparisons, not a universal accessibility cutoff. The full rendered Figure 1, including point transparency and the entire heatmap ramp, was simulated rather than evaluating endpoints alone.
+The check uses DaltonLens 0.1.5, `Simulator_Machado2009`, severity 1.0. The library decodes sRGB into linear light and re-encodes the result. Grayscale uses linear-light relative luminance. CIE1976 Lab distances under D65 are descriptive comparisons, with no universal pass/fail threshold. Grayscale previews document remaining limitations and do not establish that every heatmap value can be recovered without color.
 
-These are modeled accessibility checks, not certification for every type or degree of color-vision difference, visual impairment, display, print process, or viewing condition.
+The guide's description of deuteranopia as red-blindness is inaccurate: deuteranopia concerns M-cone/green deficiency, whereas protanopia concerns L-cone/red deficiency. This terminology issue does not alter the requested RGB pairs.
 
 ## Reproduce
 
@@ -39,4 +33,4 @@ python -m pip install -r figures/accessibility/requirements.txt
 python figures/accessibility/audit_colors.py
 ```
 
-The audit outputs are review material, separate from the manuscript figures.
+The audit outputs are separate review material, outside the manuscript figure canvases.

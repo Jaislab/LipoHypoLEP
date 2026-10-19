@@ -2,52 +2,73 @@
   {
     "figure": 1,
     "comparison": "LD SALINE vs NON-LD control",
-    "tested_genes": 8000,
-    "heatmap_shape": [
-      40,
-      12
+    "tested_genes": 7647,
+    "joint_DEG_cutoff": {
+      "absolute_log2fc_at_least": 0.2,
+      "adjusted_p_below": 0.05
+    },
+    "joint_DEG_genes": 1826,
+    "original_pre_scaling_data_restored_exactly": true,
+    "gsea_full_unfiltered_rank_count": 7647,
+    "gsea_collections": [
+      "KEGG",
+      "GO BP"
     ],
-    "forest_genes": 12,
-    "ci_formula_verified": true,
-    "estimates_equal_fitted_group_differences_without_rescaling": true,
-    "ranked_selection_without_significance_requirement": true,
-    "axis_and_ci_clipping_absent": true,
+    "gsea_scores_and_q_match_complete_tables": true,
+    "requested_palette": {
+      "higher": "#FDB338",
+      "lower": "#025196"
+    },
+    "panels": 4,
     "pca_absent": true,
-    "fonts": "Nimbus Sans",
     "all_checks_passed": true
   },
   {
     "figure": 2,
     "comparison": "LD LEPTIN vs LD SALINE",
-    "tested_genes": 8000,
-    "heatmap_shape": [
-      40,
-      12
+    "tested_genes": 7647,
+    "joint_DEG_cutoff": {
+      "absolute_log2fc_at_least": 0.2,
+      "adjusted_p_below": 0.05
+    },
+    "joint_DEG_genes": 789,
+    "original_pre_scaling_data_restored_exactly": true,
+    "gsea_full_unfiltered_rank_count": 7647,
+    "gsea_collections": [
+      "KEGG",
+      "GO BP"
     ],
-    "forest_genes": 12,
-    "ci_formula_verified": true,
-    "estimates_equal_fitted_group_differences_without_rescaling": true,
-    "ranked_selection_without_significance_requirement": true,
-    "axis_and_ci_clipping_absent": true,
+    "gsea_scores_and_q_match_complete_tables": true,
+    "requested_palette": {
+      "higher": "#FFBE6A",
+      "lower": "#40B0A6"
+    },
+    "panels": 4,
     "pca_absent": true,
-    "fonts": "Nimbus Sans",
     "all_checks_passed": true
   },
   {
     "figure": 3,
     "comparison": "LD LEPTIN vs NON-LD control",
-    "tested_genes": 8000,
-    "heatmap_shape": [
-      40,
-      12
+    "tested_genes": 7647,
+    "joint_DEG_cutoff": {
+      "absolute_log2fc_at_least": 0.2,
+      "adjusted_p_below": 0.05
+    },
+    "joint_DEG_genes": 1226,
+    "original_pre_scaling_data_restored_exactly": true,
+    "gsea_full_unfiltered_rank_count": 7647,
+    "gsea_collections": [
+      "KEGG",
+      "GO BP"
     ],
-    "forest_genes": 12,
-    "ci_formula_verified": true,
-    "estimates_equal_fitted_group_differences_without_rescaling": true,
-    "ranked_selection_without_significance_requirement": true,
-    "axis_and_ci_clipping_absent": true,
+    "gsea_scores_and_q_match_complete_tables": true,
+    "requested_palette": {
+      "higher": "#EB6123",
+      "lower": "#512888"
+    },
+    "panels": 4,
     "pca_absent": true,
-    "fonts": "Nimbus Sans",
     "all_checks_passed": true
   }
 ]

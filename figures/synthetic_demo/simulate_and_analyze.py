@@ -6,9 +6,9 @@ pipeline. Counts follow a negative-binomial model; inference uses an approximate
 linear model on log2-normalized counts, without empirical-Bayes moderation or
 precision weights. It must not be described as DESeq2, edgeR, or limma-voom.
 All effects are simulation parameters and all gene identifiers are invented.
-This deliberately assumed small-effect, low-variance scenario is for visualizing
-the figures only. It is not fitted to brain tissue and predicts neither biological
-variability nor statistical power for the planned experiment.
+This generator never reads experimental count files. Its log-count OLS and
+pseudocount are illustrative only; real differential-expression statistics must
+come from a separate validated count-model analysis, not this module.
 """
 
 from __future__ import annotations
@@ -67,17 +67,7 @@ def write_table(frame: pd.DataFrame, destination: Path) -> None:
 def balanced_effects(rng: np.random.Generator, size: int) -> np.ndarray:
     signs = np.r_[np.ones(size // 2), -np.ones(size - size // 2)]
     rng.shuffle(signs)
-    return signs * rng.uniform(0.08, 0.22, size)
-
-
-def effect_distribution(values: np.ndarray) -> dict[str, float]:
-    """Describe realized effects without clipping or selecting on their values."""
-    probabilities = (0.0, 0.01, 0.05, 0.25, 0.5, 0.75, 0.95, 0.99, 1.0)
-    names = ("min", "q01", "q05", "q25", "median", "q75", "q95", "q99", "max")
-    return {
-        name: float(value)
-        for name, value in zip(names, np.quantile(values, probabilities))
-    }
+    return signs * rng.uniform(0.8, 2.2, size)
 
 
 def generate_demo(output_dir: Path) -> dict:
@@ -89,12 +79,12 @@ def generate_demo(output_dir: Path) -> dict:
     )
     rng.shuffle(classes)
 
-    # Counts and low biological overdispersion are independent assumed parameters,
-    # chosen for a small-effect visualization, not fitted to hypothalamic tissue.
-    # In particular, neither parameters nor significant-gene counts are tuned to
-    # claim a particular experimental power. Every class balances effect signs.
-    baseline = np.clip(rng.lognormal(np.log(2000.0), 0.7, N_GENES), 300.0, 20000.0)
-    dispersion = np.exp(rng.uniform(np.log(0.001), np.log(0.03), N_GENES))
+    # Baseline expression and biological overdispersion are independently drawn
+    # for each invented gene; every class contains balanced effect directions.
+    baseline = np.clip(rng.lognormal(np.log(80.0), 1.3, N_GENES), 2.0, 12000.0)
+    dispersion = (0.04 + 0.25 / (1.0 + baseline / 100.0)) * rng.lognormal(
+        0.0, 0.18, N_GENES
+    )
     effect_saline = np.zeros(N_GENES)
     effect_leptin = np.zeros(N_GENES)
     for name in CLASS_COUNTS:
@@ -203,15 +193,14 @@ def generate_demo(output_dir: Path) -> dict:
             true_effects_by_group[numerator] - true_effects_by_group[denominator]
         )[retained]
         true_null = np.abs(true_difference) < 1e-12
-        selected = padj < 0.05
+        selected = (padj < 0.05) & (np.abs(estimate) >= 0.2)
         contrast_summary[name] = {
             "file": filename,
             "tested_genes": int(len(tested_ids)),
             "adjusted_p_below_0_05": int(np.sum(padj < 0.05)),
-            "higher_expression_at_adjusted_p_below_0_05": int(np.sum(selected & (estimate > 0))),
-            "lower_expression_at_adjusted_p_below_0_05": int(np.sum(selected & (estimate < 0))),
-            "true_log2fc_distribution": effect_distribution(true_difference),
-            "estimated_log2fc_distribution": effect_distribution(estimate),
+            "adjusted_p_below_0_05_and_absolute_log2fc_at_least_0_2": int(np.sum(selected)),
+            "higher_expression_at_joint_cutoffs": int(np.sum(selected & (estimate > 0))),
+            "lower_expression_at_joint_cutoffs": int(np.sum(selected & (estimate < 0))),
             "true_null_genes": int(np.sum(true_null)),
             "true_null_unadjusted_p_below_0_05_fraction": float(
                 np.mean(pvalue[true_null] < 0.05)
@@ -311,7 +300,7 @@ def generate_demo(output_dir: Path) -> dict:
         "pca_variance_ratios_sum_to_one": bool(np.isclose(explained_ratio.sum(), 1.0)),
     }
     summary = {
-        "data_status": "Entirely synthetic small-effect, low-variance illustration; no experimental measurements or biological findings.",
+        "data_status": "Entirely synthetic illustration; no experimental measurements or biological findings.",
         "seed": SEED,
         "software": {"numpy": np.__version__, "pandas": pd.__version__, "scipy": scipy.__version__},
         "genes_simulated": N_GENES,
@@ -320,11 +309,9 @@ def generate_demo(output_dir: Path) -> dict:
         "samples": len(sample_ids),
         "replicates_per_group": {group: N_REPLICATES for group in GROUPS},
         "simulation": {
-            "scenario": "Assumed small-effect, low-variance scenario solely for figure visualization; not fitted to brain tissue and not an estimate of biological variability or experimental power.",
             "distribution": "Negative binomial; variance = mean + dispersion * mean^2.",
-            "baseline": "Lognormal(log(2000), 0.7), clipped to [300, 20000].",
-            "dispersion": "Log-uniform(0.001, 0.03), independent of baseline counts and truth class.",
-            "base_effect_magnitude": "Uniform(0.08, 0.22) log2 units; derived amplified effects may exceed 0.22, and fitted estimates are not clipped or rescaled.",
+            "baseline": "Lognormal(log(80), 1.3), clipped to [2, 12000].",
+            "dispersion": "(0.04 + 0.25 / (1 + baseline / 100)) * Lognormal(0, 0.18).",
             "direction": "Balanced positive and negative effects within each non-null truth class.",
             "truth_class_counts": CLASS_COUNTS,
             "truth_class_fractions": {name: number / N_GENES for name, number in CLASS_COUNTS.items()},
@@ -341,8 +328,7 @@ def generate_demo(output_dir: Path) -> dict:
             "tests": "Two-sided Student t tests; Benjamini-Hochberg adjustment independently per contrast across all retained genes.",
             "limitation": "Illustrative approximate log-scale inference, without empirical-Bayes moderation or precision weights; not DESeq2, edgeR, or limma-voom.",
             "contrast_covariance": "All three contrasts share model estimates. Per-gene contrast covariance follows the common design matrix; contrasts are not independent.",
-            "significance_summary_rule": "Adjusted P < 0.05, with no fold-change threshold; this does not define truth classes or establish normalization.",
-            "plot_selection_example": "Rank all tested genes for illustrative panels; no minimum significant-gene count is required.",
+            "plot_selection_example": "DEG display uses adjusted P < 0.05 and absolute log2 fold change >= 0.2. GSEA ranks all tested genes without either DEG filter. This does not define truth classes or establish normalization.",
         },
         "pca": {
             "gene_selection": "1,500 tested genes with highest sample variance of transformed expression.",

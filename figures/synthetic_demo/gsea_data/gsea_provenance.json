@@ -1,0 +1,495 @@
+{
+  "complete": true,
+  "synthetic_disclaimer": "Synthetic demonstration only. Invented SIM identifiers were assigned to real mouse symbols by a seeded one-to-one random mapping independent of expression, effect sizes, test statistics, simulation classes, and pathway membership. Neither gene assignments nor pathway results are findings from mouse tissue. No random seeds, pathways, or memberships were selected to obtain significance.",
+  "species": "Mus musculus",
+  "mapping": {
+    "file": "synthetic_to_mouse_symbol_map.tsv",
+    "sha256": "f64a7fba9f0257d9715c073f42339109e4a01784da68c55ce85ada0c3b36abbf",
+    "seed": 20261019,
+    "algorithm": "NumPy default_rng.choice, sorted library-union universe, no replacement; zipped with lexicographically sorted SIM IDs",
+    "independent_of_statistics_and_simulation_classes": true,
+    "available_unique_mouse_symbols": 17361,
+    "assigned_unique_symbols": 7647
+  },
+  "parameters": {
+    "ranking_metric": "unfiltered signed test statistic (stat), descending",
+    "gene_level_p_or_fold_change_filter": null,
+    "weight": 1.0,
+    "min_size": 15,
+    "max_size": 500,
+    "permutation_num": 1000,
+    "permutation_type": "gene_set/preranked",
+    "seed": 20261019,
+    "threads": 2,
+    "multiple_testing": "GSEApy empirical GSEA FDR q, separately per contrast and library; not BH",
+    "display_selection": "largest absolute NES, balanced up to 3 positive and 3 negative; no significance filter",
+    "finite_permutation_note": "Software nominal P and empirical FDR q may equal zero at finite permutation resolution; raw values are preserved without replacement."
+  },
+  "software": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "gseapy": "1.3.1"
+  },
+  "sources": {
+    "kegg": {
+      "gmt_path": "figures/synthetic_demo/gsea_data/resources/kegg_mouse_biosystems_archive_2020.gmt",
+      "gmt_sha256": "70127d28c5c82a42abf2d1f33291d4a6a2a10e0afad320aad484d01931a9091a",
+      "provenance_path": "figures/synthetic_demo/gsea_data/resources/kegg_mouse_provenance.json",
+      "provenance_sha256": "12428593c85f86ab7d6743f77cfe987bf981754609c28a00da4bd8409c4ab214",
+      "provenance": {
+        "species": "Mus musculus",
+        "ncbi_taxonomy_id": 10090,
+        "retrieved_date": "2026-10-19",
+        "demo_only": true,
+        "caveat": "Gene-set membership is real mouse annotation. Any assignment of these gene symbols to anonymous synthetic SIM identifiers is arbitrary demonstration metadata; all resulting enrichment values have no experimental biological interpretation.",
+        "library": "KEGG mouse (archived NCBI BioSystems snapshot)",
+        "data_file": "kegg_mouse_biosystems_archive_2020.gmt",
+        "sha256": "70127d28c5c82a42abf2d1f33291d4a6a2a10e0afad320aad484d01931a9091a",
+        "set_count": 313,
+        "unique_gene_symbols": 8038,
+        "archive_retrieval_date": "2020-03-22",
+        "upstream_data_url": "https://raw.githubusercontent.com/stephenslab/pathways/996e2f93dd05ce3e0e203d9f0b5729c3ed171d82/data/gene_sets_mouse.RData",
+        "upstream_data_sha256": "6372f9073f09c24742fa3e7d7259c86c8abf2922ff2f234fea37bc38b184d372",
+        "source_repository": "https://github.com/stephenslab/pathways",
+        "source_commit": "996e2f93dd05ce3e0e203d9f0b5729c3ed171d82",
+        "upstream_documentation_url": "https://github.com/stephenslab/pathways/blob/996e2f93dd05ce3e0e203d9f0b5729c3ed171d82/README.md",
+        "extraction": "RData gene_sets_mouse: use sparse matrix columns where gene_set_info.database == BioSystems-kegg; accession identifiers all mmu; map sparse row positions to gene_info.Symbol; unique symbols within each pathway. Column identities were verified against sparse matrix Dimnames. No human-to-mouse orthology conversion. Retain only canonical pathway accessions matching ^mmu[0-9]{5}$; exclude all 89 mmu_M module accessions (402 BioSystems-kegg entries become 313 pathways).",
+        "identifier_type": "Mouse gene symbols; archived nomenclature from package snapshot",
+        "source_version_limitation": "Archived NCBI BioSystems collection, not the current KEGG release. Exact constituent KEGG release was not recorded by this mirror. Update from direct KEGG/mmu source before experimental analysis. NCBI mouse gene_info documented download 2020-10-15.",
+        "license": "Mirror R package MIT; original KEGG data remain subject to KEGG terms. Do not interpret package source-code license as relicensing constituent annotation.",
+        "direct_source_unavailable": "https://rest.kegg.jp/link/mmu/pathway and Enrichr HTTPS requests returned tunnel 403; no verification was disabled."
+      },
+      "total_gene_sets": 313,
+      "eligible_gene_sets": 244,
+      "below_min_size": 68,
+      "above_max_size": 1,
+      "coverage_file": "kegg_all_gene_set_coverage.tsv.gz"
+    },
+    "go_bp": {
+      "gmt_path": "figures/synthetic_demo/gsea_data/resources/go_bp_mouse_2026_05_19_nonIEA_protein_coding.gmt",
+      "gmt_sha256": "009be991eedc31fa18e23ded71cfac222fd5773d87fc243d19d67008ee21c73f",
+      "provenance_path": "figures/synthetic_demo/gsea_data/resources/go_bp_mouse_provenance.json",
+      "provenance_sha256": "c5541c88c6372ea558d5ac30c8085aa3e276d33989d87e18762f2b5a38b89c64",
+      "provenance": {
+        "species": "Mus musculus",
+        "ncbi_taxonomy_id": 10090,
+        "retrieved_date": "2026-10-19",
+        "demo_only": true,
+        "caveat": "Gene-set membership is real mouse annotation. Any assignment of these gene symbols to anonymous synthetic SIM identifiers is arbitrary demonstration metadata; all resulting enrichment values have no experimental biological interpretation.",
+        "library": "GO Biological Process mouse; non-IEA; protein-coding projection",
+        "data_file": "go_bp_mouse_2026_05_19_nonIEA_protein_coding.gmt",
+        "sha256": "009be991eedc31fa18e23ded71cfac222fd5773d87fc243d19d67008ee21c73f",
+        "set_count": 8474,
+        "go_release": "2026-05-19",
+        "go_concept_doi": "10.5281/zenodo.1205166",
+        "source_repository": "https://github.com/robinson-vidva/enrichlite",
+        "source_commit": "a98877feabb5e1fa68180eeea63ccffefe7186f3",
+        "upstream_data_url": "https://raw.githubusercontent.com/robinson-vidva/enrichlite/a98877feabb5e1fa68180eeea63ccffefe7186f3/data/mouse/go_bp.json",
+        "upstream_data_sha256": "9963350b05861e1dfd9fe1b7515802cef81774d7a459bbc6dc998fe25f239bf4",
+        "upstream_symbols_url": "https://raw.githubusercontent.com/robinson-vidva/enrichlite/a98877feabb5e1fa68180eeea63ccffefe7186f3/data/mouse/symbols.json",
+        "upstream_symbols_sha256": "fd932f30ca8c4976f84348aeecaf2545f01bf890b08d4516a961d1e64d5e8d6c",
+        "upstream_manifest_url": "https://github.com/robinson-vidva/enrichlite/blob/a98877feabb5e1fa68180eeea63ccffefe7186f3/data/manifest.json",
+        "upstream_builder_url": "https://github.com/robinson-vidva/enrichlite/blob/a98877feabb5e1fa68180eeea63ccffefe7186f3/scripts/build_genesets.py",
+        "original_sources": [
+          "https://current.geneontology.org/annotations/mgi.gaf.gz",
+          "https://current.geneontology.org/ontology/go-basic.obo",
+          "https://ftp.ncbi.nlm.nih.gov/gene/DATA/GENE_INFO/Mammalia/Mus_musculus.gene_info.gz"
+        ],
+        "upstream_processing": "MGI GAF native mouse annotations; exclude evidence IEA and ND and NOT-qualified records; resolve GO primary IDs; true-path propagation through is_a and part_of within biological_process namespace; retain upstream sets of 5\u2013500 objects. Upstream release recorded in manifest; GO concept DOI is not a release-specific DOI.",
+        "local_processing": "Resolve compact member indices through same-commit symbols.json. Intersect each set with its first codingN=26310 authoritative NCBI mouse protein-coding gene symbols, to exclude GAF complex objects and noncoding identifiers. Retain nonempty sets; GSEA must additionally apply min_size/max_size after intersection with ranked experimental universe.",
+        "identifier_type": "Authoritative NCBI mouse protein-coding gene symbols at mirror build date",
+        "source_version_limitation": "This collection is intentionally restricted upstream to terms of 5\u2013500 GAF objects before local protein-coding projection; terms larger than 500 are absent even if an experimental-universe intersection could make them smaller. Refresh a complete versioned ontology/annotation snapshot for experimental analysis if needed.",
+        "license": "Gene Ontology CC BY 4.0; attribution Gene Ontology Consortium and Mouse Genome Informatics; NCBI gene_info public domain. Enrichlite source code MIT.",
+        "license_documentation_url": "https://github.com/robinson-vidva/enrichlite/blob/a98877feabb5e1fa68180eeea63ccffefe7186f3/DATA_LICENSES.md",
+        "direct_source_unavailable": "https://current.geneontology.org/annotations/mgi.gaf.gz returned tunnel 403; no verification was disabled."
+      },
+      "total_gene_sets": 8474,
+      "eligible_gene_sets": 2829,
+      "below_min_size": 5645,
+      "above_max_size": 0,
+      "coverage_file": "go_bp_all_gene_set_coverage.tsv.gz"
+    }
+  },
+  "analyses": [
+    {
+      "figure": 1,
+      "library": "kegg",
+      "numerator": "LD SALINE",
+      "denominator": "NON-LD control",
+      "source_contrast_file": "figures/synthetic_demo/data/contrast_LD_SALINE_vs_NON_LD_control.tsv.gz",
+      "source_contrast_sha256": "f7989f4ff70f4a364607b6e029cedce9791cd19784f02e81e68140a62fefc28b",
+      "ranked_statistics_file": "figure_01_complete_ranked_statistics.tsv.gz",
+      "tested_genes": 7647,
+      "duplicate_rank_statistics": 0,
+      "tested_gene_sets": 244,
+      "gsea_fdr_q_below_0_05": 0,
+      "gsea_fdr_q_below_0_25": 0,
+      "all_results_file": "figure_01_kegg_all_results.tsv.gz",
+      "raw_results_file": "figure_01_kegg_gseapy_raw.tsv.gz",
+      "display_file": "figure_01_kegg_display.tsv",
+      "leading_edge_file": "figure_01_kegg_leading_edge.tsv.gz",
+      "displayed_sets": [
+        {
+          "term": "mmu00590 Arachidonic acid metabolism",
+          "NES": 1.4855555890690186,
+          "nominal_p": 0.015810276679841896,
+          "gsea_fdr_q": 1.0,
+          "ranked_set_size": 41
+        },
+        {
+          "term": "mmu00591 Linoleic acid metabolism",
+          "NES": 1.458657419894731,
+          "nominal_p": 0.03339882121807466,
+          "gsea_fdr_q": 1.0,
+          "ranked_set_size": 25
+        },
+        {
+          "term": "mmu05410 Hypertrophic cardiomyopathy (HCM)",
+          "NES": 1.387364936099261,
+          "nominal_p": 0.04878048780487805,
+          "gsea_fdr_q": 1.0,
+          "ranked_set_size": 50
+        },
+        {
+          "term": "mmu03015 mRNA surveillance pathway",
+          "NES": -1.5519929446232739,
+          "nominal_p": 0.01282051282051282,
+          "gsea_fdr_q": 0.9352534633738864,
+          "ranked_set_size": 43
+        },
+        {
+          "term": "mmu04727 GABAergic synapse",
+          "NES": -1.6249259014692041,
+          "nominal_p": 0.012024048096192385,
+          "gsea_fdr_q": 0.7249083535816182,
+          "ranked_set_size": 37
+        },
+        {
+          "term": "mmu04724 Glutamatergic synapse",
+          "NES": -1.636134162989149,
+          "nominal_p": 0.0,
+          "gsea_fdr_q": 1.0,
+          "ranked_set_size": 42
+        }
+      ],
+      "runtime_seconds": 5.364
+    },
+    {
+      "figure": 1,
+      "library": "go_bp",
+      "numerator": "LD SALINE",
+      "denominator": "NON-LD control",
+      "source_contrast_file": "figures/synthetic_demo/data/contrast_LD_SALINE_vs_NON_LD_control.tsv.gz",
+      "source_contrast_sha256": "f7989f4ff70f4a364607b6e029cedce9791cd19784f02e81e68140a62fefc28b",
+      "ranked_statistics_file": "figure_01_complete_ranked_statistics.tsv.gz",
+      "tested_genes": 7647,
+      "duplicate_rank_statistics": 0,
+      "tested_gene_sets": 2829,
+      "gsea_fdr_q_below_0_05": 0,
+      "gsea_fdr_q_below_0_25": 1,
+      "all_results_file": "figure_01_go_bp_all_results.tsv.gz",
+      "raw_results_file": "figure_01_go_bp_gseapy_raw.tsv.gz",
+      "display_file": "figure_01_go_bp_display.tsv",
+      "leading_edge_file": "figure_01_go_bp_leading_edge.tsv.gz",
+      "displayed_sets": [
+        {
+          "term": "GO:1904019 epithelial cell apoptotic process",
+          "NES": 1.8893550382292146,
+          "nominal_p": 0.0,
+          "gsea_fdr_q": 0.2906878393121676,
+          "ranked_set_size": 16
+        },
+        {
+          "term": "GO:0045058 T cell selection",
+          "NES": 1.8781330839891395,
+          "nominal_p": 0.0018867924528301887,
+          "gsea_fdr_q": 0.17136227564390122,
+          "ranked_set_size": 26
+        },
+        {
+          "term": "GO:0043368 positive T cell selection",
+          "NES": 1.717554815635105,
+          "nominal_p": 0.009433962264150943,
+          "gsea_fdr_q": 1.0,
+          "ranked_set_size": 18
+        },
+        {
+          "term": "GO:0042789 mRNA transcription by RNA polymerase II",
+          "NES": -1.7714247640794014,
+          "nominal_p": 0.0,
+          "gsea_fdr_q": 0.7797272265270485,
+          "ranked_set_size": 21
+        },
+        {
+          "term": "GO:0009299 mRNA transcription",
+          "NES": -1.7895803413764992,
+          "nominal_p": 0.0,
+          "gsea_fdr_q": 0.9393345786363567,
+          "ranked_set_size": 25
+        },
+        {
+          "term": "GO:0006688 glycosphingolipid biosynthetic process",
+          "NES": -1.8466062262821994,
+          "nominal_p": 0.0021598272138228943,
+          "gsea_fdr_q": 0.8278128714267243,
+          "ranked_set_size": 17
+        }
+      ],
+      "runtime_seconds": 53.642
+    },
+    {
+      "figure": 2,
+      "library": "kegg",
+      "numerator": "LD LEPTIN",
+      "denominator": "LD SALINE",
+      "source_contrast_file": "figures/synthetic_demo/data/contrast_LD_LEPTIN_vs_LD_SALINE.tsv.gz",
+      "source_contrast_sha256": "3af98fb3e0c71bd2e86bf2f870b9759c532f0e39f03f7f8e0abf280187cc1ae6",
+      "ranked_statistics_file": "figure_02_complete_ranked_statistics.tsv.gz",
+      "tested_genes": 7647,
+      "duplicate_rank_statistics": 0,
+      "tested_gene_sets": 244,
+      "gsea_fdr_q_below_0_05": 0,
+      "gsea_fdr_q_below_0_25": 0,
+      "all_results_file": "figure_02_kegg_all_results.tsv.gz",
+      "raw_results_file": "figure_02_kegg_gseapy_raw.tsv.gz",
+      "display_file": "figure_02_kegg_display.tsv",
+      "leading_edge_file": "figure_02_kegg_leading_edge.tsv.gz",
+      "displayed_sets": [
+        {
+          "term": "mmu04213 Longevity regulating pathway - multiple species",
+          "NES": 1.654129587232228,
+          "nominal_p": 0.009940357852882704,
+          "gsea_fdr_q": 1.0,
+          "ranked_set_size": 29
+        },
+        {
+          "term": "mmu00250 Alanine, aspartate and glutamate metabolism",
+          "NES": 1.5984993679030128,
+          "nominal_p": 0.03522504892367906,
+          "gsea_fdr_q": 1.0,
+          "ranked_set_size": 16
+        },
+        {
+          "term": "mmu04211 Longevity regulating pathway",
+          "NES": 1.562742559505305,
+          "nominal_p": 0.021484375,
+          "gsea_fdr_q": 0.9526828546672583,
+          "ranked_set_size": 37
+        },
+        {
+          "term": "mmu00260 Glycine, serine and threonine metabolism",
+          "NES": -1.476034487130206,
+          "nominal_p": 0.059063136456211814,
+          "gsea_fdr_q": 1.0,
+          "ranked_set_size": 21
+        },
+        {
+          "term": "mmu00620 Pyruvate metabolism",
+          "NES": -1.5133663305475795,
+          "nominal_p": 0.04048582995951417,
+          "gsea_fdr_q": 1.0,
+          "ranked_set_size": 15
+        },
+        {
+          "term": "mmu05144 Malaria",
+          "NES": -1.5884929976386344,
+          "nominal_p": 0.019646365422396856,
+          "gsea_fdr_q": 1.0,
+          "ranked_set_size": 19
+        }
+      ],
+      "runtime_seconds": 5.315
+    },
+    {
+      "figure": 2,
+      "library": "go_bp",
+      "numerator": "LD LEPTIN",
+      "denominator": "LD SALINE",
+      "source_contrast_file": "figures/synthetic_demo/data/contrast_LD_LEPTIN_vs_LD_SALINE.tsv.gz",
+      "source_contrast_sha256": "3af98fb3e0c71bd2e86bf2f870b9759c532f0e39f03f7f8e0abf280187cc1ae6",
+      "ranked_statistics_file": "figure_02_complete_ranked_statistics.tsv.gz",
+      "tested_genes": 7647,
+      "duplicate_rank_statistics": 0,
+      "tested_gene_sets": 2829,
+      "gsea_fdr_q_below_0_05": 0,
+      "gsea_fdr_q_below_0_25": 1,
+      "all_results_file": "figure_02_go_bp_all_results.tsv.gz",
+      "raw_results_file": "figure_02_go_bp_gseapy_raw.tsv.gz",
+      "display_file": "figure_02_go_bp_display.tsv",
+      "leading_edge_file": "figure_02_go_bp_leading_edge.tsv.gz",
+      "displayed_sets": [
+        {
+          "term": "GO:0045746 negative regulation of Notch signaling pathway",
+          "NES": 1.749644344668265,
+          "nominal_p": 0.003929273084479371,
+          "gsea_fdr_q": 1.0,
+          "ranked_set_size": 18
+        },
+        {
+          "term": "GO:0070269 pyroptotic inflammatory response",
+          "NES": 1.7398772502317907,
+          "nominal_p": 0.00929368029739777,
+          "gsea_fdr_q": 1.0,
+          "ranked_set_size": 20
+        },
+        {
+          "term": "GO:0031122 cytoplasmic microtubule organization",
+          "NES": 1.7292382784040363,
+          "nominal_p": 0.0019455252918287938,
+          "gsea_fdr_q": 1.0,
+          "ranked_set_size": 31
+        },
+        {
+          "term": "GO:0035088 establishment or maintenance of apical/basal cell polarity",
+          "NES": -1.835767376094494,
+          "nominal_p": 0.006263048016701462,
+          "gsea_fdr_q": 0.3360369159987585,
+          "ranked_set_size": 20
+        },
+        {
+          "term": "GO:0006984 ER-nucleus signaling pathway",
+          "NES": -1.8859200050708842,
+          "nominal_p": 0.0,
+          "gsea_fdr_q": 0.36305844120278236,
+          "ranked_set_size": 15
+        },
+        {
+          "term": "GO:0045197 establishment or maintenance of epithelial cell apical/basal polarity",
+          "NES": -1.9993270678549389,
+          "nominal_p": 0.0,
+          "gsea_fdr_q": 0.11824804191846348,
+          "ranked_set_size": 17
+        }
+      ],
+      "runtime_seconds": 50.663
+    },
+    {
+      "figure": 3,
+      "library": "kegg",
+      "numerator": "LD LEPTIN",
+      "denominator": "NON-LD control",
+      "source_contrast_file": "figures/synthetic_demo/data/contrast_LD_LEPTIN_vs_NON_LD_control.tsv.gz",
+      "source_contrast_sha256": "5fd698622266646338baccf6598e06279a51d8f92e3d6425110d66f2fbda3410",
+      "ranked_statistics_file": "figure_03_complete_ranked_statistics.tsv.gz",
+      "tested_genes": 7647,
+      "duplicate_rank_statistics": 0,
+      "tested_gene_sets": 244,
+      "gsea_fdr_q_below_0_05": 0,
+      "gsea_fdr_q_below_0_25": 0,
+      "all_results_file": "figure_03_kegg_all_results.tsv.gz",
+      "raw_results_file": "figure_03_kegg_gseapy_raw.tsv.gz",
+      "display_file": "figure_03_kegg_display.tsv",
+      "leading_edge_file": "figure_03_kegg_leading_edge.tsv.gz",
+      "displayed_sets": [
+        {
+          "term": "mmu04972 Pancreatic secretion",
+          "NES": 1.4099643404322937,
+          "nominal_p": 0.061567164179104475,
+          "gsea_fdr_q": 1.0,
+          "ranked_set_size": 43
+        },
+        {
+          "term": "mmu00830 Retinol metabolism",
+          "NES": 1.3884117815008403,
+          "nominal_p": 0.061452513966480445,
+          "gsea_fdr_q": 1.0,
+          "ranked_set_size": 38
+        },
+        {
+          "term": "mmu00140 Steroid hormone biosynthesis",
+          "NES": 1.3555290588755768,
+          "nominal_p": 0.09230769230769231,
+          "gsea_fdr_q": 1.0,
+          "ranked_set_size": 31
+        },
+        {
+          "term": "mmu05162 Measles",
+          "NES": -1.494365067518385,
+          "nominal_p": 0.015486725663716814,
+          "gsea_fdr_q": 1.0,
+          "ranked_set_size": 53
+        },
+        {
+          "term": "mmu05014 Amyotrophic lateral sclerosis (ALS)",
+          "NES": -1.555467684002594,
+          "nominal_p": 0.014492753623188406,
+          "gsea_fdr_q": 1.0,
+          "ranked_set_size": 15
+        },
+        {
+          "term": "mmu05321 Inflammatory bowel disease (IBD)",
+          "NES": -1.7831262663271559,
+          "nominal_p": 0.0,
+          "gsea_fdr_q": 0.26265510340226816,
+          "ranked_set_size": 23
+        }
+      ],
+      "runtime_seconds": 5.069
+    },
+    {
+      "figure": 3,
+      "library": "go_bp",
+      "numerator": "LD LEPTIN",
+      "denominator": "NON-LD control",
+      "source_contrast_file": "figures/synthetic_demo/data/contrast_LD_LEPTIN_vs_NON_LD_control.tsv.gz",
+      "source_contrast_sha256": "5fd698622266646338baccf6598e06279a51d8f92e3d6425110d66f2fbda3410",
+      "ranked_statistics_file": "figure_03_complete_ranked_statistics.tsv.gz",
+      "tested_genes": 7647,
+      "duplicate_rank_statistics": 0,
+      "tested_gene_sets": 2829,
+      "gsea_fdr_q_below_0_05": 0,
+      "gsea_fdr_q_below_0_25": 1,
+      "all_results_file": "figure_03_go_bp_all_results.tsv.gz",
+      "raw_results_file": "figure_03_go_bp_gseapy_raw.tsv.gz",
+      "display_file": "figure_03_go_bp_display.tsv",
+      "leading_edge_file": "figure_03_go_bp_leading_edge.tsv.gz",
+      "displayed_sets": [
+        {
+          "term": "GO:0045058 T cell selection",
+          "NES": 1.9870975091004768,
+          "nominal_p": 0.0,
+          "gsea_fdr_q": 0.07574295861136592,
+          "ranked_set_size": 26
+        },
+        {
+          "term": "GO:0043368 positive T cell selection",
+          "NES": 1.8503099439894457,
+          "nominal_p": 0.0,
+          "gsea_fdr_q": 0.41845646887143517,
+          "ranked_set_size": 18
+        },
+        {
+          "term": "GO:0033135 regulation of peptidyl-serine phosphorylation",
+          "NES": 1.7254881738283063,
+          "nominal_p": 0.001851851851851852,
+          "gsea_fdr_q": 1.0,
+          "ranked_set_size": 36
+        },
+        {
+          "term": "GO:1902750 negative regulation of cell cycle G2/M phase transition",
+          "NES": -1.83412119055207,
+          "nominal_p": 0.0,
+          "gsea_fdr_q": 0.4361764176948813,
+          "ranked_set_size": 36
+        },
+        {
+          "term": "GO:0010972 negative regulation of G2/M transition of mitotic cell cycle",
+          "NES": -1.834550906511123,
+          "nominal_p": 0.0,
+          "gsea_fdr_q": 0.6521142087065214,
+          "ranked_set_size": 34
+        },
+        {
+          "term": "GO:0044818 mitotic G2/M transition checkpoint",
+          "NES": -1.8872495017279785,
+          "nominal_p": 0.0,
+          "gsea_fdr_q": 0.6257715902179645,
+          "ranked_set_size": 27
+        }
+      ],
+      "runtime_seconds": 54.593
+    }
+  ],
+  "runtime_seconds": 175.363
+}

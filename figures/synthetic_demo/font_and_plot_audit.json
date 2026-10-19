@@ -2,7 +2,7 @@
   "figures": [
     {
       "figure": 1,
-      "file_stem": "figure_01_small_effects_synthetic",
+      "file_stem": "figure_01_gsea_synthetic",
       "question": "How does untreated LD differ from non-LD controls?",
       "all_visible_typography": "Nimbus Sans",
       "canvas_pixels": [
@@ -45,127 +45,142 @@
           "size_px": 24.0
         },
         {
-          "text": "log$_2$ fold change",
+          "text": "1.00",
+          "font": "Nimbus Sans Regular",
+          "size_px": 20.0
+        },
+        {
+          "text": "1.00",
+          "font": "Nimbus Sans Regular",
+          "size_px": 20.0
+        },
+        {
+          "text": "0.72",
+          "font": "Nimbus Sans Regular",
+          "size_px": 20.0
+        },
+        {
+          "text": "1.00",
+          "font": "Nimbus Sans Regular",
+          "size_px": 20.0
+        },
+        {
+          "text": "q",
+          "font": "Nimbus Sans Regular",
+          "size_px": 21.0
+        },
+        {
+          "text": "NES",
           "font": "Nimbus Sans Regular",
           "size_px": 24.0
         },
         {
-          "text": "SIM03168",
+          "text": "Arachidonic acid metabolism",
           "font": "Nimbus Sans Regular",
           "size_px": 21.0
         },
         {
-          "text": "SIM03168",
+          "text": "Arachidonic acid metabolism",
           "font": "Nimbus Sans Regular",
           "size_px": 21.0
         },
         {
-          "text": "SIM04531",
+          "text": "Linoleic acid metabolism",
           "font": "Nimbus Sans Regular",
           "size_px": 21.0
         },
         {
-          "text": "SIM04531",
+          "text": "Linoleic acid metabolism",
           "font": "Nimbus Sans Regular",
           "size_px": 21.0
         },
         {
-          "text": "SIM01957",
+          "text": "GABAergic synapse",
           "font": "Nimbus Sans Regular",
           "size_px": 21.0
         },
         {
-          "text": "SIM01957",
+          "text": "GABAergic synapse",
           "font": "Nimbus Sans Regular",
           "size_px": 21.0
         },
         {
-          "text": "SIM04379",
+          "text": "Glutamatergic synapse",
           "font": "Nimbus Sans Regular",
           "size_px": 21.0
         },
         {
-          "text": "SIM04379",
+          "text": "Glutamatergic synapse",
           "font": "Nimbus Sans Regular",
           "size_px": 21.0
         },
         {
-          "text": "SIM00752",
+          "text": "0.29",
+          "font": "Nimbus Sans Regular",
+          "size_px": 20.0
+        },
+        {
+          "text": "0.17",
+          "font": "Nimbus Sans Regular",
+          "size_px": 20.0
+        },
+        {
+          "text": "0.94",
+          "font": "Nimbus Sans Regular",
+          "size_px": 20.0
+        },
+        {
+          "text": "0.83",
+          "font": "Nimbus Sans Regular",
+          "size_px": 20.0
+        },
+        {
+          "text": "q",
           "font": "Nimbus Sans Regular",
           "size_px": 21.0
         },
         {
-          "text": "SIM00752",
+          "text": "NES",
+          "font": "Nimbus Sans Regular",
+          "size_px": 24.0
+        },
+        {
+          "text": "epithelial cell apoptotic process",
           "font": "Nimbus Sans Regular",
           "size_px": 21.0
         },
         {
-          "text": "SIM04146",
+          "text": "epithelial cell apoptotic process",
           "font": "Nimbus Sans Regular",
           "size_px": 21.0
         },
         {
-          "text": "SIM04146",
+          "text": "T cell selection",
           "font": "Nimbus Sans Regular",
           "size_px": 21.0
         },
         {
-          "text": "SIM05768",
+          "text": "T cell selection",
           "font": "Nimbus Sans Regular",
           "size_px": 21.0
         },
         {
-          "text": "SIM05768",
+          "text": "mRNA transcription",
           "font": "Nimbus Sans Regular",
           "size_px": 21.0
         },
         {
-          "text": "SIM06391",
+          "text": "mRNA transcription",
           "font": "Nimbus Sans Regular",
           "size_px": 21.0
         },
         {
-          "text": "SIM06391",
+          "text": "glycosphingolipid biosynthetic process",
           "font": "Nimbus Sans Regular",
           "size_px": 21.0
         },
         {
-          "text": "SIM02345",
-          "font": "Nimbus Sans Regular",
-          "size_px": 21.0
-        },
-        {
-          "text": "SIM02345",
-          "font": "Nimbus Sans Regular",
-          "size_px": 21.0
-        },
-        {
-          "text": "SIM05854",
-          "font": "Nimbus Sans Regular",
-          "size_px": 21.0
-        },
-        {
-          "text": "SIM05854",
-          "font": "Nimbus Sans Regular",
-          "size_px": 21.0
-        },
-        {
-          "text": "SIM00129",
-          "font": "Nimbus Sans Regular",
-          "size_px": 21.0
-        },
-        {
-          "text": "SIM00129",
-          "font": "Nimbus Sans Regular",
-          "size_px": 21.0
-        },
-        {
-          "text": "SIM05927",
-          "font": "Nimbus Sans Regular",
-          "size_px": 21.0
-        },
-        {
-          "text": "SIM05927",
+          "text": "glycosphingolipid biosynthetic process",
           "font": "Nimbus Sans Regular",
           "size_px": 21.0
         },
@@ -193,6 +208,21 @@
           "text": "c",
           "font": "Nimbus Sans Bold",
           "size_px": 32.0
+        },
+        {
+          "text": "KEGG",
+          "font": "Nimbus Sans Regular",
+          "size_px": 25.0
+        },
+        {
+          "text": "d",
+          "font": "Nimbus Sans Bold",
+          "size_px": 32.0
+        },
+        {
+          "text": "GO BP",
+          "font": "Nimbus Sans Regular",
+          "size_px": 25.0
         }
       ],
       "comparison": "LD SALINE vs NON-LD control",
@@ -200,13 +230,14 @@
       "panels": [
         "volcano",
         "two-group heatmap",
-        "selected effects with 95% confidence intervals"
+        "KEGG preranked GSEA",
+        "GO BP preranked GSEA"
       ],
       "volcano_limits": {
-        "absolute_log2fc": 0.8,
-        "negative_log10_adjusted_p": 6.0
+        "absolute_log2fc": 5.0,
+        "negative_log10_adjusted_p": 10.0
       },
-      "volcano_genes": 8000,
+      "volcano_genes": 7647,
       "heatmap_samples": [
         "LD SALINE 01",
         "LD SALINE 02",
@@ -222,81 +253,133 @@
         "NON-LD control 06"
       ],
       "heatmap_genes": [
-        "SIM00326",
-        "SIM02086",
-        "SIM03868",
-        "SIM02420",
-        "SIM06914",
-        "SIM04661",
-        "SIM04146",
-        "SIM03168",
-        "SIM07947",
-        "SIM04531",
-        "SIM07219",
-        "SIM05624",
-        "SIM04379",
-        "SIM05944",
-        "SIM06879",
-        "SIM00752",
-        "SIM01866",
-        "SIM01142",
-        "SIM01957",
-        "SIM07308",
-        "SIM00393",
-        "SIM01892",
-        "SIM05927",
-        "SIM06519",
-        "SIM06391",
-        "SIM04275",
-        "SIM02345",
-        "SIM02143",
-        "SIM06939",
+        "SIM00669",
+        "SIM01537",
+        "SIM03716",
+        "SIM01652",
+        "SIM04145",
+        "SIM00939",
+        "SIM02682",
+        "SIM06181",
+        "SIM02793",
+        "SIM06008",
+        "SIM01928",
+        "SIM05873",
+        "SIM01309",
+        "SIM07987",
+        "SIM00323",
+        "SIM06066",
+        "SIM05598",
+        "SIM02431",
+        "SIM02279",
+        "SIM02047",
+        "SIM06285",
         "SIM05854",
-        "SIM02661",
-        "SIM03013",
-        "SIM07561",
-        "SIM02584",
-        "SIM02289",
-        "SIM05172",
-        "SIM00129",
-        "SIM02714",
-        "SIM05768",
-        "SIM01464"
+        "SIM05404",
+        "SIM03002",
+        "SIM07018",
+        "SIM06713",
+        "SIM06871",
+        "SIM03003",
+        "SIM06396",
+        "SIM05242",
+        "SIM01407",
+        "SIM05285",
+        "SIM07256",
+        "SIM02789",
+        "SIM05019",
+        "SIM01289",
+        "SIM01807",
+        "SIM04233",
+        "SIM00633",
+        "SIM05689"
       ],
       "heatmap_group_order": [
         "LD SALINE",
         "NON-LD control"
       ],
-      "heatmap_selection": "40 tested genes with smallest adjusted P in this contrast, regardless of significance, clustered using only the two displayed groups",
+      "heatmap_selection": "40 genes with smallest adjusted P among genes passing adjusted P < 0.05 and absolute log2FC >= 0.2 in this contrast",
       "forest_genes": [
-        "SIM03168",
-        "SIM04531",
-        "SIM01957",
-        "SIM04379",
-        "SIM00752",
-        "SIM04146",
-        "SIM05768",
-        "SIM06391",
-        "SIM02345",
-        "SIM05854",
-        "SIM00129",
-        "SIM05927"
+        "SIM01289",
+        "SIM06871",
+        "SIM00633",
+        "SIM03002",
+        "SIM01407",
+        "SIM05285",
+        "SIM01928",
+        "SIM04145",
+        "SIM05598",
+        "SIM05873",
+        "SIM06181",
+        "SIM01537"
       ],
-      "forest_absolute_limit": 0.6000000000000001,
+      "forest_absolute_limit": 4.6000000000000005,
       "forest_confidence_level": 0.95,
       "forest_residual_degrees_of_freedom": 15,
       "forest_intervals": "marginal, unadjusted; genes selected from the same dataset",
-      "forest_selection": "six positive and six negative estimates with smallest adjusted P among all tested genes, regardless of significance",
-      "synthetic_effect_scale": "planted base effects 0.08 to 0.22 log2 units; fitted effects are neither rescaled nor clipped",
-      "group_colors": {
-        "LD SALINE": "#C28E85",
-        "LD LEPTIN": "#527D6B",
-        "NON-LD control": "#A8BED2"
+      "forest_selection": "six positive and six negative estimates with smallest adjusted P among genes passing the joint adjusted-P and log2FC criteria",
+      "absolute_log2fc_cutoff": 0.2,
+      "adjusted_p_cutoff": 0.05,
+      "synthetic_effect_scale": "original synthetic generator restored; fitted effects and intervals are neither rescaled nor clipped",
+      "comparison_colors": {
+        "name": "yellow/blue",
+        "higher": "#FDB338",
+        "lower": "#025196"
+      },
+      "gsea": {
+        "kegg": {
+          "display_table": "synthetic_demo/gsea_data/figure_01_kegg_display.tsv",
+          "terms": [
+            "mmu00590 Arachidonic acid metabolism",
+            "mmu00591 Linoleic acid metabolism",
+            "mmu04727 GABAergic synapse",
+            "mmu04724 Glutamatergic synapse"
+          ],
+          "NES": [
+            1.4855555890690186,
+            1.4586574198947313,
+            -1.624925901469204,
+            -1.636134162989149
+          ],
+          "gsea_fdr_q": [
+            1.0,
+            1.0,
+            0.7249083535816182,
+            1.0
+          ],
+          "selection": "two largest positive and two most negative NES, without significance requirement",
+          "ranking": "all tested genes, signed t statistic; no DEG cutoff",
+          "synthetic_random_mouse_assignment": true
+        },
+        "go_bp": {
+          "display_table": "synthetic_demo/gsea_data/figure_01_go_bp_display.tsv",
+          "terms": [
+            "GO:1904019 epithelial cell apoptotic process",
+            "GO:0045058 T cell selection",
+            "GO:0009299 mRNA transcription",
+            "GO:0006688 glycosphingolipid biosynthetic process"
+          ],
+          "NES": [
+            1.8893550382292144,
+            1.8781330839891397,
+            -1.7895803413764992,
+            -1.8466062262821996
+          ],
+          "gsea_fdr_q": [
+            0.2906878393121675,
+            0.1713622756439012,
+            0.9393345786363568,
+            0.8278128714267243
+          ],
+          "selection": "two largest positive and two most negative NES, without significance requirement",
+          "ranking": "all tested genes, signed t statistic; no DEG cutoff",
+          "synthetic_random_mouse_assignment": true
+        }
       }
     },
     {
       "figure": 2,
-      "file_stem": "figure_02_small_effects_synthetic",
+      "file_stem": "figure_02_gsea_synthetic",
       "question": "What does leptin treatment change in LD mice?",
       "all_visible_typography": "Nimbus Sans",
       "canvas_pixels": [
@@ -339,127 +422,142 @@
           "size_px": 24.0
         },
         {
-          "text": "log$_2$ fold change",
+          "text": "1.00",
+          "font": "Nimbus Sans Regular",
+          "size_px": 20.0
+        },
+        {
+          "text": "1.00",
+          "font": "Nimbus Sans Regular",
+          "size_px": 20.0
+        },
+        {
+          "text": "1.00",
+          "font": "Nimbus Sans Regular",
+          "size_px": 20.0
+        },
+        {
+          "text": "1.00",
+          "font": "Nimbus Sans Regular",
+          "size_px": 20.0
+        },
+        {
+          "text": "q",
+          "font": "Nimbus Sans Regular",
+          "size_px": 21.0
+        },
+        {
+          "text": "NES",
           "font": "Nimbus Sans Regular",
           "size_px": 24.0
         },
         {
-          "text": "SIM01601",
+          "text": "Longevity regulating pathway - multiple\nspecies",
           "font": "Nimbus Sans Regular",
           "size_px": 21.0
         },
         {
-          "text": "SIM01601",
+          "text": "Longevity regulating pathway - multiple\nspecies",
           "font": "Nimbus Sans Regular",
           "size_px": 21.0
         },
         {
-          "text": "SIM01156",
+          "text": "Alanine, aspartate and glutamate\nmetabolism",
           "font": "Nimbus Sans Regular",
           "size_px": 21.0
         },
         {
-          "text": "SIM01156",
+          "text": "Alanine, aspartate and glutamate\nmetabolism",
           "font": "Nimbus Sans Regular",
           "size_px": 21.0
         },
         {
-          "text": "SIM07308",
+          "text": "Pyruvate metabolism",
           "font": "Nimbus Sans Regular",
           "size_px": 21.0
         },
         {
-          "text": "SIM07308",
+          "text": "Pyruvate metabolism",
           "font": "Nimbus Sans Regular",
           "size_px": 21.0
         },
         {
-          "text": "SIM02708",
+          "text": "Malaria",
           "font": "Nimbus Sans Regular",
           "size_px": 21.0
         },
         {
-          "text": "SIM02708",
+          "text": "Malaria",
           "font": "Nimbus Sans Regular",
           "size_px": 21.0
         },
         {
-          "text": "SIM06391",
+          "text": "1.00",
+          "font": "Nimbus Sans Regular",
+          "size_px": 20.0
+        },
+        {
+          "text": "1.00",
+          "font": "Nimbus Sans Regular",
+          "size_px": 20.0
+        },
+        {
+          "text": "0.36",
+          "font": "Nimbus Sans Regular",
+          "size_px": 20.0
+        },
+        {
+          "text": "0.12",
+          "font": "Nimbus Sans Regular",
+          "size_px": 20.0
+        },
+        {
+          "text": "q",
           "font": "Nimbus Sans Regular",
           "size_px": 21.0
         },
         {
-          "text": "SIM06391",
+          "text": "NES",
+          "font": "Nimbus Sans Regular",
+          "size_px": 24.0
+        },
+        {
+          "text": "negative regulation of Notch signaling\npathway",
           "font": "Nimbus Sans Regular",
           "size_px": 21.0
         },
         {
-          "text": "SIM05768",
+          "text": "negative regulation of Notch signaling\npathway",
           "font": "Nimbus Sans Regular",
           "size_px": 21.0
         },
         {
-          "text": "SIM05768",
+          "text": "pyroptotic inflammatory response",
           "font": "Nimbus Sans Regular",
           "size_px": 21.0
         },
         {
-          "text": "SIM04477",
+          "text": "pyroptotic inflammatory response",
           "font": "Nimbus Sans Regular",
           "size_px": 21.0
         },
         {
-          "text": "SIM04477",
+          "text": "ER-nucleus signaling pathway",
           "font": "Nimbus Sans Regular",
           "size_px": 21.0
         },
         {
-          "text": "SIM04671",
+          "text": "ER-nucleus signaling pathway",
           "font": "Nimbus Sans Regular",
           "size_px": 21.0
         },
         {
-          "text": "SIM04671",
+          "text": "establishment or maintenance of epithelial\ncell apical/basal polarity",
           "font": "Nimbus Sans Regular",
           "size_px": 21.0
         },
         {
-          "text": "SIM04739",
-          "font": "Nimbus Sans Regular",
-          "size_px": 21.0
-        },
-        {
-          "text": "SIM04739",
-          "font": "Nimbus Sans Regular",
-          "size_px": 21.0
-        },
-        {
-          "text": "SIM02370",
-          "font": "Nimbus Sans Regular",
-          "size_px": 21.0
-        },
-        {
-          "text": "SIM02370",
-          "font": "Nimbus Sans Regular",
-          "size_px": 21.0
-        },
-        {
-          "text": "SIM03188",
-          "font": "Nimbus Sans Regular",
-          "size_px": 21.0
-        },
-        {
-          "text": "SIM03188",
-          "font": "Nimbus Sans Regular",
-          "size_px": 21.0
-        },
-        {
-          "text": "SIM03168",
-          "font": "Nimbus Sans Regular",
-          "size_px": 21.0
-        },
-        {
-          "text": "SIM03168",
+          "text": "establishment or maintenance of epithelial\ncell apical/basal polarity",
           "font": "Nimbus Sans Regular",
           "size_px": 21.0
         },
@@ -487,6 +585,21 @@
           "text": "c",
           "font": "Nimbus Sans Bold",
           "size_px": 32.0
+        },
+        {
+          "text": "KEGG",
+          "font": "Nimbus Sans Regular",
+          "size_px": 25.0
+        },
+        {
+          "text": "d",
+          "font": "Nimbus Sans Bold",
+          "size_px": 32.0
+        },
+        {
+          "text": "GO BP",
+          "font": "Nimbus Sans Regular",
+          "size_px": 25.0
         }
       ],
       "comparison": "LD LEPTIN vs LD SALINE",
@@ -494,13 +607,14 @@
       "panels": [
         "volcano",
         "two-group heatmap",
-        "selected effects with 95% confidence intervals"
+        "KEGG preranked GSEA",
+        "GO BP preranked GSEA"
       ],
       "volcano_limits": {
-        "absolute_log2fc": 0.8,
-        "negative_log10_adjusted_p": 6.0
+        "absolute_log2fc": 5.0,
+        "negative_log10_adjusted_p": 10.0
       },
-      "volcano_genes": 8000,
+      "volcano_genes": 7647,
       "heatmap_samples": [
         "LD LEPTIN 01",
         "LD LEPTIN 02",
@@ -516,81 +630,133 @@
         "LD SALINE 06"
       ],
       "heatmap_genes": [
-        "SIM00393",
-        "SIM02979",
-        "SIM03036",
-        "SIM02775",
-        "SIM03770",
-        "SIM02544",
-        "SIM01464",
-        "SIM06519",
-        "SIM02714",
-        "SIM04275",
-        "SIM06391",
-        "SIM05094",
-        "SIM04965",
-        "SIM05399",
-        "SIM01891",
-        "SIM03662",
-        "SIM01156",
-        "SIM02647",
-        "SIM02708",
-        "SIM05768",
-        "SIM01601",
-        "SIM07308",
-        "SIM07812",
-        "SIM02492",
-        "SIM05624",
-        "SIM00408",
-        "SIM01693",
-        "SIM07675",
-        "SIM04477",
-        "SIM06322",
-        "SIM05490",
-        "SIM04146",
-        "SIM03494",
-        "SIM04671",
-        "SIM02370",
-        "SIM03168",
-        "SIM03188",
+        "SIM02682",
+        "SIM05734",
         "SIM04739",
-        "SIM06904",
-        "SIM00861"
+        "SIM00401",
+        "SIM03578",
+        "SIM04296",
+        "SIM01652",
+        "SIM02304",
+        "SIM06871",
+        "SIM07079",
+        "SIM07437",
+        "SIM04390",
+        "SIM02674",
+        "SIM00323",
+        "SIM00154",
+        "SIM05379",
+        "SIM07987",
+        "SIM05521",
+        "SIM04543",
+        "SIM04654",
+        "SIM03892",
+        "SIM02888",
+        "SIM02728",
+        "SIM05404",
+        "SIM07018",
+        "SIM06713",
+        "SIM00633",
+        "SIM06467",
+        "SIM07366",
+        "SIM06795",
+        "SIM02319",
+        "SIM06396",
+        "SIM03844",
+        "SIM01858",
+        "SIM03693",
+        "SIM01478",
+        "SIM06980",
+        "SIM06425",
+        "SIM00897",
+        "SIM05766"
       ],
       "heatmap_group_order": [
         "LD LEPTIN",
         "LD SALINE"
       ],
-      "heatmap_selection": "40 tested genes with smallest adjusted P in this contrast, regardless of significance, clustered using only the two displayed groups",
+      "heatmap_selection": "40 genes with smallest adjusted P among genes passing adjusted P < 0.05 and absolute log2FC >= 0.2 in this contrast",
       "forest_genes": [
-        "SIM01601",
-        "SIM01156",
-        "SIM07308",
-        "SIM02708",
-        "SIM06391",
-        "SIM05768",
-        "SIM04477",
-        "SIM04671",
-        "SIM04739",
-        "SIM02370",
-        "SIM03188",
-        "SIM03168"
+        "SIM00323",
+        "SIM00154",
+        "SIM07079",
+        "SIM05379",
+        "SIM01652",
+        "SIM07437",
+        "SIM00633",
+        "SIM02728",
+        "SIM05404",
+        "SIM06713",
+        "SIM07366",
+        "SIM06467"
       ],
-      "forest_absolute_limit": 0.6000000000000001,
+      "forest_absolute_limit": 4.6000000000000005,
       "forest_confidence_level": 0.95,
       "forest_residual_degrees_of_freedom": 15,
       "forest_intervals": "marginal, unadjusted; genes selected from the same dataset",
-      "forest_selection": "six positive and six negative estimates with smallest adjusted P among all tested genes, regardless of significance",
-      "synthetic_effect_scale": "planted base effects 0.08 to 0.22 log2 units; fitted effects are neither rescaled nor clipped",
-      "group_colors": {
-        "LD SALINE": "#C28E85",
-        "LD LEPTIN": "#527D6B",
-        "NON-LD control": "#A8BED2"
+      "forest_selection": "six positive and six negative estimates with smallest adjusted P among genes passing the joint adjusted-P and log2FC criteria",
+      "absolute_log2fc_cutoff": 0.2,
+      "adjusted_p_cutoff": 0.05,
+      "synthetic_effect_scale": "original synthetic generator restored; fitted effects and intervals are neither rescaled nor clipped",
+      "comparison_colors": {
+        "name": "tan/turquoise",
+        "higher": "#FFBE6A",
+        "lower": "#40B0A6"
+      },
+      "gsea": {
+        "kegg": {
+          "display_table": "synthetic_demo/gsea_data/figure_02_kegg_display.tsv",
+          "terms": [
+            "mmu04213 Longevity regulating pathway - multiple species",
+            "mmu00250 Alanine, aspartate and glutamate metabolism",
+            "mmu00620 Pyruvate metabolism",
+            "mmu05144 Malaria"
+          ],
+          "NES": [
+            1.654129587232228,
+            1.5984993679030128,
+            -1.5133663305475795,
+            -1.5884929976386344
+          ],
+          "gsea_fdr_q": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "selection": "two largest positive and two most negative NES, without significance requirement",
+          "ranking": "all tested genes, signed t statistic; no DEG cutoff",
+          "synthetic_random_mouse_assignment": true
+        },
+        "go_bp": {
+          "display_table": "synthetic_demo/gsea_data/figure_02_go_bp_display.tsv",
+          "terms": [
+            "GO:0045746 negative regulation of Notch signaling pathway",
+            "GO:0070269 pyroptotic inflammatory response",
+            "GO:0006984 ER-nucleus signaling pathway",
+            "GO:0045197 establishment or maintenance of epithelial cell apical/basal polarity"
+          ],
+          "NES": [
+            1.749644344668265,
+            1.7398772502317907,
+            -1.885920005070884,
+            -1.9993270678549389
+          ],
+          "gsea_fdr_q": [
+            1.0,
+            1.0,
+            0.3630584412027823,
+            0.1182480419184634
+          ],
+          "selection": "two largest positive and two most negative NES, without significance requirement",
+          "ranking": "all tested genes, signed t statistic; no DEG cutoff",
+          "synthetic_random_mouse_assignment": true
+        }
       }
     },
     {
       "figure": 3,
-      "file_stem": "figure_03_small_effects_synthetic",
+      "file_stem": "figure_03_gsea_synthetic",
       "question": "What differences remain after leptin treatment?",
       "all_visible_typography": "Nimbus Sans",
       "canvas_pixels": [
@@ -633,127 +799,142 @@
           "size_px": 24.0
         },
         {
-          "text": "log$_2$ fold change",
+          "text": "1.00",
+          "font": "Nimbus Sans Regular",
+          "size_px": 20.0
+        },
+        {
+          "text": "1.00",
+          "font": "Nimbus Sans Regular",
+          "size_px": 20.0
+        },
+        {
+          "text": "1.00",
+          "font": "Nimbus Sans Regular",
+          "size_px": 20.0
+        },
+        {
+          "text": "0.26",
+          "font": "Nimbus Sans Regular",
+          "size_px": 20.0
+        },
+        {
+          "text": "q",
+          "font": "Nimbus Sans Regular",
+          "size_px": 21.0
+        },
+        {
+          "text": "NES",
           "font": "Nimbus Sans Regular",
           "size_px": 24.0
         },
         {
-          "text": "SIM00661",
+          "text": "Pancreatic secretion",
           "font": "Nimbus Sans Regular",
           "size_px": 21.0
         },
         {
-          "text": "SIM00661",
+          "text": "Pancreatic secretion",
           "font": "Nimbus Sans Regular",
           "size_px": 21.0
         },
         {
-          "text": "SIM03605",
+          "text": "Retinol metabolism",
           "font": "Nimbus Sans Regular",
           "size_px": 21.0
         },
         {
-          "text": "SIM03605",
+          "text": "Retinol metabolism",
           "font": "Nimbus Sans Regular",
           "size_px": 21.0
         },
         {
-          "text": "SIM00752",
+          "text": "Amyotrophic lateral sclerosis (ALS)",
           "font": "Nimbus Sans Regular",
           "size_px": 21.0
         },
         {
-          "text": "SIM00752",
+          "text": "Amyotrophic lateral sclerosis (ALS)",
           "font": "Nimbus Sans Regular",
           "size_px": 21.0
         },
         {
-          "text": "SIM02965",
+          "text": "Inflammatory bowel disease (IBD)",
           "font": "Nimbus Sans Regular",
           "size_px": 21.0
         },
         {
-          "text": "SIM02965",
+          "text": "Inflammatory bowel disease (IBD)",
           "font": "Nimbus Sans Regular",
           "size_px": 21.0
         },
         {
-          "text": "SIM01634",
+          "text": "0.08",
+          "font": "Nimbus Sans Regular",
+          "size_px": 20.0
+        },
+        {
+          "text": "0.42",
+          "font": "Nimbus Sans Regular",
+          "size_px": 20.0
+        },
+        {
+          "text": "0.65",
+          "font": "Nimbus Sans Regular",
+          "size_px": 20.0
+        },
+        {
+          "text": "0.63",
+          "font": "Nimbus Sans Regular",
+          "size_px": 20.0
+        },
+        {
+          "text": "q",
           "font": "Nimbus Sans Regular",
           "size_px": 21.0
         },
         {
-          "text": "SIM01634",
+          "text": "NES",
+          "font": "Nimbus Sans Regular",
+          "size_px": 24.0
+        },
+        {
+          "text": "T cell selection",
           "font": "Nimbus Sans Regular",
           "size_px": 21.0
         },
         {
-          "text": "SIM02463",
+          "text": "T cell selection",
           "font": "Nimbus Sans Regular",
           "size_px": 21.0
         },
         {
-          "text": "SIM02463",
+          "text": "positive T cell selection",
           "font": "Nimbus Sans Regular",
           "size_px": 21.0
         },
         {
-          "text": "SIM04739",
+          "text": "positive T cell selection",
           "font": "Nimbus Sans Regular",
           "size_px": 21.0
         },
         {
-          "text": "SIM04739",
+          "text": "negative regulation of G2/M transition of\nmitotic cell cycle",
           "font": "Nimbus Sans Regular",
           "size_px": 21.0
         },
         {
-          "text": "SIM07561",
+          "text": "negative regulation of G2/M transition of\nmitotic cell cycle",
           "font": "Nimbus Sans Regular",
           "size_px": 21.0
         },
         {
-          "text": "SIM07561",
+          "text": "mitotic G2/M transition checkpoint",
           "font": "Nimbus Sans Regular",
           "size_px": 21.0
         },
         {
-          "text": "SIM05595",
-          "font": "Nimbus Sans Regular",
-          "size_px": 21.0
-        },
-        {
-          "text": "SIM05595",
-          "font": "Nimbus Sans Regular",
-          "size_px": 21.0
-        },
-        {
-          "text": "SIM01099",
-          "font": "Nimbus Sans Regular",
-          "size_px": 21.0
-        },
-        {
-          "text": "SIM01099",
-          "font": "Nimbus Sans Regular",
-          "size_px": 21.0
-        },
-        {
-          "text": "SIM07237",
-          "font": "Nimbus Sans Regular",
-          "size_px": 21.0
-        },
-        {
-          "text": "SIM07237",
-          "font": "Nimbus Sans Regular",
-          "size_px": 21.0
-        },
-        {
-          "text": "SIM05854",
-          "font": "Nimbus Sans Regular",
-          "size_px": 21.0
-        },
-        {
-          "text": "SIM05854",
+          "text": "mitotic G2/M transition checkpoint",
           "font": "Nimbus Sans Regular",
           "size_px": 21.0
         },
@@ -781,6 +962,21 @@
           "text": "c",
           "font": "Nimbus Sans Bold",
           "size_px": 32.0
+        },
+        {
+          "text": "KEGG",
+          "font": "Nimbus Sans Regular",
+          "size_px": 25.0
+        },
+        {
+          "text": "d",
+          "font": "Nimbus Sans Bold",
+          "size_px": 32.0
+        },
+        {
+          "text": "GO BP",
+          "font": "Nimbus Sans Regular",
+          "size_px": 25.0
         }
       ],
       "comparison": "LD LEPTIN vs NON-LD control",
@@ -788,13 +984,14 @@
       "panels": [
         "volcano",
         "two-group heatmap",
-        "selected effects with 95% confidence intervals"
+        "KEGG preranked GSEA",
+        "GO BP preranked GSEA"
       ],
       "volcano_limits": {
-        "absolute_log2fc": 0.8,
-        "negative_log10_adjusted_p": 6.0
+        "absolute_log2fc": 5.0,
+        "negative_log10_adjusted_p": 10.0
       },
-      "volcano_genes": 8000,
+      "volcano_genes": 7647,
       "heatmap_samples": [
         "LD LEPTIN 01",
         "LD LEPTIN 02",
@@ -810,76 +1007,128 @@
         "NON-LD control 06"
       ],
       "heatmap_genes": [
-        "SIM03605",
-        "SIM00661",
-        "SIM02463",
-        "SIM00770",
-        "SIM06586",
-        "SIM02159",
-        "SIM01634",
-        "SIM04531",
-        "SIM01115",
-        "SIM00752",
-        "SIM02482",
-        "SIM03793",
-        "SIM02965",
-        "SIM00326",
-        "SIM06645",
+        "SIM06870",
+        "SIM07243",
+        "SIM07477",
+        "SIM05598",
         "SIM07829",
-        "SIM05595",
-        "SIM04739",
-        "SIM05172",
-        "SIM05927",
-        "SIM02584",
-        "SIM07561",
-        "SIM00574",
-        "SIM02661",
-        "SIM07237",
-        "SIM02370",
-        "SIM07381",
-        "SIM07289",
-        "SIM05854",
-        "SIM01099",
-        "SIM05904",
-        "SIM05079",
+        "SIM01916",
+        "SIM01981",
+        "SIM01928",
+        "SIM06344",
+        "SIM06053",
         "SIM03007",
-        "SIM02626",
-        "SIM03580",
-        "SIM02345",
-        "SIM07039",
-        "SIM07057",
+        "SIM04315",
+        "SIM07595",
         "SIM01478",
-        "SIM01680"
+        "SIM05289",
+        "SIM04762",
+        "SIM02834",
+        "SIM02674",
+        "SIM03282",
+        "SIM05689",
+        "SIM02591",
+        "SIM07079",
+        "SIM05854",
+        "SIM05904",
+        "SIM02789",
+        "SIM05692",
+        "SIM04939",
+        "SIM07681",
+        "SIM05285",
+        "SIM07256",
+        "SIM06871",
+        "SIM03002",
+        "SIM00574",
+        "SIM03843",
+        "SIM07437",
+        "SIM02599",
+        "SIM03703",
+        "SIM07295",
+        "SIM06285",
+        "SIM00627"
       ],
       "heatmap_group_order": [
         "LD LEPTIN",
         "NON-LD control"
       ],
-      "heatmap_selection": "40 tested genes with smallest adjusted P in this contrast, regardless of significance, clustered using only the two displayed groups",
+      "heatmap_selection": "40 genes with smallest adjusted P among genes passing adjusted P < 0.05 and absolute log2FC >= 0.2 in this contrast",
       "forest_genes": [
-        "SIM00661",
-        "SIM03605",
-        "SIM00752",
-        "SIM02965",
-        "SIM01634",
-        "SIM02463",
-        "SIM04739",
-        "SIM07561",
-        "SIM05595",
-        "SIM01099",
-        "SIM07237",
-        "SIM05854"
+        "SIM06871",
+        "SIM07256",
+        "SIM05689",
+        "SIM03703",
+        "SIM03002",
+        "SIM07079",
+        "SIM05598",
+        "SIM01928",
+        "SIM05289",
+        "SIM03007",
+        "SIM06344",
+        "SIM01478"
       ],
-      "forest_absolute_limit": 0.6000000000000001,
+      "forest_absolute_limit": 4.6000000000000005,
       "forest_confidence_level": 0.95,
       "forest_residual_degrees_of_freedom": 15,
       "forest_intervals": "marginal, unadjusted; genes selected from the same dataset",
-      "forest_selection": "six positive and six negative estimates with smallest adjusted P among all tested genes, regardless of significance",
-      "synthetic_effect_scale": "planted base effects 0.08 to 0.22 log2 units; fitted effects are neither rescaled nor clipped",
-      "group_colors": {
-        "LD SALINE": "#C28E85",
-        "LD LEPTIN": "#527D6B",
-        "NON-LD control": "#A8BED2"
+      "forest_selection": "six positive and six negative estimates with smallest adjusted P among genes passing the joint adjusted-P and log2FC criteria",
+      "absolute_log2fc_cutoff": 0.2,
+      "adjusted_p_cutoff": 0.05,
+      "synthetic_effect_scale": "original synthetic generator restored; fitted effects and intervals are neither rescaled nor clipped",
+      "comparison_colors": {
+        "name": "orange/purple",
+        "higher": "#EB6123",
+        "lower": "#512888"
+      },
+      "gsea": {
+        "kegg": {
+          "display_table": "synthetic_demo/gsea_data/figure_03_kegg_display.tsv",
+          "terms": [
+            "mmu04972 Pancreatic secretion",
+            "mmu00830 Retinol metabolism",
+            "mmu05014 Amyotrophic lateral sclerosis (ALS)",
+            "mmu05321 Inflammatory bowel disease (IBD)"
+          ],
+          "NES": [
+            1.4099643404322937,
+            1.3884117815008403,
+            -1.555467684002594,
+            -1.783126266327156
+          ],
+          "gsea_fdr_q": [
+            1.0,
+            1.0,
+            1.0,
+            0.2626551034022681
+          ],
+          "selection": "two largest positive and two most negative NES, without significance requirement",
+          "ranking": "all tested genes, signed t statistic; no DEG cutoff",
+          "synthetic_random_mouse_assignment": true
+        },
+        "go_bp": {
+          "display_table": "synthetic_demo/gsea_data/figure_03_go_bp_display.tsv",
+          "terms": [
+            "GO:0045058 T cell selection",
+            "GO:0043368 positive T cell selection",
+            "GO:0010972 negative regulation of G2/M transition of mitotic cell cycle",
+            "GO:0044818 mitotic G2/M transition checkpoint"
+          ],
+          "NES": [
+            1.9870975091004768,
+            1.8503099439894457,
+            -1.834550906511123,
+            -1.8872495017279785
+          ],
+          "gsea_fdr_q": [
+            0.0757429586113659,
+            0.4184564688714351,
+            0.6521142087065213,
+            0.6257715902179644
+          ],
+          "selection": "two largest positive and two most negative NES, without significance requirement",
+          "ranking": "all tested genes, signed t statistic; no DEG cutoff",
+          "synthetic_random_mouse_assignment": true
+        }
       }
     }
   ]

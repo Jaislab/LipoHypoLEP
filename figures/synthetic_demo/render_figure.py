@@ -9,6 +9,9 @@ import base64
 import json
 import os
 import tempfile
+import re
+import textwrap
+import hashlib
 
 os.environ.setdefault('MPLCONFIGDIR', '/tmp/lipohypolep-mpl-v2')
 import matplotlib
@@ -17,6 +20,7 @@ import matplotlib.pyplot as plt
 from matplotlib import font_manager as fm
 from matplotlib.colors import LinearSegmentedColormap
 from matplotlib.text import Text
+from matplotlib.ticker import MaxNLocator
 import numpy as np
 import pandas as pd
 from scipy.cluster.hierarchy import linkage, leaves_list
@@ -36,6 +40,14 @@ GROUPS = ('LD SALINE','LD LEPTIN','NON-LD control')
 PALETTE = {'LD SALINE':'#C28E85','LD LEPTIN':'#527D6B','NON-LD control':'#A8BED2'}
 INK,AXIS,GRID,NS = '#262A2B','#A1A7A7','#C8CDCD','#CFD3D4'
 LOWER,HIGHER = '#779AAC','#C28A80'
+LOG2FC_CUTOFF = 0.2
+ADJUSTED_P_CUTOFF = 0.05
+# RGB values printed beside the requested pairs in the supplied NCEAS guide.
+COMPARISON_COLORS = {
+    1: {'name':'yellow/blue','higher':'#FDB338','lower':'#025196'},
+    2: {'name':'tan/turquoise','higher':'#FFBE6A','lower':'#40B0A6'},
+    3: {'name':'orange/purple','higher':'#EB6123','lower':'#512888'},
+}
 
 def prepare_nimbus():
     """Retain Nimbus outlines/metrics while embedding clean TrueType PDFs.
@@ -117,18 +129,19 @@ def configure_theme():
 
 
 def selected_rows(table):
-    # Rank all tested genes; a low-powered contrast must not force significant hits.
-    heatmap=table.sort_values('padj',kind='stable').head(40)
-    positive=table[table.log2FoldChange>0].sort_values('padj',kind='stable').head(6)
-    negative=table[table.log2FoldChange<0].sort_values('padj',kind='stable').head(6)
+    # Gene-level highlights use the user-specified joint criteria; GSEA is unfiltered.
+    selected=table[(table.padj<ADJUSTED_P_CUTOFF)&(table.log2FoldChange.abs()>=LOG2FC_CUTOFF)]
+    heatmap=selected.sort_values('padj',kind='stable').head(40)
+    positive=selected[selected.log2FoldChange>0].sort_values('padj',kind='stable').head(6)
+    negative=selected[selected.log2FoldChange<0].sort_values('padj',kind='stable').head(6)
     forest=pd.concat([positive,negative]).sort_values('log2FoldChange',ascending=False,kind='stable')
     if len(heatmap)!=40 or len(forest)!=12:
-        raise RuntimeError('Synthetic demonstration needs 40 ranked genes and six estimates in each direction, regardless of significance.')
+        raise RuntimeError('Not enough genes pass the joint adjusted-P and log2FC criteria for this demonstration layout.')
     return heatmap,forest
 
 
 def export_figure(fig,number,question,fonts,details):
-    name=f'figure_{number:02d}_small_effects_synthetic'
+    name=f'figure_{number:02d}_gsea_synthetic'
     labels=[]
     for t in fig.findobj(Text):
         if not t.get_text():continue
@@ -179,6 +192,8 @@ def render_question(spec,table,expression,metadata,fonts,xmax,ymax,forest_limit,
     number,question,first,second,filename=spec
     heatmap,forest=selected_rows(table)
     comparison=f'{first} vs {second}'
+    colors=COMPARISON_COLORS[number]
+    lower,higher=colors['lower'],colors['higher']
     fig=plt.figure(figsize=(W/DPI,H/DPI),dpi=DPI)
     def axes(left,top,width,height):
         return fig.add_axes([left/W,1-(top+height)/H,width/W,height/H])
@@ -192,19 +207,22 @@ def render_question(spec,table,expression,metadata,fonts,xmax,ymax,forest_limit,
         ax.set_axisbelow(True)
 
     # a: the complete single-contrast result, with common scales across figures.
-    ax=axes(110,88,560,386)
+    ax=axes(110,88,560,310)
     panel('a',40,27)
     ax.set_title(comparison,pad=20)
     x=table.log2FoldChange.to_numpy()
     y=-np.log10(table.padj.to_numpy())
-    selected=table.padj.to_numpy()<.05
+    selected=(table.padj.to_numpy()<ADJUSTED_P_CUTOFF)&(np.abs(x)>=LOG2FC_CUTOFF)
     ax.scatter(x[~selected],y[~selected],s=8,c=NS,alpha=.55,edgecolors='none',rasterized=True)
-    for mask,color in [(selected&(x<0),LOWER),(selected&(x>0),HIGHER)]:
+    for mask,color in [(selected&(x<0),lower),(selected&(x>0),higher)]:
         ax.scatter(x[mask],y[mask],s=11,c=color,alpha=.82,edgecolors='none',rasterized=True)
     ax.axvline(0,color=GRID,lw=.65,ls=(0,(3,4)),zorder=0)
+    for cutoff in (-LOG2FC_CUTOFF,LOG2FC_CUTOFF):
+        ax.axvline(cutoff,color=AXIS,lw=.8,ls=(0,(4,4)),zorder=0)
     ax.axhline(-np.log10(.05),color=GRID,lw=.65,ls=(0,(3,4)),zorder=0)
-    ax.set(xlim=(-xmax,xmax),ylim=(-.08,ymax),
-           xticks=np.round(np.arange(-xmax,xmax+.01,.2),1),yticks=np.arange(0,ymax+.1,2))
+    ax.set(xlim=(-xmax,xmax),ylim=(-.08,ymax),yticks=np.arange(0,ymax+.1,2))
+    ticks=MaxNLocator(nbins=6,steps=[1,2,2.5,5,10],symmetric=True).tick_values(-xmax,xmax)
+    ax.set_xticks(ticks[(ticks>=-xmax)&(ticks<=xmax)])
     ax.set_xlabel(r'log$_2$ fold change',labelpad=8)
     ax.set_ylabel(r'−log$_{10}$(adjusted $P$)',labelpad=8)
     theme(ax)
@@ -217,8 +235,8 @@ def render_question(spec,table,expression,metadata,fonts,xmax,ymax,forest_limit,
     z=z[rows]
     genes=heatmap.index[rows]
     panel('b',788,27)
-    ax=axes(928,132,450,772)
-    cmap=LinearSegmentedColormap.from_list('soft_expression',[LOWER,'#FAF9F6',HIGHER])
+    ax=axes(928,132,450,266)
+    cmap=LinearSegmentedColormap.from_list(f'expression_{number}',[lower,'#FAF9F6',higher])
     im=ax.imshow(z,aspect='auto',interpolation='nearest',cmap=cmap,vmin=-2,vmax=2)
     ax.set_xticks([]);ax.set_yticks([])
     ax.set_ylabel('Genes',labelpad=12)
@@ -227,53 +245,79 @@ def render_question(spec,table,expression,metadata,fonts,xmax,ymax,forest_limit,
     for i,group in enumerate((first,second)):
         left=928+i*225
         strip=axes(left,120,223,6)
-        strip.add_patch(plt.Rectangle((0,0),1,1,color=PALETTE[group]))
+        strip.add_patch(plt.Rectangle((0,0),1,1,color=higher if i==0 else lower))
         strip.set_axis_off()
         fig.text((left+112.5)/W,1-108/H,group,ha='center',va='bottom',fontsize=px(24))
-    cax=axes(1402,386,13,264)
+    cax=axes(1402,185,13,160)
     cb=fig.colorbar(im,cax=cax,ticks=[-2,0,2])
     cb.outline.set_visible(False)
     cb.ax.tick_params(size=2,pad=4,labelsize=px(21))
     cb.set_label('z-score',fontsize=px(24),labelpad=7)
     pd.DataFrame({'gene_id':genes}).to_csv(DATA/f'figure_{number:02d}_heatmap_genes.tsv',sep='\t',index=False)
 
-    # c: selected effect estimates and marginal, unadjusted model intervals.
-    panel('c',40,564)
-    ax=axes(238,608,432,296)
+    # Retain the gene effect estimates in tables; the canvas now prioritizes GSEA.
     crit=stats.t.ppf(.975,df)
     errors=crit*forest.lfcSE.to_numpy()
     fx=forest.log2FoldChange.to_numpy()
-    for row,(effect,error) in enumerate(zip(fx,errors)):
-        color=HIGHER if effect>0 else LOWER
-        ax.errorbar(effect,row,xerr=error,fmt='o',ms=5.5,mfc=color,mec='white',mew=.5,
-                    color=color,ecolor=color,elinewidth=1.0,capsize=2,capthick=.8)
-    ax.axvline(0,color=GRID,lw=.8,ls=(0,(3,4)),zorder=0)
-    ax.set_yticks(np.arange(len(forest)),labels=forest.index)
-    ax.set(xlim=(-forest_limit,forest_limit),ylim=(len(forest)-.5,-.5),
-           xticks=np.round(np.arange(-forest_limit,forest_limit+.01,.2),1))
-    ax.set_xlabel(r'log$_2$ fold change',labelpad=9)
-    ax.tick_params(axis='y',length=0,pad=10)
-    ax.spines['left'].set_visible(False)
-    theme(ax)
-    ax.tick_params(axis='y',length=0,pad=10)
     forest=forest.copy()
     forest['ci_lower']=fx-errors
     forest['ci_upper']=fx+errors
     forest['comparison']=comparison
     forest.reset_index().to_csv(DATA/f'figure_{number:02d}_forest_genes.tsv',sep='\t',index=False,float_format='%.17g')
+
+    # c,d: one preranked calculation per collection and biological comparison.
+    gsea_details={}
+    for collection,letter,left,title in [('kegg','c',538,'KEGG'),('go_bp','d',1320,'GO BP')]:
+        path=ROOT/'gsea_data'/f'figure_{number:02d}_{collection}_display.tsv'
+        if not path.is_file():raise RuntimeError(f'GSEA results missing: run run_gsea.py first ({path})')
+        results=pd.read_csv(path,sep='\t')
+        positive=results[results.NES>0].sort_values('NES',ascending=False,kind='stable').head(2)
+        negative=results[results.NES<0].sort_values('NES',ascending=True,kind='stable').head(2)
+        shown=pd.concat([positive,negative]).sort_values('NES',ascending=False,kind='stable')
+        if len(shown)!=4:raise RuntimeError('This demonstration requires two ranked sets per direction.')
+        panel(letter,40 if collection=='kegg' else 788,494)
+        fig.text((390 if collection=='kegg' else 1160)/W,1-524/H,title,
+                 ha='center',va='baseline',fontsize=px(25))
+        ax=axes(left,568,150,340)
+        labels=[]
+        for term in shown.term:
+            label=re.sub(r'^(?:GO:\d+|mmu\d+)\s+','',str(term)).strip()
+            labels.append(textwrap.fill(label,width=42,break_long_words=False,break_on_hyphens=False))
+        ax.axvline(0,color=GRID,lw=.75,ls=(0,(3,4)),zorder=0)
+        for row,(_,result) in enumerate(shown.iterrows()):
+            color=higher if result.NES>0 else lower
+            is_significant=result.gsea_fdr_q<.05
+            ax.scatter(result.NES,row,s=90,facecolors=color if is_significant else 'white',
+                       edgecolors=color,linewidths=1.4,zorder=3)
+            ax.text(1.055,row,f'{result.gsea_fdr_q:.2f}',transform=ax.get_yaxis_transform(),
+                    ha='left',va='center',fontsize=px(20))
+        ax.set_yticks(np.arange(4),labels=labels,fontsize=px(21))
+        ax.set(xlim=(-2.6,2.6),ylim=(3.5,-.5),xticks=[-2,0,2])
+        ax.set_xlabel('NES',labelpad=9)
+        ax.spines['left'].set_visible(False)
+        theme(ax)
+        ax.tick_params(axis='y',length=0,pad=12)
+        ax.text(1.15,1.04,'q',transform=ax.transAxes,ha='center',va='bottom',fontsize=px(21))
+        gsea_details[collection]={'display_table':str(path.relative_to(OUT)),
+                                  'terms':shown.term.tolist(),'NES':shown.NES.tolist(),
+                                  'gsea_fdr_q':shown.gsea_fdr_q.tolist(),
+                                  'selection':'two largest positive and two most negative NES, without significance requirement',
+                                  'ranking':'all tested genes, signed t statistic; no DEG cutoff',
+                                  'synthetic_random_mouse_assignment':True}
     return export_figure(fig,number,question,fonts,{
         'comparison':comparison,'contrast_table':filename,
-        'panels':['volcano','two-group heatmap','selected effects with 95% confidence intervals'],
+        'panels':['volcano','two-group heatmap','KEGG preranked GSEA','GO BP preranked GSEA'],
         'volcano_limits':{'absolute_log2fc':xmax,'negative_log10_adjusted_p':ymax},
         'volcano_genes':len(table),'heatmap_samples':samples,'heatmap_genes':genes.tolist(),
         'heatmap_group_order':[first,second],
-        'heatmap_selection':'40 tested genes with smallest adjusted P in this contrast, regardless of significance, clustered using only the two displayed groups',
+        'heatmap_selection':'40 genes with smallest adjusted P among genes passing adjusted P < 0.05 and absolute log2FC >= 0.2 in this contrast',
         'forest_genes':forest.index.tolist(),'forest_absolute_limit':forest_limit,
         'forest_confidence_level':.95,'forest_residual_degrees_of_freedom':df,
         'forest_intervals':'marginal, unadjusted; genes selected from the same dataset',
-        'forest_selection':'six positive and six negative estimates with smallest adjusted P among all tested genes, regardless of significance',
-        'synthetic_effect_scale':'planted base effects 0.08 to 0.22 log2 units; fitted effects are neither rescaled nor clipped',
-        'group_colors':PALETTE,
+        'forest_selection':'six positive and six negative estimates with smallest adjusted P among genes passing the joint adjusted-P and log2FC criteria',
+        'absolute_log2fc_cutoff':LOG2FC_CUTOFF,'adjusted_p_cutoff':ADJUSTED_P_CUTOFF,
+        'synthetic_effect_scale':'original synthetic generator restored; fitted effects and intervals are neither rescaled nor clipped',
+        'comparison_colors':colors,'gsea':gsea_details,
     })
 
 
@@ -282,11 +326,20 @@ def main():
     configure_theme()
     tables=[pd.read_csv(DATA/spec[4],sep='\t').set_index('gene_id') for spec in SPECS]
     for table in tables[1:]:assert table.index.equals(tables[0].index)
+    provenance=json.loads((ROOT/'gsea_data'/'gsea_provenance.json').read_text())
+    if not provenance.get('complete') or len(provenance.get('analyses',[]))!=6:
+        raise RuntimeError('Run all six GSEA analyses to completion before rendering.')
+    for spec,table in zip(SPECS,tables):
+        expected_hash=hashlib.sha256((DATA/spec[4]).read_bytes()).hexdigest()
+        for collection in ('kegg','go_bp'):
+            analyses=[a for a in provenance['analyses'] if a['figure']==spec[0] and a['library']==collection]
+            if len(analyses)!=1 or analyses[0]['source_contrast_sha256']!=expected_hash or analyses[0]['tested_genes']!=len(table):
+                raise RuntimeError(f'Stale or inconsistent GSEA inputs for Figure {spec[0]} {collection}; rerun GSEA.')
     expression=pd.read_csv(DATA/'normalized_log2_expression.tsv.gz',sep='\t').set_index('gene_id')
     metadata=pd.read_csv(DATA/'sample_metadata.tsv',sep='\t').set_index('sample_id')
     summary=json.loads((DATA/'simulation_summary.json').read_text())
     df=summary['analysis']['residual_degrees_of_freedom']
-    xmax=float(np.ceil(max(t.log2FoldChange.abs().max() for t in tables)/.2)*.2)
+    xmax=float(np.ceil(max(t.log2FoldChange.abs().max() for t in tables)))
     ymax=float(np.ceil(max((-np.log10(t.padj)).max() for t in tables)/2)*2)
     crit=stats.t.ppf(.975,df)
     forest_limit=float(np.ceil(max((f.log2FoldChange.abs()+crit*f.lfcSE).max()
