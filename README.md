@@ -1,85 +1,77 @@
-# LipoHypoLEP
+# LipoHypoLEP — historical experimental results
 
-Hypothalamic bulk RNA-seq figure development for **LD SALINE**, **LD LEPTIN**, and **NON-LD control** mice.
+Hypothalamic bulk RNA-seq in **LD SALINE**, **LD LEPTIN**, and **NON-LD control** mice.
 
-**[Code audit](docs/CODE_AUDIT.md) · [Experimental CSV contract and preflight](docs/INPUT_DATA_CONTRACT.md)**. The experimental handoff will contain complete differential-expression results with per-sample FPKMs, plus sample/group metadata. Supplied DE estimates will be preserved; FPKMs will supply heatmap display values. The read-only preflight validates files without refitting or changing them. The synthetic scripts below are not an experimental analysis adapter.
+This branch, **`analysis/legacy-anke-data`**, contains an exploratory analysis of the three complete differential-expression tables in `DGElist_AnkeData(1).xlsx`. **[The original synthetic template remains on `main`](https://github.com/Jaislab/LipoHypoLEP/tree/main).** Its files are unchanged here, with its gallery and reproduction instructions preserved in [Synthetic figure scaffolding](docs/SYNTHETIC_SCAFFOLD.md).
 
-**Every figure below uses entirely synthetic data. These are layout and analysis demonstrations, not experimental evidence or predictions of this study's results.** The original synthetic simulation is retained: 8,000 anonymous genes and six mice per group, with 7,647 genes passing the example count filter. The figures demonstrate presentation and illustrative statistics; the simulation is not fitted to hypothalamic tissue and does not predict this study's effects, variability, or statistical power.
+**[Initial findings and ranking sensitivity](docs/LEGACY_RESULTS.md) · [Analysis methods](docs/LEGACY_ANALYSIS.md) · [Figure legends](figures/legacy/FIGURE_LEGENDS.md)**
 
-**Gene highlighting and heatmap selection require adjusted *P* < 0.05 and absolute log2 fold change ≥ 0.2.** The ±0.2 values are effect-size cutoffs; fitted estimates are unchanged and are not clipped at those values. KEGG and GO Biological Process GSEA use all 7,647 retained genes ranked by the signed test statistic, without either DEG filter. Real mouse pathway memberships and an actual enrichment calculation are used, but gene identities are assigned randomly to the synthetic statistics: no tissue-derived gene or pathway findings are implied.
+The supplied estimates and P values are preserved. Gene highlighting requires **adjusted P < 0.05 and |log2 fold change| ≥ 0.2**; effects are neither rescaled nor clipped. The workbook has no individual sample expression, so panel b shows selected gene-effect estimates rather than a heatmap. KEGG and GO BP GSEA use every tested gene, with an explicitly derived signed-P ranking because the original test statistic is absent.
 
-**One font size throughout: 32 px Nimbus Sans.** The three previews below use the same size for axes, ticks, group names, KEGG/GO pathway labels, q values, headings and panel letters. [Compare the GSEA panels at the same scale](figures/typography/uniform_type_before_after.png).
+| Figure | Comparison | Tested genes | Higher / lower at both cutoffs |
+|---|---|---:|---:|
+| 1 | LD SALINE vs NON-LD control | 15,518 | 142 / 432 |
+| 2 | LD LEPTIN vs LD SALINE | 15,136 | 512 / 238 |
+| 3 | LD LEPTIN vs NON-LD control | 19,721 | 1 / 0 |
+
+**Interpret Figure 3 cautiously:** its supplied effects are unusually compressed near zero, and effect/SE ratios do not reproduce the source P values. These observations require clarification of the upstream estimation and shrinkage methods. They do not establish normalization after leptin. See the [analysis scope and methods](docs/LEGACY_ANALYSIS.md).
 
 ## FIGURE 1 — How does untreated LD differ from non-LD controls?
 
 **LD SALINE vs NON-LD control**
 
-![Figure 1: four analytical panels comparing synthetic LD SALINE and NON-LD control samples](figures/figure_01_uniform_type_synthetic.png)
+![Figure 1: historical experimental LD SALINE versus NON-LD control results, with gene-level effects and exploratory KEGG and GO BP enrichment](figures/legacy/figure_01_legacy.png)
 
-[Figure legend](figures/FIGURE_1_LEGEND.md) · [PNG](figures/figure_01_uniform_type_synthetic.png) · [PDF](figures/figure_01_uniform_type_synthetic.pdf) · [Outlined SVG](figures/figure_01_gsea_synthetic.svg) · [Editable SVG](figures/figure_01_gsea_synthetic_editable.svg) · [High-resolution PNG](figures/figure_01_gsea_synthetic_300dpi.png)
+[Legend](figures/legacy/FIGURE_LEGENDS.md#figure-1) · [PNG](figures/legacy/figure_01_legacy.png) · [PDF](figures/legacy/figure_01_legacy.pdf) · [Outlined SVG](figures/legacy/figure_01_legacy.svg) · [Editable SVG](figures/legacy/figure_01_legacy_editable.svg) · [300 dpi PNG](figures/legacy/figure_01_legacy_300dpi.png) · [Complete DE table](analysis/legacy_results/figure_01_deg.tsv.gz)
 
 ## FIGURE 2 — What does leptin treatment change in LD mice?
 
 **LD LEPTIN vs LD SALINE**
 
-![Figure 2: four analytical panels comparing synthetic LD LEPTIN and LD SALINE samples](figures/figure_02_uniform_type_synthetic.png)
+![Figure 2: historical experimental LD LEPTIN versus LD SALINE results, with gene-level effects and exploratory KEGG and GO BP enrichment](figures/legacy/figure_02_legacy.png)
 
-[Figure legend](figures/FIGURE_2_LEGEND.md) · [PNG](figures/figure_02_uniform_type_synthetic.png) · [PDF](figures/figure_02_uniform_type_synthetic.pdf) · [Outlined SVG](figures/figure_02_gsea_synthetic.svg) · [Editable SVG](figures/figure_02_gsea_synthetic_editable.svg) · [High-resolution PNG](figures/figure_02_gsea_synthetic_300dpi.png)
+[Legend](figures/legacy/FIGURE_LEGENDS.md#figure-2) · [PNG](figures/legacy/figure_02_legacy.png) · [PDF](figures/legacy/figure_02_legacy.pdf) · [Outlined SVG](figures/legacy/figure_02_legacy.svg) · [Editable SVG](figures/legacy/figure_02_legacy_editable.svg) · [300 dpi PNG](figures/legacy/figure_02_legacy_300dpi.png) · [Complete DE table](analysis/legacy_results/figure_02_deg.tsv.gz)
+
+The source tab is `saline_VS_leptin`: its fold-change signs are reversed for this treatment-minus-saline presentation. Original source effects remain in a separate column; probabilities and SEs are unchanged.
 
 ## FIGURE 3 — What differences remain after leptin treatment?
 
 **LD LEPTIN vs NON-LD control**
 
-![Figure 3: four analytical panels comparing synthetic LD LEPTIN and NON-LD control samples](figures/figure_03_uniform_type_synthetic.png)
+![Figure 3: historical experimental LD LEPTIN versus NON-LD control results, with gene-level effects and exploratory KEGG and GO BP enrichment](figures/legacy/figure_03_legacy.png)
 
-[Figure legend](figures/FIGURE_3_LEGEND.md) · [PNG](figures/figure_03_uniform_type_synthetic.png) · [PDF](figures/figure_03_uniform_type_synthetic.pdf) · [Outlined SVG](figures/figure_03_gsea_synthetic.svg) · [Editable SVG](figures/figure_03_gsea_synthetic_editable.svg) · [High-resolution PNG](figures/figure_03_gsea_synthetic_300dpi.png)
+[Legend](figures/legacy/FIGURE_LEGENDS.md#figure-3) · [PNG](figures/legacy/figure_03_legacy.png) · [PDF](figures/legacy/figure_03_legacy.pdf) · [Outlined SVG](figures/legacy/figure_03_legacy.svg) · [Editable SVG](figures/legacy/figure_03_legacy_editable.svg) · [300 dpi PNG](figures/legacy/figure_03_legacy_300dpi.png) · [Complete DE table](analysis/legacy_results/figure_03_deg.tsv.gz)
 
-This contrast describes differences present after treatment. They can include persistent LD-associated effects and treatment-induced effects; the comparison alone does not identify which differences were uncorrected. A nonsignificant post-treatment difference does not establish normalization.
+This contrast can contain both persistent LD-associated and treatment-induced differences. Only **Tcaf2** passes both gene-display cutoffs; nonsignificance of other genes is not evidence of equivalence.
 
-## Figure files and methods
+## Analysis and artwork
 
-**[Complete figure pack, analysis source, and synthetic tables (ZIP)](figures/lipohypolep_synthetic_figure_pack.zip)**
+Each figure contains **a**, volcano; **b**, selected gene-effect points; **c**, KEGG preranked GSEA; **d**, GO Biological Process preranked GSEA. Methods and interpretation appear in the separate [legends](figures/legacy/FIGURE_LEGENDS.md). There are no inferred samples, confidence intervals or PCA panels.
 
-Open a file on GitHub and use **Download raw file** to save it. The ZIP includes all three figures, every export, source scripts, synthetic tables, legends, dependency versions, and visual-reference notes.
+All text is **32 px Nimbus Sans**, including GSEA terms, q values, axes, ticks and panel letters. Every canvas is **1536 × 1024**; high-resolution PNGs are **4608 × 3072**. PDF embeds the actual Nimbus font programs, primary SVG outlines the lettering, and editable SVG includes the fonts. [Independent export verification](figures/legacy/legacy_validation.json) checks the font programs, glyph outlines and text sizes. At 180 mm printed width, type is approximately 10.6 pt.
 
-Each figure has four panels: a volcano plot, a heatmap restricted to the two relevant groups, KEGG preranked GSEA, and GO Biological Process preranked GSEA. PCA is omitted. Full group names replace letter codes. Questions, interpretation, methods, sample counts, thresholds, selection rules, and simulation disclosures appear in the separate legends and [shared methods](figures/FIGURE_LEGEND.md). File names and embedded artwork metadata also identify the synthetic demonstration.
+Figure 1 uses yellow/blue, Figure 2 tan/turquoise, and Figure 3 orange/purple, following the supplied color guide. Direction and significance also use axis position and marker fill. The [palette accessibility review](figures/accessibility/COLOR_ACCESSIBILITY.md) documents these colors; its simulation images show the original synthetic artwork, not this workbook analysis.
 
-## Visual references and typography
+The [complete primary GSEA results](analysis/legacy_results/gsea), [signed-Z weighting sensitivity](analysis/legacy_results/gsea/signed_z), [import provenance](analysis/legacy_results/legacy_provenance.json), and [plot audit](figures/legacy/legacy_plot_audit.json) retain full rankings, tested pathways, leading-edge genes, selections and checksums. Gene-level BH adjusted P values and empirical GSEA FDR q values are different quantities. Neither DEG cutoff is used to filter GSEA.
 
-The design follows an inspection of author-archived Nature Biotechnology, Nature Methods, and Cell research figures, documented with source links and access limitations in the [visual reference review](figures/VISUAL_REFERENCE_REVIEW.md). There is no journal logo or assertion of publisher endorsement.
+Enrichment remains exploratory: the original signed test statistic is missing, contrast-specific tested universes differ, KEGG is an archived 2020 collection, and exact symbol mapping leaves documented ambiguous-symbol and mitochondrial GO coverage gaps. The [methods](docs/LEGACY_ANALYSIS.md) describe these limits and the sensitivity analysis. No synthetic identifier assignment is used for these experimental results.
 
-Every canvas is **1536 × 1024 pixels (3:2)**; the high-resolution PNGs are 4608 × 3072. All type is **Nimbus Sans**. PDFs contain embedded, searchable TrueType text; the primary SVGs outline lettering; editable SVGs include embedded font data. The [font verification](figures/FONT_VERIFICATION.md) checks actual exported Nimbus Sans font programs, metrics, and glyph outlines against the source fonts; its [report](figures/synthetic_demo/export_font_verification.json) identifies checked files by SHA-256. Plot selections and labels are recorded in the [plot audit](figures/synthetic_demo/font_and_plot_audit.json).
+## Reproduce this branch
 
-A single **32 px** size applies to every text element on the 1536 px canvas, including GSEA pathway labels and q values. Panel letters use bold Nimbus Sans at that same size. Long terms wrap at the full font size; they are never made smaller to fit. The [same-scale comparison](figures/typography/uniform_type_before_after.png) and [independent checks of every exported PDF text span](figures/typography/uniform_type_measurements.json) document the result. At **180 mm figure width**, text is approximately **10.6 pt**. Reducing the whole composition reduces type proportionally. Use the PDF or outlined SVG for final print artwork.
-
-Each comparison uses its own warm/cool pair from the supplied color-scheme guide: Figure 1 yellow/blue, Figure 2 tan/turquoise, and Figure 3 orange/purple. Colors encode direction within a comparison; group colors are not fixed across figures. Full group names, effect direction on the axes, and marker fill provide additional encodings. See the [color-accessibility review and simulation previews](figures/accessibility/COLOR_ACCESSIBILITY.md).
-
-## Reproduce
-
-From the repository root:
+Install Python 3.12 and URW Nimbus Sans (`fonts-urw-base35` on Debian/Ubuntu). Alternatively set `NIMBUS_SANS_FONT_DIR` to its OTF directory. Missing fonts cause an error rather than font substitution.
 
 ```bash
-python -m pip install -r figures/requirements.txt
-python figures/synthetic_demo/simulate_and_analyze.py
-python figures/synthetic_demo/run_gsea.py \
-  --kegg-gmt figures/synthetic_demo/gsea_data/resources/kegg_mouse_biosystems_archive_2020.gmt \
-  --go-bp-gmt figures/synthetic_demo/gsea_data/resources/go_bp_mouse_2026_05_19_nonIEA_protein_coding.gmt \
-  --kegg-provenance figures/synthetic_demo/gsea_data/resources/kegg_mouse_provenance.json \
-  --go-bp-provenance figures/synthetic_demo/gsea_data/resources/go_bp_mouse_provenance.json
-python figures/synthetic_demo/render_figure.py
-python figures/synthetic_demo/verify_export_fonts.py
-python figures/synthetic_demo/verify_uniform_typography.py
-python -m pip install -r figures/accessibility/requirements.txt
-python figures/accessibility/audit_colors.py
-python figures/synthetic_demo/validate_figures.py
-python -m unittest discover -s tests -v
-python figures/synthetic_demo/build_bundle.py
+python -m pip install -r analysis/requirements.txt
+python analysis/legacy_workbook.py \
+  --workbook /path/to/DGElist_AnkeData.xlsx \
+  --complete-tested-universe
+python analysis/legacy_gsea.py --rank-metric both
+python analysis/audit_legacy_gsea.py
+python analysis/render_legacy_figures.py
+python analysis/verify_legacy_outputs.py
+python -m unittest discover -s tests -p 'test_legacy*.py' -v
 ```
 
-For the complete set of versions tested in a clean Python 3.12 environment, install `figures/requirements-lock.txt` instead of the two requirements files. `validate_figures.py --check-report` checks that saved evidence still matches current data, code, fonts and exports. Bundle creation requires current verification and writes an archive member manifest with SHA-256 checksums; it excludes experimental CSVs.
+The workbook path may have any filename; its bytes must match the recorded SHA-256 to reproduce this import. The original spreadsheet remains a local input; the branch contains curated derived tables. To regenerate enrichment and figures from the committed tables, omit the importer command. `python analysis/verify_legacy_outputs.py --check-report` checks that the saved verification still matches the current code, inputs and artwork.
 
-Install URW Nimbus Sans (Debian/Ubuntu package `fonts-urw-base35`), or set `NIMBUS_SANS_FONT_DIR` to its OTF font directory. Missing fonts cause a hard error instead of substitution.
-
-The simulation uses seed **20261019**, negative-binomial counts, median-of-ratios normalization, and an **illustrative log-scale linear model**, with separate Benjamini–Hochberg correction for each contrast. Volcano highlights and heatmap selection use the joint adjusted-*P* and absolute-log2-fold-change cutoffs. GSEA ranks the full tested-gene universe; its empirical FDR q values are distinct from gene-level Benjamini–Hochberg adjusted *P* values. **These scripts generate and analyze this simulation only; experimental import, identifier mapping and rendering still need verification against the actual supplied tables.** The log2(normalized count + 0.5) model can compress low-expression effects and is unsuitable for production effect estimation. Experimental inputs should supply validated upstream estimates and signed ranking statistics, for example from an appropriate DESeq2 or edgeR workflow. See the [input contract](docs/INPUT_DATA_CONTRACT.md), [complete method](figures/FIGURE_LEGEND.md), [simulation source](figures/synthetic_demo/simulate_and_analyze.py), and [rendering source](figures/synthetic_demo/render_figure.py).
-
-The [synthetic data directory](figures/synthetic_demo/data) contains count and expression matrices, metadata, three complete contrast tables, selected genes, supporting gene-effect intervals, separate simulation truth, and a [numerical summary](figures/synthetic_demo/data/simulation_summary.json). The [GSEA directory](figures/synthetic_demo/gsea_data) contains the complete rankings, random gene-symbol assignment, all enrichment results, leading-edge members, and [run provenance](figures/synthetic_demo/gsea_data/gsea_provenance.json). Annotation versions and limitations are recorded for [KEGG](figures/synthetic_demo/gsea_data/resources/kegg_mouse_provenance.json) and [GO BP](figures/synthetic_demo/gsea_data/resources/go_bp_mouse_provenance.json). Positive log2 fold change and positive normalized enrichment score refer to the first named group.
+The future handoff with per-sample FPKMs remains covered by the [experimental CSV contract](docs/INPUT_DATA_CONTRACT.md) and [original code audit](docs/CODE_AUDIT.md). Those documents describe the original scaffold and expected future inputs, rather than a refitted analysis of this legacy workbook.

@@ -1,0 +1,870 @@
+{
+  "status": "PASS",
+  "integrity_schema": 1,
+  "verified_at_utc": "2026-10-20T11:10:47.627428+00:00",
+  "scope": "Actual legacy exports, producer completion manifests and exact dependency hashes; no synthetic reports are read or written.",
+  "font_pixels": 32,
+  "state_sha256": {
+    "input_sha256": {
+      "analysis/render_legacy_figures.py": "b15c25825b453936ccbf764db881497e8804c117e31d916d240cbfdaa39b7eb3",
+      "figures/synthetic_demo/render_figure.py": "e6bcedea14fe8ce87a8c3ae73ac30e3c4361d25fa460c81fe5269d87af902a0d",
+      "analysis/legacy_results/legacy_provenance.json": "99eecb6b2fd68f75a7b7b94147f9a4fbc3f6082cff7341c2943cf9cda2cd9d7c",
+      "analysis/legacy_results/gsea/gsea_manifest.json": "30135cc4ad1af3c99392ab741fd42ee827a119bf3816d5cf507333c06d9c7be5",
+      "analysis/legacy_workbook.py": "4677354a997758ecdf52136ee6a09b7d0c519d1eed1778fd7b795b92b1425708",
+      "analysis/legacy_gsea.py": "b9844ce67d7b50d007cbecdbe96b0065c04f6079858d49c2c7ff9f521950a7d4",
+      "analysis/legacy_results/figure_01_deg.tsv.gz": "d0f10f5a41dae13c94b58c77fde4c6f17fa9dd7f29e734e72f340fb7a2e5a71a",
+      "analysis/legacy_results/figure_02_deg.tsv.gz": "21ee0bce43b7971e6358a80aada79d253bc97745b6e8997cec68841067efd9eb",
+      "analysis/legacy_results/figure_03_deg.tsv.gz": "5281c8bcbff44c02ad66599fa82f424f71074984225a31bcb42c32fc05f39aaf",
+      "analysis/legacy_results/gsea/figure_01_kegg_display.tsv": "1fd484c015059e7471a6ad69c1bfb1f82884ffa9da2c5c4ba3f281735e3a7f3d",
+      "analysis/legacy_results/gsea/figure_01_go_bp_display.tsv": "11ff5b07ebc4b9d666ebdd3e99f9b9f75b27a55a5888a3a54e30ab169f7d47d3",
+      "analysis/legacy_results/gsea/figure_02_kegg_display.tsv": "154fed326d4fe232f8a6c62a7b09df5c931edb58ee620a3ba8a1b5ec54cd0974",
+      "analysis/legacy_results/gsea/figure_02_go_bp_display.tsv": "8f4a3ef72df459e89c1f8ce15255004e2ebe41c05715681ef0a358649ba5683d",
+      "analysis/legacy_results/gsea/figure_03_kegg_display.tsv": "33b28e8fd38fbba525c4f72d1d7cbf085f1e2617050e260fd377fae1ee5d86ff",
+      "analysis/legacy_results/gsea/figure_03_go_bp_display.tsv": "8ac9f0880f07aad7dc43135bae660ccb46784b81b9d4bb2285feba56d6ac1f00",
+      "figures/legacy/legacy_plot_audit.json": "16a5e8cb72e651fecfbd3a5b888e944b719e8f408e0ba43771f61cba3a931961",
+      "analysis/legacy_results/gsea/annotation_mapping_gaps.tsv": "e177d235810fd58a2a1abd82a6c7ff1ae569cf87c98dbd7905c9d3422240cd90",
+      "analysis/legacy_results/gsea/exact_symbol_mapping.tsv": "2add8b0d0e5216452891bd459f2ca9e5550e68a458768f4af564a11036b42a80",
+      "analysis/legacy_results/gsea/figure_01_complete_rank.tsv.gz": "01d1e3522a47523ab4b390b082d51676deacb5f4ef59e2ceeb3dd8a903481d11",
+      "analysis/legacy_results/gsea/figure_01_go_bp_all_results.tsv.gz": "38c6a0226e538998e17b4a8e53215d0fd044c2b62955b53dc8f967c530123294",
+      "analysis/legacy_results/gsea/figure_01_go_bp_gseapy_raw.tsv.gz": "a293f2b9d03d373c3ad9cb85868f38baed982eba7ff2acd3aa8febf13a7bb52d",
+      "analysis/legacy_results/gsea/figure_01_go_bp_leading_edge.tsv.gz": "c2dfbc5d614475bcbaf711b8a6f3e96497adabb77cc27e41e8daa54dd3ea10ef",
+      "analysis/legacy_results/gsea/figure_01_kegg_all_results.tsv.gz": "13eb7e9196fa122914d5dd28baebb603bc5b804cac3bf90854f3bb5056d5cc43",
+      "analysis/legacy_results/gsea/figure_01_kegg_gseapy_raw.tsv.gz": "78a540ca9c56b16932413e8bbf1b02c94f8d70c470124119c63f334875bf51b7",
+      "analysis/legacy_results/gsea/figure_01_kegg_leading_edge.tsv.gz": "173ee2195d26964cca4f81aa0af3e1a23c76ec8dfc9f933322459c1e6227c02d",
+      "analysis/legacy_results/gsea/figure_02_complete_rank.tsv.gz": "2949d068ee1939410fecc948e492aa56c74b4e35208ecfe1bf02269e36acf1ff",
+      "analysis/legacy_results/gsea/figure_02_go_bp_all_results.tsv.gz": "61262575ee0c1a70ed599ec604fa83e4c570b82cec9d4b42c681218f6875b684",
+      "analysis/legacy_results/gsea/figure_02_go_bp_gseapy_raw.tsv.gz": "55e3d57da5f2da97204e8770ecf7add7eab4100ccd272766d58f409816f1b66c",
+      "analysis/legacy_results/gsea/figure_02_go_bp_leading_edge.tsv.gz": "ba730780c1608276e987903131720f0cea83360f500d094fd8a54b1f3c8addeb",
+      "analysis/legacy_results/gsea/figure_02_kegg_all_results.tsv.gz": "9dde116f5bc758342e857c3ef41fead294ec1ab94d109800000953f79ed6ce98",
+      "analysis/legacy_results/gsea/figure_02_kegg_gseapy_raw.tsv.gz": "d2ab517cea029e2696381dbbc44df8dce44e38329e89068c0c0900861ec8e485",
+      "analysis/legacy_results/gsea/figure_02_kegg_leading_edge.tsv.gz": "f62273c5a7a195282abb65353670b0e8b4d06fbc5b5d9fc20048125b6903e7ff",
+      "analysis/legacy_results/gsea/figure_03_complete_rank.tsv.gz": "8796587334abf4a8762ac9486997f4f3af782d2a3868e4822d56eb00bc3bea96",
+      "analysis/legacy_results/gsea/figure_03_go_bp_all_results.tsv.gz": "6719caa4f1ffcb1d88d9a69550f74be9875242bca39d73d040bb7f4ee4e29b73",
+      "analysis/legacy_results/gsea/figure_03_go_bp_gseapy_raw.tsv.gz": "c85e3cc08a5346c0adb59c3fe63094eec8bc08bbcb31cb14a567c1e73a627a91",
+      "analysis/legacy_results/gsea/figure_03_go_bp_leading_edge.tsv.gz": "2d589faac75943e67532e032b59b65be3e396669ebea28931242fa7393864773",
+      "analysis/legacy_results/gsea/figure_03_kegg_all_results.tsv.gz": "b246c8c662a8415d652ede397750702a7910b9e8c458e4a6bbcc902a88807a95",
+      "analysis/legacy_results/gsea/figure_03_kegg_gseapy_raw.tsv.gz": "142fa6ad1eb6efbe2921f34508ce5ebafeb89c31c781e624a71ae7106d5c0547",
+      "analysis/legacy_results/gsea/figure_03_kegg_leading_edge.tsv.gz": "b1154e00a6b8c447444feaa1db54118d2bc4ff26d5802c592eeb16ea91dcb4d8",
+      "analysis/legacy_results/gsea/go_bp_coverage.tsv.gz": "2cf0f46cabfdc9a329dcdedf787a025b47fd080527a7da1d0218c0649bd4b164",
+      "analysis/legacy_results/gsea/kegg_coverage.tsv.gz": "44f69eab6d6c2f21fde1f70373e9c15b885bd8f4a7c493ef51d865f34f128c95",
+      "figures/synthetic_demo/gsea_data/resources/kegg_mouse_biosystems_archive_2020.gmt": "70127d28c5c82a42abf2d1f33291d4a6a2a10e0afad320aad484d01931a9091a",
+      "figures/synthetic_demo/gsea_data/resources/kegg_mouse_provenance.json": "12428593c85f86ab7d6743f77cfe987bf981754609c28a00da4bd8409c4ab214",
+      "figures/synthetic_demo/gsea_data/resources/go_bp_mouse_2026_05_19_nonIEA_protein_coding.gmt": "009be991eedc31fa18e23ded71cfac222fd5773d87fc243d19d67008ee21c73f",
+      "figures/synthetic_demo/gsea_data/resources/go_bp_mouse_provenance.json": "c5541c88c6372ea558d5ac30c8085aa3e276d33989d87e18762f2b5a38b89c64",
+      "analysis/legacy_results/gsea/signed_z/gsea_manifest.json": "f1b872308625c0476e292e5a9c7bb245b12461d8b9ca25b08da39eb81a5da210",
+      "analysis/legacy_results/gsea/signed_z/annotation_mapping_gaps.tsv": "e177d235810fd58a2a1abd82a6c7ff1ae569cf87c98dbd7905c9d3422240cd90",
+      "analysis/legacy_results/gsea/signed_z/exact_symbol_mapping.tsv": "2add8b0d0e5216452891bd459f2ca9e5550e68a458768f4af564a11036b42a80",
+      "analysis/legacy_results/gsea/signed_z/figure_01_complete_rank.tsv.gz": "8c0fe3a9b57fcc2ece6395f4e160e665441c3a182e8f1e2f487716ffe188ff61",
+      "analysis/legacy_results/gsea/signed_z/figure_01_go_bp_all_results.tsv.gz": "86bac3f34735dfc41b22f664b1202dda1afa6103dad267ff408fd047441879fc",
+      "analysis/legacy_results/gsea/signed_z/figure_01_go_bp_display.tsv": "b670f2e5de68b160a66a1115dabe0f17ff226b48bfb24a7efbe3e3b2c912e477",
+      "analysis/legacy_results/gsea/signed_z/figure_01_go_bp_gseapy_raw.tsv.gz": "3fd8b9489ccd18928bb70286cc524b88c08ac2177660fcfbaf35297f4ff31395",
+      "analysis/legacy_results/gsea/signed_z/figure_01_go_bp_leading_edge.tsv.gz": "fa289e50f44bd86dcc722d03e79b1973101d8a65a6ec25975e1cbf0ef0a74a44",
+      "analysis/legacy_results/gsea/signed_z/figure_01_kegg_all_results.tsv.gz": "43c74c836e9e6f9b916f3be09e3f1f0d08c5bb9d8a14aa3ba28e9736b74bc6d2",
+      "analysis/legacy_results/gsea/signed_z/figure_01_kegg_display.tsv": "feccb77343eca5f75ba7f53d7d4dae163121aa1eb2795dcfb1b1509fbd986741",
+      "analysis/legacy_results/gsea/signed_z/figure_01_kegg_gseapy_raw.tsv.gz": "e9c534194e603fbc4282ef8f55960e2350b0a1f148381948f6dc04dc142785f1",
+      "analysis/legacy_results/gsea/signed_z/figure_01_kegg_leading_edge.tsv.gz": "5dfd56b3d398c101690de79f09934e8ae564c44fb00e7895d0943be92a2fb69a",
+      "analysis/legacy_results/gsea/signed_z/figure_02_complete_rank.tsv.gz": "22e62f85feddcf4879d89bd253aa30315f498c02e69d35d22e8e2dd075e2dce2",
+      "analysis/legacy_results/gsea/signed_z/figure_02_go_bp_all_results.tsv.gz": "f15361d5d3c4a3214f93b55dd1a4cade0fe9865ac18295aa09049d5d50265a00",
+      "analysis/legacy_results/gsea/signed_z/figure_02_go_bp_display.tsv": "6328eef37ad63d6fdf8e65719ef95da2b58b29d796621b31df465c39893aeb03",
+      "analysis/legacy_results/gsea/signed_z/figure_02_go_bp_gseapy_raw.tsv.gz": "0ab570fed4d6e46cb712e20d8951a3e487c52bcdb2cabd50d9b452ed1d2d3bdf",
+      "analysis/legacy_results/gsea/signed_z/figure_02_go_bp_leading_edge.tsv.gz": "f8ae7fe9b800444c062763b8227ea487bd63c7f38670e54deab84e2042359ec7",
+      "analysis/legacy_results/gsea/signed_z/figure_02_kegg_all_results.tsv.gz": "5710cf201d1854fe037ef7a3e396a19fcdec891a66b043dc980fe8e7a431753d",
+      "analysis/legacy_results/gsea/signed_z/figure_02_kegg_display.tsv": "b425962bf19eca89543bbc1f8993b5fb3f3aff52ad9cd71e4806515efcfd296c",
+      "analysis/legacy_results/gsea/signed_z/figure_02_kegg_gseapy_raw.tsv.gz": "183e1c41b65e38541bb1097c01ac9c6f272bd5bc54bad59b6309e249e2c02354",
+      "analysis/legacy_results/gsea/signed_z/figure_02_kegg_leading_edge.tsv.gz": "28e41b43d0b61ac6c4f4801a21981ee16f188bc7a4864a3b3652a3e2e71286fa",
+      "analysis/legacy_results/gsea/signed_z/figure_03_complete_rank.tsv.gz": "820c1e07e092fecd17ceb9290ee201ebe4737240fdc1711a9124ae5324ae847d",
+      "analysis/legacy_results/gsea/signed_z/figure_03_go_bp_all_results.tsv.gz": "cffb639a5c9075b54e77e39eed1f8242f2e1cddb515e81d13376799972079666",
+      "analysis/legacy_results/gsea/signed_z/figure_03_go_bp_display.tsv": "1bac1aadbcae3c4b2e24d12d8231d007a794fcb9d8029c2c1b3fb1cb1a66297f",
+      "analysis/legacy_results/gsea/signed_z/figure_03_go_bp_gseapy_raw.tsv.gz": "cce7d23a770fd0667baec92b58fbd55002d3b15e94408bd484a739f3d2b1b166",
+      "analysis/legacy_results/gsea/signed_z/figure_03_go_bp_leading_edge.tsv.gz": "7eb9bf401a921075e8b9d4b6756ee41365c49763c7f379b2efa5d5221e14eeb6",
+      "analysis/legacy_results/gsea/signed_z/figure_03_kegg_all_results.tsv.gz": "f1de38433a276bc45c2f820a6106529eb24f364b17e5e5490fbc93d7e16e95d9",
+      "analysis/legacy_results/gsea/signed_z/figure_03_kegg_display.tsv": "75803ee352b384025fd43cef839c0dddf71574fe39012a34863e7b6fb92303a3",
+      "analysis/legacy_results/gsea/signed_z/figure_03_kegg_gseapy_raw.tsv.gz": "84a4253cb23bc5a820fe0ac13b137460d59941dacf0de8b0d31cec48e57d9395",
+      "analysis/legacy_results/gsea/signed_z/figure_03_kegg_leading_edge.tsv.gz": "7d5d1b95f4d1d7a8e822fe900925b02ecb1f2fdbd3c397044f00a13fe3ad4a45",
+      "analysis/legacy_results/gsea/signed_z/go_bp_coverage.tsv.gz": "2cf0f46cabfdc9a329dcdedf787a025b47fd080527a7da1d0218c0649bd4b164",
+      "analysis/legacy_results/gsea/signed_z/kegg_coverage.tsv.gz": "44f69eab6d6c2f21fde1f70373e9c15b885bd8f4a7c493ef51d865f34f128c95",
+      "analysis/legacy_results/legacy_gsea_audit.json": "4c6f4706f332449a74664897478b5feef887c3e1c51b9da0a56894684453fe16"
+    },
+    "verification_code_sha256": {
+      "analysis/verify_legacy_outputs.py": "0bcf7ed1f75cbc110f7ab77b54f3cb4b415c9f4e112746eabd5a1cf9cd06da15",
+      "figures/synthetic_demo/verify_export_fonts.py": "56e6287c5d9a42c5c5397a8aa26a291661116d7b73952538d8820fa3f25e8f45",
+      "figures/synthetic_demo/run_gsea.py": "e3f5465364ffdac1d58d18293502109ed5a60b6f62b01ea3129a333eb46431c6",
+      "analysis/audit_legacy_gsea.py": "a24a945e74c5c87b7cc7677632445d650c271f651a2367ff5f0e0eea3ee73507"
+    },
+    "artifact_sha256": {
+      "figures/legacy/figure_01_legacy.png": "20ec46b7eb83c3432d443ba48a2695a7f0732a8ae5e0f7deedec37ce9a6ad1ea",
+      "figures/legacy/figure_01_legacy_300dpi.png": "6173fa094399367361e1925e5fe399b3b126fcfc2999c253c11d00488c02fcca",
+      "figures/legacy/figure_01_legacy.pdf": "319c5c150821ab9dbe6b9f88418171ce6a76d176da90cb6865c31b2d45e71fcc",
+      "figures/legacy/figure_01_legacy.svg": "8a5c770b0d06ac3e4c25f05b404dae9e98df824757b100c30381ab6ec335ec36",
+      "figures/legacy/figure_01_legacy_editable.svg": "3863ea4edefce45ac224df5f66c277cf9c497a117c1307ed5b3f7e56e841ab37",
+      "figures/legacy/figure_01_gene_effects.tsv": "5a0b883e480b92d767ad847e94860c4de07445357bf20988b40da06ffcd91c91",
+      "figures/legacy/figure_02_legacy.png": "7f45eef525cff5d7082702f488f25291fc665495ec00fc51c337bd686ff4da7d",
+      "figures/legacy/figure_02_legacy_300dpi.png": "6aea17ada84c669e3d14f5618300ed3481fdb4fb64bccafa90db2a98d38b4e3a",
+      "figures/legacy/figure_02_legacy.pdf": "c90e2aee94d99b34a5fe4e3abeed8ac125ac5077869804e4066847cb74416c47",
+      "figures/legacy/figure_02_legacy.svg": "d66f25fc96163215ed15651fc07fea1aa8b0c70453d73ba232b9798e4cdd54f5",
+      "figures/legacy/figure_02_legacy_editable.svg": "59fd5bfd34b939e984b9e691dfd65c39c9fb99aa10064c49a48c3a26634808e2",
+      "figures/legacy/figure_02_gene_effects.tsv": "4ef81c1f333a73fe84670085717bc6b45f4e64b09b07849c9451ad9599dcd0ba",
+      "figures/legacy/figure_03_legacy.png": "b4330508421941c0f787ac15c7359bb18e812bc9aca175f0d4ecc5eb74d001e5",
+      "figures/legacy/figure_03_legacy_300dpi.png": "3d7229c9d777e8f6a38e22ec446833a816f890198c5e6275d8ec606437db7709",
+      "figures/legacy/figure_03_legacy.pdf": "0a35d90403f8fed12203659a435d7d2fc6646ee092fcedff6be6a8006f4b125c",
+      "figures/legacy/figure_03_legacy.svg": "26e9ada8bef0628e2a4cdbcc435ece3b122d18859689167a1f92cbc9d3491b30",
+      "figures/legacy/figure_03_legacy_editable.svg": "54f45954423de3cfa1084bab08ce51e35b3c1e6e8a879a1ff9b68ad2bc6d658d",
+      "figures/legacy/figure_03_gene_effects.tsv": "11fa25f616d7277bec994a2fde7d10eaddc105ffa7da08c71c0055ffd887439f"
+    },
+    "source_font_sha256": {
+      "NimbusSans-Regular.otf": "7c25be4d78155523080ab85b10277150657ff7dabbcad7037bdd536c9b6d0d08",
+      "NimbusSans-Bold.otf": "7f33328e6b4d4cd21b45fa625791928c9407dc702db6780e56b09ca9a3ecaa67",
+      "NimbusSans-Italic.otf": "7b0bef5686aa58c0fd0f0d01beeae56664208490e30ca6a25431281c9a0c6402"
+    }
+  },
+  "paths": {
+    "data_dir": "analysis/legacy_results",
+    "gsea_dir": "analysis/legacy_results/gsea",
+    "output_dir": "figures/legacy"
+  },
+  "source_workbook_sha256": "c2f05cd7dd6404d6fd1a81c7f74591b0b5c79cedfb7c0cbe018ab900c5749f40",
+  "gsea_rank_metric": "proxy_signed_log10_p",
+  "gsea_primary_analyses": 6,
+  "independent_gsea_audit_complete": true,
+  "independent_gsea_audit_sha256": "4c6f4706f332449a74664897478b5feef887c3e1c51b9da0a56894684453fe16",
+  "independent_gsea_audit_scope": "Weighted ES, leading edges and membership independently recalculated for both rankings; sensitivity comparison completed. Null permutations, NES normalization and empirical FDR are not independently reproduced.",
+  "renderer_complete": true,
+  "figures": [
+    {
+      "figure": 1,
+      "file_stem": "figure_01_legacy",
+      "export_sha256": {
+        "figure_01_legacy.png": "20ec46b7eb83c3432d443ba48a2695a7f0732a8ae5e0f7deedec37ce9a6ad1ea",
+        "figure_01_legacy_300dpi.png": "6173fa094399367361e1925e5fe399b3b126fcfc2999c253c11d00488c02fcca",
+        "figure_01_legacy.pdf": "319c5c150821ab9dbe6b9f88418171ce6a76d176da90cb6865c31b2d45e71fcc",
+        "figure_01_legacy.svg": "8a5c770b0d06ac3e4c25f05b404dae9e98df824757b100c30381ab6ec335ec36",
+        "figure_01_legacy_editable.svg": "3863ea4edefce45ac224df5f66c277cf9c497a117c1307ed5b3f7e56e841ab37"
+      },
+      "typography": {
+        "nonempty_text_spans_checked": 56,
+        "every_span_is_32_native_px": true,
+        "native_dpi": 100,
+        "pdf_points_to_native_pixels": 1.3888888888888888,
+        "actual_font_names": [
+          "NimbusSans-Bold",
+          "NimbusSans-Regular"
+        ],
+        "actual_native_pixel_size_counts": {
+          "32.0000": 56
+        }
+      },
+      "pdf": {
+        "font_programs": [
+          {
+            "style": "Bold",
+            "names": {
+              "1": [
+                "Nimbus Sans"
+              ],
+              "2": [
+                "Bold"
+              ],
+              "3": [
+                "NimbusSans-Bold-Figure"
+              ],
+              "4": [
+                "Nimbus Sans Bold"
+              ],
+              "6": [
+                "NimbusSans-Bold"
+              ]
+            },
+            "sha256": "aca3fd6cf9c72c5fc65f90be0200dc1285e312f774775804f080ef98846272db",
+            "bytes": 1460,
+            "units_per_em": 1000,
+            "unicode_glyphs_compared": 4,
+            "advance_widths_and_sidebearings_match_source": true,
+            "outlines_match_source_after_cubic_to_quadratic_conversion": true,
+            "conversion_max_error_font_units": 0.5,
+            "pdf_resource_name": "EKTMJB+NimbusSans-Bold",
+            "pdf_font_type": "Type0",
+            "xref": 17
+          },
+          {
+            "style": "Regular",
+            "names": {
+              "1": [
+                "Nimbus Sans"
+              ],
+              "2": [
+                "Regular"
+              ],
+              "3": [
+                "NimbusSans-Regular-Figure"
+              ],
+              "4": [
+                "Nimbus Sans Regular"
+              ],
+              "6": [
+                "NimbusSans-Regular"
+              ]
+            },
+            "sha256": "1fa9846b652dc8f21e1e4ea95456ff97b85a8f639b9e8bd733e01095bcf8a9bb",
+            "bytes": 5716,
+            "units_per_em": 1000,
+            "unicode_glyphs_compared": 55,
+            "advance_widths_and_sidebearings_match_source": true,
+            "outlines_match_source_after_cubic_to_quadratic_conversion": true,
+            "conversion_max_error_font_units": 0.5,
+            "pdf_resource_name": "EKTMJB+NimbusSans-Regular",
+            "pdf_font_type": "Type0",
+            "xref": 24
+          }
+        ],
+        "text_span_fonts": [
+          "NimbusSans-Bold",
+          "NimbusSans-Regular"
+        ],
+        "text_spans_checked": 56,
+        "pages": 1,
+        "fallback_font_found": false,
+        "pdffonts_stdout": "name                                 type              encoding         emb sub uni object ID\n------------------------------------ ----------------- ---------------- --- --- --- ---------\nEKTMJB+NimbusSans-Bold               CID TrueType      Identity-H       yes yes yes     17  0\nEKTMJB+NimbusSans-Regular            CID TrueType      Identity-H       yes yes yes     24  0\n"
+      },
+      "outlined_svg": {
+        "live_text_elements": 0,
+        "glyph_uses_checked": 430,
+        "glyph_prefixes": [
+          "NimbusSans-Bold",
+          "NimbusSans-Regular"
+        ],
+        "all_text_glyph_references_resolve": true,
+        "note": "Outlined artwork cannot substitute a font; identity is traced through the Nimbus glyph definitions and companion PDF font-program checks."
+      },
+      "editable_svg": {
+        "embedded_font_programs": [
+          {
+            "style": "Regular",
+            "names": {
+              "1": [
+                "Nimbus Sans"
+              ],
+              "2": [
+                "Regular"
+              ],
+              "3": [
+                "NimbusSans-Regular-Figure"
+              ],
+              "4": [
+                "Nimbus Sans Regular"
+              ],
+              "6": [
+                "NimbusSans-Regular"
+              ]
+            },
+            "sha256": "9041306106ea1e0bd9099058f6bdd9cd2191edcd6be156f80b2f8ef73bf97087",
+            "bytes": 95936,
+            "units_per_em": 1000,
+            "unicode_glyphs_compared": 854,
+            "advance_widths_and_sidebearings_match_source": true,
+            "outlines_match_source_after_cubic_to_quadratic_conversion": true,
+            "conversion_max_error_font_units": 0.5
+          },
+          {
+            "style": "Bold",
+            "names": {
+              "1": [
+                "Nimbus Sans"
+              ],
+              "2": [
+                "Bold"
+              ],
+              "3": [
+                "NimbusSans-Bold-Figure"
+              ],
+              "4": [
+                "Nimbus Sans Bold"
+              ],
+              "6": [
+                "NimbusSans-Bold"
+              ]
+            },
+            "sha256": "52bfbc3d51672e1086327d1773b60a44ee33b41f56186811ebfe77b2e92233eb",
+            "bytes": 94980,
+            "units_per_em": 1000,
+            "unicode_glyphs_compared": 854,
+            "advance_widths_and_sidebearings_match_source": true,
+            "outlines_match_source_after_cubic_to_quadratic_conversion": true,
+            "conversion_max_error_font_units": 0.5
+          },
+          {
+            "style": "Italic",
+            "names": {
+              "1": [
+                "Nimbus Sans"
+              ],
+              "2": [
+                "Italic"
+              ],
+              "3": [
+                "NimbusSans-Italic-Figure"
+              ],
+              "4": [
+                "Nimbus Sans Italic"
+              ],
+              "6": [
+                "NimbusSans-Italic"
+              ]
+            },
+            "sha256": "0fa82fcb60df3f4b71da990e422eb181b5dd4ad068e37fac72ab5786e0f87184",
+            "bytes": 114084,
+            "units_per_em": 1000,
+            "unicode_glyphs_compared": 854,
+            "advance_widths_and_sidebearings_match_source": true,
+            "outlines_match_source_after_cubic_to_quadratic_conversion": true,
+            "conversion_max_error_font_units": 0.5
+          }
+        ],
+        "live_text_elements": 58,
+        "family_declarations_checked": 58,
+        "fallback_font_found": false,
+        "viewer_limitation": "A viewer must honor embedded @font-face fonts. The outlined SVG and embedded-font PDF avoid that dependency."
+      },
+      "png": {
+        "pixels": [
+          1536,
+          1024
+        ],
+        "metadata": {
+          "Software": "Matplotlib version3.10.8, https://matplotlib.org/",
+          "Title": "FIGURE 1 | How does untreated LD differ from non-LD controls? | Legacy exploratory analysis",
+          "Description": "Supplied legacy differential-expression estimates; exploratory enrichment. See separate legend.",
+          "dpi": [
+            99.9998,
+            99.9998
+          ]
+        },
+        "pdf_raster_comparison": {
+          "gaussian_blur_radius_px": 1,
+          "comparison_pixels": [
+            1536,
+            1024
+          ],
+          "mean_absolute_rgb_difference_0_to_255": 1.61568
+        },
+        "font_identity_limit": "Pixels do not encode a font name. Identity is supported by verified companion exports, explicit Nimbus source selection in the renderer, and matching rendered content."
+      },
+      "high_resolution_png": {
+        "pixels": [
+          4608,
+          3072
+        ],
+        "metadata": {
+          "Software": "Matplotlib version3.10.8, https://matplotlib.org/",
+          "Title": "FIGURE 1 | How does untreated LD differ from non-LD controls? | Legacy exploratory analysis",
+          "Description": "Supplied legacy differential-expression estimates; exploratory enrichment. See separate legend.",
+          "dpi": [
+            299.9994,
+            299.9994
+          ]
+        },
+        "pdf_raster_comparison": {
+          "gaussian_blur_radius_px": 1,
+          "comparison_pixels": [
+            1536,
+            1024
+          ],
+          "mean_absolute_rgb_difference_0_to_255": 0.97562
+        },
+        "font_identity_limit": "Pixels do not encode a font name. Identity is supported by verified companion exports, explicit Nimbus source selection in the renderer, and matching rendered content."
+      }
+    },
+    {
+      "figure": 2,
+      "file_stem": "figure_02_legacy",
+      "export_sha256": {
+        "figure_02_legacy.png": "7f45eef525cff5d7082702f488f25291fc665495ec00fc51c337bd686ff4da7d",
+        "figure_02_legacy_300dpi.png": "6aea17ada84c669e3d14f5618300ed3481fdb4fb64bccafa90db2a98d38b4e3a",
+        "figure_02_legacy.pdf": "c90e2aee94d99b34a5fe4e3abeed8ac125ac5077869804e4066847cb74416c47",
+        "figure_02_legacy.svg": "d66f25fc96163215ed15651fc07fea1aa8b0c70453d73ba232b9798e4cdd54f5",
+        "figure_02_legacy_editable.svg": "59fd5bfd34b939e984b9e691dfd65c39c9fb99aa10064c49a48c3a26634808e2"
+      },
+      "typography": {
+        "nonempty_text_spans_checked": 53,
+        "every_span_is_32_native_px": true,
+        "native_dpi": 100,
+        "pdf_points_to_native_pixels": 1.3888888888888888,
+        "actual_font_names": [
+          "NimbusSans-Bold",
+          "NimbusSans-Regular"
+        ],
+        "actual_native_pixel_size_counts": {
+          "32.0000": 53
+        }
+      },
+      "pdf": {
+        "font_programs": [
+          {
+            "style": "Bold",
+            "names": {
+              "1": [
+                "Nimbus Sans"
+              ],
+              "2": [
+                "Bold"
+              ],
+              "3": [
+                "NimbusSans-Bold-Figure"
+              ],
+              "4": [
+                "Nimbus Sans Bold"
+              ],
+              "6": [
+                "NimbusSans-Bold"
+              ]
+            },
+            "sha256": "aca3fd6cf9c72c5fc65f90be0200dc1285e312f774775804f080ef98846272db",
+            "bytes": 1460,
+            "units_per_em": 1000,
+            "unicode_glyphs_compared": 4,
+            "advance_widths_and_sidebearings_match_source": true,
+            "outlines_match_source_after_cubic_to_quadratic_conversion": true,
+            "conversion_max_error_font_units": 0.5,
+            "pdf_resource_name": "EKTMJB+NimbusSans-Bold",
+            "pdf_font_type": "Type0",
+            "xref": 17
+          },
+          {
+            "style": "Regular",
+            "names": {
+              "1": [
+                "Nimbus Sans"
+              ],
+              "2": [
+                "Regular"
+              ],
+              "3": [
+                "NimbusSans-Regular-Figure"
+              ],
+              "4": [
+                "Nimbus Sans Regular"
+              ],
+              "6": [
+                "NimbusSans-Regular"
+              ]
+            },
+            "sha256": "532d198c9710668b87dfd7e3faa65be62a917d686a851119788e8864fd8fd986",
+            "bytes": 5604,
+            "units_per_em": 1000,
+            "unicode_glyphs_compared": 51,
+            "advance_widths_and_sidebearings_match_source": true,
+            "outlines_match_source_after_cubic_to_quadratic_conversion": true,
+            "conversion_max_error_font_units": 0.5,
+            "pdf_resource_name": "EKTMJB+NimbusSans-Regular",
+            "pdf_font_type": "Type0",
+            "xref": 24
+          }
+        ],
+        "text_span_fonts": [
+          "NimbusSans-Bold",
+          "NimbusSans-Regular"
+        ],
+        "text_spans_checked": 53,
+        "pages": 1,
+        "fallback_font_found": false,
+        "pdffonts_stdout": "name                                 type              encoding         emb sub uni object ID\n------------------------------------ ----------------- ---------------- --- --- --- ---------\nEKTMJB+NimbusSans-Bold               CID TrueType      Identity-H       yes yes yes     17  0\nEKTMJB+NimbusSans-Regular            CID TrueType      Identity-H       yes yes yes     24  0\n"
+      },
+      "outlined_svg": {
+        "live_text_elements": 0,
+        "glyph_uses_checked": 364,
+        "glyph_prefixes": [
+          "NimbusSans-Bold",
+          "NimbusSans-Regular"
+        ],
+        "all_text_glyph_references_resolve": true,
+        "note": "Outlined artwork cannot substitute a font; identity is traced through the Nimbus glyph definitions and companion PDF font-program checks."
+      },
+      "editable_svg": {
+        "embedded_font_programs": [
+          {
+            "style": "Regular",
+            "names": {
+              "1": [
+                "Nimbus Sans"
+              ],
+              "2": [
+                "Regular"
+              ],
+              "3": [
+                "NimbusSans-Regular-Figure"
+              ],
+              "4": [
+                "Nimbus Sans Regular"
+              ],
+              "6": [
+                "NimbusSans-Regular"
+              ]
+            },
+            "sha256": "9041306106ea1e0bd9099058f6bdd9cd2191edcd6be156f80b2f8ef73bf97087",
+            "bytes": 95936,
+            "units_per_em": 1000,
+            "unicode_glyphs_compared": 854,
+            "advance_widths_and_sidebearings_match_source": true,
+            "outlines_match_source_after_cubic_to_quadratic_conversion": true,
+            "conversion_max_error_font_units": 0.5
+          },
+          {
+            "style": "Bold",
+            "names": {
+              "1": [
+                "Nimbus Sans"
+              ],
+              "2": [
+                "Bold"
+              ],
+              "3": [
+                "NimbusSans-Bold-Figure"
+              ],
+              "4": [
+                "Nimbus Sans Bold"
+              ],
+              "6": [
+                "NimbusSans-Bold"
+              ]
+            },
+            "sha256": "52bfbc3d51672e1086327d1773b60a44ee33b41f56186811ebfe77b2e92233eb",
+            "bytes": 94980,
+            "units_per_em": 1000,
+            "unicode_glyphs_compared": 854,
+            "advance_widths_and_sidebearings_match_source": true,
+            "outlines_match_source_after_cubic_to_quadratic_conversion": true,
+            "conversion_max_error_font_units": 0.5
+          },
+          {
+            "style": "Italic",
+            "names": {
+              "1": [
+                "Nimbus Sans"
+              ],
+              "2": [
+                "Italic"
+              ],
+              "3": [
+                "NimbusSans-Italic-Figure"
+              ],
+              "4": [
+                "Nimbus Sans Italic"
+              ],
+              "6": [
+                "NimbusSans-Italic"
+              ]
+            },
+            "sha256": "0fa82fcb60df3f4b71da990e422eb181b5dd4ad068e37fac72ab5786e0f87184",
+            "bytes": 114084,
+            "units_per_em": 1000,
+            "unicode_glyphs_compared": 854,
+            "advance_widths_and_sidebearings_match_source": true,
+            "outlines_match_source_after_cubic_to_quadratic_conversion": true,
+            "conversion_max_error_font_units": 0.5
+          }
+        ],
+        "live_text_elements": 55,
+        "family_declarations_checked": 55,
+        "fallback_font_found": false,
+        "viewer_limitation": "A viewer must honor embedded @font-face fonts. The outlined SVG and embedded-font PDF avoid that dependency."
+      },
+      "png": {
+        "pixels": [
+          1536,
+          1024
+        ],
+        "metadata": {
+          "Software": "Matplotlib version3.10.8, https://matplotlib.org/",
+          "Title": "FIGURE 2 | What does leptin treatment change in LD mice? | Legacy exploratory analysis",
+          "Description": "Supplied legacy differential-expression estimates; exploratory enrichment. See separate legend.",
+          "dpi": [
+            99.9998,
+            99.9998
+          ]
+        },
+        "pdf_raster_comparison": {
+          "gaussian_blur_radius_px": 1,
+          "comparison_pixels": [
+            1536,
+            1024
+          ],
+          "mean_absolute_rgb_difference_0_to_255": 1.47118
+        },
+        "font_identity_limit": "Pixels do not encode a font name. Identity is supported by verified companion exports, explicit Nimbus source selection in the renderer, and matching rendered content."
+      },
+      "high_resolution_png": {
+        "pixels": [
+          4608,
+          3072
+        ],
+        "metadata": {
+          "Software": "Matplotlib version3.10.8, https://matplotlib.org/",
+          "Title": "FIGURE 2 | What does leptin treatment change in LD mice? | Legacy exploratory analysis",
+          "Description": "Supplied legacy differential-expression estimates; exploratory enrichment. See separate legend.",
+          "dpi": [
+            299.9994,
+            299.9994
+          ]
+        },
+        "pdf_raster_comparison": {
+          "gaussian_blur_radius_px": 1,
+          "comparison_pixels": [
+            1536,
+            1024
+          ],
+          "mean_absolute_rgb_difference_0_to_255": 0.81741
+        },
+        "font_identity_limit": "Pixels do not encode a font name. Identity is supported by verified companion exports, explicit Nimbus source selection in the renderer, and matching rendered content."
+      }
+    },
+    {
+      "figure": 3,
+      "file_stem": "figure_03_legacy",
+      "export_sha256": {
+        "figure_03_legacy.png": "b4330508421941c0f787ac15c7359bb18e812bc9aca175f0d4ecc5eb74d001e5",
+        "figure_03_legacy_300dpi.png": "3d7229c9d777e8f6a38e22ec446833a816f890198c5e6275d8ec606437db7709",
+        "figure_03_legacy.pdf": "0a35d90403f8fed12203659a435d7d2fc6646ee092fcedff6be6a8006f4b125c",
+        "figure_03_legacy.svg": "26e9ada8bef0628e2a4cdbcc435ece3b122d18859689167a1f92cbc9d3491b30",
+        "figure_03_legacy_editable.svg": "54f45954423de3cfa1084bab08ce51e35b3c1e6e8a879a1ff9b68ad2bc6d658d"
+      },
+      "typography": {
+        "nonempty_text_spans_checked": 54,
+        "every_span_is_32_native_px": true,
+        "native_dpi": 100,
+        "pdf_points_to_native_pixels": 1.3888888888888888,
+        "actual_font_names": [
+          "NimbusSans-Bold",
+          "NimbusSans-Regular"
+        ],
+        "actual_native_pixel_size_counts": {
+          "32.0000": 54
+        }
+      },
+      "pdf": {
+        "font_programs": [
+          {
+            "style": "Bold",
+            "names": {
+              "1": [
+                "Nimbus Sans"
+              ],
+              "2": [
+                "Bold"
+              ],
+              "3": [
+                "NimbusSans-Bold-Figure"
+              ],
+              "4": [
+                "Nimbus Sans Bold"
+              ],
+              "6": [
+                "NimbusSans-Bold"
+              ]
+            },
+            "sha256": "aca3fd6cf9c72c5fc65f90be0200dc1285e312f774775804f080ef98846272db",
+            "bytes": 1460,
+            "units_per_em": 1000,
+            "unicode_glyphs_compared": 4,
+            "advance_widths_and_sidebearings_match_source": true,
+            "outlines_match_source_after_cubic_to_quadratic_conversion": true,
+            "conversion_max_error_font_units": 0.5,
+            "pdf_resource_name": "EKTMJB+NimbusSans-Bold",
+            "pdf_font_type": "Type0",
+            "xref": 16
+          },
+          {
+            "style": "Regular",
+            "names": {
+              "1": [
+                "Nimbus Sans"
+              ],
+              "2": [
+                "Regular"
+              ],
+              "3": [
+                "NimbusSans-Regular-Figure"
+              ],
+              "4": [
+                "Nimbus Sans Regular"
+              ],
+              "6": [
+                "NimbusSans-Regular"
+              ]
+            },
+            "sha256": "36a205f1ece9a64cf182dcf13cfede36f806d68ca2ff14e6d00af70b2d4da513",
+            "bytes": 5840,
+            "units_per_em": 1000,
+            "unicode_glyphs_compared": 54,
+            "advance_widths_and_sidebearings_match_source": true,
+            "outlines_match_source_after_cubic_to_quadratic_conversion": true,
+            "conversion_max_error_font_units": 0.5,
+            "pdf_resource_name": "EKTMJB+NimbusSans-Regular",
+            "pdf_font_type": "Type0",
+            "xref": 23
+          }
+        ],
+        "text_span_fonts": [
+          "NimbusSans-Bold",
+          "NimbusSans-Regular"
+        ],
+        "text_spans_checked": 54,
+        "pages": 1,
+        "fallback_font_found": false,
+        "pdffonts_stdout": "name                                 type              encoding         emb sub uni object ID\n------------------------------------ ----------------- ---------------- --- --- --- ---------\nEKTMJB+NimbusSans-Bold               CID TrueType      Identity-H       yes yes yes     16  0\nEKTMJB+NimbusSans-Regular            CID TrueType      Identity-H       yes yes yes     23  0\n"
+      },
+      "outlined_svg": {
+        "live_text_elements": 0,
+        "glyph_uses_checked": 466,
+        "glyph_prefixes": [
+          "NimbusSans-Bold",
+          "NimbusSans-Regular"
+        ],
+        "all_text_glyph_references_resolve": true,
+        "note": "Outlined artwork cannot substitute a font; identity is traced through the Nimbus glyph definitions and companion PDF font-program checks."
+      },
+      "editable_svg": {
+        "embedded_font_programs": [
+          {
+            "style": "Regular",
+            "names": {
+              "1": [
+                "Nimbus Sans"
+              ],
+              "2": [
+                "Regular"
+              ],
+              "3": [
+                "NimbusSans-Regular-Figure"
+              ],
+              "4": [
+                "Nimbus Sans Regular"
+              ],
+              "6": [
+                "NimbusSans-Regular"
+              ]
+            },
+            "sha256": "9041306106ea1e0bd9099058f6bdd9cd2191edcd6be156f80b2f8ef73bf97087",
+            "bytes": 95936,
+            "units_per_em": 1000,
+            "unicode_glyphs_compared": 854,
+            "advance_widths_and_sidebearings_match_source": true,
+            "outlines_match_source_after_cubic_to_quadratic_conversion": true,
+            "conversion_max_error_font_units": 0.5
+          },
+          {
+            "style": "Bold",
+            "names": {
+              "1": [
+                "Nimbus Sans"
+              ],
+              "2": [
+                "Bold"
+              ],
+              "3": [
+                "NimbusSans-Bold-Figure"
+              ],
+              "4": [
+                "Nimbus Sans Bold"
+              ],
+              "6": [
+                "NimbusSans-Bold"
+              ]
+            },
+            "sha256": "52bfbc3d51672e1086327d1773b60a44ee33b41f56186811ebfe77b2e92233eb",
+            "bytes": 94980,
+            "units_per_em": 1000,
+            "unicode_glyphs_compared": 854,
+            "advance_widths_and_sidebearings_match_source": true,
+            "outlines_match_source_after_cubic_to_quadratic_conversion": true,
+            "conversion_max_error_font_units": 0.5
+          },
+          {
+            "style": "Italic",
+            "names": {
+              "1": [
+                "Nimbus Sans"
+              ],
+              "2": [
+                "Italic"
+              ],
+              "3": [
+                "NimbusSans-Italic-Figure"
+              ],
+              "4": [
+                "Nimbus Sans Italic"
+              ],
+              "6": [
+                "NimbusSans-Italic"
+              ]
+            },
+            "sha256": "0fa82fcb60df3f4b71da990e422eb181b5dd4ad068e37fac72ab5786e0f87184",
+            "bytes": 114084,
+            "units_per_em": 1000,
+            "unicode_glyphs_compared": 854,
+            "advance_widths_and_sidebearings_match_source": true,
+            "outlines_match_source_after_cubic_to_quadratic_conversion": true,
+            "conversion_max_error_font_units": 0.5
+          }
+        ],
+        "live_text_elements": 56,
+        "family_declarations_checked": 56,
+        "fallback_font_found": false,
+        "viewer_limitation": "A viewer must honor embedded @font-face fonts. The outlined SVG and embedded-font PDF avoid that dependency."
+      },
+      "png": {
+        "pixels": [
+          1536,
+          1024
+        ],
+        "metadata": {
+          "Software": "Matplotlib version3.10.8, https://matplotlib.org/",
+          "Title": "FIGURE 3 | What differences remain after leptin treatment? | Legacy exploratory analysis",
+          "Description": "Supplied legacy differential-expression estimates; exploratory enrichment. See separate legend.",
+          "dpi": [
+            99.9998,
+            99.9998
+          ]
+        },
+        "pdf_raster_comparison": {
+          "gaussian_blur_radius_px": 1,
+          "comparison_pixels": [
+            1536,
+            1024
+          ],
+          "mean_absolute_rgb_difference_0_to_255": 1.59733
+        },
+        "font_identity_limit": "Pixels do not encode a font name. Identity is supported by verified companion exports, explicit Nimbus source selection in the renderer, and matching rendered content."
+      },
+      "high_resolution_png": {
+        "pixels": [
+          4608,
+          3072
+        ],
+        "metadata": {
+          "Software": "Matplotlib version3.10.8, https://matplotlib.org/",
+          "Title": "FIGURE 3 | What differences remain after leptin treatment? | Legacy exploratory analysis",
+          "Description": "Supplied legacy differential-expression estimates; exploratory enrichment. See separate legend.",
+          "dpi": [
+            299.9994,
+            299.9994
+          ]
+        },
+        "pdf_raster_comparison": {
+          "gaussian_blur_radius_px": 1,
+          "comparison_pixels": [
+            1536,
+            1024
+          ],
+          "mean_absolute_rgb_difference_0_to_255": 0.96497
+        },
+        "font_identity_limit": "Pixels do not encode a font name. Identity is supported by verified companion exports, explicit Nimbus source selection in the renderer, and matching rendered content."
+      }
+    }
+  ],
+  "font_identity_method": "Actual embedded PDF and editable-SVG font metrics and glyph outlines independently compared with installed URW Nimbus Sans source OTFs; outlined SVG glyph references checked.",
+  "software": {
+    "PyMuPDF": "1.26.6",
+    "fonttools": "4.61.1",
+    "Pillow": "12.3.0",
+    "numpy": "2.3.5"
+  }
+}

@@ -1,0 +1,1199 @@
+{
+  "complete": true,
+  "legacy_exploratory": true,
+  "font_pixels": 32,
+  "input_sha256": {
+    "analysis/render_legacy_figures.py": "b15c25825b453936ccbf764db881497e8804c117e31d916d240cbfdaa39b7eb3",
+    "figures/synthetic_demo/render_figure.py": "e6bcedea14fe8ce87a8c3ae73ac30e3c4361d25fa460c81fe5269d87af902a0d",
+    "analysis/legacy_results/legacy_provenance.json": "99eecb6b2fd68f75a7b7b94147f9a4fbc3f6082cff7341c2943cf9cda2cd9d7c",
+    "analysis/legacy_results/gsea/gsea_manifest.json": "30135cc4ad1af3c99392ab741fd42ee827a119bf3816d5cf507333c06d9c7be5",
+    "analysis/legacy_workbook.py": "4677354a997758ecdf52136ee6a09b7d0c519d1eed1778fd7b795b92b1425708",
+    "analysis/legacy_gsea.py": "b9844ce67d7b50d007cbecdbe96b0065c04f6079858d49c2c7ff9f521950a7d4",
+    "analysis/legacy_results/figure_01_deg.tsv.gz": "d0f10f5a41dae13c94b58c77fde4c6f17fa9dd7f29e734e72f340fb7a2e5a71a",
+    "analysis/legacy_results/figure_02_deg.tsv.gz": "21ee0bce43b7971e6358a80aada79d253bc97745b6e8997cec68841067efd9eb",
+    "analysis/legacy_results/figure_03_deg.tsv.gz": "5281c8bcbff44c02ad66599fa82f424f71074984225a31bcb42c32fc05f39aaf",
+    "analysis/legacy_results/gsea/figure_01_kegg_display.tsv": "1fd484c015059e7471a6ad69c1bfb1f82884ffa9da2c5c4ba3f281735e3a7f3d",
+    "analysis/legacy_results/gsea/figure_01_go_bp_display.tsv": "11ff5b07ebc4b9d666ebdd3e99f9b9f75b27a55a5888a3a54e30ab169f7d47d3",
+    "analysis/legacy_results/gsea/figure_02_kegg_display.tsv": "154fed326d4fe232f8a6c62a7b09df5c931edb58ee620a3ba8a1b5ec54cd0974",
+    "analysis/legacy_results/gsea/figure_02_go_bp_display.tsv": "8f4a3ef72df459e89c1f8ce15255004e2ebe41c05715681ef0a358649ba5683d",
+    "analysis/legacy_results/gsea/figure_03_kegg_display.tsv": "33b28e8fd38fbba525c4f72d1d7cbf085f1e2617050e260fd377fae1ee5d86ff",
+    "analysis/legacy_results/gsea/figure_03_go_bp_display.tsv": "8ac9f0880f07aad7dc43135bae660ccb46784b81b9d4bb2285feba56d6ac1f00"
+  },
+  "figures": [
+    {
+      "figure": 1,
+      "file_stem": "figure_01_legacy",
+      "question": "How does untreated LD differ from non-LD controls?",
+      "canvas_pixels": [
+        1536,
+        1024
+      ],
+      "font_pixels": 32,
+      "all_visible_typography": "Nimbus Sans",
+      "labels": [
+        {
+          "text": "log2 fold change",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Regular"
+        },
+        {
+          "text": "\u22124",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Regular"
+        },
+        {
+          "text": "\u22122",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Regular"
+        },
+        {
+          "text": "0",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Regular"
+        },
+        {
+          "text": "2",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Regular"
+        },
+        {
+          "text": "4",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Regular"
+        },
+        {
+          "text": "\u2212log10(adjusted P)",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Regular"
+        },
+        {
+          "text": "0",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Regular"
+        },
+        {
+          "text": "5",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Regular"
+        },
+        {
+          "text": "10",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Regular"
+        },
+        {
+          "text": "LD SALINE vs NON-LD control",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Regular"
+        },
+        {
+          "text": "log2 fold change",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Regular"
+        },
+        {
+          "text": "\u22121",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Regular"
+        },
+        {
+          "text": "0",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Regular"
+        },
+        {
+          "text": "1",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Regular"
+        },
+        {
+          "text": "Trp53i11",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Regular"
+        },
+        {
+          "text": "Fat4",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Regular"
+        },
+        {
+          "text": "Alcam",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Regular"
+        },
+        {
+          "text": "Spock1",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Regular"
+        },
+        {
+          "text": "Grin2c",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Regular"
+        },
+        {
+          "text": "Zmat4",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Regular"
+        },
+        {
+          "text": "ECM-receptor interaction",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Regular"
+        },
+        {
+          "text": "0.001",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Regular"
+        },
+        {
+          "text": "Complement and coagulation\ncascades",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Regular"
+        },
+        {
+          "text": "0.001",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Regular"
+        },
+        {
+          "text": "Alzheimer's disease",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Regular"
+        },
+        {
+          "text": "0",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Regular"
+        },
+        {
+          "text": "Oxidative phosphorylation",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Regular"
+        },
+        {
+          "text": "0",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Regular"
+        },
+        {
+          "text": "NES",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Regular"
+        },
+        {
+          "text": "\u22122",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Regular"
+        },
+        {
+          "text": "0",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Regular"
+        },
+        {
+          "text": "2",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Regular"
+        },
+        {
+          "text": "collagen fibril organization",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Regular"
+        },
+        {
+          "text": "0",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Regular"
+        },
+        {
+          "text": "negative regulation of syncytium\nformation by plasma membrane\nfusion",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Regular"
+        },
+        {
+          "text": "0",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Regular"
+        },
+        {
+          "text": "synaptic vesicle cycle",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Regular"
+        },
+        {
+          "text": "0",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Regular"
+        },
+        {
+          "text": "vesicle-mediated transport in\nsynapse",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Regular"
+        },
+        {
+          "text": "0",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Regular"
+        },
+        {
+          "text": "NES",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Regular"
+        },
+        {
+          "text": "\u22122",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Regular"
+        },
+        {
+          "text": "0",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Regular"
+        },
+        {
+          "text": "2",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Regular"
+        },
+        {
+          "text": "a",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Bold"
+        },
+        {
+          "text": "b",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Bold"
+        },
+        {
+          "text": "Genes",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Regular"
+        },
+        {
+          "text": "c",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Bold"
+        },
+        {
+          "text": "KEGG",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Regular"
+        },
+        {
+          "text": "q",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Regular"
+        },
+        {
+          "text": "d",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Bold"
+        },
+        {
+          "text": "GO BP",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Regular"
+        },
+        {
+          "text": "q",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Regular"
+        }
+      ],
+      "pdf_nonempty_text_spans_checked": 56,
+      "export_sha256": {
+        "figure_01_legacy.png": "20ec46b7eb83c3432d443ba48a2695a7f0732a8ae5e0f7deedec37ce9a6ad1ea",
+        "figure_01_legacy_300dpi.png": "6173fa094399367361e1925e5fe399b3b126fcfc2999c253c11d00488c02fcca",
+        "figure_01_legacy.pdf": "319c5c150821ab9dbe6b9f88418171ce6a76d176da90cb6865c31b2d45e71fcc",
+        "figure_01_legacy.svg": "8a5c770b0d06ac3e4c25f05b404dae9e98df824757b100c30381ab6ec335ec36",
+        "figure_01_legacy_editable.svg": "3863ea4edefce45ac224df5f66c277cf9c497a117c1307ed5b3f7e56e841ab37"
+      },
+      "comparison": "LD SALINE vs NON-LD control",
+      "panels": [
+        "volcano",
+        "gene-effect points",
+        "KEGG preranked GSEA",
+        "GO BP preranked GSEA"
+      ],
+      "legacy_exploratory": true,
+      "sample_expression_available": false,
+      "heatmap_panel": false,
+      "pca_panel": false,
+      "volcano_genes": 15518,
+      "volcano_limits": {
+        "absolute_log2fc": 4.0,
+        "negative_log10_adjusted_p": 14.0
+      },
+      "absolute_log2fc_cutoff": 0.2,
+      "adjusted_p_cutoff": 0.05,
+      "joint_DEG_genes": 574,
+      "higher_at_joint_cutoffs": 142,
+      "lower_at_joint_cutoffs": 432,
+      "comparison_colors": {
+        "name": "yellow/blue",
+        "higher": "#FDB338",
+        "lower": "#025196"
+      },
+      "gene_effects": {
+        "gene_ids": [
+          "ENSMUSG00000068735",
+          "ENSMUSG00000046743",
+          "ENSMUSG00000022636",
+          "ENSMUSG00000056222",
+          "ENSMUSG00000020734",
+          "ENSMUSG00000037492"
+        ],
+        "display_labels": [
+          "Trp53i11",
+          "Fat4",
+          "Alcam",
+          "Spock1",
+          "Grin2c",
+          "Zmat4"
+        ],
+        "log2FoldChange": [
+          0.450781129789479,
+          0.401592426250289,
+          0.217132284988605,
+          -0.372806657562788,
+          -0.686278156995708,
+          -0.754317481934098
+        ],
+        "padj": [
+          1.07171629273349e-08,
+          7.26116036445246e-05,
+          0.00018591718410435,
+          4.48563331459965e-08,
+          5.72421259799771e-09,
+          1.07171629273349e-08
+        ],
+        "absolute_axis_limit": 1.0,
+        "confidence_intervals": null,
+        "selection": "up to three smallest adjusted-P hits per direction passing both display cutoffs"
+      },
+      "gsea": {
+        "kegg": {
+          "terms": [
+            "mmu04512 ECM-receptor interaction",
+            "mmu04610 Complement and coagulation cascades",
+            "mmu05010 Alzheimer's disease",
+            "mmu00190 Oxidative phosphorylation"
+          ],
+          "NES": [
+            2.1561157550076206,
+            2.023725721858911,
+            -2.1402684459853356,
+            -2.196213422942007
+          ],
+          "gsea_fdr_q": [
+            0.0012323154727610266,
+            0.0012323154727610266,
+            0.0,
+            0.0
+          ],
+          "absolute_nes_limit": 2.6184837330952866,
+          "selection": "audited display file: up to two strongest NES per direction; scarce-direction remainder by absolute NES; no significance filter",
+          "rank_metric": "proxy_signed_log10_p",
+          "rank_metric_description": "sign(log2FC) * -log10(raw P); exploratory proxy, not an original test statistic"
+        },
+        "go_bp": {
+          "terms": [
+            "GO:0030199 collagen fibril organization",
+            "GO:0034242 negative regulation of syncytium formation by plasma membrane fusion",
+            "GO:0099504 synaptic vesicle cycle",
+            "GO:0099003 vesicle-mediated transport in synapse"
+          ],
+          "NES": [
+            2.380439757359351,
+            2.3211573068451274,
+            -2.136313019393544,
+            -2.18328006404668
+          ],
+          "gsea_fdr_q": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "absolute_nes_limit": 2.6184837330952866,
+          "selection": "audited display file: up to two strongest NES per direction; scarce-direction remainder by absolute NES; no significance filter",
+          "rank_metric": "proxy_signed_log10_p",
+          "rank_metric_description": "sign(log2FC) * -log10(raw P); exploratory proxy, not an original test statistic"
+        }
+      },
+      "plot_data_file": "figures/legacy/figure_01_gene_effects.tsv",
+      "plot_data_sha256": "5a0b883e480b92d767ad847e94860c4de07445357bf20988b40da06ffcd91c91"
+    },
+    {
+      "figure": 2,
+      "file_stem": "figure_02_legacy",
+      "question": "What does leptin treatment change in LD mice?",
+      "canvas_pixels": [
+        1536,
+        1024
+      ],
+      "font_pixels": 32,
+      "all_visible_typography": "Nimbus Sans",
+      "labels": [
+        {
+          "text": "log2 fold change",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Regular"
+        },
+        {
+          "text": "\u22124",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Regular"
+        },
+        {
+          "text": "\u22122",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Regular"
+        },
+        {
+          "text": "0",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Regular"
+        },
+        {
+          "text": "2",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Regular"
+        },
+        {
+          "text": "4",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Regular"
+        },
+        {
+          "text": "\u2212log10(adjusted P)",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Regular"
+        },
+        {
+          "text": "0",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Regular"
+        },
+        {
+          "text": "5",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Regular"
+        },
+        {
+          "text": "10",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Regular"
+        },
+        {
+          "text": "LD LEPTIN vs LD SALINE",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Regular"
+        },
+        {
+          "text": "log2 fold change",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Regular"
+        },
+        {
+          "text": "\u22121",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Regular"
+        },
+        {
+          "text": "0",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Regular"
+        },
+        {
+          "text": "1",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Regular"
+        },
+        {
+          "text": "Zmat4",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Regular"
+        },
+        {
+          "text": "Grin2c",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Regular"
+        },
+        {
+          "text": "Chst2",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Regular"
+        },
+        {
+          "text": "Trp53i11",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Regular"
+        },
+        {
+          "text": "Ccnd1",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Regular"
+        },
+        {
+          "text": "Pmch",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Regular"
+        },
+        {
+          "text": "Synaptic vesicle cycle",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Regular"
+        },
+        {
+          "text": "0",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Regular"
+        },
+        {
+          "text": "Oxidative phosphorylation",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Regular"
+        },
+        {
+          "text": "0",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Regular"
+        },
+        {
+          "text": "Autoimmune thyroid disease",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Regular"
+        },
+        {
+          "text": "0.01",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Regular"
+        },
+        {
+          "text": "Ribosome",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Regular"
+        },
+        {
+          "text": "0.001",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Regular"
+        },
+        {
+          "text": "NES",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Regular"
+        },
+        {
+          "text": "\u22122",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Regular"
+        },
+        {
+          "text": "0",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Regular"
+        },
+        {
+          "text": "2",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Regular"
+        },
+        {
+          "text": "vesicle-mediated transport in\nsynapse",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Regular"
+        },
+        {
+          "text": "0",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Regular"
+        },
+        {
+          "text": "synaptic vesicle cycle",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Regular"
+        },
+        {
+          "text": "0",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Regular"
+        },
+        {
+          "text": "translation at synapse",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Regular"
+        },
+        {
+          "text": "0.002",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Regular"
+        },
+        {
+          "text": "translation at postsynapse",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Regular"
+        },
+        {
+          "text": "0.002",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Regular"
+        },
+        {
+          "text": "NES",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Regular"
+        },
+        {
+          "text": "\u22122",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Regular"
+        },
+        {
+          "text": "0",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Regular"
+        },
+        {
+          "text": "2",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Regular"
+        },
+        {
+          "text": "a",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Bold"
+        },
+        {
+          "text": "b",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Bold"
+        },
+        {
+          "text": "Genes",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Regular"
+        },
+        {
+          "text": "c",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Bold"
+        },
+        {
+          "text": "KEGG",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Regular"
+        },
+        {
+          "text": "q",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Regular"
+        },
+        {
+          "text": "d",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Bold"
+        },
+        {
+          "text": "GO BP",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Regular"
+        },
+        {
+          "text": "q",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Regular"
+        }
+      ],
+      "pdf_nonempty_text_spans_checked": 53,
+      "export_sha256": {
+        "figure_02_legacy.png": "7f45eef525cff5d7082702f488f25291fc665495ec00fc51c337bd686ff4da7d",
+        "figure_02_legacy_300dpi.png": "6aea17ada84c669e3d14f5618300ed3481fdb4fb64bccafa90db2a98d38b4e3a",
+        "figure_02_legacy.pdf": "c90e2aee94d99b34a5fe4e3abeed8ac125ac5077869804e4066847cb74416c47",
+        "figure_02_legacy.svg": "d66f25fc96163215ed15651fc07fea1aa8b0c70453d73ba232b9798e4cdd54f5",
+        "figure_02_legacy_editable.svg": "59fd5bfd34b939e984b9e691dfd65c39c9fb99aa10064c49a48c3a26634808e2"
+      },
+      "comparison": "LD LEPTIN vs LD SALINE",
+      "panels": [
+        "volcano",
+        "gene-effect points",
+        "KEGG preranked GSEA",
+        "GO BP preranked GSEA"
+      ],
+      "legacy_exploratory": true,
+      "sample_expression_available": false,
+      "heatmap_panel": false,
+      "pca_panel": false,
+      "volcano_genes": 15136,
+      "volcano_limits": {
+        "absolute_log2fc": 4.0,
+        "negative_log10_adjusted_p": 14.0
+      },
+      "absolute_log2fc_cutoff": 0.2,
+      "adjusted_p_cutoff": 0.05,
+      "joint_DEG_genes": 750,
+      "higher_at_joint_cutoffs": 512,
+      "lower_at_joint_cutoffs": 238,
+      "comparison_colors": {
+        "name": "tan/turquoise",
+        "higher": "#FFBE6A",
+        "lower": "#40B0A6"
+      },
+      "gene_effects": {
+        "gene_ids": [
+          "ENSMUSG00000037492",
+          "ENSMUSG00000020734",
+          "ENSMUSG00000033350",
+          "ENSMUSG00000068735",
+          "ENSMUSG00000070348",
+          "ENSMUSG00000035383"
+        ],
+        "display_labels": [
+          "Zmat4",
+          "Grin2c",
+          "Chst2",
+          "Trp53i11",
+          "Ccnd1",
+          "Pmch"
+        ],
+        "log2FoldChange": [
+          0.7825472075031,
+          0.672728452969581,
+          0.378291309897528,
+          -0.363535304608173,
+          -0.517786956640384,
+          -0.722059312587376
+        ],
+        "padj": [
+          1.47976489429891e-09,
+          2.46404858230551e-09,
+          8.14461391239637e-11,
+          2.08283098671077e-06,
+          2.08283098671077e-06,
+          1.47976489429891e-09
+        ],
+        "absolute_axis_limit": 1.0,
+        "confidence_intervals": null,
+        "selection": "up to three smallest adjusted-P hits per direction passing both display cutoffs"
+      },
+      "gsea": {
+        "kegg": {
+          "terms": [
+            "mmu04721 Synaptic vesicle cycle",
+            "mmu00190 Oxidative phosphorylation",
+            "mmu05320 Autoimmune thyroid disease",
+            "mmu03010 Ribosome"
+          ],
+          "NES": [
+            2.152415205264444,
+            2.0838468496014473,
+            -1.8953555393037231,
+            -2.0859315040678226
+          ],
+          "gsea_fdr_q": [
+            0.0,
+            0.0,
+            0.014805539186800236,
+            0.0009870359457866823
+          ],
+          "absolute_nes_limit": 2.6184837330952866,
+          "selection": "audited display file: up to two strongest NES per direction; scarce-direction remainder by absolute NES; no significance filter",
+          "rank_metric": "proxy_signed_log10_p",
+          "rank_metric_description": "sign(log2FC) * -log10(raw P); exploratory proxy, not an original test statistic"
+        },
+        "go_bp": {
+          "terms": [
+            "GO:0099003 vesicle-mediated transport in synapse",
+            "GO:0099504 synaptic vesicle cycle",
+            "GO:0140241 translation at synapse",
+            "GO:0140242 translation at postsynapse"
+          ],
+          "NES": [
+            2.1074307793985683,
+            2.0672400394010575,
+            -2.162617362511368,
+            -2.162617362511368
+          ],
+          "gsea_fdr_q": [
+            0.0,
+            0.0,
+            0.001590026676527297,
+            0.001590026676527297
+          ],
+          "absolute_nes_limit": 2.6184837330952866,
+          "selection": "audited display file: up to two strongest NES per direction; scarce-direction remainder by absolute NES; no significance filter",
+          "rank_metric": "proxy_signed_log10_p",
+          "rank_metric_description": "sign(log2FC) * -log10(raw P); exploratory proxy, not an original test statistic"
+        }
+      },
+      "plot_data_file": "figures/legacy/figure_02_gene_effects.tsv",
+      "plot_data_sha256": "4ef81c1f333a73fe84670085717bc6b45f4e64b09b07849c9451ad9599dcd0ba"
+    },
+    {
+      "figure": 3,
+      "file_stem": "figure_03_legacy",
+      "question": "What differences remain after leptin treatment?",
+      "canvas_pixels": [
+        1536,
+        1024
+      ],
+      "font_pixels": 32,
+      "all_visible_typography": "Nimbus Sans",
+      "labels": [
+        {
+          "text": "log2 fold change",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Regular"
+        },
+        {
+          "text": "\u22124",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Regular"
+        },
+        {
+          "text": "\u22122",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Regular"
+        },
+        {
+          "text": "0",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Regular"
+        },
+        {
+          "text": "2",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Regular"
+        },
+        {
+          "text": "4",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Regular"
+        },
+        {
+          "text": "\u2212log10(adjusted P)",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Regular"
+        },
+        {
+          "text": "0",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Regular"
+        },
+        {
+          "text": "5",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Regular"
+        },
+        {
+          "text": "10",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Regular"
+        },
+        {
+          "text": "LD LEPTIN vs NON-LD control",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Regular"
+        },
+        {
+          "text": "log2 fold change",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Regular"
+        },
+        {
+          "text": "\u22122.5",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Regular"
+        },
+        {
+          "text": "0.0",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Regular"
+        },
+        {
+          "text": "2.5",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Regular"
+        },
+        {
+          "text": "Tcaf2",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Regular"
+        },
+        {
+          "text": "NF-kappa B signaling pathway",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Regular"
+        },
+        {
+          "text": "0.08",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Regular"
+        },
+        {
+          "text": "TNF signaling pathway",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Regular"
+        },
+        {
+          "text": "0.07",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Regular"
+        },
+        {
+          "text": "Drug metabolism - other\nenzymes",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Regular"
+        },
+        {
+          "text": "0.23",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Regular"
+        },
+        {
+          "text": "Neuroactive ligand-receptor\ninteraction",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Regular"
+        },
+        {
+          "text": "0.01",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Regular"
+        },
+        {
+          "text": "NES",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Regular"
+        },
+        {
+          "text": "\u22122",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Regular"
+        },
+        {
+          "text": "0",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Regular"
+        },
+        {
+          "text": "2",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Regular"
+        },
+        {
+          "text": "negative regulation of ion\ntransmembrane transporter\nactivity",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Regular"
+        },
+        {
+          "text": "0.71",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Regular"
+        },
+        {
+          "text": "negative regulation of\ntransporter activity",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Regular"
+        },
+        {
+          "text": "0.36",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Regular"
+        },
+        {
+          "text": "chemical synaptic transmission,\npostsynaptic",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Regular"
+        },
+        {
+          "text": "0.04",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Regular"
+        },
+        {
+          "text": "regulation of amine metabolic\nprocess",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Regular"
+        },
+        {
+          "text": "0.05",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Regular"
+        },
+        {
+          "text": "NES",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Regular"
+        },
+        {
+          "text": "\u22122",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Regular"
+        },
+        {
+          "text": "0",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Regular"
+        },
+        {
+          "text": "2",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Regular"
+        },
+        {
+          "text": "a",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Bold"
+        },
+        {
+          "text": "b",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Bold"
+        },
+        {
+          "text": "Genes",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Regular"
+        },
+        {
+          "text": "c",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Bold"
+        },
+        {
+          "text": "KEGG",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Regular"
+        },
+        {
+          "text": "q",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Regular"
+        },
+        {
+          "text": "d",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Bold"
+        },
+        {
+          "text": "GO BP",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Regular"
+        },
+        {
+          "text": "q",
+          "size_px": 32.0,
+          "font": "Nimbus Sans Regular"
+        }
+      ],
+      "pdf_nonempty_text_spans_checked": 54,
+      "export_sha256": {
+        "figure_03_legacy.png": "b4330508421941c0f787ac15c7359bb18e812bc9aca175f0d4ecc5eb74d001e5",
+        "figure_03_legacy_300dpi.png": "3d7229c9d777e8f6a38e22ec446833a816f890198c5e6275d8ec606437db7709",
+        "figure_03_legacy.pdf": "0a35d90403f8fed12203659a435d7d2fc6646ee092fcedff6be6a8006f4b125c",
+        "figure_03_legacy.svg": "26e9ada8bef0628e2a4cdbcc435ece3b122d18859689167a1f92cbc9d3491b30",
+        "figure_03_legacy_editable.svg": "54f45954423de3cfa1084bab08ce51e35b3c1e6e8a879a1ff9b68ad2bc6d658d"
+      },
+      "comparison": "LD LEPTIN vs NON-LD control",
+      "panels": [
+        "volcano",
+        "gene-effect points",
+        "KEGG preranked GSEA",
+        "GO BP preranked GSEA"
+      ],
+      "legacy_exploratory": true,
+      "sample_expression_available": false,
+      "heatmap_panel": false,
+      "pca_panel": false,
+      "volcano_genes": 19721,
+      "volcano_limits": {
+        "absolute_log2fc": 4.0,
+        "negative_log10_adjusted_p": 14.0
+      },
+      "absolute_log2fc_cutoff": 0.2,
+      "adjusted_p_cutoff": 0.05,
+      "joint_DEG_genes": 1,
+      "higher_at_joint_cutoffs": 1,
+      "lower_at_joint_cutoffs": 0,
+      "comparison_colors": {
+        "name": "orange/purple",
+        "higher": "#EB6123",
+        "lower": "#512888"
+      },
+      "gene_effects": {
+        "gene_ids": [
+          "ENSMUSG00000029851"
+        ],
+        "display_labels": [
+          "Tcaf2"
+        ],
+        "log2FoldChange": [
+          3.45903607086903
+        ],
+        "padj": [
+          3.1687017395122e-13
+        ],
+        "absolute_axis_limit": 4.0,
+        "confidence_intervals": null,
+        "selection": "up to three smallest adjusted-P hits per direction passing both display cutoffs"
+      },
+      "gsea": {
+        "kegg": {
+          "terms": [
+            "mmu04064 NF-kappa B signaling pathway",
+            "mmu04668 TNF signaling pathway",
+            "mmu00983 Drug metabolism - other enzymes",
+            "mmu04080 Neuroactive ligand-receptor interaction"
+          ],
+          "NES": [
+            2.023551979338604,
+            1.9613803491215969,
+            -1.6653596408223004,
+            -1.974411015977131
+          ],
+          "gsea_fdr_q": [
+            0.08288374695280341,
+            0.0743515965311913,
+            0.22720696760240242,
+            0.009878563808800105
+          ],
+          "absolute_nes_limit": 2.6184837330952866,
+          "selection": "audited display file: up to two strongest NES per direction; scarce-direction remainder by absolute NES; no significance filter",
+          "rank_metric": "proxy_signed_log10_p",
+          "rank_metric_description": "sign(log2FC) * -log10(raw P); exploratory proxy, not an original test statistic"
+        },
+        "go_bp": {
+          "terms": [
+            "GO:0032413 negative regulation of ion transmembrane transporter activity",
+            "GO:0032410 negative regulation of transporter activity",
+            "GO:0099565 chemical synaptic transmission, postsynaptic",
+            "GO:0033238 regulation of amine metabolic process"
+          ],
+          "NES": [
+            2.112817566239813,
+            2.1127870793012593,
+            -2.0271073528226053,
+            -2.0572314399992297
+          ],
+          "gsea_fdr_q": [
+            0.7109082353260953,
+            0.35545411766304763,
+            0.04398657950656373,
+            0.05234766486731552
+          ],
+          "absolute_nes_limit": 2.6184837330952866,
+          "selection": "audited display file: up to two strongest NES per direction; scarce-direction remainder by absolute NES; no significance filter",
+          "rank_metric": "proxy_signed_log10_p",
+          "rank_metric_description": "sign(log2FC) * -log10(raw P); exploratory proxy, not an original test statistic"
+        }
+      },
+      "plot_data_file": "figures/legacy/figure_03_gene_effects.tsv",
+      "plot_data_sha256": "11fa25f616d7277bec994a2fde7d10eaddc105ffa7da08c71c0055ffd887439f"
+    }
+  ],
+  "gsea_manifest_sha256": "30135cc4ad1af3c99392ab741fd42ee827a119bf3816d5cf507333c06d9c7be5",
+  "gsea_primary_analyses": 6
+}

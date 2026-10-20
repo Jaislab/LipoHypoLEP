@@ -1,0 +1,391 @@
+{
+  "complete": true,
+  "integrity_schema": 1,
+  "rank_metric": "proxy_signed_log10_p",
+  "ranking_status": "Exploratory signed-P proxy; original signed test statistic is unavailable, not recovered.",
+  "all_tested_genes_exported_user_confirmed": true,
+  "source_workbook_sha256": "c2f05cd7dd6404d6fd1a81c7f74591b0b5c79cedfb7c0cbe018ab900c5749f40",
+  "source_workbook_basename": "DGElist_AnkeData(1).xlsx",
+  "input_table_sha256": {
+    "figure_01_deg.tsv.gz": "d0f10f5a41dae13c94b58c77fde4c6f17fa9dd7f29e734e72f340fb7a2e5a71a",
+    "figure_02_deg.tsv.gz": "21ee0bce43b7971e6358a80aada79d253bc97745b6e8997cec68841067efd9eb",
+    "figure_03_deg.tsv.gz": "5281c8bcbff44c02ad66599fa82f424f71074984225a31bcb42c32fc05f39aaf"
+  },
+  "sources": {
+    "kegg": {
+      "gmt_path": "figures/synthetic_demo/gsea_data/resources/kegg_mouse_biosystems_archive_2020.gmt",
+      "gmt_sha256": "70127d28c5c82a42abf2d1f33291d4a6a2a10e0afad320aad484d01931a9091a",
+      "provenance_path": "figures/synthetic_demo/gsea_data/resources/kegg_mouse_provenance.json",
+      "provenance_sha256": "12428593c85f86ab7d6743f77cfe987bf981754609c28a00da4bd8409c4ab214",
+      "provenance": {
+        "species": "Mus musculus",
+        "ncbi_taxonomy_id": 10090,
+        "retrieved_date": "2026-10-19",
+        "demo_only": true,
+        "caveat": "Gene-set membership is real mouse annotation. Any assignment of these gene symbols to anonymous synthetic SIM identifiers is arbitrary demonstration metadata; all resulting enrichment values have no experimental biological interpretation.",
+        "library": "KEGG mouse (archived NCBI BioSystems snapshot)",
+        "data_file": "kegg_mouse_biosystems_archive_2020.gmt",
+        "sha256": "70127d28c5c82a42abf2d1f33291d4a6a2a10e0afad320aad484d01931a9091a",
+        "set_count": 313,
+        "unique_gene_symbols": 8038,
+        "archive_retrieval_date": "2020-03-22",
+        "upstream_data_url": "https://raw.githubusercontent.com/stephenslab/pathways/996e2f93dd05ce3e0e203d9f0b5729c3ed171d82/data/gene_sets_mouse.RData",
+        "upstream_data_sha256": "6372f9073f09c24742fa3e7d7259c86c8abf2922ff2f234fea37bc38b184d372",
+        "source_repository": "https://github.com/stephenslab/pathways",
+        "source_commit": "996e2f93dd05ce3e0e203d9f0b5729c3ed171d82",
+        "upstream_documentation_url": "https://github.com/stephenslab/pathways/blob/996e2f93dd05ce3e0e203d9f0b5729c3ed171d82/README.md",
+        "extraction": "RData gene_sets_mouse: use sparse matrix columns where gene_set_info.database == BioSystems-kegg; accession identifiers all mmu; map sparse row positions to gene_info.Symbol; unique symbols within each pathway. Column identities were verified against sparse matrix Dimnames. No human-to-mouse orthology conversion. Retain only canonical pathway accessions matching ^mmu[0-9]{5}$; exclude all 89 mmu_M module accessions (402 BioSystems-kegg entries become 313 pathways).",
+        "identifier_type": "Mouse gene symbols; archived nomenclature from package snapshot",
+        "source_version_limitation": "Archived NCBI BioSystems collection, not the current KEGG release. Exact constituent KEGG release was not recorded by this mirror. Update from direct KEGG/mmu source before experimental analysis. NCBI mouse gene_info documented download 2020-10-15.",
+        "license": "Mirror R package MIT; original KEGG data remain subject to KEGG terms. Do not interpret package source-code license as relicensing constituent annotation.",
+        "direct_source_unavailable": "https://rest.kegg.jp/link/mmu/pathway and Enrichr HTTPS requests returned tunnel 403; no verification was disabled."
+      }
+    },
+    "go_bp": {
+      "gmt_path": "figures/synthetic_demo/gsea_data/resources/go_bp_mouse_2026_05_19_nonIEA_protein_coding.gmt",
+      "gmt_sha256": "009be991eedc31fa18e23ded71cfac222fd5773d87fc243d19d67008ee21c73f",
+      "provenance_path": "figures/synthetic_demo/gsea_data/resources/go_bp_mouse_provenance.json",
+      "provenance_sha256": "c5541c88c6372ea558d5ac30c8085aa3e276d33989d87e18762f2b5a38b89c64",
+      "provenance": {
+        "species": "Mus musculus",
+        "ncbi_taxonomy_id": 10090,
+        "retrieved_date": "2026-10-19",
+        "demo_only": true,
+        "caveat": "Gene-set membership is real mouse annotation. Any assignment of these gene symbols to anonymous synthetic SIM identifiers is arbitrary demonstration metadata; all resulting enrichment values have no experimental biological interpretation.",
+        "library": "GO Biological Process mouse; non-IEA; protein-coding projection",
+        "data_file": "go_bp_mouse_2026_05_19_nonIEA_protein_coding.gmt",
+        "sha256": "009be991eedc31fa18e23ded71cfac222fd5773d87fc243d19d67008ee21c73f",
+        "set_count": 8474,
+        "go_release": "2026-05-19",
+        "go_concept_doi": "10.5281/zenodo.1205166",
+        "source_repository": "https://github.com/robinson-vidva/enrichlite",
+        "source_commit": "a98877feabb5e1fa68180eeea63ccffefe7186f3",
+        "upstream_data_url": "https://raw.githubusercontent.com/robinson-vidva/enrichlite/a98877feabb5e1fa68180eeea63ccffefe7186f3/data/mouse/go_bp.json",
+        "upstream_data_sha256": "9963350b05861e1dfd9fe1b7515802cef81774d7a459bbc6dc998fe25f239bf4",
+        "upstream_symbols_url": "https://raw.githubusercontent.com/robinson-vidva/enrichlite/a98877feabb5e1fa68180eeea63ccffefe7186f3/data/mouse/symbols.json",
+        "upstream_symbols_sha256": "fd932f30ca8c4976f84348aeecaf2545f01bf890b08d4516a961d1e64d5e8d6c",
+        "upstream_manifest_url": "https://github.com/robinson-vidva/enrichlite/blob/a98877feabb5e1fa68180eeea63ccffefe7186f3/data/manifest.json",
+        "upstream_builder_url": "https://github.com/robinson-vidva/enrichlite/blob/a98877feabb5e1fa68180eeea63ccffefe7186f3/scripts/build_genesets.py",
+        "original_sources": [
+          "https://current.geneontology.org/annotations/mgi.gaf.gz",
+          "https://current.geneontology.org/ontology/go-basic.obo",
+          "https://ftp.ncbi.nlm.nih.gov/gene/DATA/GENE_INFO/Mammalia/Mus_musculus.gene_info.gz"
+        ],
+        "upstream_processing": "MGI GAF native mouse annotations; exclude evidence IEA and ND and NOT-qualified records; resolve GO primary IDs; true-path propagation through is_a and part_of within biological_process namespace; retain upstream sets of 5\u2013500 objects. Upstream release recorded in manifest; GO concept DOI is not a release-specific DOI.",
+        "local_processing": "Resolve compact member indices through same-commit symbols.json. Intersect each set with its first codingN=26310 authoritative NCBI mouse protein-coding gene symbols, to exclude GAF complex objects and noncoding identifiers. Retain nonempty sets; GSEA must additionally apply min_size/max_size after intersection with ranked experimental universe.",
+        "identifier_type": "Authoritative NCBI mouse protein-coding gene symbols at mirror build date",
+        "source_version_limitation": "This collection is intentionally restricted upstream to terms of 5\u2013500 GAF objects before local protein-coding projection; terms larger than 500 are absent even if an experimental-universe intersection could make them smaller. Refresh a complete versioned ontology/annotation snapshot for experimental analysis if needed.",
+        "license": "Gene Ontology CC BY 4.0; attribution Gene Ontology Consortium and Mouse Genome Informatics; NCBI gene_info public domain. Enrichlite source code MIT.",
+        "license_documentation_url": "https://github.com/robinson-vidva/enrichlite/blob/a98877feabb5e1fa68180eeea63ccffefe7186f3/DATA_LICENSES.md",
+        "direct_source_unavailable": "https://current.geneontology.org/annotations/mgi.gaf.gz returned tunnel 403; no verification was disabled."
+      }
+    }
+  },
+  "analyses": [
+    {
+      "figure_id": "figure_01",
+      "library": "kegg",
+      "rank_metric": "proxy_signed_log10_p",
+      "numerator": "LD SALINE",
+      "denominator": "NON-LD control",
+      "ranked_genes": 15518,
+      "all_tested_ensembl_rows_retained": true,
+      "tested_gene_sets": 275,
+      "genes_with_pathway_membership": 5252,
+      "gsea_fdr_q_below_0_05": 63,
+      "complete_rank_file": "figure_01_complete_rank.tsv.gz",
+      "all_results_file": "figure_01_kegg_all_results.tsv.gz",
+      "raw_results_file": "figure_01_kegg_gseapy_raw.tsv.gz",
+      "display_file": "figure_01_kegg_display.tsv",
+      "leading_edge_file": "figure_01_kegg_leading_edge.tsv.gz",
+      "displayed_sets": [
+        {
+          "term": "mmu04512 ECM-receptor interaction",
+          "NES": 2.1561157550076206,
+          "gsea_fdr_q": 0.0012323154727610266
+        },
+        {
+          "term": "mmu04610 Complement and coagulation cascades",
+          "NES": 2.023725721858911,
+          "gsea_fdr_q": 0.0012323154727610266
+        },
+        {
+          "term": "mmu05010 Alzheimer's disease",
+          "NES": -2.1402684459853356,
+          "gsea_fdr_q": 0.0
+        },
+        {
+          "term": "mmu00190 Oxidative phosphorylation",
+          "NES": -2.196213422942007,
+          "gsea_fdr_q": 0.0
+        }
+      ],
+      "runtime_seconds": 15.874
+    },
+    {
+      "figure_id": "figure_01",
+      "library": "go_bp",
+      "rank_metric": "proxy_signed_log10_p",
+      "numerator": "LD SALINE",
+      "denominator": "NON-LD control",
+      "ranked_genes": 15518,
+      "all_tested_ensembl_rows_retained": true,
+      "tested_gene_sets": 4225,
+      "genes_with_pathway_membership": 11655,
+      "gsea_fdr_q_below_0_05": 249,
+      "complete_rank_file": "figure_01_complete_rank.tsv.gz",
+      "all_results_file": "figure_01_go_bp_all_results.tsv.gz",
+      "raw_results_file": "figure_01_go_bp_gseapy_raw.tsv.gz",
+      "display_file": "figure_01_go_bp_display.tsv",
+      "leading_edge_file": "figure_01_go_bp_leading_edge.tsv.gz",
+      "displayed_sets": [
+        {
+          "term": "GO:0030199 collagen fibril organization",
+          "NES": 2.380439757359351,
+          "gsea_fdr_q": 0.0
+        },
+        {
+          "term": "GO:0034242 negative regulation of syncytium formation by plasma membrane fusion",
+          "NES": 2.3211573068451274,
+          "gsea_fdr_q": 0.0
+        },
+        {
+          "term": "GO:0099504 synaptic vesicle cycle",
+          "NES": -2.136313019393544,
+          "gsea_fdr_q": 0.0
+        },
+        {
+          "term": "GO:0099003 vesicle-mediated transport in synapse",
+          "NES": -2.18328006404668,
+          "gsea_fdr_q": 0.0
+        }
+      ],
+      "runtime_seconds": 196.275
+    },
+    {
+      "figure_id": "figure_02",
+      "library": "kegg",
+      "rank_metric": "proxy_signed_log10_p",
+      "numerator": "LD LEPTIN",
+      "denominator": "LD SALINE",
+      "ranked_genes": 15136,
+      "all_tested_ensembl_rows_retained": true,
+      "tested_gene_sets": 274,
+      "genes_with_pathway_membership": 5179,
+      "gsea_fdr_q_below_0_05": 46,
+      "complete_rank_file": "figure_02_complete_rank.tsv.gz",
+      "all_results_file": "figure_02_kegg_all_results.tsv.gz",
+      "raw_results_file": "figure_02_kegg_gseapy_raw.tsv.gz",
+      "display_file": "figure_02_kegg_display.tsv",
+      "leading_edge_file": "figure_02_kegg_leading_edge.tsv.gz",
+      "displayed_sets": [
+        {
+          "term": "mmu04721 Synaptic vesicle cycle",
+          "NES": 2.152415205264444,
+          "gsea_fdr_q": 0.0
+        },
+        {
+          "term": "mmu00190 Oxidative phosphorylation",
+          "NES": 2.0838468496014473,
+          "gsea_fdr_q": 0.0
+        },
+        {
+          "term": "mmu05320 Autoimmune thyroid disease",
+          "NES": -1.8953555393037231,
+          "gsea_fdr_q": 0.014805539186800236
+        },
+        {
+          "term": "mmu03010 Ribosome",
+          "NES": -2.0859315040678226,
+          "gsea_fdr_q": 0.0009870359457866823
+        }
+      ],
+      "runtime_seconds": 15.884
+    },
+    {
+      "figure_id": "figure_02",
+      "library": "go_bp",
+      "rank_metric": "proxy_signed_log10_p",
+      "numerator": "LD LEPTIN",
+      "denominator": "LD SALINE",
+      "ranked_genes": 15136,
+      "all_tested_ensembl_rows_retained": true,
+      "tested_gene_sets": 4190,
+      "genes_with_pathway_membership": 11484,
+      "gsea_fdr_q_below_0_05": 80,
+      "complete_rank_file": "figure_02_complete_rank.tsv.gz",
+      "all_results_file": "figure_02_go_bp_all_results.tsv.gz",
+      "raw_results_file": "figure_02_go_bp_gseapy_raw.tsv.gz",
+      "display_file": "figure_02_go_bp_display.tsv",
+      "leading_edge_file": "figure_02_go_bp_leading_edge.tsv.gz",
+      "displayed_sets": [
+        {
+          "term": "GO:0099003 vesicle-mediated transport in synapse",
+          "NES": 2.1074307793985683,
+          "gsea_fdr_q": 0.0
+        },
+        {
+          "term": "GO:0099504 synaptic vesicle cycle",
+          "NES": 2.0672400394010575,
+          "gsea_fdr_q": 0.0
+        },
+        {
+          "term": "GO:0140241 translation at synapse",
+          "NES": -2.162617362511368,
+          "gsea_fdr_q": 0.001590026676527297
+        },
+        {
+          "term": "GO:0140242 translation at postsynapse",
+          "NES": -2.162617362511368,
+          "gsea_fdr_q": 0.001590026676527297
+        }
+      ],
+      "runtime_seconds": 213.095
+    },
+    {
+      "figure_id": "figure_03",
+      "library": "kegg",
+      "rank_metric": "proxy_signed_log10_p",
+      "numerator": "LD LEPTIN",
+      "denominator": "NON-LD control",
+      "ranked_genes": 19721,
+      "all_tested_ensembl_rows_retained": true,
+      "tested_gene_sets": 287,
+      "genes_with_pathway_membership": 5954,
+      "gsea_fdr_q_below_0_05": 1,
+      "complete_rank_file": "figure_03_complete_rank.tsv.gz",
+      "all_results_file": "figure_03_kegg_all_results.tsv.gz",
+      "raw_results_file": "figure_03_kegg_gseapy_raw.tsv.gz",
+      "display_file": "figure_03_kegg_display.tsv",
+      "leading_edge_file": "figure_03_kegg_leading_edge.tsv.gz",
+      "displayed_sets": [
+        {
+          "term": "mmu04064 NF-kappa B signaling pathway",
+          "NES": 2.023551979338604,
+          "gsea_fdr_q": 0.08288374695280341
+        },
+        {
+          "term": "mmu04668 TNF signaling pathway",
+          "NES": 1.9613803491215969,
+          "gsea_fdr_q": 0.0743515965311913
+        },
+        {
+          "term": "mmu00983 Drug metabolism - other enzymes",
+          "NES": -1.6653596408223004,
+          "gsea_fdr_q": 0.22720696760240242
+        },
+        {
+          "term": "mmu04080 Neuroactive ligand-receptor interaction",
+          "NES": -1.974411015977131,
+          "gsea_fdr_q": 0.009878563808800105
+        }
+      ],
+      "runtime_seconds": 22.026
+    },
+    {
+      "figure_id": "figure_03",
+      "library": "go_bp",
+      "rank_metric": "proxy_signed_log10_p",
+      "numerator": "LD LEPTIN",
+      "denominator": "NON-LD control",
+      "ranked_genes": 19721,
+      "all_tested_ensembl_rows_retained": true,
+      "tested_gene_sets": 4525,
+      "genes_with_pathway_membership": 13204,
+      "gsea_fdr_q_below_0_05": 6,
+      "complete_rank_file": "figure_03_complete_rank.tsv.gz",
+      "all_results_file": "figure_03_go_bp_all_results.tsv.gz",
+      "raw_results_file": "figure_03_go_bp_gseapy_raw.tsv.gz",
+      "display_file": "figure_03_go_bp_display.tsv",
+      "leading_edge_file": "figure_03_go_bp_leading_edge.tsv.gz",
+      "displayed_sets": [
+        {
+          "term": "GO:0032413 negative regulation of ion transmembrane transporter activity",
+          "NES": 2.112817566239813,
+          "gsea_fdr_q": 0.7109082353260953
+        },
+        {
+          "term": "GO:0032410 negative regulation of transporter activity",
+          "NES": 2.1127870793012593,
+          "gsea_fdr_q": 0.35545411766304763
+        },
+        {
+          "term": "GO:0099565 chemical synaptic transmission, postsynaptic",
+          "NES": -2.0271073528226053,
+          "gsea_fdr_q": 0.04398657950656373
+        },
+        {
+          "term": "GO:0033238 regulation of amine metabolic process",
+          "NES": -2.0572314399992297,
+          "gsea_fdr_q": 0.05234766486731552
+        }
+      ],
+      "runtime_seconds": 310.233
+    }
+  ],
+  "parameters": {
+    "weight": 1.0,
+    "permutation_num": 1000,
+    "min_size": 15,
+    "max_size": 500,
+    "threads": 2,
+    "seed": 20261020,
+    "permutation_type": "gene-set/preranked",
+    "gene_level_filter": null,
+    "multiple_testing": "GSEApy empirical GSEA FDR q separately per contrast/collection; not BH",
+    "display_selection": "up to two strongest NES in each direction, remainder strongest absolute NES; no significance filter"
+  },
+  "mapping_policy": "Exact supplied symbols translated to full Ensembl gene IDs through globally one-to-one mappings across all three contrasts; ambiguous symbol memberships excluded, every tested Ensembl row retained in ranking/background; no aliases, random assignment or strongest-statistic duplicate selection.",
+  "limitations": [
+    "Missing original signed test statistics require an explicitly exploratory ranking proxy.",
+    "Contrasts have complete but different tested universes and observed baseline-expression filters; compare pathway results cautiously.",
+    "KEGG is the archived BioSystems2020 collection, not a current KEGG release.",
+    "GO uses the pinned2026-05-19 non-IEA protein-coding projection with upstream size restrictions.",
+    "The 13 legacy mitochondrial symbols match archived KEGG but not current GO; no unvalidated alias conversion is performed.",
+    "No sample-level expression, counts, covariates or replicate metadata are available; this is not a refitted expression analysis."
+  ],
+  "software": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "gseapy": "1.3.1"
+  },
+  "started_utc": "2026-10-20T08:39:56.179780+00:00",
+  "runner_sha256": "b9844ce67d7b50d007cbecdbe96b0065c04f6079858d49c2c7ff9f521950a7d4",
+  "pathway_helper_sha256": "e3f5465364ffdac1d58d18293502109ed5a60b6f62b01ea3129a333eb46431c6",
+  "artifact_sha256": {
+    "annotation_mapping_gaps.tsv": "e177d235810fd58a2a1abd82a6c7ff1ae569cf87c98dbd7905c9d3422240cd90",
+    "exact_symbol_mapping.tsv": "2add8b0d0e5216452891bd459f2ca9e5550e68a458768f4af564a11036b42a80",
+    "figure_01_complete_rank.tsv.gz": "01d1e3522a47523ab4b390b082d51676deacb5f4ef59e2ceeb3dd8a903481d11",
+    "figure_01_go_bp_all_results.tsv.gz": "38c6a0226e538998e17b4a8e53215d0fd044c2b62955b53dc8f967c530123294",
+    "figure_01_go_bp_display.tsv": "11ff5b07ebc4b9d666ebdd3e99f9b9f75b27a55a5888a3a54e30ab169f7d47d3",
+    "figure_01_go_bp_gseapy_raw.tsv.gz": "a293f2b9d03d373c3ad9cb85868f38baed982eba7ff2acd3aa8febf13a7bb52d",
+    "figure_01_go_bp_leading_edge.tsv.gz": "c2dfbc5d614475bcbaf711b8a6f3e96497adabb77cc27e41e8daa54dd3ea10ef",
+    "figure_01_kegg_all_results.tsv.gz": "13eb7e9196fa122914d5dd28baebb603bc5b804cac3bf90854f3bb5056d5cc43",
+    "figure_01_kegg_display.tsv": "1fd484c015059e7471a6ad69c1bfb1f82884ffa9da2c5c4ba3f281735e3a7f3d",
+    "figure_01_kegg_gseapy_raw.tsv.gz": "78a540ca9c56b16932413e8bbf1b02c94f8d70c470124119c63f334875bf51b7",
+    "figure_01_kegg_leading_edge.tsv.gz": "173ee2195d26964cca4f81aa0af3e1a23c76ec8dfc9f933322459c1e6227c02d",
+    "figure_02_complete_rank.tsv.gz": "2949d068ee1939410fecc948e492aa56c74b4e35208ecfe1bf02269e36acf1ff",
+    "figure_02_go_bp_all_results.tsv.gz": "61262575ee0c1a70ed599ec604fa83e4c570b82cec9d4b42c681218f6875b684",
+    "figure_02_go_bp_display.tsv": "8f4a3ef72df459e89c1f8ce15255004e2ebe41c05715681ef0a358649ba5683d",
+    "figure_02_go_bp_gseapy_raw.tsv.gz": "55e3d57da5f2da97204e8770ecf7add7eab4100ccd272766d58f409816f1b66c",
+    "figure_02_go_bp_leading_edge.tsv.gz": "ba730780c1608276e987903131720f0cea83360f500d094fd8a54b1f3c8addeb",
+    "figure_02_kegg_all_results.tsv.gz": "9dde116f5bc758342e857c3ef41fead294ec1ab94d109800000953f79ed6ce98",
+    "figure_02_kegg_display.tsv": "154fed326d4fe232f8a6c62a7b09df5c931edb58ee620a3ba8a1b5ec54cd0974",
+    "figure_02_kegg_gseapy_raw.tsv.gz": "d2ab517cea029e2696381dbbc44df8dce44e38329e89068c0c0900861ec8e485",
+    "figure_02_kegg_leading_edge.tsv.gz": "f62273c5a7a195282abb65353670b0e8b4d06fbc5b5d9fc20048125b6903e7ff",
+    "figure_03_complete_rank.tsv.gz": "8796587334abf4a8762ac9486997f4f3af782d2a3868e4822d56eb00bc3bea96",
+    "figure_03_go_bp_all_results.tsv.gz": "6719caa4f1ffcb1d88d9a69550f74be9875242bca39d73d040bb7f4ee4e29b73",
+    "figure_03_go_bp_display.tsv": "8ac9f0880f07aad7dc43135bae660ccb46784b81b9d4bb2285feba56d6ac1f00",
+    "figure_03_go_bp_gseapy_raw.tsv.gz": "c85e3cc08a5346c0adb59c3fe63094eec8bc08bbcb31cb14a567c1e73a627a91",
+    "figure_03_go_bp_leading_edge.tsv.gz": "2d589faac75943e67532e032b59b65be3e396669ebea28931242fa7393864773",
+    "figure_03_kegg_all_results.tsv.gz": "b246c8c662a8415d652ede397750702a7910b9e8c458e4a6bbcc902a88807a95",
+    "figure_03_kegg_display.tsv": "33b28e8fd38fbba525c4f72d1d7cbf085f1e2617050e260fd377fae1ee5d86ff",
+    "figure_03_kegg_gseapy_raw.tsv.gz": "142fa6ad1eb6efbe2921f34508ce5ebafeb89c31c781e624a71ae7106d5c0547",
+    "figure_03_kegg_leading_edge.tsv.gz": "b1154e00a6b8c447444feaa1db54118d2bc4ff26d5802c592eeb16ea91dcb4d8",
+    "go_bp_coverage.tsv.gz": "2cf0f46cabfdc9a329dcdedf787a025b47fd080527a7da1d0218c0649bd4b164",
+    "kegg_coverage.tsv.gz": "44f69eab6d6c2f21fde1f70373e9c15b885bd8f4a7c493ef51d865f34f128c95"
+  },
+  "runtime_seconds": 776.422,
+  "completed_utc": "2026-10-20T08:52:51.329191+00:00"
+}
