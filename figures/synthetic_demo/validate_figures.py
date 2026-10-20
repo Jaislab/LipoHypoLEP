@@ -47,7 +47,8 @@ def check_report():
     for filename, expected in inputs.items():
         path = REPO / filename
         require(path.is_file() and digest(path) == expected, f"Stale figure validation: {filename}")
-    for script in (ROOT / "verify_export_fonts.py", ROOT.parent / "accessibility/audit_colors.py"):
+    for script in (ROOT / "verify_export_fonts.py", ROOT / "verify_uniform_typography.py",
+                   ROOT.parent / "accessibility/audit_colors.py"):
         subprocess.run([sys.executable, str(script), "--check-report"], check=True)
     return report
 
@@ -78,9 +79,12 @@ def verify():
                 ["volcano", "two-group heatmap", "KEGG preranked GSEA", "GO BP preranked GSEA"],
                 "Unexpected panel composition")
         require(record["all_visible_typography"] == "Nimbus Sans", "Unexpected font selection")
-        expected_exports={f"figure_{number:02d}_large_axis_synthetic{extension}" for extension in ('.png','.pdf')}
+        require(record.get('font_pixels')==32 and
+                all(abs(label['size_px']-32)<.01 for label in record['labels']),
+                "Every text element must use the single 32 px font size")
+        expected_exports={f"figure_{number:02d}_uniform_type_synthetic{extension}" for extension in ('.png','.pdf')}
         require(set(record.get("versioned_export_sha256",{}))==expected_exports,
-                "Missing distinctly named large-axis exports")
+                "Missing distinctly named uniform-type exports")
         for filename,expected_hash in record['versioned_export_sha256'].items():
             path=ROOT.parent/filename
             canonical=ROOT.parent/f"figure_{number:02d}_gsea_synthetic{path.suffix}"
@@ -116,13 +120,16 @@ def verify():
                         "gsea_scores_and_q_match_complete_tables": True,
                         "requested_palette": colors, "panels": 4, "pca_absent": True})
     # These scripts read the actual fonts, outputs and their own freshness hashes.
-    for script in (ROOT / "verify_export_fonts.py", ROOT.parent / "accessibility/audit_colors.py"):
+    for script in (ROOT / "verify_export_fonts.py", ROOT / "verify_uniform_typography.py",
+                   ROOT.parent / "accessibility/audit_colors.py"):
         subprocess.run([sys.executable, str(script), "--check-report"], check=True)
     evidence = set(input_hashes)
     evidence.update(str((ROOT.parent/filename).relative_to(REPO)) for record in plot['figures']
                     for filename in record['versioned_export_sha256'])
     evidence.update(str(path.relative_to(REPO)) for path in (
         ROOT / "font_and_plot_audit.json", ROOT / "export_font_verification.json",
+        ROOT / "verify_uniform_typography.py", ROOT.parent / "typography/uniform_type_measurements.json",
+        ROOT.parent / "typography/uniform_type_before_after.png",
         ROOT.parent / "accessibility/palette_simulation.json", gsea / "gsea_provenance.json",
         ROOT / "run_gsea.py", ROOT / "simulate_and_analyze.py", ROOT.parent / "requirements.txt"))
     # Include every GSEA result/source hash rather than trusting just a summary.

@@ -1,7 +1,7 @@
 {
   "complete": true,
   "input_sha256": {
-    "figures/synthetic_demo/render_figure.py": "e89756e1e6301af19dc7414d67d7911ca4c7507896ff85c88fe8a572ee374344",
+    "figures/synthetic_demo/render_figure.py": "e6bcedea14fe8ce87a8c3ae73ac30e3c4361d25fa460c81fe5269d87af902a0d",
     "figures/synthetic_demo/data/normalized_log2_expression.tsv.gz": "3a81f5d936b48219e116c5a38c3537dbf36f88bff927cca3b353d27544d26dcf",
     "figures/synthetic_demo/data/sample_metadata.tsv": "c2d5d5c19a98408a3e9b34f29ec0040accb2f9d91d6b12cc2cc78f620ea6f754",
     "figures/synthetic_demo/data/simulation_summary.json": "0dbba9e51776e8213c7d900beefe1fe8bd491e526d7875224643f4e667c2f378",
@@ -20,12 +20,13 @@
         1536,
         1024
       ],
-      "typography_scale": 1.2,
-      "axis_label_pixels": 40,
-      "axis_tick_pixels": 32,
+      "font_pixels": 32,
+      "observed_unique_size_px": [
+        32.0
+      ],
       "versioned_export_sha256": {
-        "figure_01_large_axis_synthetic.png": "2c97ad271d0296f49e48dcc5c7338bea9b31bcb238709baba98f3e177eacea5a",
-        "figure_01_large_axis_synthetic.pdf": "69238193bfe9e931dd0da02ce6879aa202227698fe99ff374521016ea72975c1"
+        "figure_01_uniform_type_synthetic.png": "ed4561214e30dd92d34ec998f9f9d78f4bec9bdf3e778aacb31cb16ec7c68db9",
+        "figure_01_uniform_type_synthetic.pdf": "37a34157458fff775f4a42e56c2b0aaf0ef021654461dd419c8bb4cac564f432"
       },
       "pdf_fonts": [
         "EKTMJB+NimbusSans-Bold",
@@ -38,209 +39,269 @@
       "pca_panel": false,
       "labels": [
         {
-          "text": "log$_2$ fold change",
+          "text": "log2 fold change",
           "font": "Nimbus Sans Regular",
-          "size_px": 40.0
+          "size_px": 32.0
         },
         {
-          "text": "\u2212log$_{10}$(adjusted $P$)",
+          "text": "\u22124",
           "font": "Nimbus Sans Regular",
-          "size_px": 40.0
+          "size_px": 32.0
+        },
+        {
+          "text": "\u22122",
+          "font": "Nimbus Sans Regular",
+          "size_px": 32.0
+        },
+        {
+          "text": "0",
+          "font": "Nimbus Sans Regular",
+          "size_px": 32.0
+        },
+        {
+          "text": "2",
+          "font": "Nimbus Sans Regular",
+          "size_px": 32.0
+        },
+        {
+          "text": "4",
+          "font": "Nimbus Sans Regular",
+          "size_px": 32.0
+        },
+        {
+          "text": "\u2212log10(adjusted P)",
+          "font": "Nimbus Sans Regular",
+          "size_px": 32.0
+        },
+        {
+          "text": "0",
+          "font": "Nimbus Sans Regular",
+          "size_px": 32.0
+        },
+        {
+          "text": "2",
+          "font": "Nimbus Sans Regular",
+          "size_px": 32.0
+        },
+        {
+          "text": "4",
+          "font": "Nimbus Sans Regular",
+          "size_px": 32.0
+        },
+        {
+          "text": "6",
+          "font": "Nimbus Sans Regular",
+          "size_px": 32.0
+        },
+        {
+          "text": "8",
+          "font": "Nimbus Sans Regular",
+          "size_px": 32.0
+        },
+        {
+          "text": "10",
+          "font": "Nimbus Sans Regular",
+          "size_px": 32.0
         },
         {
           "text": "LD SALINE vs NON-LD control",
           "font": "Nimbus Sans Regular",
-          "size_px": 28.8
+          "size_px": 32.0
         },
         {
           "text": "Genes",
           "font": "Nimbus Sans Regular",
-          "size_px": 40.0
+          "size_px": 32.0
         },
         {
           "text": "z-score",
           "font": "Nimbus Sans Regular",
-          "size_px": 40.0
+          "size_px": 32.0
+        },
+        {
+          "text": "\u22122",
+          "font": "Nimbus Sans Regular",
+          "size_px": 32.0
+        },
+        {
+          "text": "0",
+          "font": "Nimbus Sans Regular",
+          "size_px": 32.0
+        },
+        {
+          "text": "2",
+          "font": "Nimbus Sans Regular",
+          "size_px": 32.0
+        },
+        {
+          "text": "Arachidonic acid metabolism",
+          "font": "Nimbus Sans Regular",
+          "size_px": 32.0
         },
         {
           "text": "1.00",
           "font": "Nimbus Sans Regular",
-          "size_px": 24.0
+          "size_px": 32.0
+        },
+        {
+          "text": "Linoleic acid metabolism",
+          "font": "Nimbus Sans Regular",
+          "size_px": 32.0
         },
         {
           "text": "1.00",
           "font": "Nimbus Sans Regular",
-          "size_px": 24.0
+          "size_px": 32.0
+        },
+        {
+          "text": "GABAergic synapse",
+          "font": "Nimbus Sans Regular",
+          "size_px": 32.0
         },
         {
           "text": "0.72",
           "font": "Nimbus Sans Regular",
-          "size_px": 24.0
+          "size_px": 32.0
+        },
+        {
+          "text": "Glutamatergic synapse",
+          "font": "Nimbus Sans Regular",
+          "size_px": 32.0
         },
         {
           "text": "1.00",
           "font": "Nimbus Sans Regular",
-          "size_px": 24.0
-        },
-        {
-          "text": "q",
-          "font": "Nimbus Sans Regular",
-          "size_px": 25.2
+          "size_px": 32.0
         },
         {
           "text": "NES",
           "font": "Nimbus Sans Regular",
-          "size_px": 40.0
+          "size_px": 32.0
         },
         {
-          "text": "Arachidonic acid metabolism",
+          "text": "\u22122",
           "font": "Nimbus Sans Regular",
-          "size_px": 25.2
+          "size_px": 32.0
         },
         {
-          "text": "Arachidonic acid metabolism",
+          "text": "0",
           "font": "Nimbus Sans Regular",
-          "size_px": 25.2
+          "size_px": 32.0
         },
         {
-          "text": "Linoleic acid metabolism",
+          "text": "2",
           "font": "Nimbus Sans Regular",
-          "size_px": 25.2
+          "size_px": 32.0
         },
         {
-          "text": "Linoleic acid metabolism",
+          "text": "epithelial cell apoptotic process",
           "font": "Nimbus Sans Regular",
-          "size_px": 25.2
-        },
-        {
-          "text": "GABAergic synapse",
-          "font": "Nimbus Sans Regular",
-          "size_px": 25.2
-        },
-        {
-          "text": "GABAergic synapse",
-          "font": "Nimbus Sans Regular",
-          "size_px": 25.2
-        },
-        {
-          "text": "Glutamatergic synapse",
-          "font": "Nimbus Sans Regular",
-          "size_px": 25.2
-        },
-        {
-          "text": "Glutamatergic synapse",
-          "font": "Nimbus Sans Regular",
-          "size_px": 25.2
+          "size_px": 32.0
         },
         {
           "text": "0.29",
           "font": "Nimbus Sans Regular",
-          "size_px": 24.0
+          "size_px": 32.0
+        },
+        {
+          "text": "T cell selection",
+          "font": "Nimbus Sans Regular",
+          "size_px": 32.0
         },
         {
           "text": "0.17",
           "font": "Nimbus Sans Regular",
-          "size_px": 24.0
+          "size_px": 32.0
+        },
+        {
+          "text": "mRNA transcription",
+          "font": "Nimbus Sans Regular",
+          "size_px": 32.0
         },
         {
           "text": "0.94",
           "font": "Nimbus Sans Regular",
-          "size_px": 24.0
+          "size_px": 32.0
+        },
+        {
+          "text": "glycosphingolipid biosynthetic\nprocess",
+          "font": "Nimbus Sans Regular",
+          "size_px": 32.0
         },
         {
           "text": "0.83",
           "font": "Nimbus Sans Regular",
-          "size_px": 24.0
-        },
-        {
-          "text": "q",
-          "font": "Nimbus Sans Regular",
-          "size_px": 25.2
+          "size_px": 32.0
         },
         {
           "text": "NES",
           "font": "Nimbus Sans Regular",
-          "size_px": 40.0
+          "size_px": 32.0
         },
         {
-          "text": "epithelial cell apoptotic process",
+          "text": "\u22122",
           "font": "Nimbus Sans Regular",
-          "size_px": 25.2
+          "size_px": 32.0
         },
         {
-          "text": "epithelial cell apoptotic process",
+          "text": "0",
           "font": "Nimbus Sans Regular",
-          "size_px": 25.2
+          "size_px": 32.0
         },
         {
-          "text": "T cell selection",
+          "text": "2",
           "font": "Nimbus Sans Regular",
-          "size_px": 25.2
-        },
-        {
-          "text": "T cell selection",
-          "font": "Nimbus Sans Regular",
-          "size_px": 25.2
-        },
-        {
-          "text": "mRNA transcription",
-          "font": "Nimbus Sans Regular",
-          "size_px": 25.2
-        },
-        {
-          "text": "mRNA transcription",
-          "font": "Nimbus Sans Regular",
-          "size_px": 25.2
-        },
-        {
-          "text": "glycosphingolipid biosynthetic process",
-          "font": "Nimbus Sans Regular",
-          "size_px": 25.2
-        },
-        {
-          "text": "glycosphingolipid biosynthetic process",
-          "font": "Nimbus Sans Regular",
-          "size_px": 25.2
+          "size_px": 32.0
         },
         {
           "text": "a",
           "font": "Nimbus Sans Bold",
-          "size_px": 38.4
+          "size_px": 32.0
         },
         {
           "text": "b",
           "font": "Nimbus Sans Bold",
-          "size_px": 38.4
+          "size_px": 32.0
         },
         {
           "text": "LD SALINE",
           "font": "Nimbus Sans Regular",
-          "size_px": 28.8
+          "size_px": 32.0
         },
         {
           "text": "NON-LD control",
           "font": "Nimbus Sans Regular",
-          "size_px": 28.8
+          "size_px": 32.0
         },
         {
           "text": "c",
           "font": "Nimbus Sans Bold",
-          "size_px": 38.4
+          "size_px": 32.0
         },
         {
           "text": "KEGG",
           "font": "Nimbus Sans Regular",
-          "size_px": 30.0
+          "size_px": 32.0
+        },
+        {
+          "text": "q",
+          "font": "Nimbus Sans Regular",
+          "size_px": 32.0
         },
         {
           "text": "d",
           "font": "Nimbus Sans Bold",
-          "size_px": 38.4
+          "size_px": 32.0
         },
         {
           "text": "GO BP",
           "font": "Nimbus Sans Regular",
-          "size_px": 30.0
+          "size_px": 32.0
+        },
+        {
+          "text": "q",
+          "font": "Nimbus Sans Regular",
+          "size_px": 32.0
         }
       ],
       "comparison": "LD SALINE vs NON-LD control",
@@ -408,12 +469,13 @@
         1536,
         1024
       ],
-      "typography_scale": 1.2,
-      "axis_label_pixels": 40,
-      "axis_tick_pixels": 32,
+      "font_pixels": 32,
+      "observed_unique_size_px": [
+        32.0
+      ],
       "versioned_export_sha256": {
-        "figure_02_large_axis_synthetic.png": "7f528fb314ac36ddf9ac7a007bb9b1be78fd375cfbb9755f7f0a3d0192c0284c",
-        "figure_02_large_axis_synthetic.pdf": "012daf845403fed3ed53bb62772558b46959c23285fa758050875706dcc1ec0b"
+        "figure_02_uniform_type_synthetic.png": "e22198c8461a0a100d9769418e838840b284f22ee7d80f186b19a7729c28f276",
+        "figure_02_uniform_type_synthetic.pdf": "4a84ae226ad51435da255592594c7264f85d1da6d7733daff7aa5c80ace085c9"
       },
       "pdf_fonts": [
         "EKTMJB+NimbusSans-Bold",
@@ -426,209 +488,269 @@
       "pca_panel": false,
       "labels": [
         {
-          "text": "log$_2$ fold change",
+          "text": "log2 fold change",
           "font": "Nimbus Sans Regular",
-          "size_px": 40.0
+          "size_px": 32.0
         },
         {
-          "text": "\u2212log$_{10}$(adjusted $P$)",
+          "text": "\u22124",
           "font": "Nimbus Sans Regular",
-          "size_px": 40.0
+          "size_px": 32.0
+        },
+        {
+          "text": "\u22122",
+          "font": "Nimbus Sans Regular",
+          "size_px": 32.0
+        },
+        {
+          "text": "0",
+          "font": "Nimbus Sans Regular",
+          "size_px": 32.0
+        },
+        {
+          "text": "2",
+          "font": "Nimbus Sans Regular",
+          "size_px": 32.0
+        },
+        {
+          "text": "4",
+          "font": "Nimbus Sans Regular",
+          "size_px": 32.0
+        },
+        {
+          "text": "\u2212log10(adjusted P)",
+          "font": "Nimbus Sans Regular",
+          "size_px": 32.0
+        },
+        {
+          "text": "0",
+          "font": "Nimbus Sans Regular",
+          "size_px": 32.0
+        },
+        {
+          "text": "2",
+          "font": "Nimbus Sans Regular",
+          "size_px": 32.0
+        },
+        {
+          "text": "4",
+          "font": "Nimbus Sans Regular",
+          "size_px": 32.0
+        },
+        {
+          "text": "6",
+          "font": "Nimbus Sans Regular",
+          "size_px": 32.0
+        },
+        {
+          "text": "8",
+          "font": "Nimbus Sans Regular",
+          "size_px": 32.0
+        },
+        {
+          "text": "10",
+          "font": "Nimbus Sans Regular",
+          "size_px": 32.0
         },
         {
           "text": "LD LEPTIN vs LD SALINE",
           "font": "Nimbus Sans Regular",
-          "size_px": 28.8
+          "size_px": 32.0
         },
         {
           "text": "Genes",
           "font": "Nimbus Sans Regular",
-          "size_px": 40.0
+          "size_px": 32.0
         },
         {
           "text": "z-score",
           "font": "Nimbus Sans Regular",
-          "size_px": 40.0
+          "size_px": 32.0
+        },
+        {
+          "text": "\u22122",
+          "font": "Nimbus Sans Regular",
+          "size_px": 32.0
+        },
+        {
+          "text": "0",
+          "font": "Nimbus Sans Regular",
+          "size_px": 32.0
+        },
+        {
+          "text": "2",
+          "font": "Nimbus Sans Regular",
+          "size_px": 32.0
+        },
+        {
+          "text": "Longevity regulating pathway -\nmultiple species",
+          "font": "Nimbus Sans Regular",
+          "size_px": 32.0
         },
         {
           "text": "1.00",
           "font": "Nimbus Sans Regular",
-          "size_px": 24.0
+          "size_px": 32.0
+        },
+        {
+          "text": "Alanine, aspartate and\nglutamate metabolism",
+          "font": "Nimbus Sans Regular",
+          "size_px": 32.0
         },
         {
           "text": "1.00",
           "font": "Nimbus Sans Regular",
-          "size_px": 24.0
+          "size_px": 32.0
+        },
+        {
+          "text": "Pyruvate metabolism",
+          "font": "Nimbus Sans Regular",
+          "size_px": 32.0
         },
         {
           "text": "1.00",
           "font": "Nimbus Sans Regular",
-          "size_px": 24.0
+          "size_px": 32.0
+        },
+        {
+          "text": "Malaria",
+          "font": "Nimbus Sans Regular",
+          "size_px": 32.0
         },
         {
           "text": "1.00",
           "font": "Nimbus Sans Regular",
-          "size_px": 24.0
-        },
-        {
-          "text": "q",
-          "font": "Nimbus Sans Regular",
-          "size_px": 25.2
+          "size_px": 32.0
         },
         {
           "text": "NES",
           "font": "Nimbus Sans Regular",
-          "size_px": 40.0
+          "size_px": 32.0
         },
         {
-          "text": "Longevity regulating pathway - multiple\nspecies",
+          "text": "\u22122",
           "font": "Nimbus Sans Regular",
-          "size_px": 25.2
+          "size_px": 32.0
         },
         {
-          "text": "Longevity regulating pathway - multiple\nspecies",
+          "text": "0",
           "font": "Nimbus Sans Regular",
-          "size_px": 25.2
+          "size_px": 32.0
         },
         {
-          "text": "Alanine, aspartate and glutamate\nmetabolism",
+          "text": "2",
           "font": "Nimbus Sans Regular",
-          "size_px": 25.2
+          "size_px": 32.0
         },
         {
-          "text": "Alanine, aspartate and glutamate\nmetabolism",
+          "text": "negative regulation of Notch\nsignaling pathway",
           "font": "Nimbus Sans Regular",
-          "size_px": 25.2
-        },
-        {
-          "text": "Pyruvate metabolism",
-          "font": "Nimbus Sans Regular",
-          "size_px": 25.2
-        },
-        {
-          "text": "Pyruvate metabolism",
-          "font": "Nimbus Sans Regular",
-          "size_px": 25.2
-        },
-        {
-          "text": "Malaria",
-          "font": "Nimbus Sans Regular",
-          "size_px": 25.2
-        },
-        {
-          "text": "Malaria",
-          "font": "Nimbus Sans Regular",
-          "size_px": 25.2
+          "size_px": 32.0
         },
         {
           "text": "1.00",
           "font": "Nimbus Sans Regular",
-          "size_px": 24.0
+          "size_px": 32.0
+        },
+        {
+          "text": "pyroptotic inflammatory\nresponse",
+          "font": "Nimbus Sans Regular",
+          "size_px": 32.0
         },
         {
           "text": "1.00",
           "font": "Nimbus Sans Regular",
-          "size_px": 24.0
+          "size_px": 32.0
+        },
+        {
+          "text": "ER-nucleus signaling pathway",
+          "font": "Nimbus Sans Regular",
+          "size_px": 32.0
         },
         {
           "text": "0.36",
           "font": "Nimbus Sans Regular",
-          "size_px": 24.0
+          "size_px": 32.0
+        },
+        {
+          "text": "establishment or maintenance\nof epithelial cell apical/basal\npolarity",
+          "font": "Nimbus Sans Regular",
+          "size_px": 32.0
         },
         {
           "text": "0.12",
           "font": "Nimbus Sans Regular",
-          "size_px": 24.0
-        },
-        {
-          "text": "q",
-          "font": "Nimbus Sans Regular",
-          "size_px": 25.2
+          "size_px": 32.0
         },
         {
           "text": "NES",
           "font": "Nimbus Sans Regular",
-          "size_px": 40.0
+          "size_px": 32.0
         },
         {
-          "text": "negative regulation of Notch signaling\npathway",
+          "text": "\u22122",
           "font": "Nimbus Sans Regular",
-          "size_px": 25.2
+          "size_px": 32.0
         },
         {
-          "text": "negative regulation of Notch signaling\npathway",
+          "text": "0",
           "font": "Nimbus Sans Regular",
-          "size_px": 25.2
+          "size_px": 32.0
         },
         {
-          "text": "pyroptotic inflammatory response",
+          "text": "2",
           "font": "Nimbus Sans Regular",
-          "size_px": 25.2
-        },
-        {
-          "text": "pyroptotic inflammatory response",
-          "font": "Nimbus Sans Regular",
-          "size_px": 25.2
-        },
-        {
-          "text": "ER-nucleus signaling pathway",
-          "font": "Nimbus Sans Regular",
-          "size_px": 25.2
-        },
-        {
-          "text": "ER-nucleus signaling pathway",
-          "font": "Nimbus Sans Regular",
-          "size_px": 25.2
-        },
-        {
-          "text": "establishment or maintenance of epithelial\ncell apical/basal polarity",
-          "font": "Nimbus Sans Regular",
-          "size_px": 25.2
-        },
-        {
-          "text": "establishment or maintenance of epithelial\ncell apical/basal polarity",
-          "font": "Nimbus Sans Regular",
-          "size_px": 25.2
+          "size_px": 32.0
         },
         {
           "text": "a",
           "font": "Nimbus Sans Bold",
-          "size_px": 38.4
+          "size_px": 32.0
         },
         {
           "text": "b",
           "font": "Nimbus Sans Bold",
-          "size_px": 38.4
+          "size_px": 32.0
         },
         {
           "text": "LD LEPTIN",
           "font": "Nimbus Sans Regular",
-          "size_px": 28.8
+          "size_px": 32.0
         },
         {
           "text": "LD SALINE",
           "font": "Nimbus Sans Regular",
-          "size_px": 28.8
+          "size_px": 32.0
         },
         {
           "text": "c",
           "font": "Nimbus Sans Bold",
-          "size_px": 38.4
+          "size_px": 32.0
         },
         {
           "text": "KEGG",
           "font": "Nimbus Sans Regular",
-          "size_px": 30.0
+          "size_px": 32.0
+        },
+        {
+          "text": "q",
+          "font": "Nimbus Sans Regular",
+          "size_px": 32.0
         },
         {
           "text": "d",
           "font": "Nimbus Sans Bold",
-          "size_px": 38.4
+          "size_px": 32.0
         },
         {
           "text": "GO BP",
           "font": "Nimbus Sans Regular",
-          "size_px": 30.0
+          "size_px": 32.0
+        },
+        {
+          "text": "q",
+          "font": "Nimbus Sans Regular",
+          "size_px": 32.0
         }
       ],
       "comparison": "LD LEPTIN vs LD SALINE",
@@ -796,12 +918,13 @@
         1536,
         1024
       ],
-      "typography_scale": 1.2,
-      "axis_label_pixels": 40,
-      "axis_tick_pixels": 32,
+      "font_pixels": 32,
+      "observed_unique_size_px": [
+        32.0
+      ],
       "versioned_export_sha256": {
-        "figure_03_large_axis_synthetic.png": "cbed8feaaa2bf5b3839fd53ac6841ac4e877855048147794746f040beed0bc55",
-        "figure_03_large_axis_synthetic.pdf": "314b55221100e3cf07fb26004e1c31dd52ea0f7d6398dec1d5d9e5a57bf8ed24"
+        "figure_03_uniform_type_synthetic.png": "775bbdc365b81cb9d73be268feaac023eb23206e81c77e0438f0ce7f78d68b6d",
+        "figure_03_uniform_type_synthetic.pdf": "df3bf69df707e56017ebac276330db778eea80b8929349176c0b0ed706777dbd"
       },
       "pdf_fonts": [
         "EKTMJB+NimbusSans-Bold",
@@ -814,209 +937,269 @@
       "pca_panel": false,
       "labels": [
         {
-          "text": "log$_2$ fold change",
+          "text": "log2 fold change",
           "font": "Nimbus Sans Regular",
-          "size_px": 40.0
+          "size_px": 32.0
         },
         {
-          "text": "\u2212log$_{10}$(adjusted $P$)",
+          "text": "\u22124",
           "font": "Nimbus Sans Regular",
-          "size_px": 40.0
+          "size_px": 32.0
+        },
+        {
+          "text": "\u22122",
+          "font": "Nimbus Sans Regular",
+          "size_px": 32.0
+        },
+        {
+          "text": "0",
+          "font": "Nimbus Sans Regular",
+          "size_px": 32.0
+        },
+        {
+          "text": "2",
+          "font": "Nimbus Sans Regular",
+          "size_px": 32.0
+        },
+        {
+          "text": "4",
+          "font": "Nimbus Sans Regular",
+          "size_px": 32.0
+        },
+        {
+          "text": "\u2212log10(adjusted P)",
+          "font": "Nimbus Sans Regular",
+          "size_px": 32.0
+        },
+        {
+          "text": "0",
+          "font": "Nimbus Sans Regular",
+          "size_px": 32.0
+        },
+        {
+          "text": "2",
+          "font": "Nimbus Sans Regular",
+          "size_px": 32.0
+        },
+        {
+          "text": "4",
+          "font": "Nimbus Sans Regular",
+          "size_px": 32.0
+        },
+        {
+          "text": "6",
+          "font": "Nimbus Sans Regular",
+          "size_px": 32.0
+        },
+        {
+          "text": "8",
+          "font": "Nimbus Sans Regular",
+          "size_px": 32.0
+        },
+        {
+          "text": "10",
+          "font": "Nimbus Sans Regular",
+          "size_px": 32.0
         },
         {
           "text": "LD LEPTIN vs NON-LD control",
           "font": "Nimbus Sans Regular",
-          "size_px": 28.8
+          "size_px": 32.0
         },
         {
           "text": "Genes",
           "font": "Nimbus Sans Regular",
-          "size_px": 40.0
+          "size_px": 32.0
         },
         {
           "text": "z-score",
           "font": "Nimbus Sans Regular",
-          "size_px": 40.0
+          "size_px": 32.0
+        },
+        {
+          "text": "\u22122",
+          "font": "Nimbus Sans Regular",
+          "size_px": 32.0
+        },
+        {
+          "text": "0",
+          "font": "Nimbus Sans Regular",
+          "size_px": 32.0
+        },
+        {
+          "text": "2",
+          "font": "Nimbus Sans Regular",
+          "size_px": 32.0
+        },
+        {
+          "text": "Pancreatic secretion",
+          "font": "Nimbus Sans Regular",
+          "size_px": 32.0
         },
         {
           "text": "1.00",
           "font": "Nimbus Sans Regular",
-          "size_px": 24.0
+          "size_px": 32.0
+        },
+        {
+          "text": "Retinol metabolism",
+          "font": "Nimbus Sans Regular",
+          "size_px": 32.0
         },
         {
           "text": "1.00",
           "font": "Nimbus Sans Regular",
-          "size_px": 24.0
+          "size_px": 32.0
+        },
+        {
+          "text": "Amyotrophic lateral sclerosis\n(ALS)",
+          "font": "Nimbus Sans Regular",
+          "size_px": 32.0
         },
         {
           "text": "1.00",
           "font": "Nimbus Sans Regular",
-          "size_px": 24.0
+          "size_px": 32.0
+        },
+        {
+          "text": "Inflammatory bowel disease\n(IBD)",
+          "font": "Nimbus Sans Regular",
+          "size_px": 32.0
         },
         {
           "text": "0.26",
           "font": "Nimbus Sans Regular",
-          "size_px": 24.0
-        },
-        {
-          "text": "q",
-          "font": "Nimbus Sans Regular",
-          "size_px": 25.2
+          "size_px": 32.0
         },
         {
           "text": "NES",
           "font": "Nimbus Sans Regular",
-          "size_px": 40.0
+          "size_px": 32.0
         },
         {
-          "text": "Pancreatic secretion",
+          "text": "\u22122",
           "font": "Nimbus Sans Regular",
-          "size_px": 25.2
+          "size_px": 32.0
         },
         {
-          "text": "Pancreatic secretion",
+          "text": "0",
           "font": "Nimbus Sans Regular",
-          "size_px": 25.2
+          "size_px": 32.0
         },
         {
-          "text": "Retinol metabolism",
+          "text": "2",
           "font": "Nimbus Sans Regular",
-          "size_px": 25.2
+          "size_px": 32.0
         },
         {
-          "text": "Retinol metabolism",
+          "text": "T cell selection",
           "font": "Nimbus Sans Regular",
-          "size_px": 25.2
-        },
-        {
-          "text": "Amyotrophic lateral sclerosis (ALS)",
-          "font": "Nimbus Sans Regular",
-          "size_px": 25.2
-        },
-        {
-          "text": "Amyotrophic lateral sclerosis (ALS)",
-          "font": "Nimbus Sans Regular",
-          "size_px": 25.2
-        },
-        {
-          "text": "Inflammatory bowel disease (IBD)",
-          "font": "Nimbus Sans Regular",
-          "size_px": 25.2
-        },
-        {
-          "text": "Inflammatory bowel disease (IBD)",
-          "font": "Nimbus Sans Regular",
-          "size_px": 25.2
+          "size_px": 32.0
         },
         {
           "text": "0.08",
           "font": "Nimbus Sans Regular",
-          "size_px": 24.0
+          "size_px": 32.0
+        },
+        {
+          "text": "positive T cell selection",
+          "font": "Nimbus Sans Regular",
+          "size_px": 32.0
         },
         {
           "text": "0.42",
           "font": "Nimbus Sans Regular",
-          "size_px": 24.0
+          "size_px": 32.0
+        },
+        {
+          "text": "negative regulation of G2/M\ntransition of mitotic cell cycle",
+          "font": "Nimbus Sans Regular",
+          "size_px": 32.0
         },
         {
           "text": "0.65",
           "font": "Nimbus Sans Regular",
-          "size_px": 24.0
+          "size_px": 32.0
+        },
+        {
+          "text": "mitotic G2/M transition\ncheckpoint",
+          "font": "Nimbus Sans Regular",
+          "size_px": 32.0
         },
         {
           "text": "0.63",
           "font": "Nimbus Sans Regular",
-          "size_px": 24.0
-        },
-        {
-          "text": "q",
-          "font": "Nimbus Sans Regular",
-          "size_px": 25.2
+          "size_px": 32.0
         },
         {
           "text": "NES",
           "font": "Nimbus Sans Regular",
-          "size_px": 40.0
+          "size_px": 32.0
         },
         {
-          "text": "T cell selection",
+          "text": "\u22122",
           "font": "Nimbus Sans Regular",
-          "size_px": 25.2
+          "size_px": 32.0
         },
         {
-          "text": "T cell selection",
+          "text": "0",
           "font": "Nimbus Sans Regular",
-          "size_px": 25.2
+          "size_px": 32.0
         },
         {
-          "text": "positive T cell selection",
+          "text": "2",
           "font": "Nimbus Sans Regular",
-          "size_px": 25.2
-        },
-        {
-          "text": "positive T cell selection",
-          "font": "Nimbus Sans Regular",
-          "size_px": 25.2
-        },
-        {
-          "text": "negative regulation of G2/M transition of\nmitotic cell cycle",
-          "font": "Nimbus Sans Regular",
-          "size_px": 25.2
-        },
-        {
-          "text": "negative regulation of G2/M transition of\nmitotic cell cycle",
-          "font": "Nimbus Sans Regular",
-          "size_px": 25.2
-        },
-        {
-          "text": "mitotic G2/M transition checkpoint",
-          "font": "Nimbus Sans Regular",
-          "size_px": 25.2
-        },
-        {
-          "text": "mitotic G2/M transition checkpoint",
-          "font": "Nimbus Sans Regular",
-          "size_px": 25.2
+          "size_px": 32.0
         },
         {
           "text": "a",
           "font": "Nimbus Sans Bold",
-          "size_px": 38.4
+          "size_px": 32.0
         },
         {
           "text": "b",
           "font": "Nimbus Sans Bold",
-          "size_px": 38.4
+          "size_px": 32.0
         },
         {
           "text": "LD LEPTIN",
           "font": "Nimbus Sans Regular",
-          "size_px": 28.8
+          "size_px": 32.0
         },
         {
           "text": "NON-LD control",
           "font": "Nimbus Sans Regular",
-          "size_px": 28.8
+          "size_px": 32.0
         },
         {
           "text": "c",
           "font": "Nimbus Sans Bold",
-          "size_px": 38.4
+          "size_px": 32.0
         },
         {
           "text": "KEGG",
           "font": "Nimbus Sans Regular",
-          "size_px": 30.0
+          "size_px": 32.0
+        },
+        {
+          "text": "q",
+          "font": "Nimbus Sans Regular",
+          "size_px": 32.0
         },
         {
           "text": "d",
           "font": "Nimbus Sans Bold",
-          "size_px": 38.4
+          "size_px": 32.0
         },
         {
           "text": "GO BP",
           "font": "Nimbus Sans Regular",
-          "size_px": 30.0
+          "size_px": 32.0
+        },
+        {
+          "text": "q",
+          "font": "Nimbus Sans Regular",
+          "size_px": 32.0
         }
       ],
       "comparison": "LD LEPTIN vs NON-LD control",

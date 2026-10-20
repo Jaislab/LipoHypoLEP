@@ -147,6 +147,31 @@ class NumericalDisplayTests(unittest.TestCase):
 
 
 class GseaDisplayTests(unittest.TestCase):
+    def test_pixel_wrapping_preserves_every_word_at_the_uniform_font_size(self):
+        font=Path('/usr/share/fonts/opentype/urw-base35/NimbusSans-Regular.otf')
+        if not font.is_file():
+            self.skipTest('Nimbus Sans source fonts are unavailable')
+        term='establishment or maintenance of epithelial cell apical/basal polarity'
+        wrapped=render.wrap_term(term,460,font)
+        self.assertEqual(wrapped.split(),term.split())
+        self.assertGreater(wrapped.count('\n'),0)
+        from matplotlib.backends.backend_agg import RendererAgg
+        renderer=RendererAgg(render.W,render.H,render.DPI)
+        properties=render.fm.FontProperties(fname=str(font),size=render.font_points())
+        for line in wrapped.splitlines():
+            self.assertLessEqual(renderer.get_text_width_height_descent(line,properties,False)[0],460)
+
+    def test_multiline_terms_receive_more_vertical_space_without_dropping_terms(self):
+        labels=['one line','three\nfull\nlines','two\nlines','one line']
+        positions=render.pathway_row_positions(labels,376)
+        self.assertEqual(len(positions),4)
+        self.assertTrue((np.diff(positions)>0).all())
+        self.assertGreater(positions[2]-positions[1],positions[3]-positions[2])
+        self.assertGreater(positions[0],0)
+        self.assertLess(positions[-1],376)
+        with self.assertRaisesRegex(RuntimeError,'allocate more panel space'):
+            render.pathway_row_positions(['\n'.join(['complete term']*20)]*4,376)
+
     def test_long_terms_fail_layout_check_without_reducing_font_or_truncating_text(self):
         font_dir=Path('/usr/share/fonts/opentype/urw-base35')
         if not (font_dir/'NimbusSans-Regular.otf').is_file():
@@ -158,14 +183,14 @@ class GseaDisplayTests(unittest.TestCase):
         ax.set_yticks(np.arange(4),labels=[full_label,'Second pathway','Third pathway','Fourth pathway'])
         ax.set(ylim=(3.5,-.5))
         for label in ax.get_yticklabels():
-            label.set_fontproperties(render.fm.FontProperties(fname=str(font_dir/'NimbusSans-Regular.otf'),size=render.px(21)))
+            label.set_fontproperties(render.fm.FontProperties(fname=str(font_dir/'NimbusSans-Regular.otf'),size=render.font_points()))
         fig._gsea_layout_regions=[{'axes':ax,'collection':'GO BP','q_labels':[],'left':40,'right':768}]
         try:
             fig.canvas.draw()
             with self.assertRaisesRegex(RuntimeError,'GO BP GSEA layout.*allocate more panel space'):
                 render.validate_gsea_layout(fig)
             self.assertEqual(ax.get_yticklabels()[0].get_text(),full_label)
-            self.assertEqual(ax.get_yticklabels()[0].get_fontsize(),render.px(21))
+            self.assertEqual(ax.get_yticklabels()[0].get_fontsize(),render.font_points())
         finally:
             render.plt.close(fig)
 
@@ -254,8 +279,17 @@ class GseaDisplayTests(unittest.TestCase):
             self.assertEqual(len(list(root.parent.glob("figure_01*"))), 7)
             for extension in ('.png','.pdf'):
                 self.assertEqual((root.parent/f'figure_01_gsea_synthetic{extension}').read_bytes(),
-                                 (root.parent/f'figure_01_large_axis_synthetic{extension}').read_bytes())
+                                 (root.parent/f'figure_01_uniform_type_synthetic{extension}').read_bytes())
             self.assertTrue(all("NimbusSans" in font for font in details["pdf_fonts"]))
+            self.assertEqual(details['font_pixels'],32)
+            self.assertEqual(details['observed_unique_size_px'],[32])
+            self.assertEqual({label['size_px'] for label in details['labels']},{32})
+            with render.fitz.open(root.parent/'figure_01_gsea_synthetic.pdf') as document:
+                spans=[span for page in document for block in page.get_text('dict')['blocks']
+                       for line in block.get('lines',[]) for span in line['spans'] if span['text'].strip()]
+                self.assertTrue(spans)
+                self.assertTrue(all(abs(span['size']-32*72/100)<1e-4 for span in spans))
+                self.assertIn('log2 fold change',' '.join(span['text'] for span in spans))
             self.assertEqual(details["heatmap_genes"], [])
             self.assertEqual(ylim, 324)
 

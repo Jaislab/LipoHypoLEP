@@ -8,31 +8,31 @@ Hypothalamic bulk RNA-seq figure development for **LD SALINE**, **LD LEPTIN**, a
 
 **Gene highlighting and heatmap selection require adjusted *P* < 0.05 and absolute log2 fold change ≥ 0.2.** The ±0.2 values are effect-size cutoffs; fitted estimates are unchanged and are not clipped at those values. KEGG and GO Biological Process GSEA use all 7,647 retained genes ranked by the signed test statistic, without either DEG filter. Real mouse pathway memberships and an actual enrichment calculation are used, but gene identities are assigned randomly to the synthetic statistics: no tissue-derived gene or pathway findings are implied.
 
-**Updated previews: larger axis type.** All three images below now use **40 px axis titles and 32 px numeric ticks**, with Nimbus Sans throughout. [Compare the previous and current axis labels at the same scale](figures/typography/axis_type_before_after.png). The new PNG/PDF names contain `large_axis` to identify this revision explicitly.
+**One font size throughout: 32 px Nimbus Sans.** The three previews below use the same size for axes, ticks, group names, KEGG/GO pathway labels, q values, headings and panel letters. [Compare the GSEA panels at the same scale](figures/typography/uniform_type_before_after.png).
 
 ## FIGURE 1 — How does untreated LD differ from non-LD controls?
 
 **LD SALINE vs NON-LD control**
 
-![Figure 1: four analytical panels comparing synthetic LD SALINE and NON-LD control samples](figures/figure_01_large_axis_synthetic.png)
+![Figure 1: four analytical panels comparing synthetic LD SALINE and NON-LD control samples](figures/figure_01_uniform_type_synthetic.png)
 
-[Figure legend](figures/FIGURE_1_LEGEND.md) · [PNG](figures/figure_01_large_axis_synthetic.png) · [PDF](figures/figure_01_large_axis_synthetic.pdf) · [Outlined SVG](figures/figure_01_gsea_synthetic.svg) · [Editable SVG](figures/figure_01_gsea_synthetic_editable.svg) · [High-resolution PNG](figures/figure_01_gsea_synthetic_300dpi.png)
+[Figure legend](figures/FIGURE_1_LEGEND.md) · [PNG](figures/figure_01_uniform_type_synthetic.png) · [PDF](figures/figure_01_uniform_type_synthetic.pdf) · [Outlined SVG](figures/figure_01_gsea_synthetic.svg) · [Editable SVG](figures/figure_01_gsea_synthetic_editable.svg) · [High-resolution PNG](figures/figure_01_gsea_synthetic_300dpi.png)
 
 ## FIGURE 2 — What does leptin treatment change in LD mice?
 
 **LD LEPTIN vs LD SALINE**
 
-![Figure 2: four analytical panels comparing synthetic LD LEPTIN and LD SALINE samples](figures/figure_02_large_axis_synthetic.png)
+![Figure 2: four analytical panels comparing synthetic LD LEPTIN and LD SALINE samples](figures/figure_02_uniform_type_synthetic.png)
 
-[Figure legend](figures/FIGURE_2_LEGEND.md) · [PNG](figures/figure_02_large_axis_synthetic.png) · [PDF](figures/figure_02_large_axis_synthetic.pdf) · [Outlined SVG](figures/figure_02_gsea_synthetic.svg) · [Editable SVG](figures/figure_02_gsea_synthetic_editable.svg) · [High-resolution PNG](figures/figure_02_gsea_synthetic_300dpi.png)
+[Figure legend](figures/FIGURE_2_LEGEND.md) · [PNG](figures/figure_02_uniform_type_synthetic.png) · [PDF](figures/figure_02_uniform_type_synthetic.pdf) · [Outlined SVG](figures/figure_02_gsea_synthetic.svg) · [Editable SVG](figures/figure_02_gsea_synthetic_editable.svg) · [High-resolution PNG](figures/figure_02_gsea_synthetic_300dpi.png)
 
 ## FIGURE 3 — What differences remain after leptin treatment?
 
 **LD LEPTIN vs NON-LD control**
 
-![Figure 3: four analytical panels comparing synthetic LD LEPTIN and NON-LD control samples](figures/figure_03_large_axis_synthetic.png)
+![Figure 3: four analytical panels comparing synthetic LD LEPTIN and NON-LD control samples](figures/figure_03_uniform_type_synthetic.png)
 
-[Figure legend](figures/FIGURE_3_LEGEND.md) · [PNG](figures/figure_03_large_axis_synthetic.png) · [PDF](figures/figure_03_large_axis_synthetic.pdf) · [Outlined SVG](figures/figure_03_gsea_synthetic.svg) · [Editable SVG](figures/figure_03_gsea_synthetic_editable.svg) · [High-resolution PNG](figures/figure_03_gsea_synthetic_300dpi.png)
+[Figure legend](figures/FIGURE_3_LEGEND.md) · [PNG](figures/figure_03_uniform_type_synthetic.png) · [PDF](figures/figure_03_uniform_type_synthetic.pdf) · [Outlined SVG](figures/figure_03_gsea_synthetic.svg) · [Editable SVG](figures/figure_03_gsea_synthetic_editable.svg) · [High-resolution PNG](figures/figure_03_gsea_synthetic_300dpi.png)
 
 This contrast describes differences present after treatment. They can include persistent LD-associated effects and treatment-induced effects; the comparison alone does not identify which differences were uncorrected. A nonsignificant post-treatment difference does not establish normalization.
 
@@ -50,7 +50,7 @@ The design follows an inspection of author-archived Nature Biotechnology, Nature
 
 Every canvas is **1536 × 1024 pixels (3:2)**; the high-resolution PNGs are 4608 × 3072. All type is **Nimbus Sans**. PDFs contain embedded, searchable TrueType text; the primary SVGs outline lettering; editable SVGs include embedded font data. The [font verification](figures/FONT_VERIFICATION.md) checks actual exported Nimbus Sans font programs, metrics, and glyph outlines against the source fonts; its [report](figures/synthetic_demo/export_font_verification.json) identifies checked files by SHA-256. Plot selections and labels are recorded in the [plot audit](figures/synthetic_demo/font_and_plot_audit.json).
 
-Axis titles are now **40 px** (previous preview: 28.8 px), and numeric ticks are **32 px** (previously 25.2 px), on the 1536 px canvas. At **180 mm figure width**, these correspond to approximately **13.3 pt axis titles and 10.6 pt tick numbers**. Secondary typography retains its earlier 20% increase. The [same-scale comparison](figures/typography/axis_type_before_after.png) and [measurements from the exported PDFs](figures/typography/axis_type_measurements.json) document the change. The complete four-panel figures are intended for full-width placement; reducing the whole composition reduces type proportionally. Use the PDF or outlined SVG for final print artwork.
+A single **32 px** size applies to every text element on the 1536 px canvas, including GSEA pathway labels and q values. Panel letters use bold Nimbus Sans at that same size. Long terms wrap at the full font size; they are never made smaller to fit. The [same-scale comparison](figures/typography/uniform_type_before_after.png) and [independent checks of every exported PDF text span](figures/typography/uniform_type_measurements.json) document the result. At **180 mm figure width**, text is approximately **10.6 pt**. Reducing the whole composition reduces type proportionally. Use the PDF or outlined SVG for final print artwork.
 
 Each comparison uses its own warm/cool pair from the supplied color-scheme guide: Figure 1 yellow/blue, Figure 2 tan/turquoise, and Figure 3 orange/purple. Colors encode direction within a comparison; group colors are not fixed across figures. Full group names, effect direction on the axes, and marker fill provide additional encodings. See the [color-accessibility review and simulation previews](figures/accessibility/COLOR_ACCESSIBILITY.md).
 
@@ -68,6 +68,7 @@ python figures/synthetic_demo/run_gsea.py \
   --go-bp-provenance figures/synthetic_demo/gsea_data/resources/go_bp_mouse_provenance.json
 python figures/synthetic_demo/render_figure.py
 python figures/synthetic_demo/verify_export_fonts.py
+python figures/synthetic_demo/verify_uniform_typography.py
 python -m pip install -r figures/accessibility/requirements.txt
 python figures/accessibility/audit_colors.py
 python figures/synthetic_demo/validate_figures.py

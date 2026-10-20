@@ -1,0 +1,359 @@
+{
+  "status": "PASS",
+  "verified_at_utc": "2026-10-20T06:16:28.061130+00:00",
+  "reference_commit": "46faeea01aeda3c1b57e90f4f91dfcd360288a03",
+  "current_version": "Working-tree PDF exports identified by SHA-256",
+  "measurement_method": "Every nonempty actual PDF text span read independently with PyMuPDF; renderer claims are not used.",
+  "scope": "All figure text, including pathway terms, q values, headings, panel letters, group names, axes and numeric ticks; no font-size exceptions.",
+  "expected_native_pixel_size": 32,
+  "native_dpi": 100,
+  "pdf_points_to_native_pixels": 1.3888888888888888,
+  "canvas_native_pixels": [
+    1536,
+    1024
+  ],
+  "figures": [
+    {
+      "figure": 1,
+      "previous": {
+        "pdf_sha256": "69238193bfe9e931dd0da02ce6879aa202227698fe99ff374521016ea72975c1",
+        "nonempty_text_spans_checked": 57,
+        "all_span_sizes_native_px_and_counts": {
+          "24": 8,
+          "25.2": 10,
+          "28": 2,
+          "28.8": 3,
+          "30": 2,
+          "32": 20,
+          "38.4": 4,
+          "40": 8
+        },
+        "all_span_sizes_pdf_pt_and_counts": {
+          "17.280001": 8,
+          "18.143999": 10,
+          "20.160000": 2,
+          "20.736000": 3,
+          "21.600000": 2,
+          "23.040001": 20,
+          "27.648001": 4,
+          "28.799999": 8
+        },
+        "actual_font_name_counts": {
+          "NimbusSans-Regular": 53,
+          "NimbusSans-Bold": 4
+        },
+        "span_counts_by_page_region": {
+          "upper_panels": 27,
+          "lower_KEGG": 15,
+          "lower_GO_BP": 15
+        },
+        "essential_text_labels_present": [
+          "log2foldchange",
+          "\u2212log10(adjustedp)",
+          "genes",
+          "z-score",
+          "nes",
+          "kegg",
+          "gobp",
+          "q",
+          "a",
+          "b",
+          "c",
+          "d"
+        ],
+        "text_without_whitespace_sha256": "c6dd98ec199136846804d0552bc8615802e5abcc8751323d8dd3ad3c053f59b0"
+      },
+      "current": {
+        "pdf_sha256": "37a34157458fff775f4a42e56c2b0aaf0ef021654461dd419c8bb4cac564f432",
+        "nonempty_text_spans_checked": 52,
+        "all_span_sizes_native_px_and_counts": {
+          "32": 52
+        },
+        "all_span_sizes_pdf_pt_and_counts": {
+          "23.040001": 52
+        },
+        "actual_font_name_counts": {
+          "NimbusSans-Regular": 48,
+          "NimbusSans-Bold": 4
+        },
+        "span_counts_by_page_region": {
+          "upper_panels": 25,
+          "lower_KEGG": 13,
+          "lower_GO_BP": 14
+        },
+        "essential_text_labels_present": [
+          "log2foldchange",
+          "\u2212log10(adjustedp)",
+          "genes",
+          "z-score",
+          "nes",
+          "kegg",
+          "gobp",
+          "q",
+          "a",
+          "b",
+          "c",
+          "d"
+        ],
+        "text_without_whitespace_sha256": "cb80543bf294d224461775f262e445078d4f9c563bd3423fb9d30791d06345b6",
+        "every_nonempty_span_matches_expected_size": true
+      }
+    },
+    {
+      "figure": 2,
+      "previous": {
+        "pdf_sha256": "012daf845403fed3ed53bb62772558b46959c23285fa758050875706dcc1ec0b",
+        "nonempty_text_spans_checked": 61,
+        "all_span_sizes_native_px_and_counts": {
+          "24": 8,
+          "25.2": 14,
+          "28": 2,
+          "28.8": 3,
+          "30": 2,
+          "32": 20,
+          "38.4": 4,
+          "40": 8
+        },
+        "all_span_sizes_pdf_pt_and_counts": {
+          "17.280001": 8,
+          "18.143999": 14,
+          "20.160000": 2,
+          "20.736000": 3,
+          "21.600000": 2,
+          "23.040001": 20,
+          "27.648001": 4,
+          "28.799999": 8
+        },
+        "actual_font_name_counts": {
+          "NimbusSans-Regular": 57,
+          "NimbusSans-Bold": 4
+        },
+        "span_counts_by_page_region": {
+          "upper_panels": 27,
+          "lower_KEGG": 17,
+          "lower_GO_BP": 17
+        },
+        "essential_text_labels_present": [
+          "log2foldchange",
+          "\u2212log10(adjustedp)",
+          "genes",
+          "z-score",
+          "nes",
+          "kegg",
+          "gobp",
+          "q",
+          "a",
+          "b",
+          "c",
+          "d"
+        ],
+        "text_without_whitespace_sha256": "369d0a59d1fb67c5d5442bd11889b6c447fd9408f167da0c0bfa06a6a386dea6"
+      },
+      "current": {
+        "pdf_sha256": "4a84ae226ad51435da255592594c7264f85d1da6d7733daff7aa5c80ace085c9",
+        "nonempty_text_spans_checked": 57,
+        "all_span_sizes_native_px_and_counts": {
+          "32": 57
+        },
+        "all_span_sizes_pdf_pt_and_counts": {
+          "23.040001": 57
+        },
+        "actual_font_name_counts": {
+          "NimbusSans-Regular": 53,
+          "NimbusSans-Bold": 4
+        },
+        "span_counts_by_page_region": {
+          "upper_panels": 25,
+          "lower_KEGG": 15,
+          "lower_GO_BP": 17
+        },
+        "essential_text_labels_present": [
+          "log2foldchange",
+          "\u2212log10(adjustedp)",
+          "genes",
+          "z-score",
+          "nes",
+          "kegg",
+          "gobp",
+          "q",
+          "a",
+          "b",
+          "c",
+          "d"
+        ],
+        "text_without_whitespace_sha256": "501c00b81f923566291146100f7967f1ad1793c4bf58f154080eccc86304a899",
+        "every_nonempty_span_matches_expected_size": true
+      }
+    },
+    {
+      "figure": 3,
+      "previous": {
+        "pdf_sha256": "314b55221100e3cf07fb26004e1c31dd52ea0f7d6398dec1d5d9e5a57bf8ed24",
+        "nonempty_text_spans_checked": 58,
+        "all_span_sizes_native_px_and_counts": {
+          "24": 8,
+          "25.2": 11,
+          "28": 2,
+          "28.8": 3,
+          "30": 2,
+          "32": 20,
+          "38.4": 4,
+          "40": 8
+        },
+        "all_span_sizes_pdf_pt_and_counts": {
+          "17.280001": 8,
+          "18.143999": 11,
+          "20.160000": 2,
+          "20.736000": 3,
+          "21.600000": 2,
+          "23.040001": 20,
+          "27.648001": 4,
+          "28.799999": 8
+        },
+        "actual_font_name_counts": {
+          "NimbusSans-Regular": 54,
+          "NimbusSans-Bold": 4
+        },
+        "span_counts_by_page_region": {
+          "upper_panels": 27,
+          "lower_KEGG": 15,
+          "lower_GO_BP": 16
+        },
+        "essential_text_labels_present": [
+          "log2foldchange",
+          "\u2212log10(adjustedp)",
+          "genes",
+          "z-score",
+          "nes",
+          "kegg",
+          "gobp",
+          "q",
+          "a",
+          "b",
+          "c",
+          "d"
+        ],
+        "text_without_whitespace_sha256": "5ac68e2350470cdb056474988239090ea3bdc5b15badfe6f8763ce86495afe13"
+      },
+      "current": {
+        "pdf_sha256": "df3bf69df707e56017ebac276330db778eea80b8929349176c0b0ed706777dbd",
+        "nonempty_text_spans_checked": 55,
+        "all_span_sizes_native_px_and_counts": {
+          "32": 55
+        },
+        "all_span_sizes_pdf_pt_and_counts": {
+          "23.040001": 55
+        },
+        "actual_font_name_counts": {
+          "NimbusSans-Regular": 51,
+          "NimbusSans-Bold": 4
+        },
+        "span_counts_by_page_region": {
+          "upper_panels": 25,
+          "lower_KEGG": 15,
+          "lower_GO_BP": 15
+        },
+        "essential_text_labels_present": [
+          "log2foldchange",
+          "\u2212log10(adjustedp)",
+          "genes",
+          "z-score",
+          "nes",
+          "kegg",
+          "gobp",
+          "q",
+          "a",
+          "b",
+          "c",
+          "d"
+        ],
+        "text_without_whitespace_sha256": "c971ac756b20197eae078eadca15c3b7798407cc5798b2331e37f6e1f951e412",
+        "every_nonempty_span_matches_expected_size": true
+      }
+    }
+  ],
+  "analysis_data_unchanged": true,
+  "unchanged_analysis_file_count": 52,
+  "unchanged_analysis_sha256": {
+    "figures/synthetic_demo/data/contrast_LD_LEPTIN_vs_LD_SALINE.tsv.gz": "3af98fb3e0c71bd2e86bf2f870b9759c532f0e39f03f7f8e0abf280187cc1ae6",
+    "figures/synthetic_demo/data/contrast_LD_LEPTIN_vs_NON_LD_control.tsv.gz": "5fd698622266646338baccf6598e06279a51d8f92e3d6425110d66f2fbda3410",
+    "figures/synthetic_demo/data/contrast_LD_SALINE_vs_NON_LD_control.tsv.gz": "f7989f4ff70f4a364607b6e029cedce9791cd19784f02e81e68140a62fefc28b",
+    "figures/synthetic_demo/data/counts.tsv.gz": "aeac8eed1cf7952e736ddbf60953523a9f81dae8d5b6730eff4b71a0137e7345",
+    "figures/synthetic_demo/data/figure_01_forest_genes.tsv": "29479702adb691c872ade3bcb3349217e4bbf152b1aaf9ff0406baec35cd5587",
+    "figures/synthetic_demo/data/figure_01_heatmap_genes.tsv": "8961282bb0ff65faa8c344e29a235e64d4b80afa60f51ffb6c216ed2837e0217",
+    "figures/synthetic_demo/data/figure_02_forest_genes.tsv": "51caac66059ccf54c4a65488b0e535e257fddf2ea01e2da4bd0d78bb7bf7936e",
+    "figures/synthetic_demo/data/figure_02_heatmap_genes.tsv": "8384de63465e127d7fd54de37fe76240a5203fcfd800767f2dcbe20673519b8c",
+    "figures/synthetic_demo/data/figure_03_forest_genes.tsv": "f21705edf34f124005d4d10cd24962b92014926101383e790c7a6a0251511496",
+    "figures/synthetic_demo/data/figure_03_heatmap_genes.tsv": "588a0806761e6d97bfd677870ac38a800fe036ece9c622cada5c91eecdca370e",
+    "figures/synthetic_demo/data/normalized_log2_expression.tsv.gz": "3a81f5d936b48219e116c5a38c3537dbf36f88bff927cca3b353d27544d26dcf",
+    "figures/synthetic_demo/data/pca_genes.tsv": "bd9fbe42fcea070ce01376842c592c4a8bdde0492afde6015c996bc664bab8e0",
+    "figures/synthetic_demo/data/pca_scores.tsv": "1b00b039b18af043ea37eabb1da75a7e8d9b002eb4da72f3d013a8e71070d1f2",
+    "figures/synthetic_demo/data/pca_variance.tsv": "887112772417b4fb6df0579c776c88bb49ddf7292808886fca540c2af747c3e4",
+    "figures/synthetic_demo/data/sample_metadata.tsv": "c2d5d5c19a98408a3e9b34f29ec0040accb2f9d91d6b12cc2cc78f620ea6f754",
+    "figures/synthetic_demo/data/simulation_summary.json": "0dbba9e51776e8213c7d900beefe1fe8bd491e526d7875224643f4e667c2f378",
+    "figures/synthetic_demo/data/simulation_truth.tsv.gz": "08b8695e7ae41d8008c7e60150a8c4cdfedfd3e5fefaa17295f2ec65265ed85d",
+    "figures/synthetic_demo/gsea_data/figure_01_complete_ranked_statistics.tsv.gz": "83d2328f8b23573dfe9398a259d9394ed353e294c069e09e9a6c4f688d851d9e",
+    "figures/synthetic_demo/gsea_data/figure_01_go_bp_all_results.tsv.gz": "bd08ab8b686afc3a8d565b700ad7757a820550fa73ae9bd79139a24127207843",
+    "figures/synthetic_demo/gsea_data/figure_01_go_bp_display.tsv": "62f0451c60f79b30f4f07de2e028edb478b2a527fb015cc028ceb67a478d1221",
+    "figures/synthetic_demo/gsea_data/figure_01_go_bp_gseapy_raw.tsv.gz": "309c3af8abbcfeac810f9f68970138e0c543d298201009d8fe297479759893ce",
+    "figures/synthetic_demo/gsea_data/figure_01_go_bp_leading_edge.tsv.gz": "062818df15f5a1e12106b1503c79fdb7e59bcc961066aed290d2b95ac6b79685",
+    "figures/synthetic_demo/gsea_data/figure_01_kegg_all_results.tsv.gz": "dbdb12d23258e8a1c3598b27a2c3ee6573a9d0f95713471841cea806149d420b",
+    "figures/synthetic_demo/gsea_data/figure_01_kegg_display.tsv": "810bc53555bf517f11b59c6c282ec3c181651ebb0bdf7649d4b235e4e44d9f19",
+    "figures/synthetic_demo/gsea_data/figure_01_kegg_gseapy_raw.tsv.gz": "fca110c29b76008017f8d5a7b90fa889640bff4dcc59df11042c77d6a03641fc",
+    "figures/synthetic_demo/gsea_data/figure_01_kegg_leading_edge.tsv.gz": "cf854ed628f5ffacddfa13425616af8b6f9473138fbabddae96bccc6c6f627e6",
+    "figures/synthetic_demo/gsea_data/figure_02_complete_ranked_statistics.tsv.gz": "6104ccb60497de76650dd255c98e9297b2e029421fefb5312fe181e7cac491b4",
+    "figures/synthetic_demo/gsea_data/figure_02_go_bp_all_results.tsv.gz": "ab73ad2903bef5827273a42a69b1f59f5962e971d84262270e0b9a0b09c52a5f",
+    "figures/synthetic_demo/gsea_data/figure_02_go_bp_display.tsv": "2f4a81dd38c793a4412019a84d4432ea9754be1dce45b1324e0f6f7f885b20f0",
+    "figures/synthetic_demo/gsea_data/figure_02_go_bp_gseapy_raw.tsv.gz": "e49fe9cf0fba4f57eaeae6ced48094ac63e15850a9452cfcc847518f2f9a8657",
+    "figures/synthetic_demo/gsea_data/figure_02_go_bp_leading_edge.tsv.gz": "adfb467146f250c7543a037d91a0b0e6cf74b04c0766f7de1fb17f136e9751d8",
+    "figures/synthetic_demo/gsea_data/figure_02_kegg_all_results.tsv.gz": "641af2df0a3303db113428c7575032e3e4d8175bc8c88e69db55392e923663c6",
+    "figures/synthetic_demo/gsea_data/figure_02_kegg_display.tsv": "477c2c5b9b5257078b857bca537d30905e5554144e659884bb78cdc1b845ef81",
+    "figures/synthetic_demo/gsea_data/figure_02_kegg_gseapy_raw.tsv.gz": "425dc2c8452dc077896d91ef6378cad864a6d789c3a9291343ef1e33c9ef96ac",
+    "figures/synthetic_demo/gsea_data/figure_02_kegg_leading_edge.tsv.gz": "0dc7a0ae2497f3ea3009792b6b7de1ae38b60d00708e4b4d4931c8752508e8f0",
+    "figures/synthetic_demo/gsea_data/figure_03_complete_ranked_statistics.tsv.gz": "29a6cfce08115e78842b346c37516fe865a47f46a3bf951985e1d85f8007b4ca",
+    "figures/synthetic_demo/gsea_data/figure_03_go_bp_all_results.tsv.gz": "4109de0ec73c9ff437fba1092fb123eb9865dcb286f256a99088ac40a25a0198",
+    "figures/synthetic_demo/gsea_data/figure_03_go_bp_display.tsv": "65f1ac2cf342b71cdb69d1cf745b737e31ea87f4c8e5a078dc53cb63f27fd723",
+    "figures/synthetic_demo/gsea_data/figure_03_go_bp_gseapy_raw.tsv.gz": "7ee2a9d60e467cdacc543f965da8fcf1a82791e9caa9363223ebe73bfe525b5c",
+    "figures/synthetic_demo/gsea_data/figure_03_go_bp_leading_edge.tsv.gz": "6f2ff6fa70703504ae83ce2c113d45ff6e529f0423e03a5dec76487412212d2c",
+    "figures/synthetic_demo/gsea_data/figure_03_kegg_all_results.tsv.gz": "68cb83091099e13e610b0b30b23cf34e260c3e2d7524db0cabd2a4c399ad3f79",
+    "figures/synthetic_demo/gsea_data/figure_03_kegg_display.tsv": "da692901da200f277752e1791371f55086f2426cae136e04e985a55464824bfe",
+    "figures/synthetic_demo/gsea_data/figure_03_kegg_gseapy_raw.tsv.gz": "efb0636db66f02ce94ccb261f7c18db5afdef4366b1882a72383952bcab1c6e5",
+    "figures/synthetic_demo/gsea_data/figure_03_kegg_leading_edge.tsv.gz": "75080a9eb8e28c0a0717479b41bce52541a0f5e53b7480615edd887550754bd6",
+    "figures/synthetic_demo/gsea_data/go_bp_all_gene_set_coverage.tsv.gz": "26e1a30b6890f5efa8eed1d88dce2b43f744a30529ad240e0509ef3464a0aa0b",
+    "figures/synthetic_demo/gsea_data/gsea_provenance.json": "ad58843eafd1ae03bc5f61613601e8b787fb5c63fa7c71cf6c469438b37c13f6",
+    "figures/synthetic_demo/gsea_data/kegg_all_gene_set_coverage.tsv.gz": "85279297c7d3d1a1f73d9358d890aac62f1fd453bb7ce980e4bf03f3fd059068",
+    "figures/synthetic_demo/gsea_data/resources/go_bp_mouse_2026_05_19_nonIEA_protein_coding.gmt": "009be991eedc31fa18e23ded71cfac222fd5773d87fc243d19d67008ee21c73f",
+    "figures/synthetic_demo/gsea_data/resources/go_bp_mouse_provenance.json": "c5541c88c6372ea558d5ac30c8085aa3e276d33989d87e18762f2b5a38b89c64",
+    "figures/synthetic_demo/gsea_data/resources/kegg_mouse_biosystems_archive_2020.gmt": "70127d28c5c82a42abf2d1f33291d4a6a2a10e0afad320aad484d01931a9091a",
+    "figures/synthetic_demo/gsea_data/resources/kegg_mouse_provenance.json": "12428593c85f86ab7d6743f77cfe987bf981754609c28a00da4bd8409c4ab214",
+    "figures/synthetic_demo/gsea_data/synthetic_to_mouse_symbol_map.tsv": "f64a7fba9f0257d9715c073f42339109e4a01784da68c55ce85ada0c3b36abbf"
+  },
+  "review_image": {
+    "source_figure": 1,
+    "source_crop_native_pixels": [
+      0,
+      496,
+      1536,
+      1024
+    ],
+    "source_pixel_to_review_pixel": "1:1",
+    "source_crops_pixel_identical": true,
+    "review_canvas_pixels": [
+      1584,
+      1308
+    ],
+    "file": "uniform_type_before_after.png",
+    "sha256": "4fe9f3a544643a2ae04e2ae0bb4f2238f85770ca9529d24c72a44c843e181806"
+  },
+  "review_font_sha256": {
+    "NimbusSans-Regular.otf": "7c25be4d78155523080ab85b10277150657ff7dabbcad7037bdd536c9b6d0d08",
+    "NimbusSans-Bold.otf": "7f33328e6b4d4cd21b45fa625791928c9407dc702db6780e56b09ca9a3ecaa67"
+  },
+  "software": {
+    "PyMuPDF": "1.26.6",
+    "matplotlib": "3.10.8",
+    "numpy": "2.3.5",
+    "Pillow": "12.3.0"
+  },
+  "verifier_sha256": "ccebbac45932a6a7c7689302da507241454b927509a6f6b67ea149a71ac588f3"
+}

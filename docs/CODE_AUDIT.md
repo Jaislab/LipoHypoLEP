@@ -54,6 +54,7 @@ Use the reproduction commands in the [README](../README.md), then:
 ```bash
 python -m unittest discover -s tests -v
 python figures/synthetic_demo/verify_export_fonts.py
+python figures/synthetic_demo/verify_uniform_typography.py
 python figures/accessibility/audit_colors.py
 python figures/synthetic_demo/validate_figures.py
 python figures/synthetic_demo/build_bundle.py

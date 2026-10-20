@@ -38,11 +38,8 @@ ROOT = Path(__file__).resolve().parent
 OUT = ROOT.parent
 DATA = ROOT/'data'
 W,H,DPI = 1536,1024,100
-# Scale every text role together; keep Nimbus Sans and the artwork dimensions.
-FONT_SCALE = 1.20
-# Axis text has explicit final pixel sizes, independent of secondary typography.
-AXIS_LABEL_PIXELS = 40
-AXIS_TICK_PIXELS = 32
+# Every visible text artist uses this one size, including ticks and GSEA terms.
+FONT_PIXELS = 32
 GROUPS = ('LD SALINE','LD LEPTIN','NON-LD control')
 INK,AXIS,GRID,NS = '#262A2B','#A1A7A7','#C8CDCD','#CFD3D4'
 LOG2FC_CUTOFF = 0.2
@@ -109,9 +106,7 @@ def prepare_nimbus():
         result[style]=ttf
     return result
 
-def points_from_pixels(size): return size*72/DPI
-
-def px(size): return points_from_pixels(size*FONT_SCALE)
+def font_points(): return FONT_PIXELS*72/DPI
 
 SPECS = (
     (1, 'How does untreated LD differ from non-LD controls?',
@@ -127,11 +122,10 @@ def configure_theme():
     # A missing character must not silently disappear or become an empty box.
     warnings.filterwarnings('error',message=r'Glyph .* missing from font',category=UserWarning)
     plt.rcParams.update({
-        'font.family':'Nimbus Sans','font.size':px(22),
-        'axes.labelsize':points_from_pixels(AXIS_LABEL_PIXELS),'axes.titlesize':px(24),
-        'xtick.labelsize':points_from_pixels(AXIS_TICK_PIXELS),
-        'ytick.labelsize':points_from_pixels(AXIS_TICK_PIXELS),
-        'legend.fontsize':px(20),'axes.labelcolor':INK,
+        'font.family':'Nimbus Sans','font.size':font_points(),
+        'axes.labelsize':font_points(),'axes.titlesize':font_points(),
+        'xtick.labelsize':font_points(),'ytick.labelsize':font_points(),
+        'legend.fontsize':font_points(),'axes.labelcolor':INK,
         'text.color':INK,'xtick.color':INK,'ytick.color':INK,
         'axes.edgecolor':AXIS,'axes.linewidth':0.65,
         'axes.spines.top':False,'axes.spines.right':False,
@@ -250,12 +244,43 @@ def q_label(value):
     return '0' if value==0 else f'{value:.2f}'
 
 
+def wrap_term(label,width,font_path):
+    """Wrap complete words using actual Nimbus advance widths at the single size."""
+    from matplotlib.backends.backend_agg import RendererAgg
+    renderer=RendererAgg(W,H,DPI)
+    properties=fm.FontProperties(fname=str(font_path),size=font_points())
+    lines=[]
+    line=''
+    for word in label.split():
+        candidate=f'{line} {word}'.strip()
+        if line and renderer.get_text_width_height_descent(candidate,properties,False)[0]>width:
+            lines.append(line)
+            line=word
+        else:
+            line=candidate
+    if line:lines.append(line)
+    return '\n'.join(lines)
+
+
+def pathway_row_positions(labels,height):
+    """Reserve more vertical space for multiline terms without changing selection."""
+    if not labels:return np.array([],dtype=float)
+    minimum=np.array([FONT_PIXELS*(1+1.1*label.count('\n'))+16 for label in labels])
+    if minimum.sum()>height:
+        raise RuntimeError('GSEA layout: complete pathway terms exceed the available row height. '
+                           'Review the term labels and allocate more panel space; '
+                           'font size and full term text have been preserved.')
+    cells=minimum+(height-minimum.sum())/len(labels)
+    return np.cumsum(cells)-cells/2
+
+
 def validate_gsea_layout(fig):
     """Reject crowded terms at the requested font size before saving any artwork."""
     renderer=fig.canvas.get_renderer()
     for region in getattr(fig,'_gsea_layout_regions',[]):
         ax=region['axes']
-        labels=[label for label in ax.get_yticklabels() if label.get_visible() and label.get_text()]
+        labels=[label for label in region.get('term_labels',ax.get_yticklabels())
+                if label.get_visible() and label.get_text()]
         boxes=[label.get_window_extent(renderer) for label in labels]
         problem=None
         for label,box in zip(labels,boxes):
@@ -281,15 +306,21 @@ def validate_gsea_layout(fig):
 
 def export_figure(fig,number,question,fonts,details):
     name=f'figure_{number:02d}_gsea_synthetic'
-    labels=[]
-    for t in fig.findobj(Text):
-        if not t.get_text():continue
-        style='Bold' if (t.get_fontweight() in ['bold',700] or
-                         t.get_fontproperties().get_file()==str(fonts['Bold'])) else 'Regular'
-        t.set_fontproperties(fm.FontProperties(fname=str(fonts[style]),size=t.get_fontsize()))
-        labels.append({'text':t.get_text(),'font':f'Nimbus Sans {style}',
-                       'size_px':round(t.get_fontsize()*DPI/72,2)})
-    fig.canvas.draw()
+    # A draw can create tick artists lazily. Apply the same size before and after
+    # that draw, then inspect/export only the final, fully materialized artists.
+    for _ in range(2):
+        for t in fig.findobj(Text):
+            style='Bold' if (t.get_fontweight() in ['bold',700] or
+                             t.get_fontproperties().get_file()==str(fonts['Bold'])) else 'Regular'
+            t.set_fontproperties(fm.FontProperties(fname=str(fonts[style]),size=font_points()))
+            t.set_parse_math(False)
+        fig.canvas.draw()
+    labels=[{'text':t.get_text(),
+             'font':'Nimbus Sans Bold' if t.get_fontproperties().get_file()==str(fonts['Bold']) else 'Nimbus Sans Regular',
+             'size_px':round(t.get_fontsize()*DPI/72,2)}
+            for t in fig.findobj(Text) if t.get_text() and t.get_visible()]
+    if any(abs(label['size_px']-FONT_PIXELS)>1e-8 for label in labels):
+        raise RuntimeError('Visible text does not use the single figure font size.')
     validate_gsea_layout(fig)
     for t in fig.findobj(Text):
         if not t.get_text() or not t.get_visible():continue
@@ -326,13 +357,12 @@ def export_figure(fig,number,question,fonts,details):
             raise RuntimeError(f'Font substitution in PDF: {pdf_fonts}')
     versioned_exports={}
     for extension in ('.png','.pdf'):
-        versioned=OUT/f'figure_{number:02d}_large_axis_synthetic{extension}'
+        versioned=OUT/f'figure_{number:02d}_uniform_type_synthetic{extension}'
         shutil.copyfile(OUT/f'{name}{extension}',versioned)
         versioned_exports[str(versioned.relative_to(OUT))]=hashlib.sha256(versioned.read_bytes()).hexdigest()
     return {'figure':number,'file_stem':name,'question':question,
             'all_visible_typography':'Nimbus Sans','canvas_pixels':[W,H],
-            'typography_scale':FONT_SCALE,
-            'axis_label_pixels':AXIS_LABEL_PIXELS,'axis_tick_pixels':AXIS_TICK_PIXELS,
+            'font_pixels':FONT_PIXELS,'observed_unique_size_px':sorted({label['size_px'] for label in labels}),
             'versioned_export_sha256':versioned_exports,
             'pdf_fonts':pdf_fonts,'pdf_text':'embedded, searchable vector text',
             'svg_text':'outlined paths','editable_svg':'text with embedded Nimbus Sans font data',
@@ -350,7 +380,7 @@ def render_question(spec,table,expression,metadata,fonts,xmax,ymax,forest_limit,
         return fig.add_axes([left/W,1-(top+height)/H,width/W,height/H])
     def panel(letter,left,top):
         fig.text(left/W,1-top/H,letter,
-                 fontproperties=fm.FontProperties(fname=str(fonts['Bold']),size=px(32)),
+                 fontproperties=fm.FontProperties(fname=str(fonts['Bold']),size=font_points()),
                  ha='left',va='top')
     def theme(ax):
         ax.tick_params(direction='out',pad=5)
@@ -376,8 +406,8 @@ def render_question(spec,table,expression,metadata,fonts,xmax,ymax,forest_limit,
     ax.set_yticks(yticks[(yticks>=0)&(yticks<=ymax)])
     ticks=MaxNLocator(nbins=6,steps=[1,2,2.5,5,10],symmetric=True).tick_values(-xmax,xmax)
     ax.set_xticks(ticks[(ticks>=-xmax)&(ticks<=xmax)])
-    ax.set_xlabel(r'log$_2$ fold change',labelpad=8)
-    ax.set_ylabel(r'−log$_{10}$(adjusted $P$)',labelpad=8)
+    ax.set_xlabel('log2 fold change',labelpad=8)
+    ax.set_ylabel('−log10(adjusted P)',labelpad=8)
     theme(ax)
 
     # b: only the two groups that answer this figure's question.
@@ -388,7 +418,7 @@ def render_question(spec,table,expression,metadata,fonts,xmax,ymax,forest_limit,
     cmap=LinearSegmentedColormap.from_list(f'expression_{number}',[lower,'#FAF9F6',higher])
     im=ax.imshow(z,aspect='auto',interpolation='nearest',cmap=cmap,vmin=-2,vmax=2) if len(z) else None
     if not len(z):
-        ax.text(.5,.5,'No genes meet cutoffs',transform=ax.transAxes,ha='center',va='center',fontsize=px(21))
+        ax.text(.5,.5,'No genes meet cutoffs',transform=ax.transAxes,ha='center',va='center',fontsize=font_points())
     ax.set_xticks([]);ax.set_yticks([])
     ax.set_ylabel('Genes',labelpad=12)
     for spine in ax.spines.values():spine.set_visible(False)
@@ -401,14 +431,14 @@ def render_question(spec,table,expression,metadata,fonts,xmax,ymax,forest_limit,
         strip=axes(left,120,max(width-2,1),6)
         strip.add_patch(plt.Rectangle((0,0),1,1,color=higher if i==0 else lower))
         strip.set_axis_off()
-        fig.text((left+width/2)/W,1-108/H,group,ha='center',va='bottom',fontsize=px(24))
+        fig.text((left+width/2)/W,1-108/H,group,ha='center',va='bottom',fontsize=font_points())
         offset+=width
     if im is not None:
         cax=axes(1402,185,13,160)
         cb=fig.colorbar(im,cax=cax,ticks=[-2,0,2])
         cb.outline.set_visible(False)
-        cb.ax.tick_params(size=2,pad=4,labelsize=points_from_pixels(AXIS_TICK_PIXELS))
-        cb.set_label('z-score',fontsize=points_from_pixels(AXIS_LABEL_PIXELS),labelpad=7)
+        cb.ax.tick_params(size=2,pad=4,labelsize=font_points())
+        cb.set_label('z-score',fontsize=font_points(),labelpad=7)
     pd.DataFrame({'gene_id':genes}).to_csv(DATA/f'figure_{number:02d}_heatmap_genes.tsv',sep='\t',index=False)
 
     # Retain the gene effect estimates in tables; the canvas now prioritizes GSEA.
@@ -424,45 +454,52 @@ def render_question(spec,table,expression,metadata,fonts,xmax,ymax,forest_limit,
     # c,d: one preranked calculation per collection and biological comparison.
     gsea_details={}
     fig._gsea_layout_regions=[]
-    # Reserve space for larger q values, including '<0.05' and scientific notation.
-    for collection,letter,left,title in [('kegg','c',518,'KEGG'),('go_bp','d',1300,'GO BP')]:
+    # Terms receive their own left-aligned column. Pixel-based wrapping and
+    # variable row heights allocate room without shrinking or truncating text.
+    for collection,letter,term_left,left,q_left,title in [
+            ('kegg','c',40,516,662,'KEGG'),('go_bp','d',808,1284,1430,'GO BP')]:
         path=ROOT/'gsea_data'/f'figure_{number:02d}_{collection}_display.tsv'
         if not path.is_file():raise RuntimeError(f'GSEA results missing: run run_gsea.py first ({path})')
-        results=read_table(path)
-        shown=displayed_gsea(results)
+        shown=displayed_gsea(read_table(path))
         panel(letter,40 if collection=='kegg' else 788,494)
         fig.text((390 if collection=='kegg' else 1160)/W,1-524/H,title,
-                 ha='center',va='baseline',fontsize=px(25))
-        ax=axes(left,568,150,340)
+                 ha='center',va='baseline',fontsize=font_points())
+        plot_top,plot_height,plot_width=552,376,130
+        ax=axes(left,plot_top,plot_width,plot_height)
         labels=[]
         for term in shown.term:
             label=re.sub(r'^(?:GO:\d+|mmu\d+)\s+','',str(term)).strip()
-            labels.append(textwrap.fill(label,width=42,break_long_words=False,break_on_hyphens=False))
+            labels.append(wrap_term(label,left-term_left-16,fonts['Regular']))
+        row_positions=pathway_row_positions(labels,plot_height)
         ax.axvline(0,color=GRID,lw=.75,ls=(0,(3,4)),zorder=0)
         q_labels=[]
-        for row,(_,result) in enumerate(shown.iterrows()):
+        term_labels=[]
+        for row,(_,result),label in zip(row_positions,shown.iterrows(),labels):
             color=higher if result.NES>0 else lower
             is_significant=result.gsea_fdr_q<.05
             ax.scatter(result.NES,row,s=90,facecolors=color if is_significant else 'white',
                        edgecolors=color,linewidths=1.4,zorder=3)
-            q_labels.append(ax.text(1.055,row,q_label(result.gsea_fdr_q),transform=ax.get_yaxis_transform(),
-                    ha='left',va='center',fontsize=px(20)))
-        ax.set_yticks(np.arange(len(shown)),labels=labels,fontsize=px(21))
+            term_labels.append(ax.text((term_left-left)/plot_width,row,label,
+                    transform=ax.get_yaxis_transform(),ha='left',va='center',
+                    fontsize=font_points(),linespacing=1.1))
+            q_labels.append(ax.text((q_left-left)/plot_width,row,q_label(result.gsea_fdr_q),
+                    transform=ax.get_yaxis_transform(),ha='left',va='center',fontsize=font_points()))
+        ax.set_yticks([])
         if shown.empty:
-            ax.text(.5,.5,'No eligible sets',transform=ax.transAxes,ha='center',va='center',fontsize=px(21))
+            ax.text(.5,.5,'No eligible sets',transform=ax.transAxes,ha='center',va='center',fontsize=font_points())
         limit=max(nes_limit,float(shown.NES.abs().max())*1.1) if len(shown) else nes_limit
-        ax.set(xlim=(-limit,limit),ylim=(max(len(shown)-.5,.5),-.5))
+        ax.set(xlim=(-limit,limit),ylim=(plot_height,0))
         if limit==2.6:ax.set_xticks([-2,0,2])
         else:
             ticks=MaxNLocator(nbins=3,steps=[1,2,2.5,5,10],symmetric=True).tick_values(-limit,limit)
             ax.set_xticks(ticks[(ticks>=-limit)&(ticks<=limit)])
-        ax.set_xlabel('NES',labelpad=9)
+        ax.set_xlabel('NES',labelpad=5)
         ax.spines['left'].set_visible(False)
         theme(ax)
-        ax.tick_params(axis='y',length=0,pad=12)
-        ax.text(1.15,1.04,'q',transform=ax.transAxes,ha='center',va='bottom',fontsize=px(21))
+        ax.tick_params(axis='y',length=0)
+        fig.text((q_left+30)/W,1-540/H,'q',ha='center',va='bottom',fontsize=font_points())
         fig._gsea_layout_regions.append({'axes':ax,'collection':title,'q_labels':q_labels,
-                                         'left':40 if collection=='kegg' else 788,
+                                         'term_labels':term_labels,'left':term_left,
                                          'right':768 if collection=='kegg' else W})
         gsea_details[collection]={'display_table':str(path.relative_to(OUT)),
                                   'terms':shown.term.tolist(),'NES':shown.NES.tolist(),
