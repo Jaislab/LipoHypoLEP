@@ -1,0 +1,86 @@
+{
+  "complete": true,
+  "data_date": "2026-09-30",
+  "sex": "male (source filenames)",
+  "filtered_lists_user_confirmed": true,
+  "first_minus_second_user_confirmed": true,
+  "source_sha256": {
+    "data/male_2026_09_30/source/DEGmale_LDsaline_WT.csv": "6d49fb62b256f7027eaca7453dc4b3904b196f3a666cb2ef25b123ff33560852",
+    "data/male_2026_09_30/source/DEGmale_LDsaline_LDleptin.csv": "12c01cb1ae65eba7099502c7c161049a50ad0ebd5b77eda08b534a2552ac38e2",
+    "data/male_2026_09_30/source/DEGmale_LDleptin_WT.csv": "0e585c7e0a79d5c99ac4ade61e4142547622cae45c4ed9e1ef6f7ebda8edabff"
+  },
+  "analyzer_sha256": "eb2222a7e8de61d1df2bb09c2f37c9ddbd3175b244796b8e35143f7e4ed037cb",
+  "display_rule": {
+    "adjusted_p_strictly_below": 0.05,
+    "absolute_log2fc_at_least": 0.2
+  },
+  "gene_selection": "Up to ten smallest adjusted P among joint-cutoff hits; Ensembl tie-break; effect ordering for display.",
+  "preservation": "All exported rows, identifiers, raw and adjusted P values retained. Figure 2 effects negated; original effects retained. No DE refit, effect rescaling or new BH correction.",
+  "sample_expression_available": false,
+  "signed_test_statistic_available": false,
+  "sample_inclusion": "No expression columns or mouse-to-library mapping supplied; replicate counts not assigned from the project animal register.",
+  "enrichment": {
+    "performed": false,
+    "status": "pending_complete_tested_gene_tables",
+    "reason": "User confirmed filtered lists. Full tested-gene rankings/backgrounds are unavailable. No GSEA or overrepresentation analysis performed; no legacy background substituted."
+  },
+  "figures": [
+    {
+      "figure": 1,
+      "numerator": "LD SALINE",
+      "denominator": "NON-LD control",
+      "source_file": "DEGmale_LDsaline_WT.csv",
+      "multiplier": 1,
+      "supplied_genes": 456,
+      "joint_cutoff_hits": 341,
+      "higher": 84,
+      "lower": 257,
+      "min_absolute_supplied_log2fc": 0.2010421234928871,
+      "maximum_supplied_padj": 0.09943163884760109
+    },
+    {
+      "figure": 2,
+      "numerator": "LD LEPTIN",
+      "denominator": "LD SALINE",
+      "source_file": "DEGmale_LDsaline_LDleptin.csv",
+      "multiplier": -1,
+      "supplied_genes": 11,
+      "joint_cutoff_hits": 7,
+      "higher": 0,
+      "lower": 7,
+      "min_absolute_supplied_log2fc": 0.3475973818919501,
+      "maximum_supplied_padj": 0.09435360002008476
+    },
+    {
+      "figure": 3,
+      "numerator": "LD LEPTIN",
+      "denominator": "NON-LD control",
+      "source_file": "DEGmale_LDleptin_WT.csv",
+      "multiplier": 1,
+      "supplied_genes": 297,
+      "joint_cutoff_hits": 220,
+      "higher": 43,
+      "lower": 177,
+      "min_absolute_supplied_log2fc": 0.2052556677860529,
+      "maximum_supplied_padj": 0.09953389704474926
+    }
+  ],
+  "shared_baseline_posttreatment_hits": {
+    "both_pass": 134,
+    "same_direction": 134,
+    "opposite_direction": 0,
+    "interpretation": "Intersection of supplied joint-cutoff hits. An absent gene has unknown status; absence or nonsignificance is not normalization."
+  },
+  "artifact_sha256": {
+    "baseline_posttreatment_shared_hits.tsv": "8a48f0971292897cb812d7e376c894e2eb3e3945ec5ce3c32377db950699e712",
+    "figure_01_joint_hits.tsv": "faa63da21cd017b95013bdaaca7b313d00386a9512b9fc34793ff15967224280",
+    "figure_01_selected_genes.tsv": "af7bb6b10f18201ec111f38c03567388038694240904d4224409659cf01db0a5",
+    "figure_01_supplied.tsv": "31340f9319473f1a063efb301f19f91dbfeabd1859a1e283fe38a5e9b612418d",
+    "figure_02_joint_hits.tsv": "7d4361f5ed988e95a45e40c16dfcb90fd28e27bca6d9140667db909bd522de0c",
+    "figure_02_selected_genes.tsv": "f5c00b26ad5c1b137561f2ddacdb204bed46e2fd72e0e06a6b762d27b86954b2",
+    "figure_02_supplied.tsv": "8e9b3598dfe3980c0d00074382900d6ed3d2f3f4298cdeb8c2526974c10bcafe",
+    "figure_03_joint_hits.tsv": "4c22b4700dee9bd16c5d2d198f74d4495fbea2a1582cf4678f56f3845d7e6e63",
+    "figure_03_selected_genes.tsv": "c5289bd976cd78cd6db76c645cad23e194694e7618a892f340393f37eaff0706",
+    "figure_03_supplied.tsv": "c85e45708f5300dae4143a3ea945f593db32572fa64359ab475217776d45405a"
+  }
+}
