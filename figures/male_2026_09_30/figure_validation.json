@@ -6,9 +6,9 @@
     1536,
     1024
   ],
-  "verified_at_utc": "2026-10-20T11:39:41.501441+00:00",
+  "verified_at_utc": "2026-10-20T12:04:18.698751+00:00",
   "input_sha256": {
-    "analysis/render_male_2026_09_30.py": "ad08388168fe85c8ccd172c25dc7a40d8ca81f70fc66c51204f4c076930e97f5",
+    "analysis/render_male_2026_09_30.py": "bcefb0303c69343b67a92df844cdb7664cdf3aee56684f52e0c40050e824161f",
     "analysis/analyze_male_2026_09_30.py": "eb2222a7e8de61d1df2bb09c2f37c9ddbd3175b244796b8e35143f7e4ed037cb",
     "figures/synthetic_demo/render_figure.py": "e6bcedea14fe8ce87a8c3ae73ac30e3c4361d25fa460c81fe5269d87af902a0d",
     "figures/synthetic_demo/verify_export_fonts.py": "56e6287c5d9a42c5c5397a8aa26a291661116d7b73952538d8820fa3f25e8f45",
@@ -35,8 +35,39 @@
       "supplied_rows_only": true,
       "enrichment_performed": false,
       "sample_expression_inferred": false,
-      "volcano_absolute_x_limit": 13.0,
+      "volcano_absolute_x_limit": 4.0,
       "gene_effect_absolute_x_limit": 3.8000000000000003,
+      "volcano_in_range_genes": 454,
+      "volcano_offscale_genes": [
+        {
+          "gene_id": "ENSMUSG00000098973",
+          "symbol": "Mir6236",
+          "log2FoldChange": -12.819665662006734,
+          "padj": 0.00026793176362582686,
+          "arrow_position": [
+            -4.0,
+            3.5719757972178585
+          ],
+          "label_position": [
+            -3.3,
+            5.8
+          ]
+        },
+        {
+          "gene_id": "ENSMUSG00000035202",
+          "symbol": "Lars2",
+          "log2FoldChange": -6.8052473541932414,
+          "padj": 0.0006379928979035009,
+          "arrow_position": [
+            -4.0,
+            3.195184155790573
+          ],
+          "label_position": [
+            -3.3,
+            2.1
+          ]
+        }
+      ],
       "selected_gene_ids": [
         "ENSMUSG00000029851",
         "ENSMUSG00000048537",
@@ -63,7 +94,7 @@
       ],
       "typography": {
         "every_span_32_native_px": true,
-        "nonempty_spans": 30,
+        "nonempty_spans": 32,
         "fonts": [
           "NimbusSans-Bold",
           "NimbusSans-Regular"
@@ -90,7 +121,7 @@
                 "NimbusSans-Bold"
               ]
             },
-            "sha256": "8852012d80b388b46173e3da50e6e5a9cf9d884ff3cd2798455e74d5dd3ba2fc",
+            "sha256": "d664be9486bae2e7b7b8d4eee0fe830af41d3a8f532c55ad6f331cca27006279",
             "bytes": 1224,
             "units_per_em": 1000,
             "unicode_glyphs_compared": 2,
@@ -120,10 +151,10 @@
                 "NimbusSans-Regular"
               ]
             },
-            "sha256": "03e3f30c29a5663684f2ae8619f7e3f1e510bc06d973b06d71f07faa4cfedd05",
-            "bytes": 5280,
+            "sha256": "19d420f3318e1d7ef0c63f3e573f3e9b4313a5b6dc75a55397894fe08aa9ff1b",
+            "bytes": 5428,
             "units_per_em": 1000,
-            "unicode_glyphs_compared": 44,
+            "unicode_glyphs_compared": 47,
             "advance_widths_and_sidebearings_match_source": true,
             "outlines_match_source_after_cubic_to_quadratic_conversion": true,
             "conversion_max_error_font_units": 0.5,
@@ -136,14 +167,14 @@
           "NimbusSans-Bold",
           "NimbusSans-Regular"
         ],
-        "text_spans_checked": 30,
+        "text_spans_checked": 32,
         "pages": 1,
         "fallback_font_found": false,
         "pdffonts_stdout": "name                                 type              encoding         emb sub uni object ID\n------------------------------------ ----------------- ---------------- --- --- --- ---------\nEKTMJB+NimbusSans-Bold               CID TrueType      Identity-H       yes yes yes     19  0\nEKTMJB+NimbusSans-Regular            CID TrueType      Identity-H       yes yes yes     26  0\n"
       },
       "outlined_svg": {
         "live_text_elements": 0,
-        "glyph_uses_checked": 149,
+        "glyph_uses_checked": 159,
         "glyph_prefixes": [
           "NimbusSans-Bold",
           "NimbusSans-Regular"
@@ -172,7 +203,7 @@
                 "NimbusSans-Regular"
               ]
             },
-            "sha256": "861220a30ce3e53b353c3a24ac98612c2693198dd15146b05db9bc3f00aa57f7",
+            "sha256": "ad64490284e06678b1d25e39f3d346fb2d6a729db898dc4cac4e420df1fb9d86",
             "bytes": 95936,
             "units_per_em": 1000,
             "unicode_glyphs_compared": 854,
@@ -199,7 +230,7 @@
                 "NimbusSans-Bold"
               ]
             },
-            "sha256": "04a1f5b5e537dd1894bfb842f556577ec31d5844b84b1fbe41f1eee6c7a95558",
+            "sha256": "d8d9659c051e4af1b957043393ad99d154fbc45aca82d8f5c620a81060d2a27e",
             "bytes": 94980,
             "units_per_em": 1000,
             "unicode_glyphs_compared": 854,
@@ -226,7 +257,7 @@
                 "NimbusSans-Italic"
               ]
             },
-            "sha256": "fac4153c0347b6fe1a460f50e2c3b29b5b2109c3d9eccdf0f33e3095fb19fd49",
+            "sha256": "bafdf6e30f3e663e5456066bd3e26152c1fce4a07102285528c449f405247957",
             "bytes": 114084,
             "units_per_em": 1000,
             "unicode_glyphs_compared": 854,
@@ -235,8 +266,8 @@
             "conversion_max_error_font_units": 0.5
           }
         ],
-        "live_text_elements": 30,
-        "family_declarations_checked": 30,
+        "live_text_elements": 32,
+        "family_declarations_checked": 32,
         "fallback_font_found": false,
         "viewer_limitation": "A viewer must honor embedded @font-face fonts. The outlined SVG and embedded-font PDF avoid that dependency."
       },
@@ -260,7 +291,7 @@
             1536,
             1024
           ],
-          "mean_absolute_rgb_difference_0_to_255": 0.76693
+          "mean_absolute_rgb_difference_0_to_255": 0.83228
         },
         "font_identity_limit": "Pixels do not encode a font name. Identity is supported by verified companion exports, explicit Nimbus source selection in the renderer, and matching rendered content."
       },
@@ -284,7 +315,7 @@
             1536,
             1024
           ],
-          "mean_absolute_rgb_difference_0_to_255": 0.36923
+          "mean_absolute_rgb_difference_0_to_255": 0.41643
         },
         "font_identity_limit": "Pixels do not encode a font name. Identity is supported by verified companion exports, explicit Nimbus source selection in the renderer, and matching rendered content."
       }
@@ -298,6 +329,8 @@
       "sample_expression_inferred": false,
       "volcano_absolute_x_limit": 3.0,
       "gene_effect_absolute_x_limit": 2.8000000000000003,
+      "volcano_in_range_genes": 11,
+      "volcano_offscale_genes": [],
       "selected_gene_ids": [
         "ENSMUSG00000002985",
         "ENSMUSG00000041120",
@@ -345,7 +378,7 @@
                 "NimbusSans-Bold"
               ]
             },
-            "sha256": "8852012d80b388b46173e3da50e6e5a9cf9d884ff3cd2798455e74d5dd3ba2fc",
+            "sha256": "d664be9486bae2e7b7b8d4eee0fe830af41d3a8f532c55ad6f331cca27006279",
             "bytes": 1224,
             "units_per_em": 1000,
             "unicode_glyphs_compared": 2,
@@ -375,7 +408,7 @@
                 "NimbusSans-Regular"
               ]
             },
-            "sha256": "a927ee7418827aab9f844e895ad6f12b36d78b1e2597526fb1f4a820839764d3",
+            "sha256": "0388cef3cc716c6c38db3dfee734911db5e6175fe118df7f6ec19b793174644a",
             "bytes": 5068,
             "units_per_em": 1000,
             "unicode_glyphs_compared": 44,
@@ -427,7 +460,7 @@
                 "NimbusSans-Regular"
               ]
             },
-            "sha256": "861220a30ce3e53b353c3a24ac98612c2693198dd15146b05db9bc3f00aa57f7",
+            "sha256": "ad64490284e06678b1d25e39f3d346fb2d6a729db898dc4cac4e420df1fb9d86",
             "bytes": 95936,
             "units_per_em": 1000,
             "unicode_glyphs_compared": 854,
@@ -454,7 +487,7 @@
                 "NimbusSans-Bold"
               ]
             },
-            "sha256": "04a1f5b5e537dd1894bfb842f556577ec31d5844b84b1fbe41f1eee6c7a95558",
+            "sha256": "d8d9659c051e4af1b957043393ad99d154fbc45aca82d8f5c620a81060d2a27e",
             "bytes": 94980,
             "units_per_em": 1000,
             "unicode_glyphs_compared": 854,
@@ -481,7 +514,7 @@
                 "NimbusSans-Italic"
               ]
             },
-            "sha256": "fac4153c0347b6fe1a460f50e2c3b29b5b2109c3d9eccdf0f33e3095fb19fd49",
+            "sha256": "bafdf6e30f3e663e5456066bd3e26152c1fce4a07102285528c449f405247957",
             "bytes": 114084,
             "units_per_em": 1000,
             "unicode_glyphs_compared": 854,
@@ -553,6 +586,8 @@
       "sample_expression_inferred": false,
       "volcano_absolute_x_limit": 4.0,
       "gene_effect_absolute_x_limit": 3.6,
+      "volcano_in_range_genes": 297,
+      "volcano_offscale_genes": [],
       "selected_gene_ids": [
         "ENSMUSG00000029851",
         "ENSMUSG00000054728",
@@ -606,7 +641,7 @@
                 "NimbusSans-Bold"
               ]
             },
-            "sha256": "8852012d80b388b46173e3da50e6e5a9cf9d884ff3cd2798455e74d5dd3ba2fc",
+            "sha256": "d664be9486bae2e7b7b8d4eee0fe830af41d3a8f532c55ad6f331cca27006279",
             "bytes": 1224,
             "units_per_em": 1000,
             "unicode_glyphs_compared": 2,
@@ -636,7 +671,7 @@
                 "NimbusSans-Regular"
               ]
             },
-            "sha256": "9327640c634b770503cc080a48d4e9c0a78f6a62a1dc704a73619a86b348f259",
+            "sha256": "7e2ae599595c4930e2de6454ef5a5fbd29c3e70e9445ee9e7242ec58460a9ea1",
             "bytes": 4956,
             "units_per_em": 1000,
             "unicode_glyphs_compared": 43,
@@ -688,7 +723,7 @@
                 "NimbusSans-Regular"
               ]
             },
-            "sha256": "861220a30ce3e53b353c3a24ac98612c2693198dd15146b05db9bc3f00aa57f7",
+            "sha256": "ad64490284e06678b1d25e39f3d346fb2d6a729db898dc4cac4e420df1fb9d86",
             "bytes": 95936,
             "units_per_em": 1000,
             "unicode_glyphs_compared": 854,
@@ -715,7 +750,7 @@
                 "NimbusSans-Bold"
               ]
             },
-            "sha256": "04a1f5b5e537dd1894bfb842f556577ec31d5844b84b1fbe41f1eee6c7a95558",
+            "sha256": "d8d9659c051e4af1b957043393ad99d154fbc45aca82d8f5c620a81060d2a27e",
             "bytes": 94980,
             "units_per_em": 1000,
             "unicode_glyphs_compared": 854,
@@ -742,7 +777,7 @@
                 "NimbusSans-Italic"
               ]
             },
-            "sha256": "fac4153c0347b6fe1a460f50e2c3b29b5b2109c3d9eccdf0f33e3095fb19fd49",
+            "sha256": "bafdf6e30f3e663e5456066bd3e26152c1fce4a07102285528c449f405247957",
             "bytes": 114084,
             "units_per_em": 1000,
             "unicode_glyphs_compared": 854,
@@ -807,20 +842,20 @@
     }
   ],
   "artifact_sha256": {
-    "figure_01_male_2026_09_30.png": "040cf070f366ef320b7bb029367c5c0f3841ababe63cc6f7dad32e55c45d033a",
-    "figure_01_male_2026_09_30_300dpi.png": "44676f0dc91e4ed14094f147f3b0e1b7955f058ea3c4c99f13a489c866ab91c8",
-    "figure_01_male_2026_09_30.pdf": "deec485ab4911a5831d3607586ec582391199b0c93229097581b957c4c89b4b4",
-    "figure_01_male_2026_09_30.svg": "ef39c8283457426215cb3c9bdf7c9916ee7b3d2c8a651e81527f898c5cfceea7",
-    "figure_01_male_2026_09_30_editable.svg": "eef4fc3ee909ee2dc4cbbd221e3d9116b1db39592dd6faf73bf7fc07e0d26b80",
+    "figure_01_male_2026_09_30.png": "20aa705b965a7916fe467c94ca0f6d3c1964648342e06fbb71b93922e4ea10a1",
+    "figure_01_male_2026_09_30_300dpi.png": "9071300eeb1c2350bef96d932789e5492d367f4a1842813e3ef3c801ba3a73eb",
+    "figure_01_male_2026_09_30.pdf": "2c59b686d7afb6ae663143ccd8484bfb118e3af64b4f9f8148c9f85c0116cfb8",
+    "figure_01_male_2026_09_30.svg": "1d858dbf5024b22c8c3e8db07b87e3fb211b8f723c80a361ce162773f2693b51",
+    "figure_01_male_2026_09_30_editable.svg": "eea69bd5c89688e1ba1021d69b4d1d2761af7bd0673ad805448038f5e2755e3d",
     "figure_02_male_2026_09_30.png": "1155577627804f6367e1c7f812b5400d21dd45c71e2dac80003f6052674f8891",
     "figure_02_male_2026_09_30_300dpi.png": "9cdcbdb13e7d0676ff5bfd914dacc7581f777b5bc58f034254fb10e7015d12bd",
-    "figure_02_male_2026_09_30.pdf": "a00a1d68c8895da37ab6fceebdd18e817fe4ca3c1a953690758db2a9e114a452",
-    "figure_02_male_2026_09_30.svg": "4eddf2e76bc9b10d9f49d02845f803417fbea813900c765b733e7f285bc9aa39",
-    "figure_02_male_2026_09_30_editable.svg": "3e78c66516a1f02ff235f943d2c9839d2a2930536db8fb232a7eb403a3d6edbf",
+    "figure_02_male_2026_09_30.pdf": "068afa3676cce5c536e66b13930e0bf81845acad481670454ea9d297be82db15",
+    "figure_02_male_2026_09_30.svg": "d1e71a697f23e7ad88bb40f514c9de386a88a4c6e462bd18c3b2f0bf597d70b1",
+    "figure_02_male_2026_09_30_editable.svg": "05b5894907067f2b517fe3da8b0bbfd095d5e147086c1559f5d07fb88bbd2816",
     "figure_03_male_2026_09_30.png": "db6b2b9d9f4415382eaee214228df3162a3e0946e91d95f8c9df839199df999e",
     "figure_03_male_2026_09_30_300dpi.png": "16c47e1417ebb83322188484f223cdbf7fe8057a1001804a34e03bd378435062",
-    "figure_03_male_2026_09_30.pdf": "f8a32d2c1fed0d1afbd75ae7a9226d6c822c110dc5c0d9fa3b481cafbc7033ca",
-    "figure_03_male_2026_09_30.svg": "f2606cafd8ebccdf70444a97e9d88280a5a1bd5c2ae0922323946bad7c2fa801",
-    "figure_03_male_2026_09_30_editable.svg": "3b55cce6c143c0fc3556fe59e29d979a932d2dabcfb3c471491dd9f100e9cc35"
+    "figure_03_male_2026_09_30.pdf": "86993e079f871c4098eccfb8d414d4dbea53cb75fb1b04bf04347abbcc967aaa",
+    "figure_03_male_2026_09_30.svg": "c09a2661797c159548d3a7924cc1b28991f73570b9556fee93748e46561f000c",
+    "figure_03_male_2026_09_30_editable.svg": "7522e0e5de45f6b728cd6c4a9da57653166fb6b89660ad54a4fda636a2241aa7"
   }
 }

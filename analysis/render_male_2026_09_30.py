@@ -26,6 +26,13 @@ import pandas as pd
 
 OUTPUT = ROOT / 'figures/male_2026_09_30'
 SUFFIXES = ('.png', '_300dpi.png', '.pdf', '.svg', '_editable.svg')
+# Figure 1's two large negative effects are represented by labelled boundary
+# arrows. These are display coordinates; their supplied estimates stay intact.
+VOLCANO_LIMITS = {1: 4.0}
+OFFSCALE_LABELS = {
+    'ENSMUSG00000098973': (-3.3, 5.8),  # Mir6236
+    'ENSMUSG00000035202': (-3.3, 2.1),  # Lars2
+}
 
 
 def state(data_dir):
@@ -95,12 +102,29 @@ def draw(number, first, second, table, output_dir, font_paths):
     a = fig.add_axes([130 / 1536, 184 / 1024, 540 / 1536, 700 / 1024])
     hit = analysis.joint_hits(table)
     values = -np.log10(table.padj)
-    a.scatter(table.loc[~hit, 'log2FoldChange'], values[~hit], s=24, c=style.NS, alpha=.75, edgecolors='none')
+    limit = VOLCANO_LIMITS.get(number, max(1., float(np.ceil(table.log2FoldChange.abs().max()))))
+    visible = table.log2FoldChange.between(-limit, limit)
+    offscale = table.loc[~visible]
+    a.scatter(table.loc[visible & ~hit, 'log2FoldChange'], values[visible & ~hit], s=24, c=style.NS, alpha=.75, edgecolors='none')
     for direction, color in [(-1, colors['lower']), (1, colors['higher'])]:
-        mask = hit & (np.sign(table.log2FoldChange) == direction)
+        mask = visible & hit & (np.sign(table.log2FoldChange) == direction)
         a.scatter(table.loc[mask, 'log2FoldChange'], values[mask], s=28, c=color, alpha=.9, edgecolors='none')
+    offscale_details = []
+    for row in offscale.itertuples(index=False):
+        analysis.require(row.gene_id in OFFSCALE_LABELS, f'Review off-scale annotation placement for {row.gene_id}')
+        ordinate = float(-np.log10(row.padj))
+        edge = -limit if row.log2FoldChange < 0 else limit
+        label_position = OFFSCALE_LABELS[row.gene_id]
+        color = colors['lower' if row.log2FoldChange < 0 else 'higher'] if row.padj < .05 else style.NS
+        a.annotate(row.symbol, xy=(edge, ordinate), xytext=label_position,
+                   ha='left', va='center', color=style.INK, annotation_clip=False,
+                   arrowprops={'arrowstyle': '-|>', 'color': color, 'lw': 1.2,
+                               'connectionstyle': 'angle,angleA=90,angleB=0,rad=0',
+                               'relpos': (0, .5), 'shrinkA': 6, 'shrinkB': 0, 'mutation_scale': 16})
+        offscale_details.append({'gene_id': row.gene_id, 'symbol': row.symbol,
+                                 'log2FoldChange': row.log2FoldChange, 'padj': row.padj,
+                                 'arrow_position': [edge, ordinate], 'label_position': list(label_position)})
     a.axhline(-np.log10(.05), color=style.AXIS, lw=.8, ls=(0, (4, 4)))
-    limit = max(1., float(np.ceil(table.log2FoldChange.abs().max())))
     a.set(xlim=(-limit, limit), ylim=(0, float(np.ceil(values.max() / 2) * 2)),
           xlabel='log2 fold change', ylabel='−log10(adjusted P)')
     xticks = MaxNLocator(nbins=5, symmetric=True).tick_values(-limit, limit)
@@ -136,6 +160,7 @@ def draw(number, first, second, table, output_dir, font_paths):
     return {'figure': number, 'file_stem': stem, 'comparison': f'{first} vs {second}',
             'supplied_rows_only': True, 'enrichment_performed': False, 'sample_expression_inferred': False,
             'volcano_absolute_x_limit': limit, 'gene_effect_absolute_x_limit': effect_limit,
+            'volcano_in_range_genes': int(visible.sum()), 'volcano_offscale_genes': offscale_details,
             'selected_gene_ids': selected.gene_id.tolist(), 'selected_effects': selected.log2FoldChange.tolist()}
 
 

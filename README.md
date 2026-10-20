@@ -44,7 +44,7 @@ All seven joint-cutoff treatment hits are lower in LD LEPTIN: **Lcn2, Tgm2, Apoe
 
 ## Artwork and reproducibility
 
-All text is **32 px Nimbus Sans**, including axes, ticks, gene names, comparison labels and panel letters. Canvas size is **1536 × 1024**, with **4608 × 3072** high-resolution PNGs. Figure 1 uses yellow/blue, Figure 2 tan/turquoise and Figure 3 orange/purple. The complete effect range is retained on explicit per-contrast axes; estimates are unchanged. Every actual PDF span, embedded font glyph/metric program and PNG/PDF content match is checked in the [export verification](figures/male_2026_09_30/figure_validation.json). The [palette accessibility review](figures/accessibility/COLOR_ACCESSIBILITY.md) documents the shared colors using the original template artwork.
+All text is **32 px Nimbus Sans**, including axes, ticks, gene names, comparison labels, off-scale labels and panel letters. Canvas size is **1536 × 1024**, with **4608 × 3072** high-resolution PNGs. Figure 1 uses yellow/blue, Figure 2 tan/turquoise and Figure 3 orange/purple. Figure 1's volcano displays −4 to +4 log2 fold change, with labelled leftward arrows for off-scale **Mir6236** and **Lars2**; all source estimates and gene counts are retained. Figures 2 and 3 retain their full volcano effect range. Every actual PDF span, embedded font glyph/metric program and PNG/PDF content match is checked in the [export verification](figures/male_2026_09_30/figure_validation.json). The [palette accessibility review](figures/accessibility/COLOR_ACCESSIBILITY.md) documents the shared colors using the original template artwork.
 
 From the repository root, with Python 3.12 and URW Nimbus Sans installed:
 
