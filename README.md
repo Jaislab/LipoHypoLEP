@@ -2,6 +2,8 @@
 
 Hypothalamic bulk RNA-seq in **LD SALINE**, **LD LEPTIN**, and **NON-LD control** mice.
 
+**[Project mouse register](docs/PROJECT_MICE.md): 30 mice — 18 females and 12 males.** Each group contains six females and four males. [Individual IDs, sex and recorded genotypes](data/project/mice.csv) are retained separately from sequencing sample identifiers.
+
 This branch, **`analysis/legacy-anke-data`**, contains an exploratory analysis of the three complete differential-expression tables in `DGElist_AnkeData(1).xlsx`. **[The original synthetic template remains on `main`](https://github.com/Jaislab/LipoHypoLEP/tree/main).** Its files are unchanged here, with its gallery and reproduction instructions preserved in [Synthetic figure scaffolding](docs/SYNTHETIC_SCAFFOLD.md).
 
 **[Initial findings and ranking sensitivity](docs/LEGACY_RESULTS.md) · [Analysis methods](docs/LEGACY_ANALYSIS.md) · [Figure legends](figures/legacy/FIGURE_LEGENDS.md)**

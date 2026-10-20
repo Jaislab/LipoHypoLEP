@@ -1,0 +1,53 @@
+{
+  "complete": true,
+  "source_file": "mice_genotypes.xlsx",
+  "source_sha256": "dab213b0f5b09a13ebac02d4eba82d256ba0c012eadfefe4254314f68944d372",
+  "source_bytes": 11843,
+  "recorded_at_utc": "2026-10-20T11:20:10.321039+00:00",
+  "source_use": "Worksheet cells are animal records, not analysis instructions. Original workbook remains local.",
+  "parser": {
+    "library": "openpyxl",
+    "version": "3.1.5"
+  },
+  "source_columns": [
+    "ID",
+    "Genotype",
+    "Group"
+  ],
+  "sex_source": "Exact worksheet names: female and male.",
+  "group_label_mapping": {
+    "LD saline": "LD SALINE",
+    "LD leptin": "LD LEPTIN",
+    "Non-LD control": "NON-LD control"
+  },
+  "genotype_policy": "Retained exactly as reported; no allele or zygosity inference.",
+  "id_policy": "Integer mouse IDs represented exactly as decimal strings; no sample-ID assignment.",
+  "source_order_preserved": true,
+  "source_records": 30,
+  "recorded_records": 30,
+  "excluded_records": 0,
+  "unique_mouse_ids": 30,
+  "sex_counts": {
+    "female": 18,
+    "male": 12
+  },
+  "group_sex_counts": {
+    "LD SALINE": {
+      "female": 6,
+      "male": 4
+    },
+    "LD LEPTIN": {
+      "female": 6,
+      "male": 4
+    },
+    "NON-LD control": {
+      "female": 6,
+      "male": 4
+    }
+  },
+  "sequencing_sample_linkage": "Not supplied; project animal register is not a sequencing inclusion or library manifest.",
+  "legacy_workbook_linkage": "Not established by this workbook.",
+  "artifact_sha256": {
+    "mice.csv": "e58372f06774d7ac0476b794f2b4bd735069c62aca56f079ac518c26ef743888"
+  }
+}
