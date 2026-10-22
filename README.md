@@ -14,6 +14,11 @@ An anatomical marker that changes with treatment can make an intact sample appea
 
 The following expression summaries come from our **local analysis of HypoMap**. They describe enrichment in the reported atlas clusters or regions; they are not expression thresholds for bulk samples.
 
+The original local-analysis exports are saved unchanged in this branch:
+
+- [Panel summary](data/hypomap/panel_summary.csv)
+- [Panel pseudobulk by region](data/hypomap/panel_pseudobulk_by_region.csv)
+
 | Compartment | Gene | On-target CPM | Strongest reported off-target | Specificity from displayed CPM |
 | --- | --- | --- | --- | --- |
 | ME fenestrated endothelium | **Plvap** | 2678 (Plvap.Endothelial) | 63 (neural stem cells) | 42.5× |

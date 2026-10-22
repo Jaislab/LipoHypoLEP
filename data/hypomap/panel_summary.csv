@@ -1,0 +1,36 @@
+,set,max_on_target,where_on_target,max_off_target,where_off_target,ambient_floor,specificity,over_ambient,lepr_share
+Plvap,ME,2677.5,cluster: C286-282: Plvap.Endothelial,62.654,cluster: C286-3: NSCs,5.893,42.063,388.436,0.041
+Scn7a,ME,2906.609,cluster: C286-198: Scn7a.Tanycytes,161.711,cluster: C286-204: Ccdc153.Cdhr4.Ependymal,1.385,17.864,1218.47,0.082
+Tshb,ME,1143.202,cluster: C286-268: Cga.ParsTuber,10.353,cluster: C286-232: D7Ertd443e.Pex5l.Ermn.Oligodendrocytes,0.249,100.693,915.248,0.099
+Cga,ME,20035.148,cluster: C286-268: Cga.ParsTuber,23.438,cluster: C286-259: H2-Aa.Wfdc17.Tmem119.Immune,0.568,819.832,12777.351,0.027
+Rax,tanycytes,455.862,cluster: C286-198: Scn7a.Tanycytes,54.165,cluster: C286-209: Pdzph1.Gjb6.Etnppl.Astrocytes,1.017,8.264,226.033,0.071
+Col23a1,tanycytes,1282.898,cluster: C286-198: Scn7a.Tanycytes,151.276,cluster: C286-285: Slc47a1.Dcn.Fibroblasts,5.87,8.425,186.745,0.076
+Frzb,tanycytes,477.617,cluster: C286-202: Frzb.Tanycytes,36.352,cluster: C286-251: Pdgfra.Cspg4.OPC,1.091,12.787,228.407,0.046
+Crabp1,MBH_neurons,166.141,region: Arcuate hypothalamic nucleus,61.302,cluster: C286-286: Krt19.Fibroblasts,2.678,2.667,45.175,0.009
+Fezf1,MBH_neurons,109.0,region: Ventromedial hypothalamic nucleus,60.907,cluster: C286-217: Unassigned.Unassigned.Etnppl.Astrocytes,7.346,1.761,13.061,0.03
+Htr3b,MBH_neurons,4.818,region: Arcuate hypothalamic nucleus,5.635,cluster: C286-205: Crlf1.Ependymal,0.0,0.726,4.818,0.022
+Gpr149,MBH_neurons,97.28,region: Ventromedial hypothalamic nucleus,31.561,region: Zona incerta,2.369,2.988,28.874,0.078
+Tmem26,MBH_neurons,36.167,region: Tuberal nucleus,28.358,"region: Periventricular hypothalamic nucleus, intermediate part",0.566,1.232,23.092,0.055
+Sytl4,MBH_neurons,15.296,region: Arcuate hypothalamic nucleus,61.522,cluster: C286-217: Unassigned.Unassigned.Etnppl.Astrocytes,4.869,0.245,2.606,0.047
+Col12a1,MBH_neurons,17.69,region: Ventromedial hypothalamic nucleus,143.725,cluster: C286-285: Slc47a1.Dcn.Fibroblasts,1.494,0.122,7.094,0.055
+Coch,MBH_neurons,36.629,region: Arcuate hypothalamic nucleus,44.177,region: (Anterior/Preoptic)Periventricular region,1.688,0.811,13.625,0.026
+Tmem215,MBH_neurons,21.434,region: Dorsomedial nucleus of the hypothalamus,31.451,region: Medial preoptic area,1.488,0.66,8.614,0.032
+Shisal2a,MBH_neurons,22.096,region: Arcuate hypothalamic nucleus,28.348,cluster: C286-203: Dnah12.Cdhr4.Ependymal,1.047,0.753,10.797,0.064
+Hmx3,MBH_neurons,9.787,region: Arcuate hypothalamic nucleus,21.957,region: Anterior hypothalamic nucleus,0.403,0.426,6.976,0.052
+Nkx2-4,MBH_neurons,221.587,cluster: C286-198: Scn7a.Tanycytes,96.334,cluster: C286-209: Pdzph1.Gjb6.Etnppl.Astrocytes,3.155,2.277,53.331,0.08
+Arhgap36,MBH_neurons,184.351,region: Tuberal nucleus,73.315,"region: Periventricular hypothalamic nucleus, intermediate part",9.286,2.481,17.922,0.05
+Gpr83,MBH_neurons,66.296,region: Ventromedial hypothalamic nucleus,82.291,region: Lateral preoptic area,3.761,0.796,13.925,0.032
+Slc17a8,MBH_neurons,405.366,cluster: C286-200: Slc17a8.Tgfb2.Tanycytes,14.436,region: Lateral preoptic area,0.436,26.261,282.351,0.022
+Satb2,MBH_neurons,19.296,region: Ventromedial hypothalamic nucleus,31.055,cluster: C286-3: NSCs,1.056,0.602,9.387,0.056
+Lepr,control_leptin_feeding,41.285,cluster: C286-282: Plvap.Endothelial,46.609,cluster: C286-284: Slc6a13.Dcn.Fibroblasts,0.846,0.867,22.36,1.0
+Pomc,control_leptin_feeding,1421.633,region: Arcuate hypothalamic nucleus,554.023,cluster: C286-230: Oxt.Pex5l.Ermn.Oligodendrocytes,50.081,2.561,27.831,0.173
+Agrp,control_leptin_feeding,862.045,region: Arcuate hypothalamic nucleus,454.575,"region: Periventricular hypothalamic nucleus, intermediate part",16.216,1.892,50.073,0.146
+Nr5a1,control_leptin_feeding,39.666,region: Dorsomedial nucleus of the hypothalamus,18.467,cluster: C286-263: Tyrobp.Tmem119.Immune,1.327,2.038,17.046,0.071
+Ttr,contam_choroid_plexus,6.263,region: Arcuate hypothalamic nucleus,13254.213,cluster: C286-285: Slc47a1.Dcn.Fibroblasts,0.726,0.0,3.63,0.072
+Gh,contam_pituitary,454.212,cluster: C286-268: Cga.ParsTuber,3.426,cluster: C286-285: Slc47a1.Dcn.Fibroblasts,0.0,102.619,454.212,0.103
+Prl,contam_pituitary,51.282,cluster: C286-268: Cga.ParsTuber,6.759,cluster: C286-285: Slc47a1.Dcn.Fibroblasts,0.0,6.61,51.282,0.091
+Cga,ME,20035.148,cluster: C286-268: Cga.ParsTuber,23.438,cluster: C286-259: H2-Aa.Wfdc17.Tmem119.Immune,0.568,819.832,12777.351,0.027
+Avp,contam_PVH_SON,274.054,cluster: C286-199: Rassf9.Tgfb2.Tanycytes,21842.455,region: Paraventricular hypothalamic nucleus,181.947,0.013,1.498,0.052
+Oxt,contam_PVH_SON,246.221,cluster: C286-199: Rassf9.Tgfb2.Tanycytes,7397.653,region: Paraventricular hypothalamic nucleus,85.087,0.033,2.86,0.064
+Pmch,contam_LH,401.884,cluster: C286-199: Rassf9.Tgfb2.Tanycytes,5243.206,region: Lateral hypothalamic area,118.294,0.077,3.369,0.059
+Hcrt,contam_LH,108.276,cluster: C286-199: Rassf9.Tgfb2.Tanycytes,2650.12,region: Lateral hypothalamic area,43.857,0.041,2.414,0.051
