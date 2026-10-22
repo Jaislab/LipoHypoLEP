@@ -2,6 +2,22 @@
 
 We are studying the effects of metreleptin on the brain using bulk RNA sequencing. Our hand dissections retain a shared central mediobasal hypothalamic (MBH) core, while the amount of surrounding tissue varies between samples.
 
+## Correct comparisons going forward
+
+The leptin-treatment comparison was reported in the reverse direction in two upstream analyses. The required direction is **LD_Leptin vs LD_Saline**. Use the following comparison definitions consistently in analysis outputs, figures and interpretation:
+
+| # | Comparison | Numerator | Denominator | Required direction |
+| --- | --- | --- | --- | --- |
+| 1 | Baseline LD Phenotype | `LD_Saline` | `NonLD_Saline` | **LD_Saline / NonLD_Saline** |
+| 2 | Leptin Rescue Effect | `LD_Leptin` | `LD_Saline` | **LD_Leptin / LD_Saline** |
+| 3 | Residual Pathology after Leptin | `LD_Leptin` | `NonLD_Saline` | **LD_Leptin / NonLD_Saline** |
+
+For every comparison, **positive log2 fold change means higher expression in the numerator**, and negative log2 fold change means higher expression in the denominator. Signed gene-level ranking statistics must follow that same direction; positive GSEA NES indicates enrichment toward the numerator end of the ranking.
+
+Before reusing the two upstream analyses, verify their fitted contrasts and numerical signs. Correcting a reversed comparison requires consistently oriented effect estimates, signed statistics, rankings and enrichment results, not just new titles. The experimental results have not been reoriented in this branch. The repository's existing synthetic demonstration and input contract already specify LD LEPTIN vs LD SALINE for comparison 2; their control label is `NON-LD control`. Confirm that those control samples correspond to `NonLD_Saline` before importing experimental data under the existing labels.
+
+“Leptin Rescue Effect” names the treatment comparison; evidence of rescue also requires relating the treatment change to the baseline LD phenotype. “Residual Pathology after Leptin” describes the post-treatment difference from controls, which can include both persistent LD-associated and treatment-induced changes.
+
 ## Shared MBH core, variable surrounding tissue
 
 The anatomical interpretation of our dissections is that **the central MBH is retained in every sampled slice**, with variation mainly at the dissection edges. Some samples include more lateral hypothalamic area (LHA); others may include small amounts of cortex/amygdala or thalamic tissue. These differences in surrounding-tissue contributions can affect bulk expression even when the central MBH is consistently represented.
