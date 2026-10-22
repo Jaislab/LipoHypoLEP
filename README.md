@@ -6,6 +6,10 @@ We are studying the effects of metreleptin on the brain using bulk RNA sequencin
 
 The anatomical interpretation of our dissections is that **the central MBH is retained in every sampled slice**, with variation mainly at the dissection edges. Some samples include more lateral hypothalamic area (LHA); others may include small amounts of cortex/amygdala or thalamic tissue. These differences in surrounding-tissue contributions can affect bulk expression even when the central MBH is consistently represented.
 
+![Schematic of six hand-dissected samples with variable surrounding tissue and a shared central MBH core, an overlay of their coverage, and contextual regional marker genes.](figures/MBH_dissection_scheme.jpg)
+
+**Figure — Hand-dissected MBH: shared central core, variable edges.** (A) Six illustrative dissections show variation in the inclusion of LHA, cortex/amygdala and thalamus. (B) The overlay highlights the central MBH core retained across all six illustrated dissections, including the ARC, VMH, DMH and ME. The “6/6” annotation describes this schematic rather than a measured spatial-overlap analysis. (C) Regional marker genes provide anatomical context; they are not all treatment-independent QC markers. The seven-gene candidate panel below is evaluated separately for anatomical coverage and treatment sensitivity.
+
 The anatomical QC panel therefore addresses two complementary questions: whether the intended central MBH compartments, including the median eminence (ME), are represented, and how much surrounding tissue contributes to each sample. Variable LHA or cortical signal should be interpreted alongside central MBH coverage rather than automatically treated as evidence that a sample missed the MBH.
 
 This shared-core interpretation motivates the panel below. The HypoMap expression summaries help select markers; they do not themselves measure tissue overlap or establish complete anatomical capture in individual samples.
