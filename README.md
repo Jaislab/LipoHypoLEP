@@ -1,6 +1,14 @@
 # LipoHypoLEP — anatomical QC of mediobasal hypothalamus samples
 
-We are studying the effects of metreleptin on the brain using bulk RNA sequencing. To interpret those effects, we need to assess whether our dissections contain the intended mediobasal hypothalamic (MBH) compartments, including the median eminence (ME).
+We are studying the effects of metreleptin on the brain using bulk RNA sequencing. Our hand dissections retain a shared central mediobasal hypothalamic (MBH) core, while the amount of surrounding tissue varies between samples.
+
+## Shared MBH core, variable surrounding tissue
+
+The anatomical interpretation of our dissections is that **the central MBH is retained in every sampled slice**, with variation mainly at the dissection edges. Some samples include more lateral hypothalamic area (LHA); others may include small amounts of cortex/amygdala or thalamic tissue. These differences in surrounding-tissue contributions can affect bulk expression even when the central MBH is consistently represented.
+
+The anatomical QC panel therefore addresses two complementary questions: whether the intended central MBH compartments, including the median eminence (ME), are represented, and how much surrounding tissue contributes to each sample. Variable LHA or cortical signal should be interpreted alongside central MBH coverage rather than automatically treated as evidence that a sample missed the MBH.
+
+This shared-core interpretation motivates the panel below. The HypoMap expression summaries help select markers; they do not themselves measure tissue overlap or establish complete anatomical capture in individual samples.
 
 ## Why we are revising the marker panel
 
